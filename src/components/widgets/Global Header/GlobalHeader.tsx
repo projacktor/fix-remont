@@ -9,7 +9,7 @@ import Image from "next/image";
 
 const Header: React.FC = () => {
     return (
-        <header className="flex flex-row items-center justify-around pl-4 pr-4 w-full">
+        <header className="flex flex-row items-center justify-around p-4 w-full">
             <div className="flex flex-row items-center gap-5 w-1/2 h-20 rounded-2xl bg-white">
                 <div id="symbol_part">
                     <Symbol header_src={headerLogo as string} lineColor="rgba(0, 0, 0, 0.5)" />
