@@ -12,12 +12,12 @@ const WriteUs: React.FC = () => {
                 <Image alt="online" className="w-2 h-2.5 mr-2" src={onlineCircle as string} />
                 <p className="font-medium text-xs text-gray-900">Напишите нам, <br /> мы сейчас онлайн</p>
             </div>
-            <address className="flex flex-row items-center justify-around w-24">
+            <address className="flex flex-row items-center justify-around w-20">
                 <Link className="flex items-center w-3/4" href="https://wa.me/" target="_blank" rel="noopener noreferrer">
-                    <Image alt="whatsapp" src={whatsapp as string} />
+                    <Image alt="whatsapp" src={whatsapp as string} width={35}/>
                 </Link>
                 <Link className="flex items-center w-3/4" href="https://t.me/" target="_blank" rel="noopener noreferrer">
-                    <Image alt="telegram" src={telegram as string} />
+                    <Image alt="telegram" src={telegram as string} width={35}/>
                 </Link>
             </address>
         </div>

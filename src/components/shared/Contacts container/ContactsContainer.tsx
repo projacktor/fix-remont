@@ -14,7 +14,7 @@ const ContactsContainer: React.FC = () => {
             <div className="w-px h-12 border-l border-dashed border-gray-400 opacity-50"></div>
             <address className="flex flex-row items-center w-52 not-italic">
                 <Image alt="phone_icon" className="mr-2 w-4 h-6" src={phoneIcon as string} />
-                <Link href="tel:+7 (966) 250-77-99" className="text-gray-900 w-40">
+                <Link href="tel:+7 (966) 250-77-99" className="text-gray-900 w-36 text-sm">
                     +7 (966) 250-77-99
                 </Link>
             </address>
