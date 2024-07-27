@@ -1,6 +1,6 @@
-import Symbol from '@/components/shared/Symbol/Symbol';
-import ContactsContainer from '@/components/shared/Contacts container/ContactsContainer';
-import WriteUs from '@/components/shared/Write us/WriteUs';
+import Symbol from '@/components/entities/Symbol/Symbol';
+import ContactsContainer from '@/components/entities/Contacts container/ContactsContainer';
+import WriteUs from '@/components/entities/Write us/WriteUs';
 
 import headerLogo from '@/../public/assets/svg/headerLogo.svg';
 import profileIcon from '@/../public/assets/svg/profileIcon.svg';

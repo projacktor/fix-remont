@@ -1,8 +1,8 @@
 import Link from "next/link";
 import Image from "next/image";
 
-import clockIcon from '@/../public/assets/svg/headerClockIcon.svg';
-import phoneIcon from '@/../public/assets/svg/headerPhone.svg';
+import clockIcon from '../../../../public/assets/svg/headerClockIcon.svg';
+import phoneIcon from '../../../../public/assets/svg/headerPhone.svg';
 
 const ContactsContainer: React.FC = () => {
     return (
