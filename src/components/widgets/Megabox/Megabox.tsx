@@ -1,7 +1,6 @@
-// components/IntroSection.js
 import React from 'react';
-import OrangeButton from './OrangeButton';
-import BlackButton from './BlackButton';
+import OrangeButton from "@/components/shared/Orange Button/OrangeButton";
+import BlackButton from "@/components/shared/Black Button/BlackButton";
 
 const MegaboxSection = () => {
     const openLink = (url) => () => {
@@ -10,16 +9,16 @@ const MegaboxSection = () => {
 
     return (
         <div className="flex flex-row items-center w-full min-h-screen">
-            <div className="w-1/2 min-h-screen bg-cover bg-center rounded-lg" style={{ backgroundImage: "url('/assets/img/megaBoxBackground.png')" }}>
+            <div className="w-1/2 min-h-screen bg-cover bg-center rounded-lg" style={{ backgroundImage: "url('@/public/assets/img/megaBoxBackground.png')" }}>
                 <p className="text-white text-4xl font-medium leading-tight tracking-tight ml-8 mt-32 w-3/5">
-                    Первый в России<br/>
-                    онлайн-сервис<br/>
-                    по ремонту и строительству<br/>
+                    Первый в России <br/>
+                    онлайн-сервис <br/>
+                    по ремонту и строительству <br/>
                     с фиксированной стоимостью
                 </p>
             </div>
 
-            <div id="right_part" className="flex flex-col items-center w-1/2 min-h-screen space-y-9">
+            <div className="flex flex-col items-center w-1/2 min-h-screen space-y-9">
                 <div className="w-11/12 bg-gray-900 rounded-lg min-h-[57vh]">
                     <p className="text-white text-2xl font-medium leading-snug tracking-tight ml-8 mt-5">
                         Воплотим вашу<br/>
