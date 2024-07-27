@@ -4,7 +4,7 @@ import openLink from "@/functions/openLink";
 function OrangeButton({ text, link }) {
     return (
         <button
-            className="flex items-center w-4/5 h-12 p-6 text-white text-lg font-medium bg-orange-500 rounded-full"
+            className="bg-color-orange py-6 px-8 text-sm font-semibold rounded-full"
             onClick={() => openLink(link)}
         >
             { text }
