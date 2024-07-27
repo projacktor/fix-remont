@@ -1,6 +1,12 @@
 import React from "react"
 
-function HoverSection(name: string, text: HTMLElement, link: string) {
+interface HoverSectionProps {
+    name: string,
+    text: HTMLElement,
+    link: string
+}
+
+function HoverSection({name, text, link}: HoverSectionProps) {
     return (
         <button>
             <h3></h3>
