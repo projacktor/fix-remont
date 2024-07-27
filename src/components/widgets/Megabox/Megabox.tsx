@@ -4,8 +4,7 @@ import BlackButton from "@/components/shared/Black Button/BlackButton";
 
 import style from "./megabox.module.scss";
 
-const MegaboxSection = () => {
-
+function MegaboxSection() {
     return (
         <div className="flex flex-row items-center w-full min-h-screen gap-6">
             <div className={`${style.bg} max-w-1/2 w-1/2 min-h-[90svh] bg-cover bg-center rounded-xl`}>
@@ -30,7 +29,7 @@ const MegaboxSection = () => {
                 </div>
 
                 <div className="flex flex-row">
-                    
+
                 </div>
             </div>
         </div>
