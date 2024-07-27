@@ -1,4 +1,5 @@
 import React from "react"
+import openLink from "@/functions/openLink";
 
 interface HoverSectionProps {
     name: string,
@@ -8,8 +9,9 @@ interface HoverSectionProps {
 
 function HoverSection({name, text, link}: HoverSectionProps) {
     return (
-        <button>
-            <h3></h3>
+        <button onClick={openLink(link)}>
+            <h3>{name}</h3>
+            {text}
         </button>
     );
 }
