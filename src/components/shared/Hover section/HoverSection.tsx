@@ -7,7 +7,8 @@ import arrow from "../../../../public/assets/svg/linkImg.svg";
 
 interface HoverSectionProps {
     name: string,
-    link: string
+    link: string,
+    text: React.ReactNode
 }
 
 function HoverSection({name, text, link}: HoverSectionProps) {
