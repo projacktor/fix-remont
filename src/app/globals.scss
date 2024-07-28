@@ -2,6 +2,11 @@
 @tailwind components;
 @tailwind utilities;
 
+body {
+  @apply bg-color-back
+}
+
+
 .seo_content {
   &::after {
     @apply bottom-0 left-0 w-full;
