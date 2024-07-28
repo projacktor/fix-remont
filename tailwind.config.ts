@@ -4,7 +4,7 @@ const config: {
   plugins: any[];
   theme: {
     extend: {
-      colors: { "color-dark": string; "color-orange": string };
+      colors: { "color-dark": string; "color-orange": string; "color-bg-gray": string };
       backgroundImage: { "gradient-conic": string; "gradient-radial": string }
     }
   };
@@ -23,6 +23,7 @@ const config: {
           "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
       },
       colors: {
+        'color-bg-gray': '#EFEFEF',
         'color-orange': '#f9af15',
         'color-dark': '#161616'
       }

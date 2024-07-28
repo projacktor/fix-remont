@@ -1,0 +1,19 @@
+.revert {
+ span {
+  position: relative;
+  opacity: 0;
+ }
+
+ &:hover {
+  background-image: url("../../../../public/assets/img/sectionBackground.png");
+
+  .arrow {
+   content: url("../../../../public/assets/svg/revertLinkImg.svg");
+  }
+
+  span {
+   opacity: 100%;
+  }
+ }
+
+}

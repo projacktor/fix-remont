@@ -1,0 +1,15 @@
+.revert span {
+  position: relative;
+  opacity: 0;
+}
+.revert:hover {
+  background-image: url("../../../../public/assets/img/sectionBackground.png");
+}
+.revert:hover .arrow {
+  content: url("../../../../public/assets/svg/revertLinkImg.svg");
+}
+.revert:hover span {
+  opacity: 100%;
+}
+
+/*# sourceMappingURL=hoverSection.module.css.map */
