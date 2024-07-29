@@ -3,6 +3,7 @@
   opacity: 0;
 }
 .revert:hover {
+  background-size: cover;
   background-image: url("../../../../public/assets/img/sectionBackground.png");
 }
 .revert:hover .arrow {
