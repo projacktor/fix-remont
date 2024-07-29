@@ -3,16 +3,19 @@
 @tailwind utilities;
 
 body {
-  @apply bg-color-back
+  @apply bg-color-back;
 }
 
+main {
+  padding: 0 2rem;
+}
+
+.orange-bold {
+  @apply text-color-orange;
+}
 
 .seo_content {
   &::after {
     @apply bottom-0 left-0 w-full;
   }
-}
-
-main {
-  padding: 0 2rem;
 }
