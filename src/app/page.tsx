@@ -1,19 +1,19 @@
-'use client';
+'use client'
 
-import Image from 'next/image';
+import Image from 'next/image'
 
-import style from '@/styles/home.module.sass';
+import style from '@/styles/home.module.sass'
 
-import SeoPart from '@/components/widgets/SEO/SeoPart';
-import Megabox from '@/components/widgets/Megabox/Megabox';
-import TapeSection from '@/components/shared/Tape Section/TapeSection';
+import SeoPart from '@/components/widgets/SEO/SeoPart'
+import Megabox from '@/components/widgets/Megabox/Megabox'
+import TapeSection from '@/components/shared/Tape Section/TapeSection'
 
-import contactIcon from '../../public/assets/svg/TapeSection icons/contactIcon.svg';
-import rublIcon from '../../public/assets/svg/TapeSection icons/rublIcon.svg';
-import shieldIcon from '../../public/assets/svg/TapeSection icons/shiledIcon.svg';
-import lampIcon from '../../public/assets/svg/TapeSection icons/lampIcon.svg';
-import flagIcon from '../../public/assets/svg/TapeSection icons/flagIcon.svg';
-import FavoriteBusiness from '@/components/widgets/Favorite Business/FavoriteBusiness';
+import contactIcon from '../../public/assets/svg/TapeSection icons/contactIcon.svg'
+import rublIcon from '../../public/assets/svg/TapeSection icons/rublIcon.svg'
+import shieldIcon from '../../public/assets/svg/TapeSection icons/shiledIcon.svg'
+import lampIcon from '../../public/assets/svg/TapeSection icons/lampIcon.svg'
+import flagIcon from '../../public/assets/svg/TapeSection icons/flagIcon.svg'
+import FavoriteBusiness from '@/components/widgets/Favorite Business/FavoriteBusiness'
 
 export default function Home() {
   return (
@@ -72,5 +72,5 @@ export default function Home() {
 
       <SeoPart />
     </main>
-  );
+  )
 }

@@ -1,6 +1,6 @@
-import React from 'react';
-import openLink from '@/functions/openLink';
-import { ButtonProps } from '@/types/ButtonProps';
+import React from 'react'
+import openLink from '@/functions/openLink'
+import { ButtonProps } from '@/types/ButtonProps'
 
 function BlackButton({ text, link }: ButtonProps) {
   return (
@@ -10,7 +10,7 @@ function BlackButton({ text, link }: ButtonProps) {
     >
       <p>{text}</p>
     </button>
-  );
+  )
 }
 
-export default BlackButton;
+export default BlackButton

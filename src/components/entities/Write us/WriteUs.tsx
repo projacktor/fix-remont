@@ -1,19 +1,15 @@
-import Image from 'next/image';
+import Image from 'next/image'
 
-import onlineCircle from '../../../../public/assets/svg/onlineCircleHeader.svg';
-import whatsapp from '../../../../public/assets/svg/whatsappIcon.svg';
-import telegram from '../../../../public/assets/svg/telegramIcon.svg';
-import Link from 'next/link';
+import onlineCircle from '../../../../public/assets/svg/onlineCircleHeader.svg'
+import whatsapp from '../../../../public/assets/svg/whatsappIcon.svg'
+import telegram from '../../../../public/assets/svg/telegramIcon.svg'
+import Link from 'next/link'
 
 const WriteUs: React.FC = () => {
   return (
     <div className="w-54 h-15 ml-1 flex flex-row items-center rounded-2xl bg-inherit">
       <div className="mr-2 flex flex-row items-center">
-        <Image
-          alt="online"
-          className="mr-2 h-2.5 w-2"
-          src={onlineCircle as string}
-        />
+        <Image alt="online" className="mr-2 h-2.5 w-2" src={onlineCircle as string} />
         <p className="text-xs font-medium text-gray-900">
           Напишите нам, <br /> мы сейчас онлайн
         </p>
@@ -37,7 +33,7 @@ const WriteUs: React.FC = () => {
         </Link>
       </address>
     </div>
-  );
-};
+  )
+}
 
-export default WriteUs;
+export default WriteUs

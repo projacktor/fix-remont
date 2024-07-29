@@ -1,15 +1,15 @@
-import Image from 'next/image';
-import Link from 'next/link';
+import Image from 'next/image'
+import Link from 'next/link'
 
 interface SymbolProps {
-  header_src: string;
-  lineColor: string;
+  header_src: string
+  lineColor: string
 }
 
 const Symbol: React.FC<SymbolProps> = ({ header_src, lineColor }) => {
   const lineStyle = {
-    borderLeft: `1px dashed ${lineColor}`,
-  };
+    borderLeft: `1px dashed ${lineColor}`
+  }
 
   return (
     <div className="flex w-auto flex-row items-center justify-around rounded-2xl bg-inherit">
@@ -24,7 +24,7 @@ const Symbol: React.FC<SymbolProps> = ({ header_src, lineColor }) => {
         Первый онлайн-сервис по ремонту и строительству <b>c фикс стоимостью</b>
       </p>
     </div>
-  );
-};
+  )
+}
 
-export default Symbol;
+export default Symbol

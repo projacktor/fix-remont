@@ -1,9 +1,9 @@
-import React from 'react';
-import OrangeButton from '@/components/shared/buttons/Orange Button/OrangeButton';
-import BlackButton from '@/components/shared/buttons/Black Button/BlackButton';
+import React from 'react'
+import OrangeButton from '@/components/shared/buttons/Orange Button/OrangeButton'
+import BlackButton from '@/components/shared/buttons/Black Button/BlackButton'
 
-import style from './megabox.module.scss';
-import HoverSection from '@/components/shared/Hover section/HoverSection';
+import style from './megabox.module.scss'
+import HoverSection from '@/components/shared/Hover section/HoverSection'
 
 function MegaboxSection() {
   return (
@@ -27,9 +27,7 @@ function MegaboxSection() {
             <br /> без визитов на
             <br /> объект
           </p>
-          <div
-            className={`${style.button_container} flex flex-row items-center space-x-8`}
-          >
+          <div className={`${style.button_container} flex flex-row items-center space-x-8`}>
             <OrangeButton text="Онлайн-калькулятор" link="" />
             <BlackButton text="Стать партнёром" link="" />
           </div>
@@ -40,8 +38,8 @@ function MegaboxSection() {
             name="Ремонт"
             text={
               <p>
-                Без визитов на объект. <br /> Заезжайте в готовую <br />{' '}
-                квартиру уже через <br /> 6-8 месяцев
+                Без визитов на объект. <br /> Заезжайте в готовую <br /> квартиру уже через <br />{' '}
+                6-8 месяцев
               </p>
             }
             link={''}
@@ -50,8 +48,8 @@ function MegaboxSection() {
             name="Строительство"
             text={
               <p>
-                Без визитов на объект. <br /> Заезжайте в готовую <br />{' '}
-                квартиру уже через <br /> 6-8 месяцев
+                Без визитов на объект. <br /> Заезжайте в готовую <br /> квартиру уже через <br />{' '}
+                6-8 месяцев
               </p>
             }
             link={''}
@@ -68,7 +66,7 @@ function MegaboxSection() {
         </div>
       </div>
     </div>
-  );
+  )
 }
 
-export default MegaboxSection;
+export default MegaboxSection

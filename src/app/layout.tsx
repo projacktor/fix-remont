@@ -1,19 +1,19 @@
-import type { Metadata } from 'next';
-import { Inter } from 'next/font/google';
-import './globals.scss';
-import Header from '@/components/widgets/Global Header/GlobalHeader';
+import type { Metadata } from 'next'
+import { Inter } from 'next/font/google'
+import './globals.scss'
+import Header from '@/components/widgets/Global Header/GlobalHeader'
 
-const inter = Inter({ subsets: ['latin'] });
+const inter = Inter({ subsets: ['latin'] })
 
 export const metadata: Metadata = {
   title: 'Fix-Remont',
-  description: 'Выберите нужный вам ремонт, экономя время!',
-};
+  description: 'Выберите нужный вам ремонт, экономя время!'
+}
 
 export default function RootLayout({
-  children,
+  children
 }: Readonly<{
-  children: React.ReactNode;
+  children: React.ReactNode
 }>) {
   return (
     <html lang="ru">
@@ -22,5 +22,5 @@ export default function RootLayout({
         {children}
       </body>
     </html>
-  );
+  )
 }

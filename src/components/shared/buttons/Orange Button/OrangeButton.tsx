@@ -1,6 +1,6 @@
-import React from 'react';
-import openLink from '@/functions/openLink';
-import { ButtonProps } from '@/types/ButtonProps';
+import React from 'react'
+import openLink from '@/functions/openLink'
+import { ButtonProps } from '@/types/ButtonProps'
 
 function OrangeButton({ text, link }: ButtonProps) {
   return (
@@ -10,7 +10,7 @@ function OrangeButton({ text, link }: ButtonProps) {
     >
       <p>{text}</p>
     </button>
-  );
+  )
 }
 
-export default OrangeButton;
+export default OrangeButton

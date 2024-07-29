@@ -1,11 +1,11 @@
-import React, { useState } from 'react';
+import React, { useState } from 'react'
 
 const SeoPart: React.FC = () => {
-  const [isOpen, setIsOpen] = useState(true); // Изначальное состояние - открыто
+  const [isOpen, setIsOpen] = useState(true) // Изначальное состояние - открыто
 
   const toggleOpen = () => {
-    setIsOpen(!isOpen); // Переключение состояния
-  };
+    setIsOpen(!isOpen) // Переключение состояния
+  }
 
   return (
     <div className="relative mb-20 h-[55%] w-[90rem]">
@@ -14,25 +14,22 @@ const SeoPart: React.FC = () => {
       >
         <h1 className="text-3xl">Текст, который важен для SEO</h1>
         <p className="text-sm leading-[171%]">
-          Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet
-          sint. Velit officia consequat duis enim velit mollit. Exercitation
-          veniam consequat sunt nostrud amet. Amet minim mollit non deserunt
-          ullamco est sit aliqua dolor do amet sint. Velit officia consequat
-          duis enim velit mollit. Exercitation veniam consequat sunt nostrud
-          amet.
+          Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia
+          consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet. Amet
+          minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia
+          consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.
         </p>
         <ul className="list-inside list-disc">
           <li className="text-sm leading-[171%]">
-            do amet sint. Velit officia consequat duis enim velit mollit.
-            Exercitation veniam consequat sunt nostrud amet. Amet minim mollit
-            non deserunt ullamco est sit aliqua dolor
+            do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam
+            consequat sunt nostrud amet. Amet minim mollit non deserunt ullamco est sit aliqua dolor
           </li>
           <li className="text-sm leading-[171%]">
             Amet minim mollit non deserunt ullamco est sit aliqua dolor.
           </li>
           <li className="text-sm leading-[171%]">
-            do amet sint. Velit officia consequat duis enim velit mollit.
-            Exercitation veniam consequat sunt nostrud amet.
+            do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam
+            consequat sunt nostrud amet.
           </li>
         </ul>
         <h3 className="my-1 text-xl">Заголовок H3</h3>
@@ -47,7 +44,7 @@ const SeoPart: React.FC = () => {
         {isOpen ? 'Закрыть' : 'Раскрыть полностью'}
       </button>
     </div>
-  );
-};
+  )
+}
 
-export default SeoPart;
+export default SeoPart

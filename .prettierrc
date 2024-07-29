@@ -4,8 +4,5 @@
   "tabWidth": 2,
   "trailingComma": "none",
   "printWidth": 100,
-  "plugins": [
-    "prettier-plugin-organize-attributes",
-    "prettier-plugin-tailwindcss"
-  ]
+  "plugins": ["prettier-plugin-organize-attributes", "prettier-plugin-tailwindcss"]
 }
