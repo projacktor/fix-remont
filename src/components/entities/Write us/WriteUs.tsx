@@ -7,20 +7,20 @@ import Link from 'next/link';
 
 const WriteUs: React.FC = () => {
   return (
-    <div className="flex flex-row items-center w-54 h-15 rounded-2xl bg-inherit ml-1">
-      <div className="flex flex-row items-center mr-2">
+    <div className="w-54 h-15 ml-1 flex flex-row items-center rounded-2xl bg-inherit">
+      <div className="mr-2 flex flex-row items-center">
         <Image
           alt="online"
-          className="w-2 h-2.5 mr-2"
+          className="mr-2 h-2.5 w-2"
           src={onlineCircle as string}
         />
-        <p className="font-medium text-xs text-gray-900">
+        <p className="text-xs font-medium text-gray-900">
           Напишите нам, <br /> мы сейчас онлайн
         </p>
       </div>
-      <address className="flex flex-row items-center justify-around w-20">
+      <address className="flex w-20 flex-row items-center justify-around">
         <Link
-          className="flex items-center w-3/4"
+          className="flex w-3/4 items-center"
           href="https://wa.me/"
           target="_blank"
           rel="noopener noreferrer"
@@ -28,7 +28,7 @@ const WriteUs: React.FC = () => {
           <Image alt="whatsapp" src={whatsapp as string} width={35} />
         </Link>
         <Link
-          className="flex items-center w-3/4"
+          className="flex w-3/4 items-center"
           href="https://t.me/"
           target="_blank"
           rel="noopener noreferrer"

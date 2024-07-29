@@ -5,7 +5,7 @@ import { ButtonProps } from '@/types/ButtonProps';
 function OrangeButton({ text, link }: ButtonProps) {
   return (
     <button
-      className="bg-color-orange text-white py-6 px-8 text-sm font-semibold rounded-full"
+      className="rounded-full bg-color-orange px-8 py-6 text-sm font-semibold text-white"
       onClick={() => openLink(link)}
     >
       <p>{text}</p>

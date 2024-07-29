@@ -1,5 +1,5 @@
 .bg {
-  background-image: url("../../../../public/assets/img/megaBoxBackground.png");
+  background-image: url('../../../../public/assets/img/megaBoxBackground.png');
 }
 
 .button_container button {

@@ -7,20 +7,20 @@ import HoverSection from '@/components/shared/Hover section/HoverSection';
 
 function MegaboxSection() {
   return (
-    <div className="flex flex-row items-center w-full min-h-screen gap-6">
+    <div className="flex min-h-screen w-full flex-row items-center gap-6">
       <div
-        className={`${style.bg} max-w-1/2 w-[95svw] min-h-[92svh] bg-cover bg-center rounded-xl`}
+        className={`${style.bg} max-w-1/2 min-h-[92svh] w-[95svw] rounded-xl bg-cover bg-center`}
       >
-        <p className="text-white text-4xl font-medium leading-tight tracking-tight ml-8 mt-32 w-3/5 relative top-44 left-9">
+        <p className="relative left-9 top-44 ml-8 mt-32 w-3/5 text-4xl font-medium leading-tight tracking-tight text-white">
           Первый в России <br />
           онлайн-сервис <br />
           по ремонту и строительству <br />с фиксированной стоимостью
         </p>
       </div>
 
-      <div className="flex flex-col gap-7 items-center w-1/2 max-w-1/2">
-        <div className="flex flex-col gap-40 p-10 w-full bg-color-dark rounded-3xl">
-          <p className="text-white text-2xl font-medium leading-snug tracking-tight">
+      <div className="max-w-1/2 flex w-1/2 flex-col items-center gap-7">
+        <div className="flex w-full flex-col gap-40 rounded-3xl bg-color-dark p-10">
+          <p className="text-2xl font-medium leading-snug tracking-tight text-white">
             Воплотим вашу
             <br />
             мечту в реальность

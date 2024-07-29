@@ -11,7 +11,7 @@ interface TapeSectionProps {
 function TapeSection({ svg, altName, text }: TapeSectionProps) {
   return (
     <div
-      className={`${style.tape} flex flex-col gap-6 p-5 bg-white rounded-3xl min-h-28 min-w-[17.5rem]`}
+      className={`${style.tape} flex min-h-28 min-w-[17.5rem] flex-col gap-6 rounded-3xl bg-white p-5`}
     >
       <Image
         alt={altName}
@@ -20,7 +20,7 @@ function TapeSection({ svg, altName, text }: TapeSectionProps) {
         height=""
         className={`self-end`}
       />
-      <span className={`max-w-56 leading-5 text-sm font-medium`}>{text}</span>
+      <span className={`max-w-56 text-sm font-medium leading-5`}>{text}</span>
     </div>
   );
 }
