@@ -1,6 +1,6 @@
 import React from 'react';
-import OrangeButton from '@/components/shared/Orange Button/OrangeButton';
-import BlackButton from '@/components/shared/Black Button/BlackButton';
+import OrangeButton from '@/components/shared/buttons/Orange Button/OrangeButton';
+import BlackButton from '@/components/shared/buttons/Black Button/BlackButton';
 
 import style from './megabox.module.scss';
 import HoverSection from '@/components/shared/Hover section/HoverSection';
