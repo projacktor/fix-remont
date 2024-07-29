@@ -8,9 +8,9 @@ const config: {
         'color-dark': string;
         'color-orange': string;
         'color-bg-gray': string;
-        'color-back';
+        'color-back': string;
       };
-      backgroundImage: { 'gradient-conic': string; 'gradient-radial': string };
+      backgroundImage: { 'gradient-conic': string; 'gradient-radial': string; };
     };
   };
   content: string[];

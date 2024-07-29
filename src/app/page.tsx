@@ -1,3 +1,5 @@
+'use client'
+
 import Image from 'next/image';
 
 import style from '@/styles/home.module.sass';
@@ -11,6 +13,7 @@ import rublIcon from '../../public/assets/svg/TapeSection icons/rublIcon.svg';
 import shieldIcon from '../../public/assets/svg/TapeSection icons/shiledIcon.svg';
 import lampIcon from '../../public/assets/svg/TapeSection icons/lampIcon.svg';
 import flagIcon from '../../public/assets/svg/TapeSection icons/flagIcon.svg';
+import FavoriteBusiness from "@/components/widgets/Favorite Business/FavoriteBusiness";
 
 export default function Home() {
   return (
@@ -64,6 +67,8 @@ export default function Home() {
           }
         />
       </div>
+
+      <FavoriteBusiness/>
 
       <SeoPart />
     </main>
