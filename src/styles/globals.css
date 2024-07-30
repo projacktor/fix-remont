@@ -9,12 +9,4 @@ main {
   padding: 0 2rem;
 }
 
-.orange-bold {
-  @apply text-color-orange;
-}
-
-.seo_content::after {
-  @apply bottom-0 left-0 w-full;
-}
-
 /*# sourceMappingURL=globals.css.map */

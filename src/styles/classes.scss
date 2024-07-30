@@ -1,0 +1,13 @@
+.orange-bold {
+  @apply text-color-orange;
+}
+
+.heading {
+  @apply text-5xl font-semibold leading-tight;
+}
+
+.seo_content {
+  &::after {
+    @apply bottom-0 left-0 w-full;
+  }
+}
