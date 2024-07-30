@@ -8,6 +8,7 @@ import SeoPart from '@/components/widgets/SEO/SeoPart'
 import Megabox from '@/components/widgets/Megabox/Megabox'
 import FavoriteBusiness from '@/components/widgets/Favorite Business/FavoriteBusiness'
 import TapeSection from '@/components/shared/Tape Section/TapeSection'
+import RiskSlide from "@/components/widgets/Risk Side/RiskSlide";
 
 import contactIcon from '../../public/assets/svg/TapeSection icons/contactIcon.svg'
 import rublIcon from '../../public/assets/svg/TapeSection icons/rublIcon.svg'
@@ -15,6 +16,7 @@ import shieldIcon from '../../public/assets/svg/TapeSection icons/shiledIcon.svg
 import lampIcon from '../../public/assets/svg/TapeSection icons/lampIcon.svg'
 import flagIcon from '../../public/assets/svg/TapeSection icons/flagIcon.svg'
 import creditCard from '../../public/assets/img/creditImg.png'
+import riskBg from '../../public/assets/img/creditCardMaterials.png'
 
 export default function Home() {
   return (
@@ -73,7 +75,7 @@ export default function Home() {
 
       <Image src={creditCard as string} alt="credit" width={"auto" as number} height={"auto" as number}/>
 
-
+      <RiskSlide button_text="Рассчитать стоимость" background={riskBg as string}/>
 
       <SeoPart />
     </main>
