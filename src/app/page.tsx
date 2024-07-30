@@ -6,6 +6,7 @@ import style from '@/styles/home.module.scss'
 
 import SeoPart from '@/components/widgets/SEO/SeoPart'
 import Megabox from '@/components/widgets/Megabox/Megabox'
+import FavoriteBusiness from '@/components/widgets/Favorite Business/FavoriteBusiness'
 import TapeSection from '@/components/shared/Tape Section/TapeSection'
 
 import contactIcon from '../../public/assets/svg/TapeSection icons/contactIcon.svg'
@@ -13,7 +14,7 @@ import rublIcon from '../../public/assets/svg/TapeSection icons/rublIcon.svg'
 import shieldIcon from '../../public/assets/svg/TapeSection icons/shiledIcon.svg'
 import lampIcon from '../../public/assets/svg/TapeSection icons/lampIcon.svg'
 import flagIcon from '../../public/assets/svg/TapeSection icons/flagIcon.svg'
-import FavoriteBusiness from '@/components/widgets/Favorite Business/FavoriteBusiness'
+import creditCard from '../../public/assets/img/creditImg.png'
 
 export default function Home() {
   return (
@@ -69,6 +70,10 @@ export default function Home() {
       </div>
 
       <FavoriteBusiness />
+
+      <Image src={creditCard as string} alt="credit" width={"auto" as number} height={"auto" as number}/>
+
+
 
       <SeoPart />
     </main>
