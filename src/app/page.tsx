@@ -2,7 +2,7 @@
 
 import Image from 'next/image'
 
-import style from '@/styles/home.module.sass'
+import style from '@/styles/home.module.scss'
 
 import SeoPart from '@/components/widgets/SEO/SeoPart'
 import Megabox from '@/components/widgets/Megabox/Megabox'

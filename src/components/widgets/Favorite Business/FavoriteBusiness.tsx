@@ -22,7 +22,7 @@ function FavoriteBusiness() {
   return (
     <div className="mb-12 flex min-h-screen w-full flex-row items-center">
       <div className="flex h-screen w-1/2 flex-col items-start justify-between">
-        <h1 className="mb-4 text-5xl font-semibold leading-tight">
+        <h1 className="text-5xl font-semibold leading-tight">
           Занимайтесь <br /> <b className={`orange-bold font-semibold`}>любимыми</b> делами, <br />{' '}
           а ремонт мы <br /> возьмём на себя.
         </h1>
@@ -34,17 +34,17 @@ function FavoriteBusiness() {
             </b>{' '}
             для себя лучшее:
           </p>
-          <div className="flex flex-row items-center">
-            <button className="mx-2 border-none bg-transparent">
+          <div className="flex flex-row items-center justify-around gap-1">
+            <button className="mx-2 border-none bg-transparent active:border-transparent">
               <Image alt="solution_background" src={solution1 as string} width={100} height={100} />
             </button>
-            <button className="mx-2 border-none bg-transparent">
+            <button className="mx-2 border-none bg-transparent active:border-transparent">
               <Image alt="solution_background" src={solution2 as string} width={100} height={100} />
             </button>
-            <button className="mx-2 border-none bg-transparent">
+            <button className="mx-2 border-none bg-transparent active:border-transparent">
               <Image alt="solution_background" src={solution3 as string} width={100} height={100} />
             </button>
-            <button className="mx-2 border-none bg-transparent">
+            <button className="mx-2 border-none bg-transparent active:border-transparent">
               <Image alt="solution_background" src={solution4 as string} width={100} height={100} />
             </button>
           </div>
@@ -56,9 +56,6 @@ function FavoriteBusiness() {
           <Image
             alt="world_picture"
             src={currentImg as string}
-            layout="fill"
-            objectFit="cover"
-            className="rounded"
           />
           <div className="absolute left-2 top-1/2 flex h-8 w-12 items-center justify-between">
             <button className="border-none bg-transparent" onClick={moveLeft}>
@@ -69,7 +66,7 @@ function FavoriteBusiness() {
             </button>
           </div>
         </div>
-        <div className="flex flex-col items-center rounded-3xl bg-color-bg-gray px-6 py-4">
+        <div className="flex flex-col items-center rounded-3xl bg-color-bg-gray px-6 py-4 w-[40rem]">
           <div className="mb-4">
             <h2 className="text-3xl font-semibold">Комфорт</h2>
             <p className="mt-4 text-base text-gray-600">
