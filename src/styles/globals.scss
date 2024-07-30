@@ -7,5 +7,5 @@ body {
 }
 
 main {
-  padding: 0 2rem;
+  @apply flex flex-col gap-8 px-8;
 }
