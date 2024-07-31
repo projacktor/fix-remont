@@ -3,8 +3,6 @@ import Image from 'next/image'
 
 import OrangeButton from '@/components/shared/buttons/Orange Button/OrangeButton'
 
-import style from './riskSlide.module.scss'
-
 import creditCardImg from '../../../../public/assets/img/creditCardImg.png'
 import creditBullets from '../../../../public/assets/img/creditBullets.png'
 
@@ -26,7 +24,7 @@ function RiskSlide({ button_text, background }: RiskSlideProps) {
       </div>
       <div className="relative h-[627px] w-1/2">
         <Image src={background} alt="brush_picture" layout="fill" className="z-10" />
-        <div className={`${style.button_container} relative left-16 top-[32rem] z-20 w-64`}>
+        <div className={`button_container relative left-16 top-[32rem] z-20 w-64`}>
           <OrangeButton text={button_text} className="w-full py-6" link={``} />
         </div>
       </div>

@@ -94,7 +94,7 @@ function FavoriteBusiness() {
               {variants_description[selectedVariant]}
             </p>
           </div>
-          <div className={`${style.to_calculator} flex w-64 flex-col gap-3`}>
+          <div className={`button_container flex w-64 flex-col gap-3`}>
             <div className={`flex flex-col items-start`}>
               <p className={`text-base font-normal`}>Стоимость:</p>
               <h2 className="mb-6 text-4xl font-semibold">Фикс</h2>

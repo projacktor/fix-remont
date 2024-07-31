@@ -27,7 +27,9 @@ function MegaboxSection() {
             <br /> без визитов на
             <br /> объект
           </p>
-          <div className={`${style.button_container} flex flex-row items-center space-x-8`}>
+          <div
+            className={`${style.button_container} button_container flex flex-row items-center space-x-8`}
+          >
             <OrangeButton text="Онлайн-калькулятор" link="" />
             <BlackButton text="Стать партнёром" link="" />
           </div>

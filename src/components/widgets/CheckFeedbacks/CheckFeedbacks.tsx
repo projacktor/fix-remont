@@ -2,7 +2,6 @@ import React from 'react'
 import Image from 'next/image'
 import Scroller from '@/components/shared/Scroller/Scroller'
 import CheckButton from '@/components/shared/buttons/Check Button/CheckButton'
-import style from './checkFeedbacks.module.scss'
 import feedback from '../../../../public/assets/img/feedbacks/feedback1.png'
 import videoE from '../../../../public/assets/img/pseudo videos/videoE.png'
 
@@ -27,7 +26,7 @@ function CheckFeedbacks() {
           </div>
         </div>
       </div>
-      <div className={`${style.button_container} h-16 w-full`}>
+      <div className={`button_container h-16 w-full`}>
         <CheckButton text="Смотреть все отзывы" link="/feedbacks" />
       </div>
     </div>
