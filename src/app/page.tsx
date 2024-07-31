@@ -9,6 +9,9 @@ import Megabox from '@/components/widgets/Megabox/Megabox'
 import FavoriteBusiness from '@/components/widgets/Favorite Business/FavoriteBusiness'
 import TapeSection from '@/components/shared/Tape Section/TapeSection'
 import RiskSlide from '@/components/widgets/Risk Side/RiskSlide'
+import GalleryWithFeedback from '@/components/widgets/Gallery with feedback/GalleryWithFeedback'
+import CheckFeedbacks from '@/components/widgets/CheckFeedbacks/CheckFeedbacks'
+import Planner from '@/components/widgets/Planner/Planner'
 
 import contactIcon from '../../public/assets/svg/TapeSection icons/contactIcon.svg'
 import rublIcon from '../../public/assets/svg/TapeSection icons/rublIcon.svg'
@@ -17,8 +20,7 @@ import lampIcon from '../../public/assets/svg/TapeSection icons/lampIcon.svg'
 import flagIcon from '../../public/assets/svg/TapeSection icons/flagIcon.svg'
 import creditCard from '../../public/assets/img/creditImg.png'
 import riskBg from '../../public/assets/img/creditCardMaterials.png'
-import GalleryWithFeedback from '@/components/widgets/Gallery with feedback/GalleryWithFeedback'
-import CheckFeedbacks from '@/components/widgets/CheckFeedbacks/CheckFeedbacks'
+import plannerImg1 from '../../public/assets/img/planner img/plannerImg1.png'
 
 export default function Home() {
   return (
@@ -87,6 +89,21 @@ export default function Home() {
       <GalleryWithFeedback />
 
       <CheckFeedbacks />
+
+      <Planner
+        planner_img={plannerImg1 as string}
+        time_text="1.5 часа"
+        p1_text="дома своей мечты"
+        step1_description="Выбор подходящего тарифа"
+        step1_time="30"
+        step2_description="Удобный выбор планировки и материала"
+        step2_time="60"
+        step3_description="Проведение работ сервисом FIX-ремонт"
+        step3_time=""
+        step4_description="Получите - распишитесь!:)"
+        p2_text="Выбирайте подходящий тариф под ваш бюджет. Цена фиксированная!"
+        link_text=""
+      />
 
       <SeoPart />
     </main>
