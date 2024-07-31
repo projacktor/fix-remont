@@ -3,7 +3,7 @@
 }
 
 .heading {
-  @apply text-5xl font-semibold leading-tight;
+  @apply text-5xl font-semibold leading-tight tracking-tighter;
 }
 
 .seo_content::after {

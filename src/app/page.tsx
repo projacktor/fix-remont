@@ -17,6 +17,7 @@ import lampIcon from '../../public/assets/svg/TapeSection icons/lampIcon.svg'
 import flagIcon from '../../public/assets/svg/TapeSection icons/flagIcon.svg'
 import creditCard from '../../public/assets/img/creditImg.png'
 import riskBg from '../../public/assets/img/creditCardMaterials.png'
+import GalleryWithFeedback from '@/components/widgets/Gallery with feedback/GalleryWithFeedback'
 
 export default function Home() {
   return (
@@ -81,6 +82,8 @@ export default function Home() {
       />
 
       <RiskSlide button_text="Рассчитать стоимость" background={riskBg as string} />
+
+      <GalleryWithFeedback />
 
       <SeoPart />
     </main>
