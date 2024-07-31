@@ -9,7 +9,7 @@ function MegaboxSection() {
   return (
     <div className="flex min-h-screen w-full flex-row items-center gap-6">
       <div
-        className={`${style.bg} max-w-1/2 min-h-[92svh] w-[95svw] rounded-xl bg-cover bg-center`}
+        className={`${style.bg} max-w-1/2 min-h-[92svh] w-[95svw] rounded-3xl bg-cover bg-center`}
       >
         <p className="relative left-9 top-44 ml-8 mt-32 w-3/5 text-4xl font-medium leading-tight tracking-tight text-white">
           Первый в России <br />
