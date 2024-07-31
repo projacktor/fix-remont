@@ -21,6 +21,7 @@ import flagIcon from '../../public/assets/svg/TapeSection icons/flagIcon.svg'
 import creditCard from '../../public/assets/img/creditImg.png'
 import riskBg from '../../public/assets/img/creditCardMaterials.png'
 import plannerImg1 from '../../public/assets/img/planner img/plannerImg1.png'
+import GroupPhoto from '@/components/widgets/GroupPhoto/GroupPhoto'
 
 export default function Home() {
   return (
@@ -104,6 +105,8 @@ export default function Home() {
         p2_text="Выбирайте подходящий тариф под ваш бюджет. Цена фиксированная!"
         link_text=""
       />
+
+      <GroupPhoto />
 
       <SeoPart />
     </main>

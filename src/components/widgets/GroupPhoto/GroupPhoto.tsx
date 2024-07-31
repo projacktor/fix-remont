@@ -1,19 +1,19 @@
 import React from 'react'
 import Image from 'next/image'
-import CheckButton from '../../shared/buttons/CheckButton/CheckButton'
-import groupPhoto from '../../../pages/Home/static/works/groupPhoto.png'
+import groupPhoto from '../../../../public/assets/img/groupPhoto.png'
+import CheckButton from '@/components/shared/buttons/Check Button/CheckButton'
 
 function Presentation() {
   return (
-    <div className="presentation flex flex-col items-center gap-6 py-4">
-      <h1 className="text-center text-xl font-semibold md:text-3xl lg:text-4xl">
+    <div className="flex w-full flex-col items-center gap-6 py-4">
+      <h1 className="heading">
         Над вашим объектом будет работать команда{' '}
-        <b className="text-yellow-400">настоящих фанатов</b> своего дела
+        <span className="orange-bold">настоящих фанатов</span> своего дела
       </h1>
-      <div className="w-full max-w-5xl px-4">
-        <Image src={groupPhoto} alt="team photo" layout="responsive" className="rounded-lg" />
+      <div className="w-full px-4">
+        <Image src={groupPhoto as string} alt="group photo" className="rounded-lg" />
       </div>
-      <div className="mt-10 w-full max-w-md">
+      <div className="button_container h-16 w-full">
         <CheckButton text="Оставить заявку на консультацию от специалиста" link="/contacts" />
       </div>
     </div>
