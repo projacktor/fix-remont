@@ -12,6 +12,9 @@ import RiskSlide from '@/components/widgets/Risk Side/RiskSlide'
 import GalleryWithFeedback from '@/components/widgets/Gallery with feedback/GalleryWithFeedback'
 import CheckFeedbacks from '@/components/widgets/CheckFeedbacks/CheckFeedbacks'
 import Planner from '@/components/widgets/Planner/Planner'
+import GroupPhoto from '@/components/widgets/GroupPhoto/GroupPhoto'
+import Responsibility from '@/components/widgets/Responsibility/Responsibility'
+import SocialMedia from '@/components/widgets/Social Media/SocialMedia'
 
 import contactIcon from '../../public/assets/svg/TapeSection icons/contactIcon.svg'
 import rublIcon from '../../public/assets/svg/TapeSection icons/rublIcon.svg'
@@ -21,9 +24,7 @@ import flagIcon from '../../public/assets/svg/TapeSection icons/flagIcon.svg'
 import creditCard from '../../public/assets/img/creditImg.png'
 import riskBg from '../../public/assets/img/creditCardMaterials.png'
 import plannerImg1 from '../../public/assets/img/planner img/plannerImg1.png'
-import GroupPhoto from '@/components/widgets/GroupPhoto/GroupPhoto'
-import Responsibility from '@/components/widgets/Responsibility/Responsibility'
-import SocialMedia from '@/components/widgets/Social Media/SocialMedia'
+import pseudoVid from '../../public/assets/img/pseudo videos/pseudoVid.png'
 
 export default function Home() {
   return (
@@ -113,6 +114,10 @@ export default function Home() {
       <Responsibility />
 
       <SocialMedia />
+
+      <Image src={pseudoVid as string} alt={"pseudo_vidio"} />
+
+
 
       <SeoPart />
     </main>
