@@ -26,6 +26,7 @@ import riskBg from '../../public/assets/img/creditCardMaterials.png'
 import plannerImg1 from '../../public/assets/img/planner img/plannerImg1.png'
 import pseudoVid from '../../public/assets/img/pseudo videos/pseudoVid.png'
 import ToBlog from '@/components/widgets/To blog/ToBlog'
+import FaqSection from "@/components/widgets/Faq Section/FaqSection";
 
 export default function Home() {
   return (
@@ -119,6 +120,8 @@ export default function Home() {
       <Image src={pseudoVid as string} alt={'pseudo_vidio'} />
 
       <ToBlog />
+
+      <FaqSection />
 
       <SeoPart />
     </main>

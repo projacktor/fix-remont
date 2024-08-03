@@ -1,0 +1,7 @@
+.plate {
+  &:hover {
+    img {
+      rotate: 180deg;
+    }
+  }
+}
