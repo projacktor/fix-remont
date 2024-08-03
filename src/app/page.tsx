@@ -22,6 +22,7 @@ import creditCard from '../../public/assets/img/creditImg.png'
 import riskBg from '../../public/assets/img/creditCardMaterials.png'
 import plannerImg1 from '../../public/assets/img/planner img/plannerImg1.png'
 import GroupPhoto from '@/components/widgets/GroupPhoto/GroupPhoto'
+import Responsibility from '@/components/widgets/Responsibility/Responsibility'
 
 export default function Home() {
   return (
@@ -108,6 +109,7 @@ export default function Home() {
 
       <GroupPhoto />
 
+      <Responsibility />
       <SeoPart />
     </main>
   )
