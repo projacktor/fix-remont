@@ -1,8 +1,8 @@
 import Image from 'next/image'
 
 import onlineCircle from '../../../../public/assets/svg/onlineCircleHeader.svg'
-import whatsapp from '../../../../public/assets/svg/whatsappIcon.svg'
-import telegram from '../../../../public/assets/svg/telegramIcon.svg'
+import whatsapp from '../../../../public/assets/svg/social media icons/whatsappIcon.svg'
+import telegram from '../../../../public/assets/svg/social media icons/telegramIcon.svg'
 import Link from 'next/link'
 
 const WriteUs: React.FC = () => {

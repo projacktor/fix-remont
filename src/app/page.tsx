@@ -110,6 +110,9 @@ export default function Home() {
       <GroupPhoto />
 
       <Responsibility />
+
+
+
       <SeoPart />
     </main>
   )
