@@ -23,6 +23,7 @@ import riskBg from '../../public/assets/img/creditCardMaterials.png'
 import plannerImg1 from '../../public/assets/img/planner img/plannerImg1.png'
 import GroupPhoto from '@/components/widgets/GroupPhoto/GroupPhoto'
 import Responsibility from '@/components/widgets/Responsibility/Responsibility'
+import SocialMedia from "@/components/widgets/Social Media/SocialMedia";
 
 export default function Home() {
   return (
@@ -111,7 +112,7 @@ export default function Home() {
 
       <Responsibility />
 
-
+      <SocialMedia />
 
       <SeoPart />
     </main>
