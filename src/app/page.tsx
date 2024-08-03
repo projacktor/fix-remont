@@ -25,6 +25,7 @@ import creditCard from '../../public/assets/img/creditImg.png'
 import riskBg from '../../public/assets/img/creditCardMaterials.png'
 import plannerImg1 from '../../public/assets/img/planner img/plannerImg1.png'
 import pseudoVid from '../../public/assets/img/pseudo videos/pseudoVid.png'
+import ToBlog from '@/components/widgets/To blog/ToBlog'
 
 export default function Home() {
   return (
@@ -115,9 +116,9 @@ export default function Home() {
 
       <SocialMedia />
 
-      <Image src={pseudoVid as string} alt={"pseudo_vidio"} />
+      <Image src={pseudoVid as string} alt={'pseudo_vidio'} />
 
-
+      <ToBlog />
 
       <SeoPart />
     </main>
