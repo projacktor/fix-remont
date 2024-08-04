@@ -16,14 +16,14 @@ function RiskSlide({ button_text, background }: RiskSlideProps) {
     <div className="relative flex h-[93vh] flex-row items-center gap-4">
       <div className="flex h-full w-1/2 flex-col items-center">
         <div className="mt-4">
-          <Image src={creditCardImg as string} alt="credit_card" layout="responsive" />
+          <Image src={creditCardImg as string} alt="credit_card" />
         </div>
         <div className="mt-4">
-          <Image src={creditBullets as string} alt="bullets" layout="responsive" />
+          <Image src={creditBullets as string} alt="bullets" />
         </div>
       </div>
       <div className="relative h-[627px] w-1/2">
-        <Image src={background} alt="brush_picture" layout="fill" className="z-10" />
+        <Image src={background} alt="brush_picture" className="z-10" />
         <div className={`button_container relative left-16 top-[32rem] z-20 w-64`}>
           <OrangeButton text={button_text} className="w-full py-6" link={``} />
         </div>

@@ -27,11 +27,10 @@ const Responsibility = () => {
           alt="responsibility bullits"
           className="w-full translate-x-[-1rem]"
           src={responsibilityBullits as string}
-          layout="responsive"
         />
       </div>
       <div id="responsibility_right" className="flex w-1/2 flex-col items-center">
-        <Image alt="CEO_picture" className="w-[97%]" src={ceoPhoto as string} layout="responsive" />
+        <Image alt="CEO_picture" className="w-[97%]" src={ceoPhoto as string} />
       </div>
     </div>
   )
