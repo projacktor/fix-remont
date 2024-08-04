@@ -8,7 +8,8 @@
     "start": "next start",
     "lint": "next lint",
     "format": "prettier --write .",
-    "check": "prettier --check ."
+    "check": "prettier --check .",
+    "ci": "bun i --frozen-lockfile"
   },
   "dependencies": {
     "next": "14.2.4",

@@ -49,9 +49,9 @@ jobs:
             exit 1
           fi
       - name: Setup Bun
-        uses: oven-sh/setup-bun@v1
+        uses: oven-sh/setup-bun@v2
         with:
-          node-version: '20'
+          bun-version: "latest"
           cache: ${{ steps.detect-package-manager.outputs.manager }}
 
       - name: Install dependencies
