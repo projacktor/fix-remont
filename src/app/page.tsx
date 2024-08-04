@@ -83,21 +83,16 @@ export default function Home() {
 
       <FavoriteBusiness />
 
-      <Image
-        src={creditCard as string}
-        alt="credit"
-        width={'auto' as number}
-        height={'auto' as number}
-      />
+      <Image src={creditCard} alt="credit" width={1200} height={1200} />
 
-      <RiskSlide button_text="Рассчитать стоимость" background={riskBg as string} />
+      <RiskSlide button_text="Рассчитать стоимость" background={riskBg} />
 
       <GalleryWithFeedback />
 
       <CheckFeedbacks />
 
       <Planner
-        planner_img={plannerImg1 as string}
+        planner_img={plannerImg1}
         time_text="1.5 часа"
         p1_text="дома своей мечты"
         step1_description="Выбор подходящего тарифа"
@@ -117,7 +112,7 @@ export default function Home() {
 
       <SocialMedia />
 
-      <Image src={pseudoVid as string} alt={'pseudo_vidio'} />
+      <Image src={pseudoVid} alt={'pseudo_vidio'} />
 
       <ToBlog />
 

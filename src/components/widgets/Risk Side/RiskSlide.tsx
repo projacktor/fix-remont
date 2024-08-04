@@ -24,7 +24,7 @@ function RiskSlide({ button_text, background }: RiskSlideProps) {
       </div>
       <div className="relative h-[627px] w-1/2">
         <Image src={background} alt="brush_picture" className="z-10" />
-        <div className={`button_container relative left-16 top-[32rem] z-20 w-64`}>
+        <div className={`button_container relative bottom-28 left-16 z-20 w-64`}>
           <OrangeButton text={button_text} className="w-full py-6" link={``} />
         </div>
       </div>
