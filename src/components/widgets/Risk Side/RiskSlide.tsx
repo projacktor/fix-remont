@@ -8,7 +8,7 @@ import creditBullets from '../../../../public/assets/img/creditBullets.png'
 
 interface RiskSlideProps {
   button_text: string
-  background: unknown
+  background: string
 }
 
 function RiskSlide({ button_text, background }: RiskSlideProps) {

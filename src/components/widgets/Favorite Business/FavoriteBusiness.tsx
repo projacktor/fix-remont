@@ -57,7 +57,7 @@ function FavoriteBusiness() {
               >
                 <Image
                   alt={`solution${index + 1}`}
-                  src={solution}
+                  src={solution as string}
                   width={100}
                   height={100}
                 />

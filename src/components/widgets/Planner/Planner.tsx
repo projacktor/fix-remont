@@ -1,9 +1,9 @@
 import React from 'react'
-import Image, { ImageProps } from 'next/image'
+import Image from 'next/image'
 import Link from 'next/link'
 
 interface PlannerProps {
-  planner_img: ImageProps
+  planner_img: string
   time_text: string
   p1_text: string
   step1_description: string
@@ -63,7 +63,7 @@ function Planner({
         </div>
       </div>
       <div className="flex w-1/2 flex-col items-start justify-center">
-        <Image src={planner_img} alt="FIX-remont_planner" className="w-11/12" />
+        <Image src={planner_img as string} alt="FIX-remont_planner" className="w-11/12" />
         <p className="mt-4 text-2xl font-medium text-white">{p2_text}</p>
       </div>
     </div>
