@@ -15,6 +15,8 @@ import Planner from '@/components/widgets/Planner/Planner'
 import GroupPhoto from '@/components/widgets/GroupPhoto/GroupPhoto'
 import Responsibility from '@/components/widgets/Responsibility/Responsibility'
 import SocialMedia from '@/components/widgets/Social Media/SocialMedia'
+import ToBlog from '@/components/widgets/To blog/ToBlog'
+import FaqSection from '@/components/widgets/Faq Section/FaqSection'
 
 import contactIcon from '../../public/assets/svg/TapeSection icons/contactIcon.svg'
 import rublIcon from '../../public/assets/svg/TapeSection icons/rublIcon.svg'
@@ -25,8 +27,6 @@ import creditCard from '../../public/assets/img/creditImg.png'
 import riskBg from '../../public/assets/img/creditCardMaterials.png'
 import plannerImg1 from '../../public/assets/img/planner img/plannerImg1.png'
 import pseudoVid from '../../public/assets/img/pseudo videos/pseudoVid.png'
-import ToBlog from '@/components/widgets/To blog/ToBlog'
-import FaqSection from '@/components/widgets/Faq Section/FaqSection'
 
 export default function Home() {
   return (
