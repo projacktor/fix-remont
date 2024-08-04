@@ -10,7 +10,7 @@ const WriteUs: React.FC = () => {
     <div className="w-54 h-15 ml-1 flex flex-row items-center rounded-2xl bg-inherit">
       <div className="mr-2 flex flex-row items-center">
         <Image alt="online" className="mr-2 h-2.5 w-2" src={onlineCircle as string} />
-        <p className="text-xs font-medium text-gray-900">
+        <p className="text-xs font-medium">
           Напишите нам, <br /> мы сейчас онлайн
         </p>
       </div>

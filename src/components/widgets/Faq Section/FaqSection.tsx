@@ -15,7 +15,7 @@ function FaqSection() {
                 </h1>
                 <div className="bg-color-dark w-1/2 h-[11.5rem] rounded-3xl relative order-1">
                     <Image src={photo as string} alt={"CEO photo picture"} className={`z-10`}/>
-                    <div className={`flex flex-col items-start justify-around gap-4 z-20 relative bottom-40 left-96`}>
+                    <div className={`flex flex-col items-start justify-around gap-4 z-20 relative bottom-40 left-96 w-max`}>
                         <h4 className="text-white font-semibold text-3xl leading-7">Фанис Хасанов</h4>
                         <p className="text-white font-light text-sm leading-normal">
                             Основатель и руководитель FIX-ремонт <br />
