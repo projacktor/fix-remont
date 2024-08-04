@@ -10,17 +10,19 @@ import Image from 'next/image'
 const Header: React.FC = () => {
   return (
     <header className="flex w-full flex-row items-center justify-around p-4">
-      <Symbol header_src={headerLogo as string} lineColor="rgba(0, 0, 0, 0.5)" />
-      <div className="m-0 flex h-12 w-px justify-center border-l border-dashed border-gray-400 opacity-50"></div>
-      <ContactsContainer />
+      <div className="flex flex-row items-center justify-around gap-4">
+        <Symbol header_src={headerLogo as string} lineColor="rgba(0, 0, 0, 0.5)" />
+        <div className="flex h-12 w-px justify-center border-l border-dashed border-gray-400 opacity-50"></div>
+        <ContactsContainer />
+      </div>
 
       <WriteUs />
 
-      <button className="flex w-80 flex-row items-center justify-between rounded-xl bg-color-dark p-5">
-        <Image alt="profile_icon" className="order-2" src={profileIcon as string} />
+      <button className="flex flex-row items-center justify-between gap-44 rounded-xl bg-color-dark px-4 py-6">
         <p className="text-base font-medium leading-none tracking-tight text-white">
           Личный кабинет
         </p>
+        <Image alt="profile_icon" className="order-2" src={profileIcon as string} />
       </button>
 
       <button className="order-4 flex size-20 flex-col items-center justify-center rounded-3xl border-black bg-white">
