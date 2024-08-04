@@ -57,7 +57,7 @@ function FavoriteBusiness() {
               >
                 <Image
                   alt={`solution${index + 1}`}
-                  src={solution as string}
+                  src={solution}
                   width={100}
                   height={100}
                 />
@@ -69,7 +69,7 @@ function FavoriteBusiness() {
 
       <div className="flex h-screen w-1/2 flex-col items-center gap-1">
         <div className="relative mb-4 h-3/5">
-          <Image alt="world_picture" src={currentImg as string} />
+          <Image alt="world_picture" src={currentImg} />
           <div className="relative bottom-14 left-4 flex w-28 items-center justify-around">
             <button className="border-none bg-transparent" onClick={moveLeft}>
               <Image alt="move left" src={movingArrow as string} width={40} height={40} />

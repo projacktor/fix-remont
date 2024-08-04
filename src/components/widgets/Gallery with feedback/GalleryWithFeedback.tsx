@@ -21,11 +21,11 @@ function GalleryWithFeedback() {
             href="https://yandex.ru/maps/org/fix_remont/110403249402/features/?ll=49.192026%2C55.826770&mode=search&sll=48.744609%2C55.752080&sspn=0.090294%2C0.027834&tab=features&text=%D1%84%D0%B8%D0%BA%D1%81%20%D1%80%D0%B5%D0%BC%D0%BE%D0%BD%D1%82&z=12"
             target="_blank"
           >
-            <Image src={responseYandex as string} alt="yandex_picture" width={100} height={100} />
+            <Image src={responseYandex} alt="yandex_picture" width={100} height={100} />
             <p className="text-xs font-semibold underline">Смотреть отзывы на Яндекс</p>
           </Link>
           <Link className="flex flex-row items-baseline gap-5" href="#" target="_blank">
-            <Image src={responseOtzovik as string} alt="otzovik_picture" width={100} height={100} />
+            <Image src={responseOtzovik} alt="otzovik_picture" width={100} height={100} />
             <p className="text-xs font-semibold underline">Смотреть отзывы на Отзовик</p>
           </Link>
         </div>

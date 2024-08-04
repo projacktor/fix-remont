@@ -1,9 +1,9 @@
 import React from 'react'
-import Image from 'next/image'
+import Image, { ImageProps } from 'next/image'
 import Link from 'next/link'
 
 interface PlannerProps {
-  planner_img: string
+  planner_img: ImageProps
   time_text: string
   p1_text: string
   step1_description: string

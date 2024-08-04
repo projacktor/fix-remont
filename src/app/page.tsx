@@ -83,9 +83,9 @@ export default function Home() {
 
       <FavoriteBusiness />
 
-      <Image src={creditCard} alt="credit" width={1200} height={1200} />
+      <Image src={creditCard} alt="credit" />
 
-      <RiskSlide button_text="Рассчитать стоимость" background={riskBg} />
+      <RiskSlide button_text="Рассчитать стоимость" background={riskBg as unknown} />
 
       <GalleryWithFeedback />
 
