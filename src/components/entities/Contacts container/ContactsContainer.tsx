@@ -9,9 +9,7 @@ const ContactsContainer: React.FC = () => {
     <div className="flex flex-row items-center justify-between rounded-2xl bg-inherit">
       <div className="flex flex-row items-center">
         <Image alt="clock_icon" className="h-6 w-4" src={clockIcon as string} />
-        <p className="ml-2 min-w-max text-sm font-medium leading-5">
-          Звоните Пн-Вс: 8:30 - 19:00
-        </p>
+        <p className="ml-2 min-w-max text-sm font-medium leading-5">Звоните Пн-Вс: 8:30 - 19:00</p>
       </div>
       <div className="m-4 h-12 w-px border-l border-dashed border-gray-400 opacity-50"></div>
       <address className="flex w-40 flex-row items-center not-italic">
