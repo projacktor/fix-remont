@@ -1,40 +1,40 @@
-import { GetStaticPaths, GetStaticProps } from 'next';
-import Image from 'next/image';
-import { useRouter } from 'next/router';
-import Die from '@/components/entities/Die/Die';
-import CheckButton from '@/components/shared/buttons/Check Button/CheckButton';
-import WorksGallery from '@/components/widgets/Works Gallery/WorksGallery';
-import Consulting from '@/components/widgets/Consulting/Consulting';
-import SeoPart from '@/components/widgets/SEO/SeoPart';
-import Minibar from '@/components/entities/Minibar/Minibar';
-import MinibarVideo from '@/components/entities/MinibarVideo/MinibarVideo';
-import VideoGallery from '@/components/widgets/Video Gallery/VideoGallery';
-import projPic1 from '../../../../../../public/assets/img/projects img/projPicture1.png';
-import projPic2 from '../../../../../../public/assets/img/projects img/projPicture2.png';
+import { GetStaticPaths, GetStaticProps } from 'next'
+import Image from 'next/image'
+import { useRouter } from 'next/router'
+import Die from '@/components/entities/Die/Die'
+import CheckButton from '@/components/shared/buttons/Check Button/CheckButton'
+import WorksGallery from '@/components/widgets/Works Gallery/WorksGallery'
+import Consulting from '@/components/widgets/Consulting/Consulting'
+import SeoPart from '@/components/widgets/SEO/SeoPart'
+import Minibar from '@/components/entities/Minibar/Minibar'
+import MinibarVideo from '@/components/entities/MinibarVideo/MinibarVideo'
+import VideoGallery from '@/components/widgets/Video Gallery/VideoGallery'
+import projPic1 from '../../../../../../public/assets/img/projects img/projPicture1.png'
+import projPic2 from '../../../../../../public/assets/img/projects img/projPicture2.png'
 import React from 'react'
 
 interface Project {
-  id: string;
-  title: string;
-  duration: string;
-  cost: string;
-  area: string;
-  videoDuration: string;
-  description: string;
-  task: React.ReactNode;
-  result: string;
+  id: string
+  title: string
+  duration: string
+  cost: string
+  area: string
+  videoDuration: string
+  description: string
+  task: React.ReactNode
+  result: string
 }
 
 interface ProjectPageProps {
-  project: Project;
+  project: Project
 }
 
 const ProjectPage: React.FC<ProjectPageProps> = ({ project }) => {
-  const router = useRouter();
+  const router = useRouter()
 
   // Если страница находится в состоянии fallback
   if (router.isFallback) {
-    return <div>Loading...</div>;
+    return <div>Loading...</div>
   }
 
   return (
@@ -74,31 +74,31 @@ const ProjectPage: React.FC<ProjectPageProps> = ({ project }) => {
       <Consulting />
       <SeoPart />
     </main>
-  );
-};
+  )
+}
 
 export const getStaticPaths: GetStaticPaths = async () => {
   // Здесь получите все возможные `id` для проектов
-  const res = await fetch('https://api.example.com/projects');
-  const projects = await res.json();
+  const res = await fetch('https://api.example.com/projects')
+  const projects = await res.json()
 
   const paths = projects.map((project: { id: string }) => ({
-    params: { id: project.id },
-  }));
+    params: { id: project.id }
+  }))
 
-  return { paths, fallback: true };
-};
+  return { paths, fallback: true }
+}
 
 export const getStaticProps: GetStaticProps = async (context) => {
-  const { id } = context.params!;
-  const res = await fetch(`https://api.example.com/projects/${id}`);
-  const project = await res.json();
+  const { id } = context.params!
+  const res = await fetch(`https://api.example.com/projects/${id}`)
+  const project = await res.json()
 
   return {
     props: {
-      project,
-    },
-  };
-};
+      project
+    }
+  }
+}
 
-export default ProjectPage;
+export default ProjectPage
