@@ -12,18 +12,14 @@ import GroupPhoto from '@/components/widgets/GroupPhoto/GroupPhoto'
 import Responsibility from '@/components/widgets/Responsibility/Responsibility'
 import Consulting from '@/components/widgets/Consulting/Consulting'
 import SeoPart from '@/components/widgets/SEO/SeoPart'
+import Crumb from '@/components/shared/Crumb/Crumb'
 
 function Portfolio() {
+  const path = ['Портфолио', 'wwww']
+  const links = ['/pages/dashboard/portfolio', '/pages/dashboard/portfolio']
   return (
     <main>
-      <div className="flex flex-row">
-        <p className="text-xs font-semibold">
-          <Link href={'/'} className="text-gray-500 opacity-80">
-            Главная
-          </Link>{' '}
-          * Портфолио
-        </p>
-      </div>
+      <Crumb path={path} links={links} />
       <div className="flex h-full w-full flex-col justify-around gap-4">
         <div className="flex w-full flex-col items-start justify-around gap-4">
           <div>
