@@ -15,8 +15,8 @@ import SeoPart from '@/components/widgets/SEO/SeoPart'
 import Crumb from '@/components/shared/Crumb/Crumb'
 
 function Portfolio() {
-  const path = ['Портфолио', 'wwww']
-  const links = ['/pages/dashboard/portfolio', '/pages/dashboard/portfolio']
+  const path = ['Портфолио']
+  const links = ['/pages/dashboard/portfolio']
   return (
     <main>
       <Crumb path={path} links={links} />
