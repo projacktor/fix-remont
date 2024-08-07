@@ -7,8 +7,8 @@ import mainEng from '../../../../public/assets/img/mainEngPhoto.png'
 function EngConsulting() {
   const handleSave = () => {}
   return (
-    <div className="flex w-full flex-col">
-      <div className="flex flex-row items-center justify-around gap-16">
+    <div className="flex w-full flex-col gap-12">
+      <div className="flex w-11/12 flex-row items-center justify-between">
         <div className="flex flex-col gap-4 space-y-4 text-start">
           <div>
             <p className="font-medium">Остались вопросы?</p>
@@ -25,8 +25,8 @@ function EngConsulting() {
           </ul>
         </div>
         <div className="relative flex flex-col items-center">
-          <Image src={mainEng} alt="Фото главного инженера"/>
-          <div className="absolute top-16 right-12 flex w-36 flex-col gap-6 text-white">
+          <Image src={mainEng} alt="Фото главного инженера" width={750} />
+          <div className="absolute right-10 top-12 flex w-36 flex-col gap-6 text-white">
             <h2 className="text-3xl font-semibold">Саид Низамов</h2>
             <p className="text-sm font-light">Главный иженер FIX-ремонт</p>
           </div>
@@ -36,7 +36,7 @@ function EngConsulting() {
         <label id="contact-method" className="text-sm font-medium">
           Как с нами связаться?
         </label>
-        <div className="flex w-full flex-row items-center justify-around gap-16">
+        <div className="flex w-11/12 flex-row items-center justify-around gap-16">
           <select id="contact-method" className="w-1/3 rounded-full bg-gray-100 p-6">
             <option>Написать в WhatsApp</option>
             <option>Написать в Telegram</option>

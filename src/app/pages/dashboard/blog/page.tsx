@@ -21,7 +21,7 @@ function Blog() {
   const links = ['/pages/dashboard/blog']
 
   return (
-    <main className="flex w-full flex-col items-start">
+    <main className="flex w-full flex-col items-center">
       <Crumb path={path} links={links} />
       <div className="flex w-full flex-col items-start gap-7">
         <div className="flex w-full flex-col items-start">
