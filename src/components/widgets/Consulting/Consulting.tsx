@@ -25,8 +25,8 @@ function EngConsulting() {
           </ul>
         </div>
         <div className="relative flex flex-col items-center">
-          <Image src={mainEng} alt="Фото главного инженера" className="z-10" />
-          <div className="relative bottom-[21.5rem] left-64 z-20 flex w-36 flex-col gap-6 text-white">
+          <Image src={mainEng} alt="Фото главного инженера"/>
+          <div className="absolute top-16 right-12 flex w-36 flex-col gap-6 text-white">
             <h2 className="text-3xl font-semibold">Саид Низамов</h2>
             <p className="text-sm font-light">Главный иженер FIX-ремонт</p>
           </div>
