@@ -9,8 +9,8 @@ import SeoPart from '@/components/widgets/SEO/SeoPart'
 import Minibar from '@/components/entities/Minibar/Minibar'
 import MinibarVideo from '@/components/entities/MinibarVideo/MinibarVideo'
 import VideoGallery from '@/components/widgets/Video Gallery/VideoGallery'
-import projPic1 from '../../../../../../public/assets/img/projects img/projPicture1.png'
-import projPic2 from '../../../../../../public/assets/img/projects img/projPicture2.png'
+import projPic1 from '../../../../../public/assets/img/projects img/projPicture1.png'
+import projPic2 from '../../../../../public/assets/img/projects img/projPicture2.png'
 import React from 'react'
 
 interface Project {

@@ -12,7 +12,7 @@ import CheckButton from '@/components/shared/buttons/Check Button/CheckButton'
 import ContentFilter from '@/components/shared/Content Filter/ContentFilter'
 import Crumb from '@/components/shared/Crumb/Crumb'
 
-import pseudoVid from '../../../../../public/assets/img/pseudo videos/pseudoVid.png'
+import pseudoVid from '../../../../public/assets/img/pseudo videos/pseudoVid.png'
 
 function Blog() {
   const buttons = ['Все', 'Ремонт квартир', 'Строительство домов', 'Полезное']

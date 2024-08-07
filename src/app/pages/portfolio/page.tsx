@@ -6,8 +6,8 @@ import Image from 'next/image'
 
 import CheckButton from '@/components/shared/buttons/Check Button/CheckButton'
 
-import work1 from '../../../../../public/assets/img/works gallery/work1.png'
-import work2 from '../../../../../public/assets/img/works gallery/work2.png'
+import work1 from '../../../../public/assets/img/works gallery/work1.png'
+import work2 from '../../../../public/assets/img/works gallery/work2.png'
 import GroupPhoto from '@/components/widgets/GroupPhoto/GroupPhoto'
 import Responsibility from '@/components/widgets/Responsibility/Responsibility'
 import Consulting from '@/components/widgets/Consulting/Consulting'
@@ -45,25 +45,25 @@ function Portfolio() {
         <div className="h-full columns-2">
           <div className="">
             <Image src={work1 as string} alt="work1" width={700} />
-            <Link href="/" className="relative left-[2.4rem] top-[-4rem] text-yellow-500 underline">
+            <Link href="/public" className="relative left-[2.4rem] top-[-4rem] text-yellow-500 underline">
               Узнать стоимость
             </Link>
           </div>
           <div className="">
             <Image src={work1 as string} alt="work1" width={700} />
-            <Link href="/" className="relative left-[2.4rem] top-[-4rem] text-yellow-500 underline">
+            <Link href="/public" className="relative left-[2.4rem] top-[-4rem] text-yellow-500 underline">
               Узнать стоимость
             </Link>
           </div>
           <div className="">
             <Image src={work2 as string} alt="work2" width={700} />
-            <Link href="/" className="relative left-[2.4rem] top-[-4rem] text-yellow-500 underline">
+            <Link href="/public" className="relative left-[2.4rem] top-[-4rem] text-yellow-500 underline">
               Узнать стоимость
             </Link>
           </div>
           <div className="">
             <Image src={work2 as string} alt="work2" width={700} />
-            <Link href="/" className="relative left-[2.4rem] top-[-4rem] text-yellow-500 underline">
+            <Link href="/public" className="relative left-[2.4rem] top-[-4rem] text-yellow-500 underline">
               Узнать стоимость
             </Link>
           </div>
