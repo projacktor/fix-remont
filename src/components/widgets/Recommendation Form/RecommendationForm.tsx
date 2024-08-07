@@ -19,7 +19,7 @@ const RecommendationForm: React.FC = () => {
         </label>
         <select
           id="contact-method"
-          className="w-full rounded-full bg-[#4A4A4A] px-8 py-5 text-white"
+          className="w-full rounded-full bg-color-input-d px-8 py-5 text-white"
         >
           <option>Написать в WhatsApp</option>
           <option>Написать в Telegram</option>
@@ -27,7 +27,7 @@ const RecommendationForm: React.FC = () => {
         <input
           type="tel"
           placeholder="Ваш номер телефона"
-          className="w-full rounded-full bg-[#4A4A4A] px-8 py-5 text-white"
+          className="w-full rounded-full bg-color-input-d px-8 py-5 text-white"
         />
         <div className="button_container w-full">
           <OrangeButton text="Записаться на консультацию" />

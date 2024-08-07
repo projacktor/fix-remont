@@ -30,7 +30,8 @@ const config: {
         'color-bg-gray': '#EFEFEF',
         'color-orange': '#f9af15',
         'color-dark': '#161616',
-        'color-back': '#FAFAFA'
+        'color-back': '#FAFAFA',
+        'color-input-d': '#4A4A4A'
       }
     }
   },
