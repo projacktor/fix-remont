@@ -9,3 +9,7 @@ body {
 main {
   @apply flex flex-col gap-8 px-8;
 }
+
+input[type='checkbox']:checked {
+  accent-color: #f9af15;
+}

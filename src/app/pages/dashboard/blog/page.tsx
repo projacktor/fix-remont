@@ -1,53 +1,62 @@
 'use client'
+import React from 'react'
+import Image from 'next/image'
 
-import React from 'react';
-import Image from 'next/image';
-import pseudoVid from '../../../../../public/assets/img/pseudo videos/pseudoVid.png';
 import SeoPart from '@/components/widgets/SEO/SeoPart'
 import Consulting from '@/components/widgets/Consulting/Consulting'
 import FaqSection from '@/components/widgets/Faq Section/FaqSection'
 import SocialMedia from '@/components/widgets/Social Media/SocialMedia'
-import CheckButton from '@/components/shared/buttons/Check Button/CheckButton'
-import ContentFilter from '@/components/shared/Content Filter/ContentFilter'
 import BlogGallery from '@/components/widgets/Blog Gallery/BlogGallery'
 import RecommendationForm from '@/components/widgets/Recommendation Form/RecommendationForm'
+import CheckButton from '@/components/shared/buttons/Check Button/CheckButton'
+import ContentFilter from '@/components/shared/Content Filter/ContentFilter'
+import Crumb from '@/components/shared/Crumb/Crumb'
 
-const Blog: React.FC = () => {
-  const buttons = [
-    "Все",
-    "Ремонт квартир",
-    "Строительство домов",
-    "Полезное"
-  ];
+import pseudoVid from '../../../../../public/assets/img/pseudo videos/pseudoVid.png'
+
+function Blog() {
+  const buttons = ['Все', 'Ремонт квартир', 'Строительство домов', 'Полезное']
+
+  const path = ['Блог']
+  const links = ['/pages/dashboard/blog']
 
   return (
-    <main className="flex flex-col items-center w-full min-h-screen">
-      <div className="w-full flex flex-col items-start p-4">
-        <p className="text-left mb-2">
-          Делимся полезными идеями и раскрываем секреты ремонта и строительства
-        </p>
-        <h1 className="text-2xl font-bold mb-4">Полезные статьи</h1>
-        <ContentFilter buttons={buttons} />
-      </div>
-      <div className="flex flex-col items-center w-full">
-        <div className="flex flex-col items-center w-full max-w-7xl">
-          <BlogGallery />
-          <RecommendationForm />
+    <main className="flex w-full flex-col items-start">
+      <Crumb path={path} links={links} />
+      <div className="flex w-full flex-col items-start gap-7">
+        <div className="flex w-full flex-col items-start">
+          <p className="mb-2 text-left">
+            Делимся полезными идеями и раскрываем секреты ремонта и строительства
+          </p>
+          <h1 className="heading">Полезные статьи</h1>
         </div>
-        <CheckButton text="Показать больше" link="/blog" />
+        <ContentFilter buttons={buttons} />
+        <div className="flex w-full flex-col items-center gap-8">
+          <div className="flex h-full flex-row gap-12">
+            <BlogGallery />
+            <RecommendationForm />
+            {/*<div className="w-2/3">*/}
+            {/*</div>*/}
+            {/*<div className="w-1/3 h-full">*/}
+            {/*</div>*/}
+          </div>
+          <div className="button_container h-16 w-full">
+            <CheckButton text="Показать больше" link="/blog" />
+          </div>
+        </div>
       </div>
 
       <SocialMedia />
 
       <Image src={pseudoVid} alt="pseudo video" />
 
-      <FaqSection/>
+      <FaqSection />
 
-      <Consulting/>
+      <Consulting />
 
-      <SeoPart/>
+      <SeoPart />
     </main>
-  );
-};
+  )
+}
 
-export default Blog;
+export default Blog

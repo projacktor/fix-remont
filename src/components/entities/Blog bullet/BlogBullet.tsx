@@ -12,15 +12,16 @@ interface BlogBulletProps {
 
 const BlogBullet: React.FC<BlogBulletProps> = ({ section, link, text }) => {
   return (
-    <div className="single_blog_bullet h-84 rounded-lg bg-cover">
-      <Image src={bg as string} alt="blog photo" className="h-full w-max" />
-      <div className="relative bottom-72 left-4 flex max-h-max max-w-max items-center justify-center rounded-full bg-gray-900 p-4">
-        <p className="text-xs font-semibold text-white">{section}</p>
-      </div>
-      <Link href={`/blog/${link}`}>
-        <p className="relative bottom-40 left-8 w-80 text-xl font-semibold text-white underline">
-          {text}
-        </p>
+    <div className="relative rounded-lg">
+      <Image src={bg as string} alt="blog photo z-10" width={440} />
+      <p className="absolute bottom-60 left-8 z-20 flex max-h-max max-w-max items-center justify-center rounded-full bg-color-dark px-5 py-3 text-xs font-semibold text-white">
+        {section}
+      </p>
+      <Link
+        href={`/blog/${link}`}
+        className={`absolute bottom-7 left-8 z-20 block w-96 text-xl font-semibold text-white underline`}
+      >
+        {text}
       </Link>
     </div>
   )

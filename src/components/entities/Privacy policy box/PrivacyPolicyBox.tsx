@@ -1,21 +1,22 @@
-import React from 'react';
+import React from 'react'
+import Link from 'next/link'
 
 interface PrivacyPolicyBoxProps {
-  color: string;
+  color: string
 }
 
 const PrivacyPolicyBox: React.FC<PrivacyPolicyBoxProps> = ({ color }) => {
-  const textStyle = {
-    color: color,
-  };
   return (
-    <div className="flex items-center text-sm" style={textStyle}>
-      <input type="checkbox" id="consent" className="w-4 h-4 mr-2" />
-      <label htmlFor="consent">
-        Согласен с условиями <a href="#" className="underline">Политики конфиденциальности данных</a>
+    <div className={`flex items-center text-sm text-[${color}]`}>
+      <input type="checkbox" id="consent" className="mr-2 h-4 w-4" />
+      <label htmlFor="consent" className="text-xs">
+        Согласен с условиями{' '}
+        <Link href="#" className="underline hover:opacity-70">
+          Политики конфиденциальности данных
+        </Link>
       </label>
     </div>
-  );
-};
+  )
+}
 
-export default PrivacyPolicyBox;
+export default PrivacyPolicyBox

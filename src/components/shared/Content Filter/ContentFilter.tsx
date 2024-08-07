@@ -1,19 +1,22 @@
-import React from 'react';
+import React from 'react'
 
 interface ContentFilterProps {
-  buttons: string[];
+  buttons: string[]
 }
 
 const ContentFilter: React.FC<ContentFilterProps> = ({ buttons }) => {
   return (
-    <div className="flex justify-around items-center w-1/3 gap-10">
+    <div className="flex items-center justify-around gap-10">
       {buttons.map((text, index) => (
-        <button key={index} className="bg-gray-200 p-2 rounded-full">
-          <p>{text}</p>
+        <button
+          key={index}
+          className="rounded-full bg-gray-200 p-3 text-xs active:bg-color-dark active:text-white"
+        >
+          {text}
         </button>
       ))}
     </div>
-  );
-};
+  )
+}
 
-export default ContentFilter;
+export default ContentFilter

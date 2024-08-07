@@ -16,12 +16,12 @@ import Crumb from '@/components/shared/Crumb/Crumb'
 
 const Work1: React.FC = () => {
   const path = ['Портфолио', 'Дом из кирпича 560 м2 на Барвихе']
-  const links = ['/pages/dashboard/portfolio', '/pages/dashboard/portfolio/works' ]
+  const links = ['/pages/dashboard/portfolio', '/pages/dashboard/portfolio/works']
   return (
     <main className="flex h-full w-full flex-col">
       <div className="flex w-full flex-col items-center">
         <div className="flex w-full flex-col items-start gap-4 p-4">
-          <Crumb path={path} links={links}/>
+          <Crumb path={path} links={links} />
           <h1 className="heading">Дом из кирпича 560 м2 на Барвихе</h1>
           <div className="flex flex-row items-center justify-around gap-8">
             <Minibar desc_name="Сроки" desc_content="15 дней" />
