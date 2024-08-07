@@ -7,7 +7,7 @@ import mainEng from '../../../../public/assets/img/mainEngPhoto.png'
 function EngConsulting() {
   const handleSave = () => {}
   return (
-    <div className="flex w-full flex-col gap-12">
+    <div className="flex w-full flex-col items-center gap-12">
       <div className="flex w-11/12 flex-row items-center justify-between">
         <div className="flex flex-col gap-4 space-y-4 text-start">
           <div>
@@ -32,11 +32,14 @@ function EngConsulting() {
           </div>
         </div>
       </div>
-      <form className="flex w-full flex-col items-start justify-around gap-3" onSubmit={handleSave}>
+      <form
+        className="flex w-11/12 flex-col items-start justify-around gap-3"
+        onSubmit={handleSave}
+      >
         <label id="contact-method" className="text-sm font-medium">
           Как с нами связаться?
         </label>
-        <div className="flex w-11/12 flex-row items-center justify-around gap-16">
+        <div className="flex w-full flex-row items-center justify-around gap-16">
           <select id="contact-method" className="w-1/3 rounded-full bg-gray-100 p-6">
             <option>Написать в WhatsApp</option>
             <option>Написать в Telegram</option>
