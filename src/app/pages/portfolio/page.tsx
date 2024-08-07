@@ -45,25 +45,37 @@ function Portfolio() {
         <div className="h-full columns-2">
           <div className="">
             <Image src={work1 as string} alt="work1" width={700} />
-            <Link href="/public" className="relative left-[2.4rem] top-[-4rem] text-yellow-500 underline">
+            <Link
+              href="/public"
+              className="relative left-[2.4rem] top-[-4rem] text-yellow-500 underline"
+            >
               Узнать стоимость
             </Link>
           </div>
           <div className="">
             <Image src={work1 as string} alt="work1" width={700} />
-            <Link href="/public" className="relative left-[2.4rem] top-[-4rem] text-yellow-500 underline">
+            <Link
+              href="/public"
+              className="relative left-[2.4rem] top-[-4rem] text-yellow-500 underline"
+            >
               Узнать стоимость
             </Link>
           </div>
           <div className="">
             <Image src={work2 as string} alt="work2" width={700} />
-            <Link href="/public" className="relative left-[2.4rem] top-[-4rem] text-yellow-500 underline">
+            <Link
+              href="/public"
+              className="relative left-[2.4rem] top-[-4rem] text-yellow-500 underline"
+            >
               Узнать стоимость
             </Link>
           </div>
           <div className="">
             <Image src={work2 as string} alt="work2" width={700} />
-            <Link href="/public" className="relative left-[2.4rem] top-[-4rem] text-yellow-500 underline">
+            <Link
+              href="/public"
+              className="relative left-[2.4rem] top-[-4rem] text-yellow-500 underline"
+            >
               Узнать стоимость
             </Link>
           </div>
