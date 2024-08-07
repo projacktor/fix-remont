@@ -35,10 +35,6 @@ function Blog() {
           <div className="flex h-full flex-row gap-12">
             <BlogGallery />
             <RecommendationForm />
-            {/*<div className="w-2/3">*/}
-            {/*</div>*/}
-            {/*<div className="w-1/3 h-full">*/}
-            {/*</div>*/}
           </div>
           <div className="button_container h-16 w-full">
             <CheckButton text="Показать больше" link="/blog" />
