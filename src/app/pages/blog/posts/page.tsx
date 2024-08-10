@@ -1,5 +1,5 @@
 'use client'
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import Image from 'next/image'
 
 import blog1_main from '../../../../../public/assets/img/blog1_calculator.png'
@@ -9,10 +9,19 @@ import RecommendationForm from '@/components/widgets/Recommendation Form/Recomme
 import SeoPart from '@/components/widgets/SEO/SeoPart'
 import Consulting from '@/components/widgets/Consulting/Consulting'
 import PostsGallery from '@/components/widgets/Post Gallery/PostGallery'
+import Crumb from '@/components/shared/Crumb/Crumb'
 
 function Post1() {
+  const [postName, setPostName] = useState('')
+  useEffect(() => {
+    const name = document.querySelector('.heading')?.textContent
+    setPostName(name || '')
+  }, [])
+  const path = ['Блог', postName]
+  const links = ['/pages/dashboard/blog', '/pages/dashboard/blog/posts']
   return (
     <main className="flex w-full flex-col items-center gap-12">
+      <Crumb path={path} links={links} />
       <div className="flex w-full flex-row justify-between gap-8">
         <div className="flex w-2/3 flex-col items-center gap-6">
           <h1 className="heading w-full text-left">
