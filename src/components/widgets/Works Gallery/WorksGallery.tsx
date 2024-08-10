@@ -7,7 +7,7 @@ import Link from 'next/link'
 
 function WorksGallery() {
   return (
-    <div className="ml-2 flex h-[80vh] flex-col items-start gap-8">
+    <div className="flex h-[80vh] flex-col items-start gap-8">
       <div className="flex flex-row items-center gap-8">
         <div id="variant1">
           <Image src={work1 as string} alt="work1" layout="responsive" />
@@ -22,7 +22,7 @@ function WorksGallery() {
           </Link>
         </div>
       </div>
-      <div className="-mt-12 flex w-full items-center justify-center">
+      <div className="flex w-full items-center justify-center">
         <Scroller />
       </div>
     </div>
