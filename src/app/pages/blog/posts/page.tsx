@@ -27,8 +27,7 @@ function Post1() {
             роль в обеспечении комфорта и эффективности современных деловых встреч.
           </p>
           <div className="flex justify-between gap-12">
-            <Image src={blog1_2} alt="gallery_photo_1" width={450} />
-            <Image src={blog1_2} alt="gallery_photo_2" width={450} />
+            <Image src={blog1_2} alt="gallery_photo_1" />
           </div>
           <p className="text-lg leading-6">
             <b className="text-black">Качество: каждая деталь важна</b>
@@ -49,9 +48,7 @@ function Post1() {
             где каждая деталь имеет значение.
           </p>
           <div className="flex gap-8">
-            <Image src={blog1_2} alt="gallery_photo_1" width={350} />
-            <Image src={blog1_2} alt="gallery_photo_2" width={350} />
-            <Image src={blog1_2} alt="gallery_photo_2" width={350} />
+            <Image src={blog1_2} alt="gallery_photo_2" />
           </div>
           <p className="text-lg leading-6">
             <b className="text-black">Комфорт: создайте условия для успешных встреч</b>
@@ -66,7 +63,7 @@ function Post1() {
             устройства к системе, будь то ноутбук, смартфон или планшет. Важно, чтобы ничто не
             мешало процессу обмена информацией и идеями.
           </p>
-          <div className="button_container w-full">
+          <div className="button_container mt-10 h-20 w-full">
             <CheckButton text="Вернуться в блог" link="/blog" />
           </div>
         </div>
