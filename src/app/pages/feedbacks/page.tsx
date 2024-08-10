@@ -1,7 +1,7 @@
 'use client'
 import React from 'react'
 import Image from 'next/image'
-import pseudoVidImage from '../../../../public/assets/img/pseudo videos/pseudoVideoRybakova.png'
+
 import CheckButton from '@/components/shared/buttons/Check Button/CheckButton'
 import FeedbacksGallery from '@/components/widgets/Feedbacks gallery/FeedbacksGallery'
 import WorksGallery from '@/components/widgets/Works Gallery/WorksGallery'
@@ -9,6 +9,8 @@ import ToBlog from '@/components/widgets/To blog/ToBlog'
 import Consulting from '@/components/widgets/Consulting/Consulting'
 import SeoPart from '@/components/widgets/SEO/SeoPart'
 import Crumb from '@/components/shared/Crumb/Crumb'
+
+import pseudoVidImage from '../../../../public/assets/img/pseudo videos/pseudoVideoRybakova.png'
 
 const Feedbacks: React.FC = () => {
   const path = ['Отзывы']
