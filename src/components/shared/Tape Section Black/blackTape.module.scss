@@ -1,0 +1,8 @@
+.paraLen {
+  width: 27rem;
+  p,
+  li {
+    @apply text-sm font-normal;
+    max-width: 27rem;
+  }
+}

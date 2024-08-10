@@ -1,0 +1,9 @@
+.whiteTapes div {
+  @apply gap-10 p-8;
+  width: 27rem;
+}
+.whiteTapes p {
+  @apply max-w-20 text-base font-medium leading-tight tracking-tighter;
+}
+
+/*# sourceMappingURL=about.module.css.map */

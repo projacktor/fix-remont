@@ -1,0 +1,10 @@
+.paraLen {
+  width: 27rem;
+}
+.paraLen p,
+.paraLen li {
+  @apply text-sm font-normal;
+  max-width: 27rem;
+}
+
+/*# sourceMappingURL=blackTape.module.css.map */
