@@ -13,7 +13,7 @@ function MegaboxSection() {
     <div className="flex min-h-screen w-full flex-row items-center gap-6">
       <div className={`relative flex h-auto rounded-3xl bg-cover`}>
         <Image src={bg as string} alt="backgraund" />
-        <p className="absolute left-14 top-64 w-3/5 text-4xl font-medium leading-tight tracking-tight text-white">
+        <p className="absolute left-14 top-64 w-80 text-4xl font-medium leading-tight tracking-tight text-white">
           Первый в России <br />
           онлайн-сервис <br />
           по ремонту и строительству <br />с фиксированной стоимостью
