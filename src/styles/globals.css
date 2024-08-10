@@ -6,7 +6,7 @@ body {
 }
 
 main {
-  @apply flex flex-col gap-8 px-8;
+  @apply flex flex-col gap-8 px-14;
 }
 
 input[type='checkbox']:checked {

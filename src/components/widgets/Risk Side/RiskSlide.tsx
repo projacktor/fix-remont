@@ -13,18 +13,18 @@ interface RiskSlideProps {
 
 function RiskSlide({ button_text, background }: RiskSlideProps) {
   return (
-    <div className="relative flex flex-row items-center justify-around gap-4">
-      <div className="flex h-full w-1/2 flex-col items-center">
-        <div className="mt-4">
-          <Image src={creditCardImg as string} alt="credit_card" />
-        </div>
-        <div className="mt-4">
-          <Image src={creditBullets as string} alt="bullets" />
-        </div>
+    <div className="relative flex flex-row items-center justify-center gap-4">
+      <div className="flex w-1/2 flex-col justify-around self-stretch">
+        {/*<div className="">*/}
+        {/*</div>*/}
+        <Image src={creditCardImg as string} alt="credit_card" />
+        <Image src={creditBullets as string} alt="bullets" />
+        {/*  <div className="">*/}
+        {/*</div>*/}
       </div>
-      <div className="w-1/2">
-        <Image src={background} alt="brush_picture" className="z-10" />
-        <div className={`button_container relative bottom-28 left-16 z-20 w-64`}>
+      <div className="flex h-auto w-1/2">
+        <Image src={background} alt="brush_picture" className="relative" />
+        <div className={`button_container absolute bottom-14 right-96 w-64`}>
           <OrangeButton text={button_text} className="w-full py-6" link={``} />
         </div>
       </div>

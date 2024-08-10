@@ -30,7 +30,7 @@ import pseudoVid from '../../public/assets/img/pseudo videos/pseudoVid.png'
 
 export default function Home() {
   return (
-    <main className="home_content">
+    <main className="flex flex-col items-center">
       <Megabox />
 
       <div className={`flex flex-row gap-4`}>
@@ -85,7 +85,7 @@ export default function Home() {
 
       <Image src={creditCard as string} alt="credit" />
 
-      <RiskSlide button_text="Рассчитать стоимость" background={riskBg} />
+      <RiskSlide button_text="Рассчитать стоимость" background={riskBg as string} />
 
       <GalleryWithFeedback />
 

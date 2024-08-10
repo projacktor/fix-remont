@@ -12,13 +12,13 @@ import PostsGallery from '@/components/widgets/Post Gallery/PostGallery'
 
 function Post1() {
   return (
-    <main className="flex flex-col items-center gap-12">
-      <div className="flex w-full flex-row gap-16">
-        <div className="flex w-2/3 flex-col gap-6">
-          <h1 className="heading">
+    <main className="flex w-full flex-col items-center gap-12">
+      <div className="flex w-full flex-row justify-between gap-8">
+        <div className="flex w-2/3 flex-col items-center gap-6">
+          <h1 className="heading w-full text-left">
             Как рассчитать стоимость <br /> через калькулятор FIX-ремонт?
           </h1>
-          <Image src={blog1_main} alt="calculator_picture" className="w-full" />
+          <Image src={blog1_main} alt="calculator_picture" />
           <p className="text-lg leading-6">
             В мире современных бизнес-коммуникаций, успешные встречи и конференции играют важную
             роль. Все чаще мы видим, как виртуальные пространства объединяют людей из разных уголков
@@ -26,9 +26,9 @@ function Post1() {
             стали незаменимой частью этой эволюции, и их аудио-визуальные системы играют ключевую
             роль в обеспечении комфорта и эффективности современных деловых встреч.
           </p>
-          <div className="flex justify-between">
-            <Image src={blog1_2} alt="gallery_photo_1" className="w-1/2" />
-            <Image src={blog1_2} alt="gallery_photo_2" className="w-1/2" />
+          <div className="flex justify-between gap-12">
+            <Image src={blog1_2} alt="gallery_photo_1" width={450} />
+            <Image src={blog1_2} alt="gallery_photo_2" width={450} />
           </div>
           <p className="text-lg leading-6">
             <b className="text-black">Качество: каждая деталь важна</b>
@@ -48,10 +48,10 @@ function Post1() {
             высоким разрешением. Это особенно важно при проведении видеоконференций и презентаций,
             где каждая деталь имеет значение.
           </p>
-          <div className="flex gap-4">
-            <Image src={blog1_2} alt="gallery_photo_1" className="w-1/3" />
-            <Image src={blog1_2} alt="gallery_photo_2" className="w-1/3" />
-            <Image src={blog1_2} alt="gallery_photo_2" className="w-1/3" />
+          <div className="flex gap-8">
+            <Image src={blog1_2} alt="gallery_photo_1" width={350} />
+            <Image src={blog1_2} alt="gallery_photo_2" width={350} />
+            <Image src={blog1_2} alt="gallery_photo_2" width={350} />
           </div>
           <p className="text-lg leading-6">
             <b className="text-black">Комфорт: создайте условия для успешных встреч</b>
@@ -70,24 +70,18 @@ function Post1() {
             <CheckButton text="Вернуться в блог" link="/blog" />
           </div>
         </div>
-        <div className="relative h-[360vh] w-1/3 flex-shrink-0">
+        <div className="relative w-1/3">
           <div className="sticky top-5">
             <RecommendationForm />
           </div>
         </div>
       </div>
 
-      <div className="w-full">
-        <PostsGallery />
-      </div>
+      <PostsGallery />
 
-      <div className="w-full">
-        <Consulting />
-      </div>
+      <Consulting />
 
-      <div className="w-full">
-        <SeoPart />
-      </div>
+      <SeoPart />
     </main>
   )
 }

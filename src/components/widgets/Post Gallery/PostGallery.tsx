@@ -7,7 +7,7 @@ const PostsGallery: React.FC = () => {
   const param = 'calculator-guide'
 
   return (
-    <div className="flex flex-col gap-5">
+    <div className="flex w-full flex-col gap-5">
       <h1 className="heading pl-3">Также может быть интересно</h1>
       <div className="flex h-80 items-center justify-around">
         <BlogBullet
