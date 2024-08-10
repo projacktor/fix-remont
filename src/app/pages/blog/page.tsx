@@ -18,7 +18,7 @@ function Blog() {
   const buttons = ['Все', 'Ремонт квартир', 'Строительство домов', 'Полезное']
 
   const path = ['Блог']
-  const links = ['/pages/dashboard/blog']
+  const links = ['/pages/blog']
 
   return (
     <main className="flex w-full flex-col items-center">
