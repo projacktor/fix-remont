@@ -19,7 +19,7 @@ const RecommendationForm: React.FC = () => {
         </label>
         <select
           id="contact-method"
-          className="w-full rounded-full bg-color-input-d px-8 py-5 text-white"
+          className="w-full appearance-none rounded-full bg-color-input-d px-8 py-5 text-white"
         >
           <option>Написать в WhatsApp</option>
           <option>Написать в Telegram</option>
