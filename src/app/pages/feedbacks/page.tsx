@@ -1,7 +1,6 @@
 'use client'
 import React from 'react'
 import Image from 'next/image'
-import feedbacksImage from '../../../../public/assets/img/feedbacks.png'
 import pseudoVidImage from '../../../../public/assets/img/pseudo videos/pseudoVideoRybakova.png'
 import CheckButton from '@/components/shared/buttons/Check Button/CheckButton'
 import FeedbacksGallery from '@/components/widgets/Feedbacks gallery/FeedbacksGallery'
@@ -9,10 +8,14 @@ import WorksGallery from '@/components/widgets/Works Gallery/WorksGallery'
 import ToBlog from '@/components/widgets/To blog/ToBlog'
 import Consulting from '@/components/widgets/Consulting/Consulting'
 import SeoPart from '@/components/widgets/SEO/SeoPart'
+import Crumb from '@/components/shared/Crumb/Crumb'
 
 const Feedbacks: React.FC = () => {
+  const path = ['Отзывы']
+  const links = ['/pages/feedbacks']
   return (
     <main className="flex min-h-screen w-full flex-col items-center overflow-hidden">
+      <Crumb path={path} links={links} />
       <div className="w-full text-left">
         <p>С 2013 года нам доверились уже более 10 000 клиентов</p>
         <h1 className="heading">Отзывы наших клиентов</h1>
