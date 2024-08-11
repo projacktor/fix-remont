@@ -3,16 +3,16 @@ import ceoPhoto from '../../../../public/assets/img/ceoPhoto.png'
 
 function CEOgreeting() {
   return (
-    <div className="flex items-center gap-8">
+    <div className="flex items-center gap-16 leading-tight tracking-tighter">
       <div className="h-auto w-1/2">
         <Image
           alt="CEO_photo"
           src={ceoPhoto}
-          className="h-5/6 w-full translate-y-6 transform object-cover"
+          // className="w-full"
         />
       </div>
-      <div className="flex w-1/2 flex-col gap-2">
-        <h2 className="heading">
+      <div className="flex min-h-full w-1/2 flex-col items-start justify-evenly self-stretch font-medium">
+        <h2 className="heading max-w-[30rem]">
           Здравствуйте! <span className="orange-bold">Меня зовут Фанис Хасанов</span> и я
           приветствую вас на нашем сайте!
         </h2>
@@ -30,7 +30,7 @@ function CEOgreeting() {
           <li>Ежедневно она тратила 2-3 часа на пробки, езду и покупки</li>
           <li>Мастера постоянно косячили, а смета непрерывно росла</li>
         </ul>
-        <p className="mt-4 text-xl">
+        <p className="text-xl">
           Конечно, я принял решение сменить подрядчиков. Стал искать компании, предлагающие ремонт
           по фиксированное цене и забирающие всю ответственность на себя. Таких компании на рынке не
           было. Поэтому и родилась идея создать FIX-ремонт.

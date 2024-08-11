@@ -42,7 +42,7 @@ function About() {
   const path = ['О компании']
   const links = ['/pages/about']
   return (
-    <main className="flex flex-col items-center justify-around gap-4">
+    <main className="flex flex-col items-center justify-around gap-12">
       <Crumb path={path} links={links} />
       <h1 className="heading w-full text-left">О компании FIX-ремонт</h1>
 
@@ -64,9 +64,9 @@ function About() {
 
       <CEOgreeting />
 
-      <div className="Russia_slider text-center">
-        <div className="w-full space-y-2 text-left tracking-tighter">
-          <h2 className="heading">
+      <div className="relative">
+        <div className="absolute top-7 w-full space-y-4 text-left tracking-tighter">
+          <h2 className="text-6xl font-semibold leading-tight tracking-tighter">
             Работаем с клиентами по всей <br /> территории Российской Федерации
           </h2>
           <p className="text-lg font-medium">Несколько бригад в каждом регионе страны</p>
