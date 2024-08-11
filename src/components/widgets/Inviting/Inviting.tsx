@@ -5,6 +5,8 @@ import CheckButton from '@/components/shared/buttons/Check Button/CheckButton'
 import inviteL from '../../../../public/assets/img/invitingLeft.png'
 import invitingRight from '../../../../public/assets/img/invitingRight.png'
 
+// TODO: add media query to change the heading font-size to 6xl
+
 function Inviting() {
   return (
     <div className="flex w-full items-center justify-evenly gap-8">

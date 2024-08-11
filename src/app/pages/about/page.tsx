@@ -66,7 +66,7 @@ function About() {
 
       <div className="relative">
         <div className="absolute top-7 w-full space-y-4 text-left tracking-tighter">
-          <h2 className="text-6xl font-semibold leading-tight tracking-tighter">
+          <h2 className="heading6">
             Работаем с клиентами по всей <br /> территории Российской Федерации
           </h2>
           <p className="text-lg font-medium">Несколько бригад в каждом регионе страны</p>
