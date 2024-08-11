@@ -14,6 +14,7 @@ import Responsibility from '@/components/widgets/Responsibility/Responsibility'
 import GroupPhoto from '@/components/widgets/GroupPhoto/GroupPhoto'
 import TapeSection from '@/components/shared/Tape Section/TapeSection'
 import TapeSectionBlack from '@/components/shared/Tape Section Black/TapeSectionBlack'
+import Crumb from '@/components/shared/Crumb/Crumb'
 
 import src1 from '../../../../public/assets/svg/digit icons/15000.svg'
 import src2 from '../../../../public/assets/svg/digit icons/998.svg'
@@ -21,7 +22,6 @@ import src3 from '../../../../public/assets/svg/digit icons/10.svg'
 import pseudoVid from '../../../../public/assets/img/pseudo videos/pseudoVid.png'
 import russia from '../../../../public/assets/img/Russia.png'
 import materialsImg from '../../../../public/assets/img/creditCardMaterials.png'
-import Crumb from '@/components/shared/Crumb/Crumb'
 
 function About() {
   const blackBullet1 = <p>Ремонт, строительство и обслуживание квартир, жилых домов под ключ</p>
