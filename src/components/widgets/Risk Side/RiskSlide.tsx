@@ -15,12 +15,8 @@ function RiskSlide({ button_text, background }: RiskSlideProps) {
   return (
     <div className="relative flex flex-row items-center justify-center gap-4">
       <div className="flex w-1/2 flex-col justify-around self-stretch">
-        {/*<div className="">*/}
-        {/*</div>*/}
         <Image src={creditCardImg as string} alt="credit_card" />
         <Image src={creditBullets as string} alt="bullets" />
-        {/*  <div className="">*/}
-        {/*</div>*/}
       </div>
       <div className="flex h-auto w-1/2">
         <Image src={background} alt="brush_picture" className="relative" />
