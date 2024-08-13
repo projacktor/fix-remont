@@ -11,7 +11,7 @@ function CheckFeedbacks() {
       <div className="flex flex-row items-center gap-24">
         <div className="flex h-full flex-col gap-1">
           <div className="relativeh-full">
-            <Image src={feedback as string} alt="response_picture" height="450" />
+            <Image src={feedback as unknown as string} alt="response_picture" height="450" />
           </div>
           <div className="w-full">
             <Scroller />
@@ -19,7 +19,7 @@ function CheckFeedbacks() {
         </div>
         <div className="flex h-full w-3/5 flex-col gap-10">
           <div className="relative h-full w-full">
-            <Image src={videoE as string} alt="pseudo_vid" />
+            <Image src={videoE as unknown as string} alt="pseudo_vid" />
           </div>
           <div className="w-full">
             <Scroller />
