@@ -13,7 +13,7 @@ interface BlogBulletProps {
 const BlogBullet: React.FC<BlogBulletProps> = ({ section, link, text }) => {
   return (
     <div className="relative rounded-lg">
-      <Image src={bg as string} alt="blog photo z-10" width={440} />
+      <Image src={bg as unknown as string} alt="blog photo z-10" width={440} />
       <p className="absolute bottom-60 left-8 z-20 flex max-h-max max-w-max items-center justify-center rounded-full bg-color-dark px-5 py-3 text-xs font-semibold text-white">
         {section}
       </p>

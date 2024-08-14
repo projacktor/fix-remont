@@ -20,23 +20,23 @@ const SocialMedia = () => {
           target="_blank"
           rel="noopener noreferrer"
         >
-          <Image className="w-full" src={videoY as string} alt="video" />
+          <Image className="w-full" src={videoY as unknown as string} alt="video" />
         </a>
         <div className="flex w-1/2 flex-col items-center justify-between gap-10">
           <SocialMediaBullet
-            image={vkIcon as string}
+            image={vkIcon as unknown as string}
             name={'ВКонтакте'}
             sub={'1 500'}
             link={'https://vk.com/fix.remoont?from=search'}
           />
           <SocialMediaBullet
-            image={instagramIcon as string}
+            image={instagramIcon as unknown as string}
             name={'Instagram'}
             sub={'15 500'}
             link={'https://instagram.com/fix_remont.ru'}
           />
           <SocialMediaBullet
-            image={telegramIcon as string}
+            image={telegramIcon as unknown as string}
             name={'Telegram'}
             sub={'500'}
             link={'https://t.me/FIX_REMONT_bot'}

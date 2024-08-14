@@ -21,7 +21,7 @@ const SingleFaq: React.FC<SingleFaqProps> = ({ text }) => {
         className={`${style.plate} flex w-full items-center justify-between rounded-3xl bg-white p-5 transition-all hover:bg-gray-200`}
       >
         <h4 className="text-2xl font-bold">{text}</h4>
-        <Image className="" src={linkImg as string} alt="arrow" width={40} />
+        <Image className="" src={linkImg as unknown as string} alt="arrow" width={40} />
       </button>
       {isOpen && (
         <div className="mt-2 rounded-lg bg-white p-3">

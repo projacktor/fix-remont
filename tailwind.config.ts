@@ -27,11 +27,11 @@ const config: {
         'gradient-conic': 'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))'
       },
       colors: {
-        'color-bg-gray': '#EFEFEF',
-        'color-orange': '#f9af15',
         'color-dark': '#161616',
-        'color-back': '#FAFAFA',
-        'color-input-d': '#4A4A4A'
+        'color-orange': '#FF7F00',
+        'color-bg-gray': '#E5E5E5',
+        'color-back': '#FAFAFA'
+        // 'color-input-d': '#4A4A4A',
       }
     }
   },

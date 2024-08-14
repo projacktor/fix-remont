@@ -63,7 +63,11 @@ function Planner({
         </div>
       </div>
       <div className="flex w-1/2 flex-col items-start justify-center">
-        <Image src={planner_img as string} alt="FIX-remont_planner" className="w-11/12" />
+        <Image
+          src={planner_img as unknown as string}
+          alt="FIX-remont_planner"
+          className="w-11/12"
+        />
         <p className="mt-4 text-2xl font-medium text-white">{p2_text}</p>
       </div>
     </div>

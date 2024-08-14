@@ -19,7 +19,7 @@ function FaqSection() {
           наших клиентов
         </h1>
         <div className="order-1 flex max-h-[14.2rem] w-1/2 flex-row items-center justify-around rounded-3xl bg-color-dark">
-          <Image src={photo as string} alt={'CEO photo picture'} className={`z-10`} />
+          <Image src={photo as unknown as string} alt={'CEO photo picture'} className={`z-10`} />
           <div className={`z-20 flex w-max flex-col items-start justify-around gap-4`}>
             <h4 className="text-3xl font-semibold leading-7 text-white">Фанис Хасанов</h4>
             <p className="text-sm font-light leading-normal text-white">
@@ -34,10 +34,20 @@ function FaqSection() {
                 8 (800) 000-00-00
               </Link>
               <Link href="#">
-                <Image className="" src={whatsappIco as string} alt="Whatsapp" width={30} />
+                <Image
+                  className=""
+                  src={whatsappIco as unknown as string}
+                  alt="Whatsapp"
+                  width={30}
+                />
               </Link>
               <Link href="#">
-                <Image className="" src={telegramIco as string} alt="Telegram" width={30} />
+                <Image
+                  className=""
+                  src={telegramIco as unknown as string}
+                  alt="Telegram"
+                  width={30}
+                />
               </Link>
             </div>
           </div>

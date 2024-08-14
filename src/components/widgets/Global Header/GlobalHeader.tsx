@@ -11,7 +11,7 @@ const Header: React.FC = () => {
   return (
     <header className="flex w-full flex-row items-center justify-around p-4">
       <div className="flex flex-row items-center justify-around gap-4">
-        <Symbol header_src={headerLogo as string} lineColor="rgba(0, 0, 0, 0.5)" />
+        <Symbol header_src={headerLogo as unknown as string} lineColor="rgba(0, 0, 0, 0.5)" />
         <div className="flex h-12 w-px justify-center border-l border-dashed border-gray-400 opacity-50"></div>
         <ContactsContainer />
       </div>
@@ -22,11 +22,11 @@ const Header: React.FC = () => {
         <p className="text-base font-medium leading-none tracking-tight text-white">
           Личный кабинет
         </p>
-        <Image alt="profile_icon" className="order-2" src={profileIcon as string} />
+        <Image alt="profile_icon" className="order-2" src={profileIcon as unknown as string} />
       </button>
 
       <button className="order-4 flex size-20 flex-col items-center justify-center rounded-3xl border-black bg-white">
-        <Image alt="menu button" className="h-8 w-8" src={menuBar as string} />
+        <Image alt="menu button" className="h-8 w-8" src={menuBar as unknown as string} />
       </button>
     </header>
   )

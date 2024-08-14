@@ -10,13 +10,13 @@ function WorksGallery() {
     <div className="flex h-[80vh] flex-col items-start gap-8">
       <div className="flex flex-row items-center gap-8">
         <div id="variant1">
-          <Image src={work1 as string} alt="work1" layout="responsive" />
+          <Image src={work1 as unknown as string} alt="work1" layout="responsive" />
           <Link href="#" className={`relative bottom-14 left-9 font-normal text-color-orange`}>
             Узнать стоимость
           </Link>
         </div>
         <div id="variant2">
-          <Image src={work2 as string} alt="work2" layout="responsive" />
+          <Image src={work2 as unknown as string} alt="work2" layout="responsive" />
           <Link href="#" className={`relative bottom-14 left-9 font-normal text-color-orange`}>
             Узнать стоимость
           </Link>

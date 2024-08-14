@@ -26,7 +26,7 @@ function ToBlog() {
         />
         <Image
           className="rounded-2xl bg-cover bg-center"
-          src={bg as string}
+          src={bg as unknown as string}
           alt="pseudo vid"
           width={450}
         />

@@ -59,7 +59,7 @@ function About() {
       </div>
 
       <div className="pseudo_vid">
-        <Image src={pseudoVid as string} alt="pseudo_video" className="h-auto w-full" />
+        <Image src={pseudoVid as unknown as string} alt="pseudo_video" className="h-auto w-full" />
       </div>
 
       <CEOgreeting />
@@ -71,7 +71,7 @@ function About() {
           </h2>
           <p className="text-lg font-medium">Несколько бригад в каждом регионе страны</p>
         </div>
-        <Image alt="Russia" src={russia as string} className="w-full" />
+        <Image alt="Russia" src={russia as unknown as string} className="w-full" />
       </div>
 
       <Inviting />
@@ -80,7 +80,10 @@ function About() {
 
       <Responsibility />
 
-      <RiskSlide button_text="Рассчитать стоимость" background={materialsImg as string} />
+      <RiskSlide
+        button_text="Рассчитать стоимость"
+        background={materialsImg as unknown as string}
+      />
 
       <SocialMedia />
 

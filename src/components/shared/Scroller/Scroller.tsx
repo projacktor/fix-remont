@@ -16,18 +16,18 @@ function Scroller() {
     <div className="flex w-full flex-row items-center justify-between">
       <div className="order-1 flex flex-row justify-around gap-4">
         <button onClick={moveLeft} className="border-none bg-transparent">
-          <Image src={movingArrow as string} alt="move left" className="leftMover" />
+          <Image src={movingArrow as unknown as string} alt="move left" className="leftMover" />
         </button>
         <button onClick={moveRight} className="border-none bg-transparent">
           <Image
-            src={movingArrow as string}
+            src={movingArrow as unknown as string}
             alt="move right"
             className="rightMover rotate-180 transform"
           />
         </button>
       </div>
       <div className="order-2">
-        <Image src={scroller as string} alt="scroller" width="95" />
+        <Image src={scroller as unknown as string} alt="scroller" width="95" />
       </div>
     </div>
   )

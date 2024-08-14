@@ -13,7 +13,10 @@ function Footer() {
   return (
     <footer className="z-50 flex h-28 w-full flex-row items-center justify-around gap-8 rounded-t-2xl bg-color-dark p-10">
       <div className={`${style.white_text} order-1`}>
-        <Symbol header_src={footerLogo as string} lineColor="rgba(255, 255, 255, 1.25)" />
+        <Symbol
+          header_src={footerLogo as unknown as string}
+          lineColor="rgba(255, 255, 255, 1.25)"
+        />
       </div>
       <p className="order-2 text-xs font-light text-white opacity-95">
         Copyright 2024. Все права защищены

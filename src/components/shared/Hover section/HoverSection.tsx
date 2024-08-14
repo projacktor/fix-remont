@@ -23,7 +23,7 @@ function HoverSection({ name, text, link }: HoverSectionProps) {
       </div>
       <Image
         alt="arrow"
-        src={arrow as string}
+        src={arrow as unknown as string}
         width="40"
         height="40"
         className={`${style.arrow} relative bottom-4 left-32`}
