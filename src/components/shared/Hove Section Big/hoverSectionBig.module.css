@@ -1,0 +1,22 @@
+.revert span,
+.revert .h {
+  opacity: 0;
+}
+.revert:hover {
+  background-position: center;
+  background-size: cover;
+  background-image: url("../../../../public/assets/img/sectionBackground.png");
+}
+.revert:hover .arrow {
+  content: url("../../../../public/assets/svg/revertLinkImg.svg");
+}
+.revert:hover span,
+.revert:hover .h {
+  opacity: 100%;
+}
+
+.lists ul {
+  @apply ml-5 list-disc;
+}
+
+/*# sourceMappingURL=hoverSectionBig.module.css.map */

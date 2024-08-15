@@ -1,0 +1,25 @@
+.revert {
+  span,
+  .h {
+    opacity: 0;
+  }
+
+  &:hover {
+    background-position: center;
+    background-size: cover;
+    background-image: url('../../../../public/assets/img/sectionBackground.png');
+
+    .arrow {
+      content: url('../../../../public/assets/svg/revertLinkImg.svg');
+    }
+
+    span,
+    .h {
+      opacity: 100%;
+    }
+  }
+}
+
+.lists ul {
+  @apply ml-5 list-disc;
+}
