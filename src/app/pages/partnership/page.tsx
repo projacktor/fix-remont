@@ -30,6 +30,7 @@ import SuitSection from "@/components/widgets/Suit section/SuitSection";
 import Predict from "@/components/widgets/Predict/Predict";
 import OrganazingGallery from "@/components/widgets/Organizing Gallery/OrganazingGallery";
 import Transparency from "@/components/widgets/Transparency/Transparency";
+import Reasons from "@/components/widgets/Reasons/Reasons";
 
 const Partnership = () => {
   return (
@@ -144,13 +145,13 @@ const Partnership = () => {
 
     <RiskSlide button_text="Рассчитать стоимость" background={materialsImg as string}/>
 
-    {/*<ReasonsList*/}
-    {/*    head_text={*/}
-    {/*        <h1>*/}
-    {/*            Избавим ваших клиентов <br/> <b>от типичных проблем</b> <br/> ремонта квартиры:*/}
-    {/*        </h1>*/}
-    {/*    }*/}
-    {/*/>*/}
+    <Reasons
+        head_text={
+            <h1 className="heading">
+                Избавим ваших клиентов <br/> <span className="orange-bold">от типичных проблем</span> <br/> ремонта квартиры:
+            </h1>
+        }
+    />
 
     <GalleryWithFeedback/>
 
