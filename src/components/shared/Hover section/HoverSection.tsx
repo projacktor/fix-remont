@@ -15,7 +15,7 @@ function HoverSection({ name, text, link }: HoverSectionProps) {
   return (
     <button
       onClick={openLink(link)}
-      className={`${style.revert} flex w-[14rem] flex-col items-start gap-1 rounded-3xl border bg-color-bg-gray px-7 text-color-dark hover:text-white`}
+      className={`${style.revert} flex w-[13rem] flex-col items-start gap-1 rounded-3xl border bg-color-bg-gray px-7 text-color-dark hover:text-white`}
     >
       <div className={`mt-7 flex flex-col items-start gap-2`}>
         <h3 className="max-w-4 text-left text-xl font-medium leading-5">{name}</h3>

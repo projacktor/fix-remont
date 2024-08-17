@@ -1,95 +1,127 @@
+'use client'
 import React from 'react'
-import openLink from '@/components/functions/openLink'
-import OrangeButton from '@/components/shared/buttons/OrangeButton/OrangeButton'
-import HomeBullets from '@/components/widgets/HomeBullets/HomeBullets'
-import Suit from '@/components/widgets/Suit/Suit'
-import Predict from '@/components/widgets/Predict/Predict'
-import Planner from '@/components/widgets/Planner/Planner'
-import OrganizationGallery from '@/components/widgets/OrganizationGallery/OrganizationGallery'
-import Transparency from '@/components/widgets/Transparency/Transparency'
-import Risk from '@/components/widgets/Risk/Risk'
-import ReasonsList from '@/components/widgets/ReasonsList/ReasonsList'
-import WorksGallery from '@/components/widgets/WorksGallery/WorksGallery'
-import CheckFeedbacks from '@/components/widgets/CheckFeedbacks/CheckFeedbacks'
-import Presentation from '@/components/widgets/Presentation/Presentation'
-import Responsibility from '@/components/widgets/Responsibility/Responsibility'
-import SocialMedia from '@/components/widgets/SocialMedia/SocialMedia'
-import ToBlog from '@/components/widgets/ToBlog/ToBlog'
-import FAQ from '@/components/widgets/FAQ/FAQ'
-import EngConsulting from '@/components/widgets/EngConsulting/EngConsulting'
-import SeoDiv from '@/components/widgets/SeoDiv/SeoDiv'
+import Image from "next/image";
+import openLink from '@/functions/openLink'
 
-import linkImg from '@/public/assets/svg/linkImg.svg'
-import plannerImage from '@/public/assets/img/plannerImage2.png'
-import responseYandex from '@/public/assets/img/responseYandex.png'
-import responseOtzovik from '@/public/assets/img/responseOtzovik.png'
-import pseudoVid from '@/public/assets/img/pseudoVid.png'
-import materialsImg from '@/public/assets/img/creditCardMaterials.png'
+import plannerImage from '../../../../public/assets/img/planner img/plannerImg2.png'
+import pseudoVid from '../../../../public/assets/img/pseudo videos/pseudoVid.png'
+import materialsImg from '../../../../public/assets/img/creditCardMaterials.png'
+import SeoPart from "@/components/widgets/SEO/SeoPart";
+import Consulting from "@/components/widgets/Consulting/Consulting";
+import OrangeButton from "@/components/shared/buttons/Orange Button/OrangeButton";
+import FaqSection from "@/components/widgets/Faq Section/FaqSection";
+import ToBlog from "@/components/widgets/To blog/ToBlog";
+import SocialMedia from "@/components/widgets/Social Media/SocialMedia";
+import Responsibility from "@/components/widgets/Responsibility/Responsibility";
+import GroupPhoto from "@/components/widgets/GroupPhoto/GroupPhoto";
+import CheckFeedbacks from "@/components/widgets/CheckFeedbacks/CheckFeedbacks";
+import GalleryWithFeedback from "@/components/widgets/Gallery with feedback/GalleryWithFeedback";
+import RiskSlide from "@/components/widgets/Risk Side/RiskSlide";
+import Planner from "@/components/widgets/Planner/Planner";
+import TapeSection from "@/components/shared/Tape Section/TapeSection";
+import HoverSection from "@/components/shared/Hover section/HoverSection";
+import contactIcon from "../../../../public/assets/svg/TapeSection icons/contactIcon.svg";
+import rublIcon from "../../../../public/assets/svg/TapeSection icons/rublIcon.svg";
+import shieldIcon from "../../../../public/assets/svg/TapeSection icons/shiledIcon.svg";
+import lampIcon from "../../../../public/assets/svg/TapeSection icons/lampIcon.svg";
+import flagIcon from "../../../../public/assets/svg/TapeSection icons/flagIcon.svg";
+import bg from '../../../../public/assets/img/partnershipBackground.png'
+import SuitSection from "@/components/widgets/Suit section/SuitSection";
 
 const Partnership = () => {
   return (
-    <main className="flex flex-col gap-14">
-      <div className="h-[41rem] w-full">
-        <div className="flex w-full justify-around">
-          <div
-            id="left"
-            className="h-[40rem] w-[68%] bg-cover"
-            style={{ backgroundImage: 'url(/assets/img/partnershipBackground.png)' }}
-          >
-            <h1 className="relative left-[5rem] top-[26rem] w-[25rem] text-[40px] text-white">
-              Зарабатывайте 10% <br /> комиссию с каждой сделки FIX-ремонт
-            </h1>
+      <main className="flex flex-col gap-14">
+          <div className="h-[41rem] w-full relative">
+              <div className="flex w-full">
+                  <Image src={bg as string} alt={"background"} className="w-[69%]"/>
+                  <h1 className="absolute left-20 bottom-24 heading text-white">
+                      Зарабатывайте 10% <br/> комиссию с каждой <br/> сделки FIX-ремонт
+                  </h1>
+                  <div
+                      className="ml-5 flex h-[27rem] w-[27rem] flex-col items-center rounded-[32px] bg-color-dark p-11 justify-between"
+                  >
+                      <h2 className="leading-tighter text-white font-semibold text-2xl">
+                          Партнерская программа
+                          <br/>
+                          от первого в России
+                          <br/>
+                          онлайн-сервиса по ремонту и строительству с фиксированной ценой
+                      </h2>
+                      <div className="button_container w-full text-xs">
+                          <OrangeButton text="Зарегистрироваться, как партнёр" link=""/>
+                      </div>
+                  </div>
+              </div>
+                  <div className="flex justify-between gap-6 absolute left-[46rem] bottom-5">
+                      <HoverSection name={'Риэлторам'} link={''} text={<p>
+                          Без визитов на объект. <br/> Заезжайте в готовую <br/> квартиру уже через <br/>{' '}
+                          6-8 месяцев
+                      </p>}/>
+                      <HoverSection name={'Застройщикам'} link={''} text={<p>
+                          Без визитов на объект. <br/> Заезжайте в готовую <br/> квартиру уже через <br/>{' '}
+                          6-8 месяцев
+                      </p>}/>
+                      <HoverSection name={'Физическим лицам'} link={''} text={<p>
+                          Без визитов на объект. <br/> Заезжайте в готовую <br/> квартиру уже через <br/>{' '}
+                          6-8 месяцев
+                      </p>}/>
+                  </div>
           </div>
-          <div
-            id="right"
-            className="flex h-[22rem] w-[22rem] flex-col items-center rounded-[32px] bg-[#161616] p-[41px]"
-          >
-            <h2 className="mb-[7rem] mt-0 w-[21rem] leading-[131%] text-white">
-              Партнерская программа
-              <br />
-              от первого в России
-              <br />
-              онлайн-сервиса по ремонту и строительству с фиксированной ценой
-            </h2>
-            <OrangeButton text="Зарегистрироваться, как партнёр" link="" />
-          </div>
-        </div>
-        <div id="bottom" className="relative left-[46.5rem] top-[-13rem] w-[43.5em]">
-          <div className="flex justify-around">
-            <button
-              className="section_renovation section_box"
-              onClick={openLink('partnership/realtors')}
-            >
-              <h3 className="renovation_para">Риэлторам</h3>
-              <img className="linkImg revertImg" src={linkImg} alt="section_background" />
-            </button>
-            <button
-              className="section_building section_box"
-              onClick={openLink('partnership/builders')}
-            >
-              <h3 className="building_para">Застройщикам</h3>
-              <img className="linkImg revertImg" src={linkImg} alt="section_background" />
-            </button>
-            <button
-              className="section_box"
-              id="section_partnership"
-              onClick={openLink('partnership/persons')}
-            >
-              <h3 className="building_para">Физическим лицам</h3>
-              <img className="linkImg revertImg" src={linkImg} alt="section_background" />
-            </button>
-          </div>
-        </div>
+
+          <div className={`flex flex-row gap-3`}>
+          <TapeSection
+              svg={contactIcon as string}
+              altName={'contactIcon'}
+              text={
+                  <p>
+                      Без визитов <br/> на объект
+                  </p>
+              }
+          />
+          <TapeSection
+              svg={rublIcon as string}
+              altName={'rublIcon'}
+              text={
+                  <p>
+                      100% гарантия фиксированной <br/> сметы
+                  </p>
+              }
+          />
+          <TapeSection
+              svg={shieldIcon as string}
+              altName={'shieldIcon'}
+              text={
+                  <p>
+                      Все финансовые риски берём <br/> на себя
+                  </p>
+              }
+          />
+          <TapeSection
+              svg={lampIcon as string}
+              altName={'lampIcon'}
+              text={
+                  <p>
+                      36 готовых <br/> дизнай-проектов
+                  </p>
+              }
+          />
+          <TapeSection
+              svg={flagIcon as string}
+              altName={'flagIcon'}
+              text={
+                  <p>
+                      Всё берем на себя <br/> и работаем под ключ
+                  </p>
+              }
+          />
       </div>
 
-      <HomeBullets />
+    <SuitSection />
 
-      <Suit />
+    {/*<Predict/>*/}
 
-      <Predict />
-
-      <Planner
-        planner_img={plannerImage}
+    <Planner
+        planner_img={plannerImage as string}
         time_text="10 минут"
         p1_text="первой выплаты вознаграждения"
         step1_description="Регистрация на платформе"
@@ -101,71 +133,43 @@ const Partnership = () => {
         step4_description="Первая выплата"
         p2_text="Простая регистрация на платформе для партнёров FIX-ремонт займёт не более 2-х минут вашего времени!"
         link_text="Инструкция по регистрации"
-      />
+    />
 
-      <OrganizationGallery />
+    {/*<OrganizationGallery/>*/}
 
-      <Transparency />
+    {/*<Transparency/>*/}
 
-      <Risk button_text="Рассчитать стоимость" background={materialsImg} />
+    <RiskSlide button_text="Рассчитать стоимость" background={materialsImg as string}/>
 
-      <ReasonsList
-        head_text={
-          <h1>
-            Избавим ваших клиентов <br /> <b>от типичных проблем</b> <br /> ремонта квартиры:
-          </h1>
-        }
-      />
+    {/*<ReasonsList*/}
+    {/*    head_text={*/}
+    {/*        <h1>*/}
+    {/*            Избавим ваших клиентов <br/> <b>от типичных проблем</b> <br/> ремонта квартиры:*/}
+    {/*        </h1>*/}
+    {/*    }*/}
+    {/*/>*/}
 
-      <div id="home_works_gallery" className="flex flex-col items-center gap-8">
-        <div className="flex flex-col items-center gap-4">
-          <div id="response_names" className="text-center">
-            <p>Но лучше всего о нас расскажут</p>
-            <h1>
-              Выполненные работы <br /> и отзывы клиентов{' '}
-            </h1>
-          </div>
-          <div id="response_bullets" className="flex gap-4">
-            <a
-              className="response_bullet"
-              target="_blank"
-              href="https://yandex.ru/maps/org/fix_remont/110403249402/features/?ll=49.192026%2C55.826770&mode=search&sll=48.744609%2C55.752080&sspn=0.090294%2C0.027834&tab=features&text=%D1%84%D0%B8%D0%BA%D1%81%20%D1%80%D0%B5%D0%BC%D0%BE%D0%BD%D1%82&z=12"
-            >
-              <img alt="yandex_picture" src={responseYandex} />
-              <p>
-                <u>Смотреть отзывы на Яндекс</u>
-              </p>
-            </a>
-            <a className="response_bullet response_bullet2" target="_blank">
-              <img alt="otzovik_picture" src={responseOtzovik} />
-              <p>
-                <u>Смотреть отзывы на Отзовик</u>
-              </p>
-            </a>
-          </div>
-        </div>
-        <WorksGallery />
-      </div>
+    <GalleryWithFeedback/>
 
-      <CheckFeedbacks />
+    <CheckFeedbacks/>
 
-      <Presentation />
+    <GroupPhoto/>
 
-      <Responsibility />
+    <Responsibility/>
 
-      <SocialMedia />
+    <SocialMedia/>
 
-      <div className="pseudo_vid">
-        <img alt="pseudo_video" src={pseudoVid} className="h-auto w-full" />
+    <div className="pseudo_vid">
+    <img alt="pseudo_video" src={pseudoVid as string} className="h-auto w-full" />
       </div>
 
       <ToBlog />
 
-      <FAQ />
+      <FaqSection />
 
-      <EngConsulting />
+      <Consulting />
 
-      <SeoDiv />
+      <SeoPart />
     </main>
   )
 }
