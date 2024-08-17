@@ -18,8 +18,9 @@
   @apply bottom-0 left-0 w-full;
 }
 
-.input-filed, input[type=number]::-webkit-inner-spin-button {
-  @apply p-6 bg-color-bg-gray rounded-full border-none appearance-none;
+.input-filed,
+input[type=number]::-webkit-inner-spin-button {
+  @apply appearance-none rounded-full border-none bg-color-bg-gray p-6;
   -webkit-appearance: none;
 }
 
