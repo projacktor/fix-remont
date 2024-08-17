@@ -38,9 +38,7 @@ const Partnership = () => {
   const links = ['/pages/partnership']
   return (
     <main className="flex flex-col gap-14">
-        <div className="mb-8">
-            <Crumb path={path} links={links} />
-        </div>
+        <Crumb path={path} links={links} />
         <div className="relative h-[41rem] w-full">
         <div className="flex w-full">
           <Image src={bg as string} alt={'background'} className="w-[69%]" />
