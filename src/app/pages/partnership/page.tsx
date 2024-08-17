@@ -29,6 +29,7 @@ import bg from '../../../../public/assets/img/partnershipBackground.png'
 import SuitSection from "@/components/widgets/Suit section/SuitSection";
 import Predict from "@/components/widgets/Predict/Predict";
 import OrganazingGallery from "@/components/widgets/Organizing Gallery/OrganazingGallery";
+import Transparency from "@/components/widgets/Transparency/Transparency";
 
 const Partnership = () => {
   return (
@@ -139,7 +140,7 @@ const Partnership = () => {
 
     <OrganazingGallery/>
 
-    {/*<Transparency/>*/}
+    <Transparency/>
 
     <RiskSlide button_text="Рассчитать стоимость" background={materialsImg as string}/>
 
