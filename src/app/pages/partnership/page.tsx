@@ -31,11 +31,17 @@ import Predict from '@/components/widgets/Predict/Predict'
 import OrganazingGallery from '@/components/widgets/Organizing Gallery/OrganazingGallery'
 import Transparency from '@/components/widgets/Transparency/Transparency'
 import Reasons from '@/components/widgets/Reasons/Reasons'
+import Crumb from '@/components/shared/Crumb/Crumb'
 
 const Partnership = () => {
+  const path = ['Партнерская программа']
+  const links = ['/pages/partnership']
   return (
     <main className="flex flex-col gap-14">
       <div className="relative h-[41rem] w-full">
+        <div className="mb-8">
+          <Crumb path={path} links={links} />
+        </div>
         <div className="flex w-full">
           <Image src={bg as string} alt={'background'} className="w-[69%]" />
           <h1 className="heading absolute bottom-24 left-20 text-white">
@@ -54,7 +60,7 @@ const Partnership = () => {
             </div>
           </div>
         </div>
-        <div className="absolute bottom-5 left-[46rem] flex justify-between gap-6">
+        <div className="absolute bottom-[-1.75rem] left-[46rem] flex justify-between gap-6">
           <HoverSection
             name={'Риэлторам'}
             link={''}
