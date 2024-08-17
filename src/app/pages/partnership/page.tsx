@@ -27,6 +27,8 @@ import lampIcon from "../../../../public/assets/svg/TapeSection icons/lampIcon.s
 import flagIcon from "../../../../public/assets/svg/TapeSection icons/flagIcon.svg";
 import bg from '../../../../public/assets/img/partnershipBackground.png'
 import SuitSection from "@/components/widgets/Suit section/SuitSection";
+import Predict from "@/components/widgets/Predict/Predict";
+import OrganazingGallery from "@/components/widgets/Organizing Gallery/OrganazingGallery";
 
 const Partnership = () => {
   return (
@@ -118,7 +120,7 @@ const Partnership = () => {
 
     <SuitSection />
 
-    {/*<Predict/>*/}
+    <Predict/>
 
     <Planner
         planner_img={plannerImage as string}
@@ -135,7 +137,7 @@ const Partnership = () => {
         link_text="Инструкция по регистрации"
     />
 
-    {/*<OrganizationGallery/>*/}
+    <OrganazingGallery/>
 
     {/*<Transparency/>*/}
 

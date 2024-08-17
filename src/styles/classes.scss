@@ -16,6 +16,11 @@
   }
 }
 
+.input-filed, input[type="number"]::-webkit-inner-spin-button {
+  @apply p-6 bg-color-bg-gray rounded-full border-none appearance-none;
+  -webkit-appearance: none;
+}
+
 .button_container button {
   width: 100%;
   height: 100%;
