@@ -38,10 +38,10 @@ const Partnership = () => {
   const links = ['/pages/partnership']
   return (
     <main className="flex flex-col gap-14">
-      <div className="relative h-[41rem] w-full">
         <div className="mb-8">
-          <Crumb path={path} links={links} />
+            <Crumb path={path} links={links} />
         </div>
+        <div className="relative h-[41rem] w-full">
         <div className="flex w-full">
           <Image src={bg as string} alt={'background'} className="w-[69%]" />
           <h1 className="heading absolute bottom-24 left-20 text-white">
@@ -60,7 +60,7 @@ const Partnership = () => {
             </div>
           </div>
         </div>
-        <div className="absolute bottom-[-1.75rem] left-[46rem] flex justify-between gap-6">
+        <div className="absolute bottom-4 left-[46rem] flex justify-between gap-6">
           <HoverSection
             name={'Риэлторам'}
             link={''}
