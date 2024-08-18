@@ -2,6 +2,10 @@
   @apply text-color-orange;
 }
 
+.headingStruct {
+  @apply font-semibold leading-tight tracking-tighter;
+}
+
 .heading {
   @apply text-5xl font-semibold leading-tight tracking-tighter;
 }
