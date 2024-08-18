@@ -3,15 +3,6 @@ import React from 'react'
 import Image from 'next/image'
 import Link from 'next/link'
 
-import plannerImage from '../../../../../public/assets/img/planner img/plannerImg2.png'
-import pseudoVid from '../../../../../public/assets/img/pseudo videos/pseudoVid.png'
-import renovationHeaderBackground from '../../../../../public/assets/img/headBannerPartnershipRealtors.png'
-import reputationIcon from '../../../../../public/assets/svg/TapeSection icons/reputationIcon.svg'
-import tickIcon from '../../../../../public/assets/svg/TapeSection icons/tickIcon.svg'
-import contactIcon from '../../../../../public/assets/svg/TapeSection icons/contactIcon.svg'
-import shieldIcon from '../../../../../public/assets/svg/TapeSection icons/shiledIcon.svg'
-import lampIcon from '../../../../../public/assets/svg/TapeSection icons/lampIcon.svg'
-import riskBackground from '../../../../../public/assets/img/riskBackground2.png'
 import TapeSection from '@/components/shared/Tape Section/TapeSection'
 import Predict from '@/components/widgets/Predict/Predict'
 import RiskSlide from '@/components/widgets/Risk Side/RiskSlide'
@@ -34,6 +25,16 @@ import DesignSlide from '@/components/widgets/Design Slide/DesignSlide'
 import BenefitsSlide from '@/components/widgets/Benefits Slide/BenefitsSlide'
 import PaymentSlide from '@/components/widgets/Payment Slide/PaymentSlide'
 
+import plannerImage from '../../../../../public/assets/img/planner img/plannerImg2.png'
+import pseudoVid from '../../../../../public/assets/img/pseudo videos/pseudoVid.png'
+import renovationHeaderBackground from '../../../../../public/assets/img/headBannerPartnershipRealtors.png'
+import reputationIcon from '../../../../../public/assets/svg/TapeSection icons/reputationIcon.svg'
+import tickIcon from '../../../../../public/assets/svg/TapeSection icons/tickIcon.svg'
+import contactIcon from '../../../../../public/assets/svg/TapeSection icons/contactIcon.svg'
+import shieldIcon from '../../../../../public/assets/svg/TapeSection icons/shiledIcon.svg'
+import lampIcon from '../../../../../public/assets/svg/TapeSection icons/lampIcon.svg'
+import riskBackground from '../../../../../public/assets/img/riskBackground2.png'
+
 function Realtors() {
   const path = ['Партнёрская программа', 'Риелторам']
   const links = ['/pages/partnership', '/pages/partnership/realtors']
@@ -43,7 +44,7 @@ function Realtors() {
         <div className="flex flex-col gap-8">
           <Crumb path={path} links={links} />
           <Image src={renovationHeaderBackground} alt="background" className="relative" />
-          <div className="heading absolute bottom-[3rem] left-[8rem] max-w-lg text-white">
+          <div className="heading absolute bottom-[1rem] left-[8rem] max-w-lg text-white">
             <h1 className="headingStruct text-4xl">
               Приводите клиентов на ремонт с фикс ценой и зарабатывайте от 1000 руб/м² с каждой
               сделки
@@ -57,7 +58,7 @@ function Realtors() {
               Подробнее
             </Link>
             <div className="button_container h-16 w-full">
-              <OrangeButton text="Онлайн-калькулятор" link="" />
+              <OrangeButton text="Зарегистрироваться как партнер" link="" />
             </div>
           </div>
         </div>
