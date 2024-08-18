@@ -3,7 +3,7 @@ import Image from 'next/image'
 import Scroller from '@/components/shared/Scroller/Scroller'
 import feedback from '../../../../public/assets/img/renovationFeedback.webp'
 
-const SelfRenovation: React.FC = () => {
+function SelfRenovation() {
   return (
     <div className="flex w-full flex-col items-center gap-24">
       <div className="flex w-full flex-col gap-4">
