@@ -31,6 +31,7 @@ import SeoPart from '@/components/widgets/SEO/SeoPart'
 import OrangeButton from '@/components/shared/buttons/Orange Button/OrangeButton'
 import Crumb from '@/components/shared/Crumb/Crumb'
 import DesignSlide from '@/components/widgets/Design Slide/DesignSlide'
+import BenefitsSlide from '@/components/widgets/Benefits Slide/BenefitsSlide'
 
 function Realtors() {
   const path = ['Партнёрская программа', 'Риелторам']
@@ -111,7 +112,7 @@ function Realtors() {
 
       <DesignSlide />
 
-      {/*<Benefits/>*/}
+      <BenefitsSlide />
 
       <Predict />
 
@@ -138,8 +139,8 @@ function Realtors() {
 
       <FeedbacksGallery
         head_text={
-          <h1 className="w-full">
-            Посмотрите, <b>что говорят о нас</b> наши текущие партнёры
+          <h1 className="heading">
+            Посмотрите, <span className="orange-bold">что говорят о нас</span> наши текущие партнёры
           </h1>
         }
       />
