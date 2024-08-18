@@ -29,6 +29,7 @@ import Consulting from '@/components/widgets/Consulting/Consulting'
 import SeoPart from '@/components/widgets/SEO/SeoPart'
 import RenovationHeader from '@/components/widgets/Renovation Header/RenovationHeader'
 import Crumb from '@/components/shared/Crumb/Crumb'
+import SelfRenovation from '@/components/widgets/Self Renovation/SelfRenovation'
 
 const RenovationService = () => {
   const path = ['Услуги', 'Ремонт квартир']
@@ -89,7 +90,7 @@ const RenovationService = () => {
         />
       </div>
 
-      {/*<SelfRenovation/>*/}
+      <SelfRenovation />
 
       <ReasonsList
         head_text={
