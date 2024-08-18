@@ -1,71 +1,132 @@
-import RenovationHeader from '@/components/widgets/RenovationHeader/RenovationHeader'
-import WhiteBullet from '@/components/shared/WhiteBullet/WhiteBullet'
-import Designs from '@/components/widgets/Designs/Designs'
-import Benefits from '@/components/widgets/Benefits/Benefits'
-import FavoriteBusiness from '@/components/widgets/FavoriteBusiness/FavoriteBusiness'
-import Risk from '@/components/widgets/Risk/Risk'
+'use client'
+import React from 'react'
+import Image from 'next/image'
+import Link from 'next/link'
+
+import plannerImage from '../../../../../public/assets/img/planner img/plannerImg2.png'
+import pseudoVid from '../../../../../public/assets/img/pseudo videos/pseudoVid.png'
+import renovationHeaderBackground from '../../../../../public/assets/img/headBannerPartnershipBuilders.png'
+import reputationIcon from '../../../../../public/assets/svg/TapeSection icons/reputationIcon.svg'
+import tickIcon from '../../../../../public/assets/svg/TapeSection icons/tickIcon.svg'
+import contactIcon from '../../../../../public/assets/svg/TapeSection icons/contactIcon.svg'
+import shieldIcon from '../../../../../public/assets/svg/TapeSection icons/shiledIcon.svg'
+import lampIcon from '../../../../../public/assets/svg/TapeSection icons/lampIcon.svg'
+import riskBackground from '../../../../../public/assets/img/riskBackground2.png'
+import cooperation from '../../../../../public/assets/img/cooperation.png'
+import TapeSection from '@/components/shared/Tape Section/TapeSection'
+import Predict from '@/components/widgets/Predict/Predict'
+import RiskSlide from '@/components/widgets/Risk Side/RiskSlide'
 import Transparency from '@/components/widgets/Transparency/Transparency'
-import OrganizationGallery from '@/components/widgets/OrganizationGallery/OrganizationGallery'
+import OrganizationGallery from '@/components/widgets/Organizing Gallery/OrganazingGallery'
 import Planner from '@/components/widgets/Planner/Planner'
-import FeedbacksGallery from '@/components/widgets/FeedbacksGallery/FeedbacksGallery'
+import FeedbacksGallery from '@/components/widgets/Feedbacks gallery/FeedbacksGallery'
 import Responsibility from '@/components/widgets/Responsibility/Responsibility'
-import ToBlog from '@/components/widgets/ToBlog/ToBlog'
-import FAQ from '@/components/widgets/FAQ/FAQ'
-import EngConsulting from '@/components/widgets/EngConsulting/EngConsulting'
-import SeoDiv from '@/components/widgets/SeoDiv/SeoDiv'
-import WorksGallery from '@/components/widgets/WorksGallery/WorksGallery'
 import CheckFeedbacks from '@/components/widgets/CheckFeedbacks/CheckFeedbacks'
-import Presentation from '@/components/widgets/Presentation/Presentation'
-import SocialMedia from '@/components/widgets/SocialMedia/SocialMedia'
+import GalleryWithFeedback from '@/components/widgets/Gallery with feedback/GalleryWithFeedback'
+import GroupPhoto from '@/components/widgets/GroupPhoto/GroupPhoto'
+import SocialMedia from '@/components/widgets/Social Media/SocialMedia'
+import ToBlog from '@/components/widgets/To blog/ToBlog'
+import FaqSection from '@/components/widgets/Faq Section/FaqSection'
+import Consulting from '@/components/widgets/Consulting/Consulting'
+import SeoPart from '@/components/widgets/SEO/SeoPart'
+import OrangeButton from '@/components/shared/buttons/Orange Button/OrangeButton'
+import Crumb from '@/components/shared/Crumb/Crumb'
+import DesignSlide from '@/components/widgets/Design Slide/DesignSlide'
+import BenefitsSlide from '@/components/widgets/Benefits Slide/BenefitsSlide'
+import PaymentSlide from '@/components/widgets/Payment Slide/PaymentSlide'
 
-import riskBackground from '@/public/assets/img/riskBackground2.png'
-import renovationHeaderBackground from '@/public/assets/img/headBannerPartnershipBuilders.png'
-import plannerImage from '@/public/assets/img/plannerImage2.png'
-import responseYandex from '@/public/assets/img/responseYandex.png'
-import responseOtzovik from '@/public/assets/img/responseOtzovik.png'
-import pseudoVid from '@/public/assets/img/pseudoVid.png'
-import cooperation from '@/public/assets/img/cooperation.png'
-import contactIco from '@/public/assets/icons/contactIcon.svg'
-import reputationIco from '@/public/assets/svg/reputation.svg'
-import shieledIco from '@/public/assets/icons/shiledIcon.svg'
-import lampIco from '@/public/assets/icons/lampIcon.svg'
-import tickIco from '@/public/assets/svg/tick.svg'
-
-const Builders = () => {
+function Realtors() {
+  const path = ['Партнёрская программа', 'Риелторам']
+  const links = ['/pages/partnership', '/pages/partnership/realtors']
   return (
-    <main className="flex flex-col gap-14">
-      <RenovationHeader
-        image={renovationHeaderBackground}
-        header1={
-          <h1 className="w-96">
-            Продавайте квартиры с готовым ремонтом по фиксированной цене от FIX-ремонт
-          </h1>
-        }
-        header2="Повысьте качество ваших объектов и дополнительно зарабатывайте на “ремонте в ипотеку”"
-        link_text="Подробнее"
-      />
-
-      <div className="flex flex-wrap justify-around gap-4">
-        <WhiteBullet line1="Следите за ходом" line2="работ онлайн" src={contactIco} />
-        <WhiteBullet line1="Ценим вашу" line2="и свою репутации" src={reputationIco} />
-        <WhiteBullet line1="Все финансовые риски берем" line2="на себя" src={shieledIco} />
-        <WhiteBullet line1="36 готовых" line2="дизайн-проектов" src={lampIco} />
-        <WhiteBullet line1="Обеспечим лучший" line2="сервис для клиента" src={tickIco} />
+    <main className="flex flex-col space-y-8">
+      <div className="flex w-full bg-cover bg-center">
+        <div className="flex flex-col gap-8">
+          <Crumb path={path} links={links} />
+          <Image src={renovationHeaderBackground} alt="background" className="relative" />
+          <div className="heading absolute bottom-[3rem] left-[8rem] max-w-lg text-white">
+            <h1 className="headingStruct text-4xl">
+              Продавайте квартиры с готовым ремонтом по фиксированной цене от FIX-ремонт
+            </h1>
+          </div>
+          <div className="absolute bottom-[-4.75rem] right-[4rem] flex w-[26rem] flex-col space-y-7 rounded-3xl bg-color-dark p-8">
+            <h2 className="max-w-[19rem] text-2xl font-normal tracking-tighter text-white">
+              Повысьте качество ваших объектов и дополнительно зарабатывайте на <br /> “ремонте в
+              ипотеку”
+            </h2>
+            <Link href={''} className="text-color-orange underline">
+              Подробнее
+            </Link>
+            <div className="button_container h-16 w-full">
+              <OrangeButton text="Онлайн-калькулятор" link="" />
+            </div>
+          </div>
+        </div>
       </div>
 
-      <Designs />
+      <div className={`flex flex-row gap-4`}>
+        <TapeSection
+          svg={contactIcon as string}
+          altName={'contactIcon'}
+          text={
+            <p>
+              Без визитов <br /> на объект
+            </p>
+          }
+        />
+        <TapeSection
+          svg={reputationIcon as string}
+          altName={'rublIcon'}
+          text={
+            <p>
+              100% гарантия фиксированной <br /> сметы
+            </p>
+          }
+        />
+        <TapeSection
+          svg={shieldIcon as string}
+          altName={'shieldIcon'}
+          text={
+            <p>
+              Все финансовые риски берём <br /> на себя
+            </p>
+          }
+        />
+        <TapeSection
+          svg={lampIcon as string}
+          altName={'lampIcon'}
+          text={
+            <p>
+              36 готовых <br /> дизнай-проектов
+            </p>
+          }
+        />
+        <TapeSection
+          svg={tickIcon as string}
+          altName={'flagIcon'}
+          text={
+            <p>
+              Всё берем на себя <br /> и работаем под ключ
+            </p>
+          }
+        />
+      </div>
 
-      <Benefits />
+      <DesignSlide />
 
-      <FavoriteBusiness />
+      <BenefitsSlide />
 
-      <Risk button_text="Стать партнером" background={riskBackground} />
+      <Predict />
+
+      <RiskSlide button_text="Стать партнером" background={riskBackground} />
 
       <Transparency />
 
-      <div className="w-full">
-        <h1 className="text-center font-bold">Как будет выглядеть наше сотрудничество?</h1>
-        <img alt="cooperation_picture" src={cooperation} className="w-full" />
+      <div className="space-y-8">
+        <h1 className="heading">
+          <span className="orange-bold">Как будет выглядеть</span> наше сотрудничество?
+        </h1>
+        <Image alt="cooperation_picture" src={cooperation} />
       </div>
 
       <OrganizationGallery />
@@ -73,7 +134,7 @@ const Builders = () => {
       <Planner
         planner_img={plannerImage}
         time_text="10 минут"
-        p1_text="первой сделки по ремонту"
+        p1_text="первой выплаты вознаграждения"
         step1_description="Регистрация на платформе"
         step1_time="2"
         step2_description="Оформление сделки"
@@ -87,63 +148,33 @@ const Builders = () => {
 
       <FeedbacksGallery
         head_text={
-          <h1 className="w-full">
-            Посмотрите, <b>что говорят о нас</b> наши текущие партнёры
+          <h1 className="heading">
+            Посмотрите, <span className="orange-bold">что говорят о нас</span> наши текущие партнёры
           </h1>
         }
       />
 
       <Responsibility />
 
-      <div id="home_works_gallery" className="flex flex-col items-center gap-8">
-        <div className="flex flex-col items-center gap-4">
-          <div id="response_names" className="text-center">
-            <p>Но лучше всего о нас расскажут</p>
-            <h1>
-              Выполненные работы <br /> и отзывы клиентов{' '}
-            </h1>
-          </div>
-          <div id="response_bullets" className="flex gap-4">
-            <a
-              className="response_bullet"
-              target="_blank"
-              href="https://yandex.ru/maps/org/fix_remont/110403249402/features/?ll=49.192026%2C55.826770&mode=search&sll=48.744609%2C55.752080&sspn=0.090294%2C0.027834&tab=features&text=%D1%84%D0%B8%D0%BA%D1%81%20%D1%80%D0%B5%D0%BC%D0%BE%D0%BD%D1%82&z=12"
-            >
-              <img alt="yandex_picture" src={responseYandex} />
-              <p>
-                <u>Смотреть отзывы на Яндекс</u>
-              </p>
-            </a>
-            <a className="response_bullet response_bullet2" target="_blank">
-              <img alt="otzovik_picture" src={responseOtzovik} />
-              <p>
-                <u>Смотреть отзывы на Отзовик</u>
-              </p>
-            </a>
-          </div>
-        </div>
-        <WorksGallery />
-      </div>
+      <GalleryWithFeedback />
 
       <CheckFeedbacks />
 
-      <Presentation />
+      <GroupPhoto />
 
       <SocialMedia />
 
-      <div className="pseudo_vid">
-        <img alt="pseudo_video" src={pseudoVid} className="h-auto w-full" />
-      </div>
+      <Image src={pseudoVid as unknown as string} alt={'pseudo_vidio'} />
 
       <ToBlog />
 
-      <FAQ />
+      <FaqSection />
 
-      <EngConsulting />
+      <Consulting />
 
-      <SeoDiv />
+      <SeoPart />
     </main>
   )
 }
 
-export default Builders
+export default Realtors
