@@ -30,7 +30,7 @@ import SuitSection from '@/components/widgets/Suit section/SuitSection'
 import Predict from '@/components/widgets/Predict/Predict'
 import OrganazingGallery from '@/components/widgets/Organizing Gallery/OrganazingGallery'
 import Transparency from '@/components/widgets/Transparency/Transparency'
-import Reasons from '@/components/widgets/Reasons/Reasons'
+import Reasons from '@/components/widgets/Reasons List/ReasonsList'
 import Crumb from '@/components/shared/Crumb/Crumb'
 
 const Partnership = () => {
@@ -38,8 +38,8 @@ const Partnership = () => {
   const links = ['/pages/partnership']
   return (
     <main className="flex flex-col gap-14">
-        <Crumb path={path} links={links} />
-        <div className="relative h-[41rem] w-full">
+      <Crumb path={path} links={links} />
+      <div className="relative h-[41rem] w-full">
         <div className="flex w-full">
           <Image src={bg as string} alt={'background'} className="w-[69%]" />
           <h1 className="heading absolute bottom-24 left-20 text-white">

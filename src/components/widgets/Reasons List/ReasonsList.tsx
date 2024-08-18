@@ -12,7 +12,7 @@ function ReasonsList({ head_text }: ReasonsListProps) {
     <div className="flex w-full flex-row">
       <div className="w-1/2">
         <div className="sticky top-2.5">
-          <h1>{head_text}</h1>
+          {head_text}
           <div className="button_container mt-4 h-16 w-2/3">
             <CheckButton text="Рассчитать стоимость без посещения оффиса" />
           </div>
