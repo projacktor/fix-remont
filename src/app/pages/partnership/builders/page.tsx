@@ -3,16 +3,6 @@ import React from 'react'
 import Image from 'next/image'
 import Link from 'next/link'
 
-import plannerImage from '../../../../../public/assets/img/planner img/plannerImg2.png'
-import pseudoVid from '../../../../../public/assets/img/pseudo videos/pseudoVid.png'
-import renovationHeaderBackground from '../../../../../public/assets/img/headBannerPartnershipBuilders.png'
-import reputationIcon from '../../../../../public/assets/svg/TapeSection icons/reputationIcon.svg'
-import tickIcon from '../../../../../public/assets/svg/TapeSection icons/tickIcon.svg'
-import contactIcon from '../../../../../public/assets/svg/TapeSection icons/contactIcon.svg'
-import shieldIcon from '../../../../../public/assets/svg/TapeSection icons/shiledIcon.svg'
-import lampIcon from '../../../../../public/assets/svg/TapeSection icons/lampIcon.svg'
-import riskBackground from '../../../../../public/assets/img/riskBackground2.png'
-import cooperation from '../../../../../public/assets/img/cooperation.png'
 import TapeSection from '@/components/shared/Tape Section/TapeSection'
 import Predict from '@/components/widgets/Predict/Predict'
 import RiskSlide from '@/components/widgets/Risk Side/RiskSlide'
@@ -33,11 +23,21 @@ import OrangeButton from '@/components/shared/buttons/Orange Button/OrangeButton
 import Crumb from '@/components/shared/Crumb/Crumb'
 import DesignSlide from '@/components/widgets/Design Slide/DesignSlide'
 import BenefitsSlide from '@/components/widgets/Benefits Slide/BenefitsSlide'
-import PaymentSlide from '@/components/widgets/Payment Slide/PaymentSlide'
+
+import plannerImage from '../../../../../public/assets/img/planner img/plannerImg2.png'
+import pseudoVid from '../../../../../public/assets/img/pseudo videos/pseudoVid.png'
+import renovationHeaderBackground from '../../../../../public/assets/img/headBannerPartnershipBuilders.png'
+import reputationIcon from '../../../../../public/assets/svg/TapeSection icons/reputationIcon.svg'
+import tickIcon from '../../../../../public/assets/svg/TapeSection icons/tickIcon.svg'
+import contactIcon from '../../../../../public/assets/svg/TapeSection icons/contactIcon.svg'
+import shieldIcon from '../../../../../public/assets/svg/TapeSection icons/shiledIcon.svg'
+import lampIcon from '../../../../../public/assets/svg/TapeSection icons/lampIcon.svg'
+import riskBackground from '../../../../../public/assets/img/riskBackground2.png'
+import cooperation from '../../../../../public/assets/img/cooperation.png'
 
 function Realtors() {
-  const path = ['Партнёрская программа', 'Риелторам']
-  const links = ['/pages/partnership', '/pages/partnership/realtors']
+  const path = ['Партнёрская программа', 'Застройщикам']
+  const links = ['/pages/partnership', '/pages/partnership/builders']
   return (
     <main className="flex flex-col space-y-8">
       <div className="flex w-full bg-cover bg-center">
