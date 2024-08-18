@@ -31,6 +31,7 @@ import RenovationHeader from '@/components/widgets/Renovation Header/RenovationH
 import Crumb from '@/components/shared/Crumb/Crumb'
 import SelfRenovation from '@/components/widgets/Self Renovation/SelfRenovation'
 import Comparison from '@/components/widgets/Comparison/Comparison'
+import SelfRenovationGallery from '@/components/widgets/Self Renovation Gallery/SelfRenovationGallery'
 
 const RenovationService = () => {
   const path = ['Услуги', 'Ремонт квартир']
@@ -139,7 +140,7 @@ const RenovationService = () => {
 
       <SocialMedia />
 
-      {/*<SelfRenovationGallery />*/}
+      <SelfRenovationGallery />
 
       {/*<LongBlock />*/}
 
