@@ -9,7 +9,7 @@ function Payment() {
   return (
     <div className="flex w-full flex-row items-center gap-7">
       <div className="w-1/2">
-        <Image alt="IPhone picture" src={IPhonePicture} className="w-full max-w-[45rem]" />
+        <Image alt="IPhone picture" src={IPhonePicture as unknown as string} className="w-full max-w-[45rem]" />
       </div>
       <div className="flex w-1/2 flex-col items-start gap-8 pl-24">
         <div className="w-full max-w-[36rem] space-y-4">
@@ -24,7 +24,7 @@ function Payment() {
           </p>
         </div>
         <Link href="">
-          <Image alt="Raffle" src={raffle} className="w-full max-w-[85%]" />
+          <Image alt="Raffle" src={raffle as unknown as string} className="w-full max-w-[85%]" />
         </Link>
         <div className="button_container h-16 w-full">
           <CheckButton text="Стать партнёром" className="w-full max-w-[36rem]" />

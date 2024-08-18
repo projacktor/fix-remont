@@ -41,7 +41,7 @@ const RenovationService = () => {
     <main className="flex flex-col gap-10">
       <Crumb path={path} links={links} />
       <RenovationHeader
-        image={renovationHeaderBackground as string}
+        image={renovationHeaderBackground as unknown as string}
         header1={<h1>Ремонт квартир под ключ по готовым проектам и с фиксированной ценой</h1>}
         header2="Заселитесь в квартиру мечты с мебелью в течение 3-х месяцев"
       />
@@ -106,14 +106,14 @@ const RenovationService = () => {
         }
       />
 
-      <RiskSlide button_text="Рассчитать стоимость" background={materialsImg} />
+      <RiskSlide button_text="Рассчитать стоимость" background={materialsImg as unknown as string} />
 
       <Comparison />
 
       <FavoriteBusiness />
 
       <Link href="" className="w-full">
-        <Image alt="credit" src={creditImg} className="w-full" />
+        <Image alt="credit" src={creditImg as unknown as string} className="w-full" />
       </Link>
 
       <GalleryWithFeedback />
@@ -121,7 +121,7 @@ const RenovationService = () => {
       <CheckFeedbacks />
 
       <Planner
-        planner_img={plannerImg1}
+        planner_img={plannerImg1 as unknown as string}
         time_text="1.5 часа"
         p1_text="дома своей мечты"
         step1_description="Выбор подходящего тарифа"

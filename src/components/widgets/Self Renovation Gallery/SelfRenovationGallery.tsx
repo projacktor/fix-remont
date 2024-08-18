@@ -41,7 +41,7 @@ function SelfRenovationGallery() {
               </h2>
             </div>
             <div className="w-1/2">
-              <Image alt="kitchen_picture" src={kitchen} width={600} />
+              <Image alt="kitchen_picture" src={kitchen as unknown as string} width={600} />
             </div>
           </div>
           <Scroller />

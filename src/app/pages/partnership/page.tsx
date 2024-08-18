@@ -1,11 +1,7 @@
 'use client'
 import React from 'react'
 import Image from 'next/image'
-import openLink from '@/functions/openLink'
 
-import plannerImage from '../../../../public/assets/img/planner img/plannerImg2.png'
-import pseudoVid from '../../../../public/assets/img/pseudo videos/pseudoVid.png'
-import materialsImg from '../../../../public/assets/img/creditCardMaterials.png'
 import SeoPart from '@/components/widgets/SEO/SeoPart'
 import Consulting from '@/components/widgets/Consulting/Consulting'
 import OrangeButton from '@/components/shared/buttons/Orange Button/OrangeButton'
@@ -20,18 +16,22 @@ import RiskSlide from '@/components/widgets/Risk Side/RiskSlide'
 import Planner from '@/components/widgets/Planner/Planner'
 import TapeSection from '@/components/shared/Tape Section/TapeSection'
 import HoverSection from '@/components/shared/Hover section/HoverSection'
-import contactIcon from '../../../../public/assets/svg/TapeSection icons/contactIcon.svg'
-import rublIcon from '../../../../public/assets/svg/TapeSection icons/rublIcon.svg'
-import shieldIcon from '../../../../public/assets/svg/TapeSection icons/shiledIcon.svg'
-import lampIcon from '../../../../public/assets/svg/TapeSection icons/lampIcon.svg'
-import flagIcon from '../../../../public/assets/svg/TapeSection icons/flagIcon.svg'
-import bg from '../../../../public/assets/img/partnershipBackground.png'
 import SuitSection from '@/components/widgets/Suit section/SuitSection'
 import Predict from '@/components/widgets/Predict/Predict'
 import OrganazingGallery from '@/components/widgets/Organizing Gallery/OrganazingGallery'
 import Transparency from '@/components/widgets/Transparency/Transparency'
 import Reasons from '@/components/widgets/Reasons List/ReasonsList'
 import Crumb from '@/components/shared/Crumb/Crumb'
+
+import plannerImage from '../../../../public/assets/img/planner img/plannerImg2.png'
+import pseudoVid from '../../../../public/assets/img/pseudo videos/pseudoVid.png'
+import materialsImg from '../../../../public/assets/img/creditCardMaterials.png'
+import contactIcon from '../../../../public/assets/svg/TapeSection icons/contactIcon.svg'
+import rublIcon from '../../../../public/assets/svg/TapeSection icons/rublIcon.svg'
+import shieldIcon from '../../../../public/assets/svg/TapeSection icons/shiledIcon.svg'
+import lampIcon from '../../../../public/assets/svg/TapeSection icons/lampIcon.svg'
+import flagIcon from '../../../../public/assets/svg/TapeSection icons/flagIcon.svg'
+import bg from '../../../../public/assets/img/partnershipBackground.png'
 
 const Partnership = () => {
   const path = ['Партнерская программа']
@@ -41,7 +41,7 @@ const Partnership = () => {
       <Crumb path={path} links={links} />
       <div className="relative h-[41rem] w-full">
         <div className="flex w-full">
-          <Image src={bg as string} alt={'background'} className="w-[69%]" />
+          <Image src={bg as unknown as string} alt={'background'} className="w-[69%]" />
           <h1 className="heading absolute bottom-24 left-20 text-white">
             Зарабатывайте 10% <br /> комиссию с каждой <br /> сделки FIX-ремонт
           </h1>
@@ -145,7 +145,7 @@ const Partnership = () => {
       <Predict />
 
       <Planner
-        planner_img={plannerImage as string}
+        planner_img={plannerImage as unknown as string}
         time_text="10 минут"
         p1_text="первой выплаты вознаграждения"
         step1_description="Регистрация на платформе"
@@ -163,7 +163,7 @@ const Partnership = () => {
 
       <Transparency />
 
-      <RiskSlide button_text="Рассчитать стоимость" background={materialsImg as string} />
+      <RiskSlide button_text="Рассчитать стоимость" background={materialsImg as unknown as string} />
 
       <Reasons
         head_text={
@@ -185,7 +185,7 @@ const Partnership = () => {
       <SocialMedia />
 
       <div className="pseudo_vid">
-        <img alt="pseudo_video" src={pseudoVid as string} className="h-auto w-full" />
+        <Image alt="pseudo_video" src={pseudoVid as unknown as string} className="h-auto w-full" />
       </div>
 
       <ToBlog />

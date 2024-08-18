@@ -14,11 +14,11 @@ function OrganizationGallery() {
       </h1>
       <div className="flex w-full flex-col gap-20 md:flex-row">
         <div className="flex w-full flex-col gap-8 md:w-1/2">
-          <Image alt="staff_picture" src={pic1 as string} className="w-full" />
+          <Image alt="staff_picture" src={pic1 as unknown as string} className="w-full" />
           <Scroller />
         </div>
         <div className="flex w-full flex-col gap-8 md:w-1/2">
-          <Image alt="staff_picture" src={pic2 as string} className="w-full" />
+          <Image alt="staff_picture" src={pic2 as unknown as string} className="w-full" />
           <Scroller />
         </div>
       </div>

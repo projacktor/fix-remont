@@ -43,7 +43,7 @@ function Realtors() {
       <div className="flex w-full bg-cover bg-center">
         <div className="flex flex-col gap-8">
           <Crumb path={path} links={links} />
-          <Image src={renovationHeaderBackground} alt="background" className="relative" />
+          <Image src={renovationHeaderBackground as unknown as string} alt="background" className="relative" />
           <div className="heading absolute bottom-[3rem] left-[8rem] max-w-lg text-white">
             <h1 className="headingStruct text-4xl">
               Продавайте квартиры с готовым ремонтом по фиксированной цене от FIX-ремонт
@@ -118,7 +118,7 @@ function Realtors() {
 
       <Predict />
 
-      <RiskSlide button_text="Стать партнером" background={riskBackground} />
+      <RiskSlide button_text="Стать партнером" background={riskBackground as unknown as string} />
 
       <Transparency />
 
@@ -126,13 +126,13 @@ function Realtors() {
         <h1 className="heading">
           <span className="orange-bold">Как будет выглядеть</span> наше сотрудничество?
         </h1>
-        <Image alt="cooperation_picture" src={cooperation} />
+        <Image alt="cooperation_picture" src={cooperation as unknown as string} />
       </div>
 
       <OrganizationGallery />
 
       <Planner
-        planner_img={plannerImage}
+        planner_img={plannerImage as unknown as string}
         time_text="10 минут"
         p1_text="первой выплаты вознаграждения"
         step1_description="Регистрация на платформе"
