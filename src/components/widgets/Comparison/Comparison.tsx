@@ -1,6 +1,6 @@
 import React from 'react'
 
-const Comparison: React.FC = () => {
+function Comparison() {
   return (
     <div className="flex w-full flex-col gap-8">
       <div className="space-y-3">
