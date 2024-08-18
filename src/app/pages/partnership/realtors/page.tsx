@@ -32,6 +32,7 @@ import OrangeButton from '@/components/shared/buttons/Orange Button/OrangeButton
 import Crumb from '@/components/shared/Crumb/Crumb'
 import DesignSlide from '@/components/widgets/Design Slide/DesignSlide'
 import BenefitsSlide from '@/components/widgets/Benefits Slide/BenefitsSlide'
+import PaymentSlide from '@/components/widgets/Payment Slide/PaymentSlide'
 
 function Realtors() {
   const path = ['Партнёрская программа', 'Риелторам']
@@ -151,7 +152,7 @@ function Realtors() {
 
       <CheckFeedbacks />
 
-      {/*<Payment/>*/}
+      <PaymentSlide />
 
       <GroupPhoto />
 
