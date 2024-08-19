@@ -83,14 +83,16 @@ const Work1: React.FC = () => {
           </div>
           <div className="flex w-full flex-col gap-5 p-8">
             <h2 className="text-lg font-bold">Результат:</h2>
-            <Image src={projPic2} alt="projectPic2" className="w-11/12" />
+            <Image src={projPic2} alt="projectPic2" className="w-full" />
           </div>
         </div>
       </div>
-      <div className="mt-8 flex w-full flex-col items-center">
-        <h1 className={'heading'}>Другие реализованные проекты</h1>
+      <div className="flex w-full flex-col items-center gap-8">
+        <h1 className={'heading w-full items-start'}>Другие реализованные проекты</h1>
         <WorksGallery />
-        <CheckButton text="Смотреть все портфолио" link="/portfolio" />
+        <div className="button_container h-16 w-full">
+          <CheckButton text="Смотреть все портфолио" link="/portfolio" />
+        </div>
       </div>
       <Consulting />
       <SeoPart />
