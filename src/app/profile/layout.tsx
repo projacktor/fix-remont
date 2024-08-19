@@ -1,4 +1,5 @@
 import type { Metadata } from 'next'
+import Footer from "@/components/widgets/Global Footer/GlobalFooter";
 
 export const metadata: Metadata = {
     title: 'Профиль',
