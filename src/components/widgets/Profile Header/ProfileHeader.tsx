@@ -5,10 +5,8 @@ import notificationOff from '../../../../public/assets/svg/notificationOff.svg'
 import phone from '../../../../public/assets/svg/phone.svg'
 import headerLogo from '../../../../public/assets/svg/headerLogo.svg'
 import Symbol from '@/components/entities/Symbol/Symbol'
-import OrangeButton from '@/components/shared/buttons/Orange Button/OrangeButton'
 import profileIcon from '../../../../public/assets/svg/profileIcon.svg'
 import profile from '../../../../public/assets/img/ProfilePhoto.png'
-import openLink from '@/functions/openLink'
 
 function ProfileHeader() {
   return (

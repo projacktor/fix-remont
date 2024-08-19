@@ -1,6 +1,7 @@
 import type { Metadata } from 'next'
 import ProfileHeader from '@/components/widgets/Profile Header/ProfileHeader'
 import Footer from '@/components/widgets/Global Footer/GlobalFooter'
+import LeftMenu from '@/components/widgets/Left Menu/LeftMenu'
 
 export const metadata: Metadata = {
   title: 'Профиль',
@@ -16,7 +17,11 @@ export default function RootLayout({
     <html lang="ru">
       <body>
         <ProfileHeader />
-        {children}
+        <div className="flex flex-row">
+          <LeftMenu />
+          {children}
+        </div>
+        <Footer />
       </body>
     </html>
   )
