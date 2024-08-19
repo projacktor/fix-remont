@@ -9,12 +9,13 @@ interface HoverSectionProps {
   name: string
   link: string
   text: React.ReactNode
+  blank?: boolean
 }
 
-function HoverSection({ name, text, link }: HoverSectionProps) {
+function HoverSection({ name, text, link, blank = false }: HoverSectionProps) {
   return (
     <button
-      onClick={openLink(link)}
+      onClick={openLink(link, blank)}
       className={`${style.revert} flex w-[13rem] flex-col items-start gap-1 rounded-3xl border bg-color-bg-gray px-7 text-color-dark hover:text-white`}
     >
       <div className={`mt-7 flex flex-col items-start gap-2`}>

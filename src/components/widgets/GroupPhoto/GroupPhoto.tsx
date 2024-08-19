@@ -14,7 +14,11 @@ function Presentation() {
         <Image src={groupPhoto as unknown as string} alt="group photo" className="rounded-lg" />
       </div>
       <div className="button_container h-16 w-full">
-        <CheckButton text="Оставить заявку на консультацию от специалиста" link="/contacts" />
+        <CheckButton
+          text="Оставить заявку на консультацию от специалиста"
+          link="/pages/contacts/"
+          blank={true}
+        />
       </div>
     </div>
   )

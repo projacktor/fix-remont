@@ -33,7 +33,7 @@ function ToBlog() {
       </div>
       <div className={`flex h-14 w-full flex-row items-center justify-between gap-8 px-2`}>
         <div className="button_container h-full w-4/6">
-          <CheckButton text="Перейти в блог" link="/blog" />
+          <CheckButton text="Перейти в блог" link="/pages/blog" />
         </div>
         <button
           className="h-full w-[27rem] rounded-full border border-red-600 py-4 text-center text-red-600"

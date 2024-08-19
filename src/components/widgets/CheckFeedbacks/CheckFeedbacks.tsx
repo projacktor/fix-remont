@@ -27,7 +27,7 @@ function CheckFeedbacks() {
         </div>
       </div>
       <div className={`button_container h-16 w-full`}>
-        <CheckButton text="Смотреть все отзывы" link="/feedbacks" />
+        <CheckButton text="Смотреть все отзывы" link="pages/feedbacks" blank={true} />
       </div>
     </div>
   )

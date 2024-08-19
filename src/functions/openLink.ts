@@ -5,8 +5,7 @@ function openLink(link: string, blank = false) {
         window.open(link, '_blank', 'noopener,noreferrer')
       }
     }
-  }
-  else {
+  } else {
     if (link) {
       return () => {
         window.open(link, 'noopener,noreferrer')

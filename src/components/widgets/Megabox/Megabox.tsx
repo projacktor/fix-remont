@@ -33,7 +33,7 @@ function MegaboxSection() {
             className={`${style.button_container} button_container flex flex-row items-center space-x-8`}
           >
             <OrangeButton text="Онлайн-калькулятор" link="" />
-            <BlackButton text="Стать партнёром" link="/pages/partnership"/>
+            <BlackButton text="Стать партнёром" link="/pages/partnership" />
           </div>
         </div>
 
@@ -46,7 +46,7 @@ function MegaboxSection() {
                 6-8 месяцев
               </p>
             }
-            link={''}
+            link={'pages/services/apartments'}
           />
           <HoverSection
             name="Строительство"
@@ -56,7 +56,7 @@ function MegaboxSection() {
                 6-8 месяцев
               </p>
             }
-            link={''}
+            link={'pages/services/building'}
           />
           <HoverSection
             name="Партнерская программа"
@@ -65,7 +65,7 @@ function MegaboxSection() {
                 Подходит для физ.лиц, <br /> застройщиков, <br /> риелторов
               </p>
             }
-            link={''}
+            link={'pages/partnership'}
           />
         </div>
       </div>
