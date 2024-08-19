@@ -5,7 +5,6 @@ import '@/styles/classes.scss'
 import Header from '@/components/widgets/Global Header/GlobalHeader'
 import Footer from '@/components/widgets/Global Footer/GlobalFooter'
 
-
 export const metadata: Metadata = {
   title: 'Fix-Remont',
   description: 'Выберите нужный вам ремонт, экономя время!'
