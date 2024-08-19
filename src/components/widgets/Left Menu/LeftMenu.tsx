@@ -1,15 +1,16 @@
 import React from 'react'
 import Image from 'next/image'
 import Link from 'next/link'
+import WriteUs from '@/components/entities/Write us/WriteUs'
+
 import clockIcon from '../../../../public/assets/svg/headerClockIcon.svg'
 import phoneIcon from '../../../../public/assets/svg/headerPhone.svg'
 import qr from '../../../../public/assets/img/trialQr.png'
-import WriteUs from '@/components/entities/Write us/WriteUs'
 import profile from '../../../../public/assets/img/ProfilePhoto.png'
 
 function LeftMenu() {
   return (
-    <aside className="sticky top-[10px] flex h-screen w-80 flex-col items-start gap-8 p-8">
+    <aside className="sticky top-[10px] flex h-screen w-96 flex-col items-start gap-8 p-8">
       <ul className="flex flex-col text-lg font-semibold leading-10 text-color-dark underline">
         <li>Главная</li>
         <li>Договоры</li>
