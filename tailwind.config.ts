@@ -9,6 +9,7 @@ const config: {
         'color-orange': string
         'color-bg-gray': string
         'color-back': string
+        'color-input-d': string
       }
       backgroundImage: { 'gradient-conic': string; 'gradient-radial': string }
     }
@@ -30,8 +31,8 @@ const config: {
         'color-dark': '#161616',
         'color-orange': '#F9AF15',
         'color-bg-gray': '#E5E5E5',
-        'color-back': '#FAFAFA'
-        // 'color-input-d': '#4A4A4A',
+        'color-back': '#FAFAFA',
+        'color-input-d': '#4A4A4A',
       }
     }
   },
