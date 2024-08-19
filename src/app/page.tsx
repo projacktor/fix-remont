@@ -27,105 +27,104 @@ import creditCard from '../../public/assets/img/creditImg.png'
 import riskBg from '../../public/assets/img/creditCardMaterials.png'
 import plannerImg1 from '../../public/assets/img/planner img/plannerImg1.png'
 import pseudoVid from '../../public/assets/img/pseudo videos/pseudoVid.png'
-import Header from "@/components/widgets/Global Header/GlobalHeader";
-import Footer from "@/components/widgets/Global Footer/GlobalFooter";
+import Header from '@/components/widgets/Global Header/GlobalHeader'
+import Footer from '@/components/widgets/Global Footer/GlobalFooter'
 
 export default function Home() {
   return (
-      <>
-          <Header />
-          <main className="flex flex-col items-center">
-              <Megabox/>
+    <>
+      <Header />
+      <main className="flex flex-col items-center">
+        <Megabox />
 
-              <div className={`flex flex-row gap-4`}>
-                  <TapeSection
-                      svg={contactIcon as string}
-                      altName={'contactIcon'}
-                      text={
-                          <p>
-                              Без визитов <br/> на объект
-                          </p>
-                      }
-                  />
-                  <TapeSection
-                      svg={rublIcon as string}
-                      altName={'rublIcon'}
-                      text={
-                          <p>
-                              100% гарантия фиксированной <br/> сметы
-                          </p>
-                      }
-                  />
-                  <TapeSection
-                      svg={shieldIcon as string}
-                      altName={'shieldIcon'}
-                      text={
-                          <p>
-                              Все финансовые риски берём <br/> на себя
-                          </p>
-                      }
-                  />
-                  <TapeSection
-                      svg={lampIcon as string}
-                      altName={'lampIcon'}
-                      text={
-                          <p>
-                              36 готовых <br/> дизнай-проектов
-                          </p>
-                      }
-                  />
-                  <TapeSection
-                      svg={flagIcon as string}
-                      altName={'flagIcon'}
-                      text={
-                          <p>
-                              Всё берем на себя <br/> и работаем под ключ
-                          </p>
-                      }
-                  />
-              </div>
+        <div className={`flex flex-row gap-4`}>
+          <TapeSection
+            svg={contactIcon as string}
+            altName={'contactIcon'}
+            text={
+              <p>
+                Без визитов <br /> на объект
+              </p>
+            }
+          />
+          <TapeSection
+            svg={rublIcon as string}
+            altName={'rublIcon'}
+            text={
+              <p>
+                100% гарантия фиксированной <br /> сметы
+              </p>
+            }
+          />
+          <TapeSection
+            svg={shieldIcon as string}
+            altName={'shieldIcon'}
+            text={
+              <p>
+                Все финансовые риски берём <br /> на себя
+              </p>
+            }
+          />
+          <TapeSection
+            svg={lampIcon as string}
+            altName={'lampIcon'}
+            text={
+              <p>
+                36 готовых <br /> дизнай-проектов
+              </p>
+            }
+          />
+          <TapeSection
+            svg={flagIcon as string}
+            altName={'flagIcon'}
+            text={
+              <p>
+                Всё берем на себя <br /> и работаем под ключ
+              </p>
+            }
+          />
+        </div>
 
-              <FavoriteBusiness/>
+        <FavoriteBusiness />
 
-              <Image src={creditCard as unknown as string} alt="credit"/>
+        <Image src={creditCard as unknown as string} alt="credit" />
 
-              <RiskSlide button_text="Рассчитать стоимость" background={riskBg as unknown as string}/>
+        <RiskSlide button_text="Рассчитать стоимость" background={riskBg as unknown as string} />
 
-              <GalleryWithFeedback/>
+        <GalleryWithFeedback />
 
-              <CheckFeedbacks/>
+        <CheckFeedbacks />
 
-              <Planner
-                  planner_img={plannerImg1 as unknown as string}
-                  time_text="1.5 часа"
-                  p1_text="дома своей мечты"
-                  step1_description="Выбор подходящего тарифа"
-                  step1_time="30"
-                  step2_description="Удобный выбор планировки и материала"
-                  step2_time="60"
-                  step3_description="Проведение работ сервисом FIX-ремонт"
-                  step3_time=""
-                  step4_description="Получите - распишитесь!:)"
-                  p2_text="Выбирайте подходящий тариф под ваш бюджет. Цена фиксированная!"
-                  link_text=""
-              />
+        <Planner
+          planner_img={plannerImg1 as unknown as string}
+          time_text="1.5 часа"
+          p1_text="дома своей мечты"
+          step1_description="Выбор подходящего тарифа"
+          step1_time="30"
+          step2_description="Удобный выбор планировки и материала"
+          step2_time="60"
+          step3_description="Проведение работ сервисом FIX-ремонт"
+          step3_time=""
+          step4_description="Получите - распишитесь!:)"
+          p2_text="Выбирайте подходящий тариф под ваш бюджет. Цена фиксированная!"
+          link_text=""
+        />
 
-              <GroupPhoto/>
+        <GroupPhoto />
 
-              <Responsibility/>
+        <Responsibility />
 
-              <SocialMedia/>
+        <SocialMedia />
 
-              <Image src={pseudoVid as unknown as string} alt={'pseudo_vidio'}/>
+        <Image src={pseudoVid as unknown as string} alt={'pseudo_vidio'} />
 
-              <ToBlog/>
+        <ToBlog />
 
-              <FaqSection/>
+        <FaqSection />
 
-              <SeoPart/>
-          </main>
-          <Footer />
-
-      </>
+        <SeoPart />
+      </main>
+      <Footer />
+    </>
   )
 }

@@ -9,7 +9,11 @@ function Payment() {
   return (
     <div className="flex w-full flex-row items-center gap-7">
       <div className="w-1/2">
-        <Image alt="IPhone picture" src={IPhonePicture as unknown as string} className="w-full max-w-[45rem]" />
+        <Image
+          alt="IPhone picture"
+          src={IPhonePicture as unknown as string}
+          className="w-full max-w-[45rem]"
+        />
       </div>
       <div className="flex w-1/2 flex-col items-start gap-8 pl-24">
         <div className="w-full max-w-[36rem] space-y-4">

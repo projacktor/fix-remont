@@ -163,7 +163,10 @@ const Partnership = () => {
 
       <Transparency />
 
-      <RiskSlide button_text="Рассчитать стоимость" background={materialsImg as unknown as string} />
+      <RiskSlide
+        button_text="Рассчитать стоимость"
+        background={materialsImg as unknown as string}
+      />
 
       <Reasons
         head_text={

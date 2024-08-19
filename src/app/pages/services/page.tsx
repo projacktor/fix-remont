@@ -29,7 +29,10 @@ export default function Services() {
         <HoverSectionBig link={''} lists={hoverSectionLists} name={'Партнёрская программа'} />
       </div>
 
-      <RiskSlide button_text="Рассчитать стоимость" background={materialsImg as unknown as string} />
+      <RiskSlide
+        button_text="Рассчитать стоимость"
+        background={materialsImg as unknown as string}
+      />
 
       <GalleryWithFeedback />
 

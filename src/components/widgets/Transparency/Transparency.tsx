@@ -10,7 +10,11 @@ const Transparency: React.FC = () => {
         Весь процесс сотрудничества на <span className="orange-bold">100% прозрачный</span> и
         контролируемый
       </h1>
-      <Image alt="transparency_bullets" src={transparencyBullets as unknown as string} className="w-full" />
+      <Image
+        alt="transparency_bullets"
+        src={transparencyBullets as unknown as string}
+        className="w-full"
+      />
       <div className="button_container h-16 w-full">
         <CheckButton text="Зарегистрироваться на платформе" />
       </div>

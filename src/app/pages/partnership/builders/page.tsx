@@ -43,7 +43,11 @@ function Realtors() {
       <div className="flex w-full bg-cover bg-center">
         <div className="flex flex-col gap-8">
           <Crumb path={path} links={links} />
-          <Image src={renovationHeaderBackground as unknown as string} alt="background" className="relative" />
+          <Image
+            src={renovationHeaderBackground as unknown as string}
+            alt="background"
+            className="relative"
+          />
           <div className="heading absolute bottom-[3rem] left-[8rem] max-w-lg text-white">
             <h1 className="headingStruct text-4xl">
               Продавайте квартиры с готовым ремонтом по фиксированной цене от FIX-ремонт
