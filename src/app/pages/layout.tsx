@@ -5,7 +5,6 @@ import '@/styles/classes.scss'
 import Header from '@/components/widgets/Global Header/GlobalHeader'
 import Footer from '@/components/widgets/Global Footer/GlobalFooter'
 
-const inter = Inter({ subsets: ['latin'] })
 
 export const metadata: Metadata = {
   title: 'Fix-Remont',
@@ -19,7 +18,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="ru">
-      <body className={inter.className}>
+      <body>
         <Header />
         {children}
         <Footer />
