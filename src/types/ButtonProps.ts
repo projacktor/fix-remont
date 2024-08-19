@@ -5,4 +5,5 @@ export interface ButtonProps {
   link?: string
   className?: string
   type?: 'button' | 'submit' | 'reset'
+  blank?: boolean
 }

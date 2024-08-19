@@ -33,7 +33,7 @@ function MegaboxSection() {
             className={`${style.button_container} button_container flex flex-row items-center space-x-8`}
           >
             <OrangeButton text="Онлайн-калькулятор" link="" />
-            <BlackButton text="Стать партнёром" link="" />
+            <BlackButton text="Стать партнёром" link="/pages/partnership"/>
           </div>
         </div>
 
