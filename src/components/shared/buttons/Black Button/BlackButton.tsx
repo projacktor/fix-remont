@@ -2,8 +2,8 @@ import React from 'react'
 import openLink from '@/functions/openLink'
 import { ButtonProps } from '@/types/ButtonProps'
 
-const BlackButton: React.FC<ButtonProps> = ({ text, link, className, type = 'button', blank }) => {
-  const handleClick = openLink(link, blank)
+function BlackButton({ text, link, className, type = 'button', blank }: ButtonProps) {
+  const handleClick = openLink(link as string, blank)
   return (
     <button
       type={type}
