@@ -7,7 +7,7 @@ function BlackButton({ text, link, className, type = 'button', blank }: ButtonPr
   return (
     <button
       type={type}
-      className={`flex items-center justify-center rounded-full border border-white bg-color-dark px-8 py-6 text-sm font-medium text-white ${className}`}
+      className={`flex items-center justify-center rounded-full bg-color-dark px-8 py-6 text-sm font-medium text-white ${className}`}
       onClick={handleClick}
     >
       <p>{text}</p>
