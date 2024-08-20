@@ -30,12 +30,8 @@ const Work1: React.FC = () => {
             <MinibarVideo desc_content="1:25 мин" />
           </div>
           <Image src={projPic1} alt="Project picture" />
-          <div className="relative bottom-[45rem] left-12 flex items-center">
-            <Die text="СТРОИТЕЛЬСТВО ДОМОВ" />
-          </div>
-          <div className="my-4 flex w-full justify-center">
-            <VideoGallery />
-          </div>
+          <Die text="СТРОИТЕЛЬСТВО ДОМОВ" />
+          <VideoGallery />
           <Image src={projPic2} alt="projectPic2" />
           <div className="flex w-full flex-col p-8">
             <h2>Задача:</h2>
