@@ -1,5 +1,6 @@
 import React, { useRef } from 'react'
 import Link from 'next/link'
+import BlackButton from "@/components/shared/buttons/Black Button/BlackButton";
 
 function RefLink() {
   const linkRef = useRef(null)
@@ -20,27 +21,23 @@ function RefLink() {
     }
   }
   return (
-    <div className="flex flex-col gap-5 rounded-3xl bg-color-orange px-8 py-14 text-white">
-      <h4 className="headingStruct text-3xl">
-        Приглашайте новых клиентов и <br /> зарабатывайте с нами
-      </h4>
-      <div className="flex flex-row space-x-20">
-        <div className="flex flex-col items-start space-y-4">
-          <h6 className="text-xs font-normal">Ваша ссылка:</h6>
-          <Link href="/" className="text-lg font-semibold" ref={linkRef}>
-            ref.fix-remont.ru/8GTS7LX82390
-          </Link>
-          <hr className="w-full bg-white" />
+      <div className="flex flex-col space-y-5 rounded-3xl bg-color-orange p-8 text-white">
+        <h3 className="headingStruct text-2xl">
+          Приглашайте новых клиентов и <br/> зарабатывайте с нами
+        </h3>
+        <div className="flex flex-row space-x-20 items-center">
+          <div className="flex flex-col items-start space-y-4">
+            <h6 className="text-xs font-normal">Ваша ссылка:</h6>
+            <Link href="/" className="text-base font-semibold" ref={linkRef}>
+              ref.fix-remont.ru/8GTS7LX82390
+            </Link>
+            <hr className="w-full bg-white"/>
+          </div>
+          <div className="button_container w-64 h-18">
+            <BlackButton text="Скопировать ссылку" className="text-base"/>
+          </div>
         </div>
-        <button
-          type={'button'}
-          onClick={handleCopy}
-          className={`flex w-80 items-center justify-center rounded-full bg-color-dark px-8 py-6 text-lg font-medium text-white`}
-        >
-          Скопировать ссылку
-        </button>
       </div>
-    </div>
   )
 }
 
