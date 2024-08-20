@@ -2,6 +2,7 @@ import type { Metadata } from 'next'
 import ProfileHeader from '@/components/widgets/Profile Header/ProfileHeader'
 import Footer from '@/components/widgets/Global Footer/GlobalFooter'
 import LeftMenu from '@/components/widgets/Left Menu/LeftMenu'
+import '@/styles/globals.scss'
 
 export const metadata: Metadata = {
   title: 'Профиль',
