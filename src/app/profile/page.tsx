@@ -2,15 +2,15 @@
 import React from 'react'
 import Image from 'next/image'
 
-import banner from '../../../public/assets/img/bannerTrial.png'
+import Tariff from '@/types/Tariff'
+
 import RefLink from '@/components/widgets/Ref Link/RefLink'
 import CodeGen from '@/components/widgets/Code Generator/CodeGen'
 import Wallet from '@/components/widgets/Wallet/Wallet'
 import PartsField from '@/components/widgets/Parts Field/PartsField'
-import Tariff from '@/types/Tariff'
-import BlogGallery from '@/components/widgets/Blog Gallery/BlogGallery'
-import PostsGallery from '@/components/widgets/Post Gallery/PostGallery'
 import BlogBullet from '@/components/entities/Blog bullet/BlogBullet'
+
+import banner from '../../../public/assets/img/bannerTrial.png'
 
 function Home() {
   const param = 'calculator-guide'
