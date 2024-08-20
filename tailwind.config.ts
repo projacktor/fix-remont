@@ -15,6 +15,7 @@ const config: {
     }
   }
   content: string[]
+  mode?: 'jit' | 'aot'
 } = {
   content: [
     './src/pages/**/*.{js,ts,jsx,tsx,mdx}',
@@ -32,10 +33,11 @@ const config: {
         'color-orange': '#F9AF15',
         'color-bg-gray': '#E5E5E5',
         'color-back': '#FAFAFA',
-        'color-input-d': '#4A4A4A',
+        'color-input-d': '#4A4A4A'
       }
     }
   },
-  plugins: []
+  plugins: [],
+  mode: 'aot'
 }
 export default config
