@@ -58,9 +58,9 @@ function LeftMenu() {
           </h4>
         </div>
 
-        <p className="orange-bold text-sm font-semibold leading-tight underline">
+        <button className="orange-bold text-sm font-semibold leading-tight underline">
           Выйти из <br /> аккаунта
-        </p>
+        </button>
       </div>
     </aside>
   )
