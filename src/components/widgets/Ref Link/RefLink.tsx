@@ -1,13 +1,13 @@
 import React, { useRef } from 'react'
 import Link from 'next/link'
-import BlackButton from '@/components/shared/buttons/Black Button/BlackButton'
 
 function RefLink() {
-  const linkRef = useRef(null)
+  const linkRef = useRef<HTMLDivElement>(null)
 
   const handleCopy = () => {
     if (linkRef.current) {
-      const linkText = linkRef.current?.textContent
+      const linkElement = linkRef.current.querySelector('a')
+      const linkText = linkElement?.textContent
       if (linkText) {
         navigator.clipboard
           .writeText(linkText)
@@ -26,16 +26,19 @@ function RefLink() {
         Приглашайте новых клиентов и <br /> зарабатывайте с нами
       </h3>
       <div className="flex flex-row items-center space-x-20">
-        <div className="flex flex-col items-start space-y-4">
+        <div className="flex flex-col items-start space-y-4" ref={linkRef}>
           <h6 className="text-xs font-normal">Ваша ссылка:</h6>
-          <Link href="/" className="text-base font-semibold" ref={linkRef}>
+          <Link href="/" className="text-base font-semibold">
             ref.fix-remont.ru/8GTS7LX82390
           </Link>
           <hr className="w-full bg-white" />
         </div>
-        <div className="button_container h-18 w-64">
-          <BlackButton text="Скопировать ссылку" className="text-base" />
-        </div>
+        <button
+          className={`flex h-16 w-64 items-center justify-center rounded-full bg-color-dark text-sm font-medium text-white`}
+          onClick={handleCopy}
+        >
+          Скопировать ссылку
+        </button>
       </div>
     </div>
   )
