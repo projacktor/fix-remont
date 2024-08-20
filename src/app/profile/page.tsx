@@ -82,26 +82,26 @@ function Home() {
         </div>
       </div>
 
-      <div className="flex flex-col items-start space-y-4">
-        <h1 className="heading">Новости платформы</h1>
-        <div className="flex h-80 items-center justify-around">
-          <BlogBullet
-            section="Ремонт"
-            link={param}
-            text="Как рассчитать стоимость через онлайн-калькулятор FIX-ремонт?"
-          />
-          <BlogBullet
-            section="Ремонт"
-            link={param}
-            text="Как рассчитать стоимость через онлайн-калькулятор FIX-ремонт?"
-          />
-          <BlogBullet
-            section="Ремонт"
-            link={param}
-            text="Как рассчитать стоимость через онлайн-калькулятор FIX-ремонт?"
-          />
-        </div>
-      </div>
+      {/*<div className="flex flex-col items-start space-y-4 w-full">*/}
+      {/*  <h1 className="heading">Новости платформы</h1>*/}
+      {/*  <div className="flex flex-row h-80 items-center justify-around">*/}
+      {/*    <BlogBullet*/}
+      {/*      section="Ремонт"*/}
+      {/*      link={param}*/}
+      {/*      text="Как рассчитать стоимость через онлайн-калькулятор FIX-ремонт?"*/}
+      {/*    />*/}
+      {/*    <BlogBullet*/}
+      {/*      section="Ремонт"*/}
+      {/*      link={param}*/}
+      {/*      text="Как рассчитать стоимость через онлайн-калькулятор FIX-ремонт?"*/}
+      {/*    />*/}
+      {/*    <BlogBullet*/}
+      {/*      section="Ремонт"*/}
+      {/*      link={param}*/}
+      {/*      text="Как рассчитать стоимость через онлайн-калькулятор FIX-ремонт?"*/}
+      {/*    />*/}
+      {/*  </div>*/}
+      {/*</div>*/}
     </main>
   )
 }
