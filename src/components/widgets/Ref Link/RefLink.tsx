@@ -24,7 +24,7 @@ function RefLink() {
       <h4 className="headingStruct text-3xl">
         Приглашайте новых клиентов и <br /> зарабатывайте с нами
       </h4>
-      <div className="flex flex-row space-x-40">
+      <div className="flex flex-row space-x-20">
         <div className="flex flex-col items-start space-y-4">
           <h6 className="text-xs font-normal">Ваша ссылка:</h6>
           <Link href="/" className="text-lg font-semibold" ref={linkRef}>
