@@ -4,7 +4,7 @@ import Image from 'next/image'
 
 import banner from '../../../public/assets/img/bannerTrial.png'
 import RefLink from '@/components/widgets/Ref Link/RefLink'
-import CodeGen from "@/components/widgets/Code Generator/CodeGen";
+import CodeGen from '@/components/widgets/Code Generator/CodeGen'
 
 async function Home() {
   return (
