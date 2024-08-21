@@ -1,16 +1,11 @@
 import React from 'react'
 import PartsField from '@/components/widgets/Parts Field/PartsField'
 import Tariff from "@/types/Tariff";
+import {PartsFiledProps} from "@/types/PartsFieldProps";
 
 interface DealListProps {
   heading: string
-  data: [{
-      objectName: string
-      tariff: Tariff
-      location: string
-      payment: number
-      part: string
-  }]
+  data: PartsFiledProps[]
 }
 
 function DealList({ heading, data }: DealListProps) {
