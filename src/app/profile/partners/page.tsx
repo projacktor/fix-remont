@@ -9,9 +9,9 @@ import CodeGen from '@/components/widgets/Code Generator/CodeGen'
 import Wallet from '@/components/widgets/Wallet/Wallet'
 import NewsSection from '@/components/widgets/News Section/NewsSection'
 import SupportSection from '@/components/widgets/Support Section/SupportSection'
+import DealList from '@/components/widgets/Deal List/DealList'
 
 import banner from '../../../../public/assets/img/bannerTrial.png'
-import DealList from '@/components/widgets/Deal List/DealList'
 
 function Home() {
   const partsData = [
