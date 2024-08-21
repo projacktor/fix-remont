@@ -8,12 +8,10 @@ import RefLink from '@/components/widgets/Ref Link/RefLink'
 import CodeGen from '@/components/widgets/Code Generator/CodeGen'
 import Wallet from '@/components/widgets/Wallet/Wallet'
 import PartsField from '@/components/widgets/Parts Field/PartsField'
-import BlogBullet from '@/components/entities/Blog bullet/BlogBullet'
-
-import banner from '../../../public/assets/img/bannerTrial.png'
-import BlogBulletProfile from '@/components/entities/Blog Bullet Profile/BlogBulletProfile'
 import NewsSection from '@/components/widgets/News Section/NewsSection'
 import SupportSection from '@/components/widgets/Support Section/SupportSection'
+
+import banner from '../../../public/assets/img/bannerTrial.png'
 
 function Home() {
   return (
