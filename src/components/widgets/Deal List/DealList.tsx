@@ -1,7 +1,7 @@
 import React from 'react'
 import PartsField from '@/components/widgets/Parts Field/PartsField'
-import Tariff from "@/types/Tariff";
-import {PartsFiledProps} from "@/types/PartsFieldProps";
+import Tariff from '@/types/Tariff'
+import { PartsFiledProps } from '@/types/PartsFieldProps'
 
 interface DealListProps {
   heading: string
