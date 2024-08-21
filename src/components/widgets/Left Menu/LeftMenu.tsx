@@ -10,7 +10,7 @@ import profile from '../../../../public/assets/img/ProfilePhoto.png'
 
 function LeftMenu() {
   return (
-    <aside className="sticky top-0 flex h-max w-96 flex-col items-start gap-8 p-8">
+    <aside className="sticky top-0 flex h-max w-96 flex-col items-start gap-8 p-8 bg-white rounded-3xl">
       <ul className="flex flex-col text-lg font-semibold leading-10 text-color-dark underline">
         <li>Главная</li>
         <li>Договоры</li>
