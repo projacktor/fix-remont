@@ -1,7 +1,7 @@
 'use client'
 import React from 'react'
 import OrangeButton from '@/components/shared/buttons/Orange Button/OrangeButton'
-import PartsFieldOperation from '@/components/widgets/Parts Field Operation/PartsFieldOperation'
+import PartsFieldOperation from '@/components/shared/Parts Field Operation/PartsFieldOperation'
 import { Operation } from '@/types/Operation'
 import SupportSection from '@/components/widgets/Support Section/SupportSection'
 

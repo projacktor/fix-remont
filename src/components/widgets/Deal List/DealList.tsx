@@ -1,5 +1,5 @@
 import React from 'react'
-import PartsField from '@/components/widgets/Parts Field/PartsField'
+import PartsField from '@/components/shared/Parts Field/PartsField'
 import Tariff from '@/types/Tariff'
 import { PartsFiledProps } from '@/types/PartsFieldProps'
 
