@@ -13,6 +13,7 @@ import BlogBullet from '@/components/entities/Blog bullet/BlogBullet'
 import banner from '../../../public/assets/img/bannerTrial.png'
 import BlogBulletProfile from '@/components/entities/Blog Bullet Profile/BlogBulletProfile'
 import NewsSection from '@/components/widgets/News Section/NewsSection'
+import SupportSection from '@/components/widgets/Support Section/SupportSection'
 
 function Home() {
   return (
@@ -84,6 +85,8 @@ function Home() {
       </div>
 
       <NewsSection />
+
+      <SupportSection />
     </main>
   )
 }
