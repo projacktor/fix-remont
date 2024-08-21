@@ -12,9 +12,9 @@ import BlogBullet from '@/components/entities/Blog bullet/BlogBullet'
 
 import banner from '../../../public/assets/img/bannerTrial.png'
 import BlogBulletProfile from '@/components/entities/Blog Bullet Profile/BlogBulletProfile'
+import NewsSection from '@/components/widgets/News Section/NewsSection'
 
 function Home() {
-  const param = 'calculator-guide'
   return (
     <main className="mb-8 flex flex-col gap-8">
       <Image src={banner as unknown as string} alt="banner" className="w-full" />
@@ -83,26 +83,7 @@ function Home() {
         </div>
       </div>
 
-      <div className="flex w-full flex-col items-start space-y-4">
-        <h1 className="heading">Новости платформы</h1>
-        <div className="flex h-64 flex-row items-center justify-around space-x-6">
-          <BlogBulletProfile
-            section="Ремонт"
-            link={param}
-            text="Как рассчитать стоимость через онлайн-калькулятор FIX-ремонт?"
-          />
-          <BlogBulletProfile
-            section="Ремонт"
-            link={param}
-            text="Как рассчитать стоимость через онлайн-калькулятор FIX-ремонт?"
-          />
-          <BlogBulletProfile
-            section="Ремонт"
-            link={param}
-            text="Как рассчитать стоимость через онлайн-калькулятор FIX-ремонт?"
-          />
-        </div>
-      </div>
+      <NewsSection />
     </main>
   )
 }
