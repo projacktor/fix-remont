@@ -4,6 +4,8 @@ import OrangeButton from '@/components/shared/buttons/Orange Button/OrangeButton
 import PartsFieldOperation from '@/components/shared/Parts Field Operation/PartsFieldOperation'
 import { Operation } from '@/types/Operation'
 import SupportSection from '@/components/widgets/Support Section/SupportSection'
+import PaymentField from '@/components/shared/Payment Field/PaymentField'
+import PaymentCards from '@/components/widgets/Payment Cards/PaymentCards'
 
 function Page() {
   const data = [
@@ -75,6 +77,8 @@ function Page() {
           ))}
         </div>
       </div>
+
+      <PaymentCards />
 
       <SupportSection />
     </main>
