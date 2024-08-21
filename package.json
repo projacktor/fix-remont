@@ -12,6 +12,7 @@
     "ci": "bun i --frozen-lockfile"
   },
   "dependencies": {
+    "data-fns": "^1.1.0",
     "next": "14.2.4",
     "prettier": "^3.3.2",
     "prettier-plugin-organize-attributes": "^1.0.0",
