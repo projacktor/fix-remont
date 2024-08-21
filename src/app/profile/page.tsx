@@ -30,7 +30,7 @@ function Home() {
 
       <div className="flex flex-col items-start space-y-4">
         <h2 className="heading2">Мои клиенты</h2>
-        <div className="flex h-max w-full flex-col items-center justify-around space-y-4 rounded-3xl p-4">
+        <div className="flex h-max w-full flex-col items-center justify-around space-y-4 rounded-3xl bg-white p-6">
           <PartsField
             objectName="Квартира"
             tariff={Tariff.business}
@@ -40,7 +40,7 @@ function Home() {
           />
           <PartsField
             objectName="Дом"
-            tariff={Tariff.comfort}
+            tariff={Tariff.standard}
             location="Казань, ул. Светлая"
             payment={120000}
             part="Заливка фундамента"
@@ -57,26 +57,26 @@ function Home() {
 
       <div className="flex flex-col items-start space-y-4">
         <h2 className="heading2">Мои договоры</h2>
-        <div className="flex h-max w-full flex-col items-center justify-around space-y-4 rounded-3xl p-4">
+        <div className="flex h-max w-full flex-col items-center justify-around space-y-4 rounded-3xl bg-white p-6">
           <PartsField
             objectName="Квартира"
             tariff={Tariff.business}
             location="Казань, ул. Волкова"
-            payment={32000}
+            payment={5032000}
             part="Установка полов"
           />
           <PartsField
             objectName="Дом"
             tariff={Tariff.comfort}
             location="Казань, ул. Светлая"
-            payment={120000}
+            payment={3120000}
             part="Заливка фундамента"
           />
           <PartsField
             objectName="Квартира"
             tariff={Tariff.comfort}
             location="Казань, ул. Щапова"
-            payment={26000}
+            payment={3462000}
             part="Объект сдан"
           />
         </div>

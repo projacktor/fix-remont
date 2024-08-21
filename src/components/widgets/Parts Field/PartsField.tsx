@@ -2,6 +2,8 @@ import React from 'react'
 import Tariff from '@/types/Tariff'
 import Image from 'next/image'
 
+import style from './partsField.module.scss'
+
 import leave from '../../../../public/assets/svg/Leave.svg'
 
 interface PartsFiledProps {
@@ -14,7 +16,7 @@ interface PartsFiledProps {
 
 function PartsField({ objectName, tariff, location, payment, part }: PartsFiledProps) {
   return (
-    <div className="grid w-full grid-cols-6 items-center">
+    <div className={`grid w-full grid-cols-6 items-center ${style.layout}`}>
       <div className="flex flex-col space-y-2">
         <p className="text-xs font-medium text-gray-400">Объект:</p>
         <h4 className="headingStruct text-xl">{objectName}</h4>
@@ -25,7 +27,7 @@ function PartsField({ objectName, tariff, location, payment, part }: PartsFiledP
       </div>
       <div className="flex flex-col space-y-2">
         <p className="text-xs font-medium text-gray-400">Локация:</p>
-        <h4 className="headingStruct text-xl">{location}</h4>
+        <h4 className="headingStruct max-w-[12rem] text-xl">{location}</h4>
       </div>
       <div className="flex flex-col space-y-2">
         <p className="text-xs font-medium text-gray-400">Вознаграждения:</p>
