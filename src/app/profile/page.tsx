@@ -12,6 +12,7 @@ import NewsSection from '@/components/widgets/News Section/NewsSection'
 import SupportSection from '@/components/widgets/Support Section/SupportSection'
 
 import banner from '../../../public/assets/img/bannerTrial.png'
+import DealList from '@/components/widgets/Deal List/DealList'
 
 function Client() {
   const partsData = [
@@ -51,23 +52,7 @@ function Client() {
 
       <Wallet />
 
-      <div className="flex flex-col items-start space-y-4">
-        <h2 className="heading2">Мои договоры</h2>
-        <div className="flex h-max max-h-96 w-full flex-col items-center justify-around space-y-4 overflow-y-auto rounded-3xl bg-white p-6">
-          {partsData.map((part, index) => (
-            <React.Fragment key={index}>
-              <PartsField
-                objectName={part.objectName}
-                tariff={part.tariff}
-                location={part.location}
-                payment={part.payment}
-                part={part.part}
-              />
-              {index < partsData.length - 1 && <hr className="w-full border-t border-gray-300" />}
-            </React.Fragment>
-          ))}
-        </div>
-      </div>
+      <DealList heading={'Мои договоры'} data={partsData} />
 
       <NewsSection />
 

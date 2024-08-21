@@ -1,18 +1,11 @@
 import React from 'react'
-import Tariff from '@/types/Tariff'
 import Image from 'next/image'
+
+import { PartsFiledProps } from '@/types/PartsFieldProps'
 
 import style from './partsField.module.scss'
 
 import leave from '../../../../public/assets/svg/Leave.svg'
-
-interface PartsFiledProps {
-  objectName: string
-  tariff: Tariff
-  location: string
-  payment: number
-  part: string
-}
 
 function PartsField({ objectName, tariff, location, payment, part }: PartsFiledProps) {
   return (

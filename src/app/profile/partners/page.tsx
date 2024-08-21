@@ -7,11 +7,11 @@ import Tariff from '@/types/Tariff'
 import RefLink from '@/components/widgets/Ref Link/RefLink'
 import CodeGen from '@/components/widgets/Code Generator/CodeGen'
 import Wallet from '@/components/widgets/Wallet/Wallet'
-import PartsField from '@/components/widgets/Parts Field/PartsField'
 import NewsSection from '@/components/widgets/News Section/NewsSection'
 import SupportSection from '@/components/widgets/Support Section/SupportSection'
 
 import banner from '../../../../public/assets/img/bannerTrial.png'
+import DealList from '@/components/widgets/Deal List/DealList'
 
 function Home() {
   const partsData = [
@@ -82,41 +82,9 @@ function Home() {
 
       <Wallet />
 
-      <div className="flex flex-col items-start space-y-4">
-        <h2 className="heading2">Мои клиенты</h2>
-        <div className="flex h-max max-h-96 w-full flex-col items-center justify-around space-y-4 overflow-y-auto rounded-3xl bg-white p-6">
-          {clientData.map((client, index) => (
-            <React.Fragment key={index}>
-              <PartsField
-                objectName={client.objectName}
-                tariff={client.tariff}
-                location={client.location}
-                payment={client.payment}
-                part={client.part}
-              />
-              {index < clientData.length - 1 && <hr className="w-full border-t border-gray-300" />}
-            </React.Fragment>
-          ))}
-        </div>
-      </div>
+      <DealList heading={'Мои клиенты'} data={clientData} />
 
-      <div className="flex flex-col items-start space-y-4">
-        <h2 className="heading2">Мои договоры</h2>
-        <div className="flex h-max max-h-96 w-full flex-col items-center justify-around space-y-4 overflow-y-auto rounded-3xl bg-white p-6">
-          {partsData.map((part, index) => (
-            <React.Fragment key={index}>
-              <PartsField
-                objectName={part.objectName}
-                tariff={part.tariff}
-                location={part.location}
-                payment={part.payment}
-                part={part.part}
-              />
-              {index < partsData.length - 1 && <hr className="w-full border-t border-gray-300" />}
-            </React.Fragment>
-          ))}
-        </div>
-      </div>
+      <DealList heading={'Мои договоры'} data={partsData} />
 
       <NewsSection />
 
