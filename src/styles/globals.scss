@@ -13,3 +13,18 @@ main {
 input[type='checkbox']:checked {
   accent-color: #f9af15;
 }
+
+html {
+  ::-webkit-scrollbar-thumb {
+    background: #f9af15;
+    border-radius: 32px;
+  }
+
+  ::-webkit-scrollbar {
+    width: 8px;
+  }
+
+  ::-webkit-scrollbar-track {
+    background: #fafafa;
+  }
+}

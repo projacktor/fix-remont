@@ -13,4 +13,15 @@ input[type='checkbox']:checked {
   accent-color: #f9af15;
 }
 
+html ::-webkit-scrollbar-thumb {
+  background: #f9af15;
+  border-radius: 32px;
+}
+html ::-webkit-scrollbar {
+  width: 8px;
+}
+html ::-webkit-scrollbar-track {
+  background: #fafafa;
+}
+
 /*# sourceMappingURL=globals.css.map */
