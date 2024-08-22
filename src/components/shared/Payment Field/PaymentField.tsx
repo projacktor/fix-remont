@@ -1,4 +1,5 @@
 import React from 'react'
+import Image from 'next/image'
 
 import { PaymentFieldProps } from '@/types/PaymentFieldProps'
 import { PaymentProvider } from '@/types/Payment Provider'
@@ -8,26 +9,23 @@ import style from './paymentField.module.scss'
 import mir from '../../../../public/assets/svg/mirLogo.svg'
 import visa from '../../../../public/assets/svg/visaLogo.svg'
 import master from '../../../../public/assets/svg/mastercardLogo.svg'
-import Image from 'next/image'
 
-function PaymentField({ paymentProvider, index, name }: PaymentFieldProps) {
-  const checkProvider = (paymentProvider: PaymentProvider) => {
-    switch (paymentProvider) {
-      case PaymentProvider.Mir:
-        return <Image src={mir as string} alt={'mir card'} />
-      case PaymentProvider.Visa:
-        return <Image src={visa as string} alt={'visa card'} />
-      case PaymentProvider.MasterCard:
-        return <Image src={master as string} alt={'master'} />
-      default:
-        console.log(paymentProvider)
-    }
-  }
-
+function PaymentField({ provider, index, name }: PaymentFieldProps) {
   return (
-    <div className={`${style.layout} grid items-center p-4`}>
-      {checkProvider(paymentProvider)}
-      {/*<Image src={paymentProvider === PaymentProvider.Mir ? mir as string : paymentProvider === PaymentProvider.Visa ? visa as string : paymentProvider === PaymentProvider.MasterCard ? master as string : "as"} alt="Card logo" width={90}/>*/}
+    <div className={`${style.layout} grid items-center p-3`}>
+      <Image
+        src={
+          provider === PaymentProvider.Mir
+            ? (mir as string)
+            : provider === PaymentProvider.Visa
+              ? (visa as string)
+              : provider === PaymentProvider.MasterCard
+                ? (master as string)
+                : 'as'
+        }
+        alt="Card logo"
+        width={60}
+      />
 
       <h5 className="headingStruct texl-lg">{name}</h5>
 
