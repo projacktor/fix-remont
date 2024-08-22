@@ -1,13 +1,37 @@
 'use client'
 import React from 'react'
+import { PaymentProvider } from '@/types/Payment Provider'
+import { Operation } from '@/types/Operation'
+
 import OrangeButton from '@/components/shared/buttons/Orange Button/OrangeButton'
 import PartsFieldOperation from '@/components/shared/Parts Field Operation/PartsFieldOperation'
-import { Operation } from '@/types/Operation'
 import SupportSection from '@/components/widgets/Support Section/SupportSection'
-import PaymentField from '@/components/shared/Payment Field/PaymentField'
 import PaymentCards from '@/components/widgets/Payment Cards/PaymentCards'
 
 function Page() {
+  const payment = [
+    {
+      provider: PaymentProvider.Mir,
+      index: 2980,
+      name: 'Карта МИР'
+    },
+    {
+      provider: PaymentProvider.Visa,
+      index: 2929,
+      name: 'Карта VISA'
+    },
+    {
+      provider: PaymentProvider.MasterCard,
+      index: 7777,
+      name: 'Карта MasterCard'
+    },
+    {
+      provider: PaymentProvider.MasterCard,
+      index: 7777,
+      name: 'Карта MasterCard'
+    }
+  ]
+
   const data = [
     {
       type: Operation.output,
@@ -64,21 +88,25 @@ function Page() {
       <div className="flex flex-col items-start space-y-4">
         <h2 className="heading2">История операций</h2>
         <div className="flex h-max max-h-96 w-full flex-col items-center justify-around space-y-4 overflow-y-auto rounded-3xl bg-white p-6">
-          {data.map((part, index) => (
-            <React.Fragment key={index}>
-              <PartsFieldOperation
-                type={part.type}
-                cost={part.cost}
-                date={part.date}
-                status={part.status}
-              />
-              {index < data.length - 1 && <hr className="w-full border-t border-gray-300" />}
-            </React.Fragment>
-          ))}
+          {data.length === 0 ? (
+            <p className="w-full text-center font-medium text-gray-400">У вас не было операций</p>
+          ) : (
+            data.map((part, index) => (
+              <React.Fragment key={index}>
+                <PartsFieldOperation
+                  type={part.type}
+                  cost={part.cost}
+                  date={part.date}
+                  status={part.status}
+                />
+                {index < data.length - 1 && <hr className="w-full border-t border-gray-300" />}
+              </React.Fragment>
+            ))
+          )}
         </div>
       </div>
 
-      <PaymentCards />
+      <PaymentCards initialData={payment} />
 
       <SupportSection />
     </main>

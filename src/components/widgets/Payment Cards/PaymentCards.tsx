@@ -3,32 +3,10 @@ import React, { useState } from 'react'
 import { PaymentFieldProps } from '@/types/PaymentFieldProps'
 
 import PaymentField from '@/components/shared/Payment Field/PaymentField'
-import { PaymentProvider } from '@/types/Payment Provider'
 import NewCard from '@/components/modal/New Card/NewCard'
 
-function PaymentCards() {
-  const [data, setData] = useState([
-    {
-      provider: PaymentProvider.Mir,
-      index: 2980,
-      name: 'Карта МИР'
-    },
-    {
-      provider: PaymentProvider.Visa,
-      index: 2929,
-      name: 'Карта VISA'
-    },
-    {
-      provider: PaymentProvider.MasterCard,
-      index: 7777,
-      name: 'Карта MasterCard'
-    },
-    {
-      provider: PaymentProvider.MasterCard,
-      index: 7777,
-      name: 'Карта MasterCard'
-    }
-  ])
+function PaymentCards({ initialData }: PaymentFieldProps[]) {
+  const [data, setData] = useState(initialData)
 
   const [isPopupOpen, setPopupOpen] = useState(false)
 
