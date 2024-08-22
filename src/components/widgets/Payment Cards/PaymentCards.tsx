@@ -5,7 +5,11 @@ import { PaymentFieldProps } from '@/types/PaymentFieldProps'
 import PaymentField from '@/components/shared/Payment Field/PaymentField'
 import NewCard from '@/components/modal/New Card/NewCard'
 
-function PaymentCards({ initialData }: PaymentFieldProps[]) {
+interface PaymentCardsProps {
+  initialData: PaymentFieldProps[]
+}
+
+function PaymentCards({ initialData }: PaymentCardsProps) {
   const [data, setData] = useState(initialData)
 
   const [isPopupOpen, setPopupOpen] = useState(false)
