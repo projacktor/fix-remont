@@ -7,7 +7,7 @@ import active from '../../../../public/assets/svg/rectangle.svg'
 import inactive from '../../../../public/assets/svg/rectangleInnactive.svg'
 
 function ScaleStep({ heading, status, watch }: ScaleStepProps) {
-  function isActive(status) {
+  function isActive(status: boolean) {
     return status ? (active as string) : (inactive as string)
   }
 
