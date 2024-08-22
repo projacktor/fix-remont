@@ -72,7 +72,7 @@ function ContractCard({
       </article>
 
       <div className="button_container h-16 w-full">
-        <CheckButton text="Подробнее о заказе" />
+        <CheckButton text="Подробнее о заказе" link={`/profile/contracts/orders/${index}`} />
       </div>
     </div>
   )

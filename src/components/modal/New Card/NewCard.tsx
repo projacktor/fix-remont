@@ -14,13 +14,13 @@ interface NewCardProps {
 
 function NewCard({ onClose, onSave }: NewCardProps) {
   const [provider, setProvider] = useState<PaymentProvider | null>(null)
-  const [index, setIndex] = useState<string>('') // Изменено на строку
+  const [index, setIndex] = useState<string>('')
   const [name, setName] = useState<string>('')
-  const [cvc, setCvc] = useState<string>('') // Добавлено поле для CVC
+  const [cvc, setCvc] = useState<string>('')
 
   const handleCardNumberChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    let cardNumber = e.target.value.replace(/\D/g, '') // Удаление всех символов, кроме цифр
-    cardNumber = cardNumber.slice(0, 16) // Ограничение до 16 цифр
+    let cardNumber = e.target.value.replace(/\D/g, '')
+    cardNumber = cardNumber.slice(0, 16)
 
     setIndex(cardNumber)
 
@@ -36,15 +36,15 @@ function NewCard({ onClose, onSave }: NewCardProps) {
   }
 
   const handleCvcChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    let cvcInput = e.target.value.replace(/\D/g, '') // Удаление всех символов, кроме цифр
-    cvcInput = cvcInput.slice(0, 3) // Ограничение до 3 цифр
+    let cvcInput = e.target.value.replace(/\D/g, '')
+    cvcInput = cvcInput.slice(0, 3)
 
     setCvc(cvcInput)
   }
 
   function handleSave() {
     if (provider && index && name && cvc.length === 3) {
-      const cardIndex = Number(index.slice(-4)) // Присваивание последних 4 цифр
+      const cardIndex = Number(index.slice(-4))
       onSave({ provider, index: cardIndex, name })
       onClose()
     } else {
@@ -117,7 +117,7 @@ function NewCard({ onClose, onSave }: NewCardProps) {
               СVC:
             </label>
             <input
-              type="text" // Изменено на текст
+              type="text"
               placeholder="CVC"
               className="w-full rounded-3xl bg-color-bg-gray p-3 placeholder:text-gray-500"
               value={cvc}
