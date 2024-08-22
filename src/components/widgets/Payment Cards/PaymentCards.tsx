@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 
 import { PaymentFieldProps } from '@/types/PaymentFieldProps'
 
@@ -6,7 +6,7 @@ import PaymentField from '@/components/shared/Payment Field/PaymentField'
 import { PaymentProvider } from '@/types/Payment Provider'
 
 function PaymentCards() {
-  const data = [
+  const [data, setData] = useState([
     {
       provider: PaymentProvider.Mir,
       index: 2980,
@@ -21,23 +21,46 @@ function PaymentCards() {
       provider: PaymentProvider.MasterCard,
       index: 7777,
       name: 'Карта MasterCard'
+    },
+    {
+      provider: PaymentProvider.MasterCard,
+      index: 7777,
+      name: 'Карта MasterCard'
     }
-    // {
-    //   provider: PaymentProvider.MasterCard,
-    //   index: 7777,
-    //   name: 'Карта MasterCard'
-    // }
-  ]
+  ])
+
+  const removeCard = (indexToRemove: number) => {
+    setData((prevData) => prevData.filter((_, index) => index !== indexToRemove))
+  }
   return (
     <div className="flex flex-col space-y-6">
       <h2 className="heading2">Способы оплаты</h2>
-      <div className="flex max-h-72 flex-col overflow-y-auto rounded-3xl bg-white p-5">
-        {data.map((field, index) => (
-          <React.Fragment key={index}>
-            <PaymentField provider={field.provider} index={field.index} name={field.name} />
-            {index < data.length - 1 && <hr className="w-full border-t border-gray-300" />}
-          </React.Fragment>
-        ))}
+      <div className="space-y-8 rounded-3xl bg-white p-5">
+        <div className="flex max-h-72 flex-col overflow-y-auto">
+          {data.length === 0 ? (
+            <p className="w-full text-center font-medium text-gray-400">
+              У вас нет способов вывода
+            </p>
+          ) : (
+            data.map((field, index) => (
+              <React.Fragment key={index}>
+                <PaymentField
+                  provider={field.provider}
+                  index={field.index}
+                  name={field.name}
+                  onRemove={() => removeCard(index)}
+                />
+                {index != data.length - 1 && <hr className="w-full border-t border-gray-300" />}
+              </React.Fragment>
+            ))
+          )}
+        </div>
+        <div className="flex flex-row justify-between px-4">
+          <h5 className="headingStruct text-lg">Добавить новый способ вывода</h5>
+          <button className="rounded-xl bg-color-orange px-3 py-1 text-3xl font-medium text-white">
+            +
+          </button>
+        </div>
       </div>
     </div>
   )

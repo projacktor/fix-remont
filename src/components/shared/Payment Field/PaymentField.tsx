@@ -10,7 +10,11 @@ import mir from '../../../../public/assets/svg/mirLogo.svg'
 import visa from '../../../../public/assets/svg/visaLogo.svg'
 import master from '../../../../public/assets/svg/mastercardLogo.svg'
 
-function PaymentField({ provider, index, name }: PaymentFieldProps) {
+interface Props extends PaymentFieldProps {
+  onRemove: () => void
+}
+
+function PaymentField({ provider, index, name, onRemove }: Props) {
   return (
     <div className={`${style.layout} grid items-center p-3`}>
       <Image
@@ -35,7 +39,9 @@ function PaymentField({ provider, index, name }: PaymentFieldProps) {
       </article>
 
       <div className="text-end text-2xl">
-        <button className="rounded-lg bg-color-back px-4 py-2 text-gray-500">&times;</button>
+        <button className="rounded-lg bg-color-back px-4 py-2 text-gray-500" onClick={onRemove}>
+          &times;
+        </button>
       </div>
     </div>
   )
