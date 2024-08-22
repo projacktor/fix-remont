@@ -3,7 +3,6 @@ import React from 'react'
 import Tariff from '@/types/Tariff'
 import { State } from '@/types/State'
 
-import PartBullet from '@/components/entities/Part Bullet/PartBullet'
 import CheckButton from '@/components/shared/buttons/Check Button/CheckButton'
 import CardNote from '@/components/entities/Card Note/CardNote'
 
@@ -56,7 +55,16 @@ function ContractCard({
 
       <CardNote state={state} />
 
-      <PartBullet part={part} />
+      <div
+        className={`flex w-full flex-col space-y-4 rounded-2xl p-4 ${part === 'Объект сдан' ? 'bg-color-dark' : 'bg-color-back'}`}
+      >
+        <p className="text-xs font-medium text-gray-400">Текущий этап:</p>
+        <h4
+          className={`headingStruct text-xl ${part === 'Объект сдан' ? 'text-white' : 'text-black'}`}
+        >
+          {part}
+        </h4>
+      </div>
 
       <article className="flex flex-row justify-between">
         <p className="text-xs font-medium text-gray-400">Вознаграждение:</p>
