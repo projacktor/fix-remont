@@ -5,28 +5,25 @@ import { PartsFiledProps } from '@/types/PartsFieldProps'
 
 import style from './partsField.module.scss'
 
-import leave from '../../../../public/assets/svg/Leave.svg'
 import PartBullet from '@/components/entities/Part Bullet/PartBullet'
+import Description from '@/components/entities/Description/Description'
+
+import leave from '../../../../public/assets/svg/Leave.svg'
 
 function PartsField({ objectName, tariff, location, payment, part }: PartsFiledProps) {
+  const props = [
+    { label: 'Объект', value: objectName },
+    { label: 'Тариф', value: tariff },
+    { label: 'Локация', value: location },
+    { label: 'Вознаграждения', value: `${payment.toLocaleString('ru-Ru')} руб` }
+  ]
   return (
     <div className={`grid w-full grid-cols-6 items-center ${style.layout}`}>
-      <div className="flex flex-col space-y-2">
-        <p className="text-xs font-medium text-gray-400">Объект:</p>
-        <h4 className="headingStruct text-xl">{objectName}</h4>
-      </div>
-      <div className="flex flex-col space-y-2">
-        <p className="text-xs font-medium text-gray-400">Тариф:</p>
-        <h4 className="headingStruct text-xl">{tariff}</h4>
-      </div>
-      <div className="flex flex-col space-y-2">
-        <p className="text-xs font-medium text-gray-400">Локация:</p>
-        <h4 className="headingStruct max-w-[12rem] text-xl">{location}</h4>
-      </div>
-      <div className="flex flex-col space-y-2">
-        <p className="text-xs font-medium text-gray-400">Вознаграждения:</p>
-        <h4 className="headingStruct text-xl">{payment.toLocaleString('ru-Ru')} руб</h4>
-      </div>
+      {props.map((prop, index) => (
+        <React.Fragment key={index}>
+          <Description name={prop.label} heading={prop.value} />
+        </React.Fragment>
+      ))}
 
       <PartBullet part={part} />
 

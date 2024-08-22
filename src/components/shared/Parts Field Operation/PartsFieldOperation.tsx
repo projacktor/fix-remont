@@ -3,6 +3,7 @@ import React from 'react'
 import style from './partsFieldOparation.module.scss'
 
 import CheckButton from '@/components/shared/buttons/Check Button/CheckButton'
+import Description from '@/components/entities/Description/Description'
 import { Operation } from '@/types/Operation'
 
 interface PartsFiledOperationProps {
@@ -20,14 +21,8 @@ function PartsFieldOperation({ type, cost, date, status }: PartsFiledOperationPr
   const formattedDate = `${day}.${month}.${year}`
   return (
     <div className={`grid w-full grid-cols-6 items-center ${style.layout}`}>
-      <div className="flex flex-col space-y-2">
-        <p className="text-xs font-medium text-gray-400">Операция:</p>
-        <h4 className="headingStruct text-xl">{type}</h4>
-      </div>
-      <div className="flex flex-col space-y-2">
-        <p className="text-xs font-medium text-gray-400">Сумма:</p>
-        <h4 className="headingStruct text-xl">{cost.toLocaleString('ru-Ru')} руб</h4>
-      </div>
+      <Description name="Операция" heading={type} />
+      <Description name="Сумма" heading={`${cost.toLocaleString('ru-Ru')} руб`} />
       <div className="flex flex-col space-y-2">
         <p className="text-xs font-medium text-gray-400">Дата:</p>
         <time className="headingStruct text-xl">{formattedDate}</time>
