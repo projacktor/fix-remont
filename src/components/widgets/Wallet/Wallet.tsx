@@ -23,12 +23,12 @@ function Wallet() {
         <h3 className="heading2">67 800 руб</h3>
       </div>
 
-      <div className="button_container h-20 w-64">
+      <div className="button_container h-16 w-64">
         <OrangeButton text="Вывести средства" className="text-base" />
       </div>
 
-      <div className="button_container h-20 w-64">
-        <CheckButton text="Перейти в кошелек" />
+      <div className="button_container h-16 w-64">
+        <CheckButton text="Перейти в кошелек" link="/profile/wallet" />
       </div>
     </div>
   )

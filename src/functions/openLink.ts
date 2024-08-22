@@ -1,5 +1,6 @@
-function openLink(link: string, blank = false) {
-  if (blank) {
+function openLink(link: string, blank: boolean = false) {
+  const shouldOpenInNewTab = blank === true
+  if (shouldOpenInNewTab) {
     if (link) {
       return () => {
         window.open(link, '_blank', 'noopener,noreferrer')
@@ -8,7 +9,7 @@ function openLink(link: string, blank = false) {
   } else {
     if (link) {
       return () => {
-        window.open(link, 'noopener,noreferrer')
+        window.open(link, '_self', 'noopener,noreferrer')
       }
     }
   }
