@@ -1,14 +1,10 @@
 import React from 'react'
 import Image from 'next/image'
 
+import { ScaleStepProps } from '@/types/ScaleStepProps'
+
 import active from '../../../../public/assets/svg/rectangle.svg'
 import inactive from '../../../../public/assets/svg/rectangleInnactive.svg'
-
-interface ScaleStepProps {
-  heading: string
-  status: boolean
-  watch: string
-}
 
 function ScaleStep({ heading, status, watch }: ScaleStepProps) {
   function isActive(status) {

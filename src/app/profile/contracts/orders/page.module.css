@@ -1,5 +1,9 @@
-.layout {
+.layout1 {
   grid-template-columns: repeat(3, 15%) 20% 35%;
+}
+
+.layout2 {
+  grid-template-columns: repeat(3, 15%) 30% 25%;
 }
 
 /*# sourceMappingURL=page.module.css.map */

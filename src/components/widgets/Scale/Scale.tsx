@@ -1,41 +1,13 @@
 import React, { useState } from 'react'
 import ScaleStep from '@/components/entities/Scale Step/ScaleStep'
+import { ScaleStepProps } from '@/types/ScaleStepProps'
 
-function Scale() {
+interface ScaleProps {
+  data: ScaleStepProps[]
+}
+
+function Scale({ data }: ScaleProps) {
   const [steps, setStep] = useState<number>(0)
-
-  const data = [
-    {
-      heading: 'Монтаж пола',
-      status: false,
-      watch: 'договор'
-    },
-    {
-      heading: 'Монтаж пола',
-      status: false,
-      watch: 'договор'
-    },
-    {
-      heading: 'Монтаж пола',
-      status: false,
-      watch: 'договор'
-    },
-    {
-      heading: 'Подписание договора',
-      status: true,
-      watch: 'договор'
-    },
-    {
-      heading: 'Вывоз мусора',
-      status: true,
-      watch: 'договор'
-    },
-    {
-      heading: 'Монтаж пола',
-      status: false,
-      watch: 'договор'
-    }
-  ]
 
   return (
     <div className="flex flex-col space-y-6">
