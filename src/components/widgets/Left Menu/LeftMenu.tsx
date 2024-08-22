@@ -12,12 +12,12 @@ function LeftMenu() {
   return (
     <aside className="sticky top-0 flex h-max w-96 flex-col items-start gap-8 rounded-3xl bg-white p-8">
       <ul className="flex flex-col text-lg font-semibold leading-10 text-color-dark underline">
-        <li>Главная</li>
-        <li>Договоры</li>
-        <li>Партнерская программа</li>
-        <li>Профиль</li>
-        <li>Новости платформы</li>
-        <li>Служба поддержки</li>
+        <Link href={'/profile/'}>Главная</Link>
+        <Link href={'/profile/contracts/'}>Договоры</Link>
+        <Link href={'/profile/partnership'}>Партнерская программа</Link>
+        <Link href={'/profile/account/'}>Профиль</Link>
+        <Link href={'/profile/news/'}>Новости платформы</Link>
+        <Link href={'/profile/support'}>Служба поддержки</Link>
       </ul>
 
       <div className="flex flex-col items-start justify-between space-y-3 rounded-2xl bg-inherit">
