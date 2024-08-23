@@ -9,7 +9,7 @@ function Page() {
     <main className="mb-8 flex w-full flex-col gap-8">
       <h1 className="heading">Служба поддержки</h1>
 
-      <div className="flex flex-row items-center justify-between space-x-3 rounded-3xl bg-white p-7">
+      <div className="whiteContainer flex flex-row items-center justify-between space-x-3">
         <div className="headingStruct flex flex-col space-y-1 text-2xl">
           <h2 className="orange-bold">Есть вопросы?</h2>
           <h2>Обратитесь в нашу службу поддержки</h2>

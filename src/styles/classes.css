@@ -41,4 +41,8 @@ input[type='number']::-webkit-inner-spin-button {
   display: none;
 }
 
+.whiteContainer {
+  @apply rounded-3xl bg-white p-7;
+}
+
 /*# sourceMappingURL=classes.css.map */

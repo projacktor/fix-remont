@@ -43,3 +43,7 @@ input[type='number']::-webkit-inner-spin-button {
   -ms-overflow-style: none;
   scrollbar-width: none;
 }
+
+.whiteContainer {
+  @apply rounded-3xl bg-white p-7;
+}
