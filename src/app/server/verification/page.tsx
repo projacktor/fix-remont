@@ -11,10 +11,9 @@ function Page() {
       <form className="flex flex-col space-y-5 rounded-3xl bg-white p-8">
         <div className="flex flex-col space-y-3">
           <h2 className="heading2">Верификация</h2>
-          <p className="text-sm font-medium">
-            Для вывода средств, вам необходимо пройти верификацию на
-            <br />
-            основании Законодательства Российской Федерации
+          <p className="max-w-max text-sm font-medium">
+            Для вывода средств, вам необходимо пройти верификацию на основании Законодательства
+            Российской Федерации
           </p>
         </div>
 
@@ -68,8 +67,6 @@ function Page() {
         quality={100}
         className="w-2/3 md:w-[62%]"
       />
-      {/*<picture className="">*/}
-      {/*</picture>*/}
     </main>
   )
 }
