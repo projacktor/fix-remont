@@ -2,8 +2,35 @@
 import React from 'react'
 import SupportSection from '@/components/widgets/Support Section/SupportSection'
 import BlackButton from '@/components/shared/buttons/Black Button/BlackButton'
+import AccountNotification from '@/components/entities/Account Notification/AccountNotification'
 
 function Page() {
+  const notifications = [
+    {
+      value: 'По заказу №41084',
+      label: '25 февраля 2024 ',
+      description: 'Исполнитель по заказу №41084 хочет связаться с вами по текущему проекту '
+    },
+    {
+      value: 'Технические работы',
+      label: '25 февраля 2024',
+      description:
+        'В срок с 25.02.2024 03:00 МСК по 26.02.2024 03:00 МСК на платформе будут проводиться технические работы по обновлению сайта '
+    },
+    {
+      value: 'Технические работы',
+      label: '25 февраля 2024',
+      description:
+        'В срок с 25.02.2024 03:00 МСК по 26.02.2024 03:00 МСК на платформе будут проводиться технические работы по обновлению сайта '
+    },
+    {
+      value: 'Технические работы',
+      label: '25 февраля 2024',
+      description:
+        'В срок с 25.02.2024 03:00 МСК по 26.02.2024 03:00 МСК на платформе будут проводиться технические работы по обновлению сайта '
+    }
+  ]
+
   return (
     <main className="mb-8 flex w-full flex-col gap-8">
       <h1 className="heading">Профиль</h1>
@@ -18,7 +45,7 @@ function Page() {
 
           <div className="grid w-96 grid-rows-3 items-center gap-4">
             <div className="flex flex-col items-start space-y-1">
-              <label className="pl-3 text-sm text-gray-400" htmlFor="name">
+              <label className="pl-3 text-xs text-gray-400" htmlFor="name">
                 Имя:
               </label>
               <input
@@ -32,7 +59,7 @@ function Page() {
               <hr className="w-full border-t border-gray-300" />
             </div>
             <div className="flex flex-col items-start space-y-1">
-              <label className="pl-3 text-sm text-gray-400" htmlFor="surname">
+              <label className="pl-3 text-xs text-gray-400" htmlFor="surname">
                 Фамилия:
               </label>
               <input
@@ -46,7 +73,7 @@ function Page() {
               <hr className="w-full border-t border-gray-300" />
             </div>
             <div className="flex flex-col items-start space-y-1">
-              <label className="pl-3 text-sm text-gray-400" htmlFor="role">
+              <label className="pl-3 text-xs text-gray-400" htmlFor="role">
                 Роль:
               </label>
               <input
@@ -62,7 +89,7 @@ function Page() {
 
           <div className="grid w-96 grid-rows-3 items-center gap-4">
             <div className="flex flex-col items-start space-y-1">
-              <label className="pl-3 text-sm text-gray-400" htmlFor="phone">
+              <label className="pl-3 text-xs text-gray-400" htmlFor="phone">
                 Телефон:
               </label>
               <input
@@ -76,7 +103,7 @@ function Page() {
               <hr className="w-full border-t border-gray-300" />
             </div>
             <div className="flex flex-col items-start space-y-1">
-              <label className="pl-3 text-sm text-gray-400" htmlFor="mail">
+              <label className="pl-3 text-xs text-gray-400" htmlFor="mail">
                 E-mail:
               </label>
               <input
@@ -98,6 +125,59 @@ function Page() {
         </form>
       </div>
 
+      <div className="grid w-full grid-cols-2 items-center gap-5">
+        <div className="flex flex-col space-y-6">
+          <h4 className="headingStruct pl-7 text-2xl">Уведомления:</h4>
+          <div className="noScrollbar flex h-[25rem] max-h-[25rem] min-w-[32rem] flex-col space-y-8 overflow-y-auto rounded-3xl bg-white p-9">
+            {notifications.length === 0 ? (
+              <p className="w-full text-center font-medium text-gray-400">У вас нет уведомлений</p>
+            ) : (
+              notifications.map((note, index) => (
+                <React.Fragment key={index}>
+                  <AccountNotification
+                    value={note.value}
+                    label={note.label}
+                    description={note.description}
+                  />
+                  {index < notifications.length - 1 && (
+                    <hr className="w-full border-t border-gray-300" />
+                  )}
+                </React.Fragment>
+              ))
+            )}
+          </div>
+        </div>
+
+        <div className="flex flex-col space-y-5">
+          <h4 className="headingStruct pl-7 text-2xl">Изменение пароля</h4>
+          <form className="flex flex-col items-center justify-around space-x-3 space-y-4 rounded-3xl bg-color-dark p-9">
+            <input
+              className="w-full rounded-full bg-color-input-d px-8 py-6 text-color-back placeholder:text-color-back"
+              placeholder="Старый пароль"
+              type="password"
+              autoComplete="current-password"
+              id="current-password"
+            />
+            <input
+              className="w-full rounded-full bg-color-input-d px-8 py-6 text-color-back placeholder:text-color-back"
+              placeholder="Новый пароль"
+              type="password"
+              autoComplete="new-password webauthn"
+              id="new-password"
+            />
+            <input
+              className="w-full rounded-full bg-color-input-d px-8 py-6 text-color-back placeholder:text-color-back"
+              placeholder="Повторите новый пароль"
+              type="password"
+              autoComplete="new-password webauthn"
+              id="repeat-new-password"
+            />
+            <button className="flex w-full items-center justify-center rounded-full bg-color-orange px-8 py-6 font-semibold text-white">
+              Изменить пароль
+            </button>
+          </form>
+        </div>
+      </div>
       <SupportSection />
     </main>
   )
