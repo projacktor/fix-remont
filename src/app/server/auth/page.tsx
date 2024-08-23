@@ -3,7 +3,8 @@ import React, { useState } from 'react'
 import Image from 'next/image'
 import Link from 'next/link'
 
-import eyeIcon from '../../../../public/assets/svg/eye-icon.svg'
+import eyeClosedIcon from '../../../../public/assets/svg/close-eye.svg'
+import eyeOpenIcon from '../../../../public/assets/svg/open-eye.svg'
 import picture from '../../../../public/assets/img/banners/auth.png'
 
 function LoginPage() {
@@ -44,14 +45,14 @@ function LoginPage() {
             />
             <button
               type="button"
-              className="absolute right-4 top-14"
+              className={`absolute right-5 ${showPassword ? 'top-[3.6rem]' : 'top-[3.4rem]'}`}
               onClick={togglePasswordVisibility}
             >
               <Image
-                src={eyeIcon as string}
+                src={showPassword ? (eyeOpenIcon as string) : (eyeClosedIcon as string)}
                 alt="Toggle Password Visibility"
-                width={24}
-                height={24}
+                width={23}
+                height={23}
               />
             </button>
           </div>
