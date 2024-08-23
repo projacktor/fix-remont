@@ -131,7 +131,7 @@ function Page() {
           <h4 className="headingStruct pl-7 text-2xl">Уведомления:</h4>
           <div className="noScrollbar flex h-[25rem] max-h-[25rem] min-w-[32rem] flex-col space-y-8 overflow-y-auto rounded-3xl bg-white p-9">
             {notifications.length === 0 ? (
-              <p className="w-full text-center font-medium text-gray-400">У вас нет уведомлений</p>
+              <p className="emptyMessage">У вас нет уведомлений</p>
             ) : (
               notifications.map((note, index) => (
                 <React.Fragment key={index}>
