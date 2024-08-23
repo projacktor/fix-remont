@@ -14,7 +14,6 @@ import CheckButton from '@/components/shared/buttons/Check Button/CheckButton'
 import attention from '../../../../../public/assets/svg/ellips/ellipsRed.svg'
 import wait from '../../../../../public/assets/svg/ellips/ellipsYellow.svg'
 import accept from '../../../../../public/assets/svg/ellips/ellipsGreen.svg'
-import inactive from '../../../../../public/assets/svg/ellips/ellipsGray.svg'
 
 function Page() {
   const data = [
@@ -104,6 +103,24 @@ function Page() {
       label: 'Первый этап (20%)'
     }
   ]
+
+  const documents_data = [
+    {
+      type: Notification.accept,
+      value: 'Договор',
+      label: 'Подписан 10.02.2024'
+    },
+    {
+      type: Notification.accept,
+      value: 'Акт приёмки (1 этап)',
+      label: 'Подписан 10.02.2024'
+    },
+    {
+      type: Notification.attention,
+      value: 'Акт приёмки (2 этап)',
+      label: 'Требует подписания'
+    }
+  ]
   return (
     <main className="mb-8 flex w-full flex-col gap-8 overflow-x-hidden">
       <div className="mt-8 flex w-full flex-row justify-between">
@@ -168,7 +185,7 @@ function Page() {
             <div className="noScrollbar flex max-h-72 flex-col space-y-3 overflow-y-auto rounded-3xl bg-white p-7">
               {notifications_data.map((note, index) => (
                 <div key={index} className="mb-1">
-                  <div className="flex flex-row items-center space-x-8">
+                  <div className="flex flex-row items-center justify-between space-x-8">
                     <div className="flex flex-col space-y-2">
                       <div className="flex flex-row space-x-2">
                         <Image
@@ -209,11 +226,7 @@ function Page() {
                       <div className="flex flex-row space-x-2">
                         <Image
                           src={
-                            pay.type === Notification.wait
-                              ? (wait as string)
-                              : pay.type === Notification.accept
-                                ? (accept as string)
-                                : (inactive as string)
+                            pay.type === Notification.wait ? (wait as string) : (accept as string)
                           }
                           alt="notification"
                           width={8}
@@ -233,6 +246,46 @@ function Page() {
                     </div>
                   </div>
                   {index < payment_data.length - 1 && (
+                    <hr className="mt-5 w-full border-t border-gray-300" />
+                  )}
+                </div>
+              ))}
+            </div>
+            <div className="pointer-events-none absolute bottom-0 left-0 right-0 h-20 rounded-2xl bg-gradient-to-t from-white to-transparent" />
+          </div>
+        </div>
+
+        <div className="flex flex-col space-y-5">
+          <h4 className="headingStruct pl-7 text-2xl">Документы:</h4>
+          <div className="relative">
+            <div className="noScrollbar flex max-h-72 flex-col space-y-3 overflow-y-auto rounded-3xl bg-white p-7">
+              {documents_data.map((doc, index) => (
+                <div key={index} className="mb-1">
+                  <div className="flex flex-row items-center justify-between space-x-8">
+                    <div className="flex flex-col space-y-2">
+                      <div className="flex flex-row space-x-2">
+                        <Image
+                          src={
+                            doc.type === Notification.attention
+                              ? (attention as string)
+                              : (accept as string)
+                          }
+                          alt="notification"
+                          width={8}
+                        />
+                        <h5 className="text-lg font-semibold">{doc.value}</h5>
+                      </div>
+                      <p
+                        className={`text-sm ${doc.type === Notification.attention ? 'text-color-attention' : 'text-gray-400'}`}
+                      >
+                        {doc.label}
+                      </p>
+                    </div>
+                    <div className="button_container h-16 w-36">
+                      <CheckButton text="Скачать" />
+                    </div>
+                  </div>
+                  {index < documents_data.length - 1 && (
                     <hr className="mt-5 w-full border-t border-gray-300" />
                   )}
                 </div>
