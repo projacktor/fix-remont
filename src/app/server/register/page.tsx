@@ -5,13 +5,18 @@ import Link from 'next/link'
 
 import eyeClosedIcon from '../../../../public/assets/svg/close-eye.svg'
 import eyeOpenIcon from '../../../../public/assets/svg/open-eye.svg'
-import picture from '../../../../public/assets/img/banners/auth.png'
+import picture from '../../../../public/assets/img/banners/register.png'
 
-function LoginPage() {
+function RegisterPage() {
   const [showPassword, setShowPassword] = useState(false)
+  const [showConfirmPassword, setShowConfirmPassword] = useState(false)
 
   const togglePasswordVisibility = () => {
     setShowPassword(!showPassword)
+  }
+
+  const toggleConfirmPasswordVisibility = () => {
+    setShowConfirmPassword(!showConfirmPassword)
   }
 
   return (
@@ -19,15 +24,15 @@ function LoginPage() {
       <form className="whiteContainer flex w-full max-w-md flex-col">
         <div className="flex flex-col space-y-7">
           <section className="flex flex-col space-y-3">
-            <h2 className="heading2">Авторизация</h2>
-            <p className="headingStruct text-sm">Войдите в аккаунт используя электронную почту</p>
+            <h2 className="heading2">Регистрация</h2>
+            <p className="headingStruct text-sm">Зарегистрируйтесь, используя электронную почту</p>
           </section>
 
           <div className="flex flex-col items-start space-y-1">
             <label className="text-sm font-medium">Электронная почта:</label>
             <input
               className="w-full rounded-full bg-gray-100 px-10 py-8 font-medium placeholder:text-gray-400"
-              placeholder="you@example.com"
+              placeholder="E-mail"
               type="email"
               autoComplete="email"
               required={true}
@@ -40,7 +45,7 @@ function LoginPage() {
               className="w-full rounded-full bg-gray-100 px-10 py-8 pr-12 font-medium placeholder:text-gray-400"
               placeholder="Введите пароль"
               type={showPassword ? 'text' : 'password'}
-              autoComplete="current-password"
+              autoComplete="new-password"
               required={true}
             />
             <button
@@ -51,36 +56,59 @@ function LoginPage() {
               <Image
                 src={showPassword ? (eyeOpenIcon as string) : (eyeClosedIcon as string)}
                 alt="Toggle Password Visibility"
-                width={23}
-                height={23}
+                width={24}
+                height={24}
+              />
+            </button>
+          </div>
+
+          <div className="relative flex flex-col items-start space-y-1">
+            <label className="text-sm font-medium">Повторить пароль:</label>
+            <input
+              className="w-full rounded-full bg-gray-100 px-10 py-8 pr-12 font-medium placeholder:text-gray-400"
+              placeholder="Повторите пароль"
+              type={showConfirmPassword ? 'text' : 'password'}
+              autoComplete="new-password"
+              required={true}
+            />
+            <button
+              type="button"
+              className={`absolute right-5 ${showPassword ? 'top-[3.6rem]' : 'top-[3.4rem]'}`}
+              onClick={toggleConfirmPasswordVisibility}
+            >
+              <Image
+                src={showConfirmPassword ? (eyeOpenIcon as string) : (eyeClosedIcon as string)}
+                alt="Toggle Confirm Password Visibility"
+                width={24}
+                height={24}
               />
             </button>
           </div>
 
           <div className="flex items-center justify-between">
-            <div className={`text-black}] flex items-center text-sm`}>
-              <input type="checkbox" id="consent" className="mr-2 h-4 w-4" />
-              <label htmlFor="consent" className="text-base">
-                Запомнить меня
+            <div className={`flex items-center text-sm text-black`}>
+              <input type="checkbox" id="privacy-policy" className="mr-2 h-4 w-4" required />
+              <label htmlFor="privacy-policy" className="text-sm">
+                Я соглашаюсь с{' '}
+                <Link href="#" className="text-color-orange underline hover:opacity-70">
+                  Политикой конфиденциальности
+                </Link>
               </label>
             </div>
-            <Link href="#" className="text-base text-color-orange underline hover:opacity-70">
-              Забыли пароль?
-            </Link>
           </div>
 
           <button className="flex items-center justify-center rounded-full bg-color-dark px-10 py-8 text-lg font-medium text-white">
-            Войти
+            Зарегистрироваться
           </button>
         </div>
         <div className="mt-24 flex flex-col items-center text-sm font-bold">
           <p>
-            Ещё нет аккаунта?{' '}
+            Уже зарегистрированы?{' '}
             <Link
-              href="/server/register"
+              href="/server/auth/"
               className="font-bold text-color-orange underline hover:opacity-70"
             >
-              Зарегистрироваться
+              Войдите в аккаунт
             </Link>
           </p>
         </div>
@@ -88,7 +116,7 @@ function LoginPage() {
 
       <Image
         src={picture as unknown as string}
-        alt="auth"
+        alt="register"
         quality={100}
         className="w-2/3 md:w-[62%]"
       />
@@ -96,4 +124,4 @@ function LoginPage() {
   )
 }
 
-export default LoginPage
+export default RegisterPage
