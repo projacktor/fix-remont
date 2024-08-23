@@ -16,7 +16,7 @@ function LoginPage() {
 
   return (
     <main className="flex w-full flex-row items-center justify-center px-12 py-12">
-      <form className="flex w-full max-w-md flex-col rounded-3xl bg-white p-8">
+      <form className="whiteContainer flex w-full max-w-md flex-col">
         <div className="flex flex-col space-y-7">
           <section className="flex flex-col space-y-3">
             <h2 className="heading2">Авторизация</h2>
