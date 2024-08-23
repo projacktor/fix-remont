@@ -1,8 +1,9 @@
 'use client'
 import React from 'react'
+import openLink from '@/functions/openLink'
 import SupportSection from '@/components/widgets/Support Section/SupportSection'
-import BlackButton from '@/components/shared/buttons/Black Button/BlackButton'
 import AccountNotification from '@/components/entities/Account Notification/AccountNotification'
+import CheckButton from '@/components/shared/buttons/Check Button/CheckButton'
 
 function Page() {
   const notifications = [
@@ -176,6 +177,27 @@ function Page() {
               Изменить пароль
             </button>
           </form>
+        </div>
+      </div>
+
+      <div className="flex flex-col">
+        <h4 className="headingStruct pl-7 text-2xl">Паспортные данные</h4>
+        <div className="flex flex-row items-center justify-around space-x-3 rounded-3xl bg-white p-7">
+          <div className="flex flex-col space-y-2">
+            <p className="text-xs text-gray-400">Статус</p>
+            <h5 className="headingStruct text-xl">Верификация непройдена</h5>
+          </div>
+
+          <div className="button_container h-16 w-72">
+            <CheckButton text="Как пройти верификацию" />
+          </div>
+
+          <button
+            className="h-16 w-64 rounded-full bg-color-attention px-6 py-2 text-base font-semibold text-white"
+            onClick={openLink('/server/verification')}
+          >
+            Пройти верификацию
+          </button>
         </div>
       </div>
       <SupportSection />
