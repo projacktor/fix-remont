@@ -3,10 +3,12 @@ import React from 'react'
 import Image from 'next/image'
 
 import search from '../../../../public/assets/svg/search.svg'
+import SupportCategory from '@/components/entities/Support Category/SupportCategory'
+import SupportSection from '@/components/widgets/Support Section/SupportSection'
 
 function Page() {
   return (
-    <main className="mb-8 flex w-full flex-col gap-8">
+    <main className="flex w-full flex-col justify-around gap-8">
       <h1 className="heading">Служба поддержки</h1>
 
       <div className="whiteContainer flex flex-row items-center justify-between space-x-3">
@@ -23,7 +25,22 @@ function Page() {
         </div>
       </div>
 
-      <div className="whiteContainer flex flex-col space-y-3"></div>
+      <div className="flex flex-col space-y-3">
+        <h4 className="shiftedHeading4">Популярные темы</h4>
+
+        <div className="whiteContainer grid w-full grid-cols-4 grid-rows-2 items-center gap-5">
+          <SupportCategory link="" value="Фото с объекта" />
+          <SupportCategory link="" value="Оплата" />
+          <SupportCategory link="" value="Материалы" />
+          <SupportCategory link="" value="Договор" />
+          <SupportCategory link="" value="Вознаграждение" />
+          <SupportCategory link="" value="Скачать документы" />
+          <SupportCategory link="" value="Подтверждение" />
+          <SupportCategory link="" value="Оплата" />
+        </div>
+      </div>
+
+      <SupportSection />
     </main>
   )
 }

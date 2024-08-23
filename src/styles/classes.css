@@ -18,7 +18,7 @@
   @apply text-3xl font-semibold leading-tight tracking-tighter;
 }
 
-.shiftedHeading {
+.shiftedHeading4 {
   @apply pl-7 text-2xl font-semibold leading-tight tracking-tighter;
 }
 
