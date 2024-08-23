@@ -10,18 +10,18 @@ import bg from '../../../../public/assets/img/megaBoxBackground.png'
 
 function MegaboxSection() {
   return (
-    <div className="flex min-h-screen w-full flex-row items-center gap-6">
-      <div className={`relative flex h-auto rounded-3xl bg-cover`}>
+    <div className="flex h-max w-full flex-row items-center gap-6">
+      <div className={`relative flex h-max rounded-3xl bg-cover`}>
         <Image src={bg as unknown as string} alt="backgraund" />
-        <p className="absolute left-14 top-64 w-80 text-4xl font-medium leading-tight tracking-tight text-white">
+        <p className="absolute left-14 top-64 w-72 text-4xl font-medium leading-tight tracking-tight text-white">
           Первый в России <br />
           онлайн-сервис <br />
           по ремонту и строительству <br />с фиксированной стоимостью
         </p>
       </div>
 
-      <div className="max-w-1/2 flex w-1/2 flex-col items-center gap-4">
-        <div className="flex h-[26rem] w-full flex-col gap-32 rounded-3xl bg-color-dark p-10">
+      <div className="max-w-1/2 flex w-1/2 flex-col items-center justify-between self-stretch">
+        <div className="flex h-[28rem] w-full flex-col gap-32 rounded-3xl bg-color-dark p-10">
           <p className="text-2xl font-medium leading-snug tracking-tight text-white">
             Воплотим вашу
             <br />
@@ -29,11 +29,13 @@ function MegaboxSection() {
             <br /> без визитов на
             <br /> объект
           </p>
-          <div
-            className={`${style.button_container} button_container flex flex-row items-center space-x-8`}
-          >
-            <OrangeButton text="Онлайн-калькулятор" link="" />
-            <BlackButton text="Стать партнёром" link="/pages/partnership" />
+          <div className={`${style.button_container} flex flex-row items-center space-x-8`}>
+            <div className="button_container h-[4.6rem] w-1/2">
+              <OrangeButton text="Онлайн-калькулятор" link="" />
+            </div>
+            <div className="button_container w-1/2 rounded-full border border-white">
+              <BlackButton text="Стать партнёром" link="/pages/partnership" />
+            </div>
           </div>
         </div>
 
