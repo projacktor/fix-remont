@@ -11,6 +11,7 @@ const config: {
         'color-back': string
         'color-input-d': string
         'color-attention': string
+        'color-yellow': string
       }
       backgroundImage: { 'gradient-conic': string; 'gradient-radial': string }
     }
@@ -35,7 +36,8 @@ const config: {
         'color-bg-gray': '#E5E5E5',
         'color-back': '#FAFAFA',
         'color-input-d': '#4A4A4A',
-        'color-attention': '#E02350'
+        'color-attention': '#E02350',
+        'color-yellow': '#E0C223'
       }
     }
   },

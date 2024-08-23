@@ -1,5 +1,7 @@
 'use client'
 import React from 'react'
+import Image from 'next/image'
+import { Notification } from '@/types/Notification'
 
 import style from './page.module.scss'
 
@@ -7,14 +9,12 @@ import OrangeButton from '@/components/shared/buttons/Orange Button/OrangeButton
 import Description from '@/components/entities/Description/Description'
 import Scale from '@/components/widgets/Scale/Scale'
 import SupportSection from '@/components/widgets/Support Section/SupportSection'
-import Image from 'next/image'
-import { Notification } from '@/types/Notification'
+import CheckButton from '@/components/shared/buttons/Check Button/CheckButton'
 
-import accept from '../../../../../public/assets/svg/ellips/ellipsGreen.svg'
 import attention from '../../../../../public/assets/svg/ellips/ellipsRed.svg'
 import wait from '../../../../../public/assets/svg/ellips/ellipsYellow.svg'
-import inactive from '../../../../../public/assets/svg/ellips/ellipsGray.svg.svg'
-import CheckButton from '@/components/shared/buttons/Check Button/CheckButton'
+import accept from '../../../../../public/assets/svg/ellips/ellipsGreen.svg'
+import inactive from '../../../../../public/assets/svg/ellips/ellipsGray.svg'
 
 function Page() {
   const data = [
@@ -69,9 +69,6 @@ function Page() {
     }
   ]
 
-  const note = Notification.attention
-  const label = 'Материалы для стен'
-
   const notifications_data = [
     {
       type: Notification.attention,
@@ -87,6 +84,24 @@ function Page() {
       type: Notification.wait,
       value: 'Новое сообщение от менеджера',
       label: ''
+    }
+  ]
+
+  const payment_data = [
+    {
+      type: Notification.accept,
+      value: 240000,
+      label: 'Первый этап (60%)'
+    },
+    {
+      type: Notification.wait,
+      value: 80000,
+      label: 'Первый этап (40%)'
+    },
+    {
+      type: Notification.accept,
+      value: 60000,
+      label: 'Первый этап (20%)'
     }
   ]
   return (
@@ -167,13 +182,57 @@ function Page() {
                         />
                         <h5 className="text-lg font-semibold">{note.value}</h5>
                       </div>
-                      {label && <p className="text-sm text-gray-400">{note.label}</p>}
+                      {note.label && <p className="text-sm text-gray-400">{note.label}</p>}
                     </div>
                     <div className="button_container h-16 w-36">
                       <CheckButton text="Открыть" />
                     </div>
                   </div>
                   {index < notifications_data.length - 1 && (
+                    <hr className="mt-5 w-full border-t border-gray-300" />
+                  )}
+                </div>
+              ))}
+            </div>
+            <div className="pointer-events-none absolute bottom-0 left-0 right-0 h-20 rounded-2xl bg-gradient-to-t from-white to-transparent" />
+          </div>
+        </div>
+
+        <div className="flex flex-col space-y-5">
+          <h4 className="headingStruct pl-7 text-2xl">Оплата:</h4>
+          <div className="relative">
+            <div className="noScrollbar flex max-h-72 flex-col space-y-3 overflow-y-auto rounded-3xl bg-white p-7">
+              {payment_data.map((pay, index) => (
+                <div key={index} className="mb-1">
+                  <div className="flex flex-row items-center justify-between space-x-8">
+                    <div className="flex flex-col space-y-2">
+                      <div className="flex flex-row space-x-2">
+                        <Image
+                          src={
+                            pay.type === Notification.wait
+                              ? (wait as string)
+                              : pay.type === Notification.accept
+                                ? (accept as string)
+                                : (inactive as string)
+                          }
+                          alt="notification"
+                          width={8}
+                        />
+                        <h5 className="text-lg font-semibold">
+                          {pay.value.toLocaleString('ru-Ru')} руб
+                        </h5>
+                      </div>
+                      {pay.label && <p className="text-sm text-gray-400">{pay.label}</p>}
+                    </div>
+                    <div className="button_container h-16 w-36">
+                      <button
+                        className={`flex items-center justify-center rounded-full border bg-transparent px-4 py-2 text-base font-semibold ${pay.type === Notification.wait ? 'border-color-yellow text-color-yellow' : 'border-green-500 text-green-500'}`}
+                      >
+                        {pay.type === Notification.wait ? 'Оплатить' : 'Оплачено'}
+                      </button>
+                    </div>
+                  </div>
+                  {index < payment_data.length - 1 && (
                     <hr className="mt-5 w-full border-t border-gray-300" />
                   )}
                 </div>
