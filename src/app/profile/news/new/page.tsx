@@ -11,7 +11,7 @@ function Page() {
         <h5 className="headingStruct text-xl underline">
           Как рассчитать стоимость через онлайн- калькулятор FIX-ремонт?
         </h5>
-        <div className="w-[100svw ] h-[30rem] rounded-3xl bg-gray-400">
+        <div className="w-[100svw ] h-[30rem] rounded-3xl bg-gray-300">
           {/*<Image src={} alt={}/>*/}
         </div>
 
@@ -24,8 +24,8 @@ function Page() {
         </article>
 
         <div className="flex flex-row justify-around">
-          <div className="h-[20rem] w-[30rem] rounded-3xl bg-gray-400"></div>
-          <div className="h-[20rem] w-[30rem] rounded-3xl bg-gray-400"></div>
+          <div className="h-[20rem] w-[30rem] rounded-3xl bg-gray-300"></div>
+          <div className="h-[20rem] w-[30rem] rounded-3xl bg-gray-300"></div>
         </div>
 
         <h5 className="headingStruct text-xl underline">Качество: каждая деталь важна</h5>
