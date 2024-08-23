@@ -117,8 +117,15 @@ function Page() {
             <Description name="Дата заказа" heading="11.03.2024" />
           </div>
         </div>
+
+        <div className="flex flex-col space-y-5">
+          <h4 className="headingStruct pl-7 text-2xl">Уведомления по заказу:</h4>
+          <div className="flex flex-col space-y-3 rounded-3xl bg-white p-7">
+
+          </div>
+        </div>
       </div>
-      <SupportSection />
+      <SupportSection/>
     </main>
   )
 }
