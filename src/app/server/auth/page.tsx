@@ -64,7 +64,10 @@ function LoginPage() {
                 Запомнить меня
               </label>
             </div>
-            <Link href="#" className="text-base text-color-orange underline hover:opacity-70">
+            <Link
+              href="/server/reset"
+              className="text-base text-color-orange underline hover:opacity-70"
+            >
               Забыли пароль?
             </Link>
           </div>
