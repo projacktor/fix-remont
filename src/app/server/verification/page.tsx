@@ -3,7 +3,7 @@ import Image from 'next/image'
 
 import PrivacyPolicyBox from '@/components/entities/Privacy policy box/PrivacyPolicyBox'
 
-import picture from '../../../../public/assets/img/verification.png'
+import picture from '../../../../public/assets/img/banners/verification.png'
 
 function Page() {
   return (
