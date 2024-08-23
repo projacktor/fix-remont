@@ -7,6 +7,14 @@ import OrangeButton from '@/components/shared/buttons/Orange Button/OrangeButton
 import Description from '@/components/entities/Description/Description'
 import Scale from '@/components/widgets/Scale/Scale'
 import SupportSection from '@/components/widgets/Support Section/SupportSection'
+import Image from 'next/image'
+import { Notification } from '@/types/Notification'
+
+import accept from '../../../../../public/assets/svg/ellips/ellipsGreen.svg'
+import attention from '../../../../../public/assets/svg/ellips/ellipsRed.svg'
+import wait from '../../../../../public/assets/svg/ellips/ellipsYellow.svg'
+import inactive from '../../../../../public/assets/svg/ellips/ellipsGray.svg.svg'
+import CheckButton from '@/components/shared/buttons/Check Button/CheckButton'
 
 function Page() {
   const data = [
@@ -60,6 +68,27 @@ function Page() {
       value: 32000
     }
   ]
+
+  const note = Notification.attention
+  const label = 'Материалы для стен'
+
+  const notifications_data = [
+    {
+      type: Notification.attention,
+      value: 'Требуется ваше подтверждение',
+      label: 'Материалы для стен'
+    },
+    {
+      type: Notification.wait,
+      value: 'Новое сообщение от менеджера',
+      label: ''
+    },
+    {
+      type: Notification.wait,
+      value: 'Новое сообщение от менеджера',
+      label: ''
+    }
+  ]
   return (
     <main className="mb-8 flex w-full flex-col gap-8 overflow-x-hidden">
       <div className="mt-8 flex w-full flex-row justify-between">
@@ -107,7 +136,7 @@ function Page() {
         </div>
       </div>
 
-      <div className="grid grid-cols-2 grid-rows-2">
+      <div className="grid grid-cols-2 grid-rows-2 gap-4">
         <div className="flex flex-col space-y-5">
           <h4 className="headingStruct pl-7 text-2xl">Информация о клиенте:</h4>
           <div className="flex flex-col space-y-3 rounded-3xl bg-white p-7">
@@ -120,12 +149,41 @@ function Page() {
 
         <div className="flex flex-col space-y-5">
           <h4 className="headingStruct pl-7 text-2xl">Уведомления по заказу:</h4>
-          <div className="flex flex-col space-y-3 rounded-3xl bg-white p-7">
-
+          <div className="relative">
+            <div className="noScrollbar flex max-h-72 flex-col space-y-3 overflow-y-auto rounded-3xl bg-white p-7">
+              {notifications_data.map((note, index) => (
+                <div key={index} className="mb-1">
+                  <div className="flex flex-row items-center space-x-8">
+                    <div className="flex flex-col space-y-2">
+                      <div className="flex flex-row space-x-2">
+                        <Image
+                          src={
+                            note.type === Notification.attention
+                              ? (attention as string)
+                              : (wait as string)
+                          }
+                          alt="notification"
+                          width={8}
+                        />
+                        <h5 className="text-lg font-semibold">{note.value}</h5>
+                      </div>
+                      {label && <p className="text-sm text-gray-400">{note.label}</p>}
+                    </div>
+                    <div className="button_container h-16 w-36">
+                      <CheckButton text="Открыть" />
+                    </div>
+                  </div>
+                  {index < notifications_data.length - 1 && (
+                    <hr className="mt-5 w-full border-t border-gray-300" />
+                  )}
+                </div>
+              ))}
+            </div>
+            <div className="pointer-events-none absolute bottom-0 left-0 right-0 h-20 rounded-2xl bg-gradient-to-t from-white to-transparent" />
           </div>
         </div>
       </div>
-      <SupportSection/>
+      <SupportSection />
     </main>
   )
 }

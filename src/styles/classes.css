@@ -33,4 +33,12 @@ input[type='number']::-webkit-inner-spin-button {
   height: 100%;
 }
 
+.noScrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+.noScrollbar ::-webkit-scrollbar {
+  display: none;
+}
+
 /*# sourceMappingURL=classes.css.map */
