@@ -29,6 +29,7 @@ function LoginPage() {
               placeholder="you@example.com"
               type="email"
               autoComplete="email"
+              required={true}
             />
           </div>
 
@@ -39,6 +40,7 @@ function LoginPage() {
               placeholder="Введите пароль"
               type={showPassword ? 'text' : 'password'}
               autoComplete="current-password"
+              required={true}
             />
             <button
               type="button"

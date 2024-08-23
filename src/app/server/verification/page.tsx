@@ -23,6 +23,7 @@ function Page() {
             className="w-full rounded-full bg-gray-100 px-10 py-8 font-medium placeholder:text-black"
             placeholder="90 00 000000"
             type="number"
+            required={true}
           />
         </div>
         <div className="flex flex-col items-start space-y-1">
@@ -32,6 +33,7 @@ function Page() {
             placeholder="Фамилия Имя (Отчество)"
             type="text"
             autoComplete="name"
+            required={true}
           />
         </div>
         <div className="flex flex-col items-start space-y-1">
@@ -41,6 +43,7 @@ function Page() {
             placeholder="01.01.1970"
             autoComplete="bday-day"
             type="date"
+            required={true}
           />
         </div>
         <div className="flex flex-col items-start space-y-1">
@@ -50,6 +53,7 @@ function Page() {
             placeholder="г. Казань, ул. Волкова 10, кв. 26"
             autoComplete="address-level4 webauthn"
             type="text"
+            required={true}
           />
         </div>
 
