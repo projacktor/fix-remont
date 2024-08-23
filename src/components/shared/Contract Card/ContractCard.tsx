@@ -36,19 +36,19 @@ function ContractCard({
 
       <div className="grid h-36 grid-cols-2 grid-rows-2 gap-0">
         <article className="flex flex-col space-y-3">
-          <p className="text-xs font-medium text-gray-400">Объект:</p>
+          <p className="label">Объект:</p>
           <h5 className="headingStruct text-lg">{object_type}</h5>
         </article>
         <article className="flex flex-col space-y-3">
-          <p className="text-xs font-medium text-gray-400">Тип заказа:</p>
+          <p className="label">Тип заказа:</p>
           <h5 className="headingStruct text-lg">{contract_type}</h5>
         </article>
         <article className="flex flex-col space-y-3">
-          <p className="text-xs font-medium text-gray-400">Тариф:</p>
+          <p className="label">Тариф:</p>
           <h5 className="headingStruct text-lg">{tariff}</h5>
         </article>
         <article className="flex flex-col space-y-3">
-          <p className="text-xs font-medium text-gray-400">Площадь:</p>
+          <p className="label">Площадь:</p>
           <h5 className="headingStruct text-lg">{area.toLocaleString('ru-Ru')} м²</h5>
         </article>
       </div>
@@ -58,7 +58,7 @@ function ContractCard({
       <div
         className={`flex w-full flex-col space-y-4 rounded-2xl p-4 ${part === 'Объект сдан' ? 'bg-color-dark' : 'bg-color-back'}`}
       >
-        <p className="text-xs font-medium text-gray-400">Текущий этап:</p>
+        <p className="label">Текущий этап:</p>
         <h4
           className={`headingStruct text-xl ${part === 'Объект сдан' ? 'text-white' : 'text-black'}`}
         >
@@ -67,7 +67,7 @@ function ContractCard({
       </div>
 
       <article className="flex flex-row justify-between">
-        <p className="text-xs font-medium text-gray-400">Вознаграждение:</p>
+        <p className="label">Вознаграждение:</p>
         <h5 className="headingStruct text-lg">{payment.toLocaleString('ru-Ru')} руб</h5>
       </article>
 

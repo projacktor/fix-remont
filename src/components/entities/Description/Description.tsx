@@ -7,10 +7,10 @@ interface DescriptionProps {
 
 function Description({ name, heading }: DescriptionProps) {
   return (
-    <article className="flex flex-col space-y-2">
-      <p className="text-xs font-medium text-gray-400">{name}:</p>
+    <section className="flex flex-col space-y-2">
+      <p className="label">{name}:</p>
       <h4 className="headingStruct text-xl">{heading}</h4>
-    </article>
+    </section>
   )
 }
 

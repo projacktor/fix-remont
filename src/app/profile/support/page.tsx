@@ -1,6 +1,5 @@
 'use client'
 import React from 'react'
-import Image from 'next/image'
 
 import search from '../../../../public/assets/svg/search.svg'
 import SupportCategory from '@/components/entities/Support Category/SupportCategory'
@@ -29,14 +28,14 @@ function Page() {
         <h4 className="shiftedHeading4">Популярные темы</h4>
 
         <div className="whiteContainer grid w-full grid-cols-4 grid-rows-2 items-center gap-5">
-          <SupportCategory link="" value="Фото с объекта" />
-          <SupportCategory link="" value="Оплата" />
-          <SupportCategory link="" value="Материалы" />
-          <SupportCategory link="" value="Договор" />
-          <SupportCategory link="" value="Вознаграждение" />
-          <SupportCategory link="" value="Скачать документы" />
-          <SupportCategory link="" value="Подтверждение" />
-          <SupportCategory link="" value="Оплата" />
+          <SupportCategory link="/profile/news/category/" value="Фото с объекта" />
+          <SupportCategory link="/profile/news/category/" value="Оплата" />
+          <SupportCategory link="/profile/news/category/" value="Материалы" />
+          <SupportCategory link="/profile/news/category/" value="Договор" />
+          <SupportCategory link="/profile/news/category/" value="Вознаграждение" />
+          <SupportCategory link="/profile/news/category/" value="Скачать документы" />
+          <SupportCategory link="/profile/news/category/" value="Подтверждение" />
+          <SupportCategory link="/profile/news/category/" value="Оплата" />
         </div>
       </div>
 

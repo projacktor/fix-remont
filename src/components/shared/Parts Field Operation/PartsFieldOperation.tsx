@@ -24,7 +24,7 @@ function PartsFieldOperation({ type, cost, date, status }: PartsFiledOperationPr
       <Description name="Операция" heading={type} />
       <Description name="Сумма" heading={`${cost.toLocaleString('ru-Ru')} руб`} />
       <div className="flex flex-col space-y-2">
-        <p className="text-xs font-medium text-gray-400">Дата:</p>
+        <p className="label">Дата:</p>
         <time className="headingStruct text-xl">{formattedDate}</time>
       </div>
 

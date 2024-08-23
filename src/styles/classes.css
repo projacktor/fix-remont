@@ -22,6 +22,10 @@
   @apply pl-7 text-2xl font-semibold leading-tight tracking-tighter;
 }
 
+.label {
+  @apply text-xs font-medium text-gray-400;
+}
+
 .seo_content::after {
   @apply bottom-0 left-0 w-full;
 }
