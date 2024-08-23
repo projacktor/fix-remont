@@ -22,6 +22,8 @@ function Page() {
           />
         </div>
       </div>
+
+      <div className="whiteContainer flex flex-col space-y-3"></div>
     </main>
   )
 }

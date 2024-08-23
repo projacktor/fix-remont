@@ -18,6 +18,10 @@
   @apply text-3xl font-semibold leading-tight tracking-tighter;
 }
 
+.shiftedHeading {
+  @apply pl-7 text-2xl font-semibold leading-tight tracking-tighter;
+}
+
 .seo_content::after {
   @apply bottom-0 left-0 w-full;
 }
