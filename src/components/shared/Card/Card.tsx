@@ -1,6 +1,11 @@
 import React, { useState } from 'react'
 
-function Card({ title, price }) {
+interface CardProps {
+  title: string
+  price: number
+}
+
+function Card({ title, price }: CardProps) {
   const [isChecked, setIsChecked] = useState(false)
 
   const handleCheckboxChange = () => {
@@ -35,7 +40,7 @@ function Card({ title, price }) {
           </label>
         </div>
 
-        <p className="mt-2 text-gray-500">{price} руб/м²</p>
+        <p className="mt-2 text-gray-500">{price.toLocaleString('ru-Ru')} руб/м²</p>
       </div>
     </div>
   )
