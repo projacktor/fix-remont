@@ -10,11 +10,11 @@ function RenovationForm() {
   const [doors, setDoors] = useState(1)
   const [bathrooms, setBathrooms] = useState(2)
 
-  const handleIncrement = (setter, value) => {
+  const handleIncrement = (setter: React.Dispatch<React.SetStateAction<number>>, value: number) => {
     setter(value + 1)
   }
 
-  const handleDecrement = (setter, value) => {
+  const handleDecrement = (setter: React.Dispatch<React.SetStateAction<number>>, value: number) => {
     if (value > 0) {
       setter(value - 1)
     }
@@ -25,7 +25,7 @@ function RenovationForm() {
       <div className="flex w-full flex-row items-end justify-between">
         <section className="space-y-4">
           <h1 className="headingStruct text-4xl">
-            Соберите <span className="text-color-orange">ремонт</span> своей мечты
+            Соберите <span className="orange-bold">ремонт</span> своей мечты
             <br />и узнайте его полную стоимость
           </h1>
           <p className="headingStruct">
