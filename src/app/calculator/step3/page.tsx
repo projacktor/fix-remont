@@ -7,6 +7,7 @@ import ContentFilter from '@/components/shared/Content Filter/ContentFilter'
 import mock from '../../../../public/assets/img/mockImg.png'
 import clock from '../../../../public/assets/svg/clock.svg'
 import SingleFaq from '@/components/entities/Single Faq/SingleFaq'
+import CalcHeading from '@/components/widgets/Calc Heading/CalcHeading'
 
 function Page() {
   const [selectedCard, setSelectedCard] = useState<string | null>(null)
@@ -29,25 +30,7 @@ function Page() {
 
   return (
     <main className="whiteContainer w-full p-20">
-      <div className="flex w-full flex-row items-end justify-between">
-        <section className="space-y-4">
-          <h1 className="headingStruct text-4xl">
-            Соберите <span className="orange-bold">ремонт</span> своей мечты
-            <br />и узнайте его полную стоимость
-          </h1>
-          <p className="headingStruct">
-            под ваши пожелания и бюджет, ответив на несколько вопросов
-          </p>
-        </section>
-
-        <div className="flex flex-row items-center space-x-4 font-normal">
-          <Image src={clock as string} alt="clock" />
-          <span className="headingStruct">
-            5 минут - среднее время <br /> заполнения анкеты
-          </span>
-        </div>
-      </div>
-      <hr className="" />
+      <CalcHeading />
 
       <div className="space-y-3">
         <h2 className="headingStruct text-2xl">
