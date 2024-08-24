@@ -1,22 +1,24 @@
 import React from 'react'
+import Link from 'next/link'
 
 interface CardProps {
   title: string
   price: number
   selected: boolean
   onSelect: (title: string) => void
+  link?: string
 }
 
-function Card({ title, price, selected, onSelect }: CardProps) {
+function Card({ title, price, selected, onSelect, link }: CardProps) {
   const handleSelect = () => {
     onSelect(title)
   }
 
   return (
-    <div className="h-max w-max rounded-lg p-4">
+    <div className="h-max w-max rounded-3xl p-4">
       <div className="relative">
         <div
-          className={`h-40 w-72 rounded-lg bg-gray-100 ${
+          className={`h-40 w-72 rounded-3xl bg-gray-100 ${
             selected ? 'border-4 border-color-orange' : 'border-4 border-transparent'
           } transition-all duration-300`}
           onClick={handleSelect}
@@ -53,10 +55,15 @@ function Card({ title, price, selected, onSelect }: CardProps) {
               </svg>
             )}
           </label>
-          <span className="ml-2 text-lg font-medium text-black">{title}</span>
+          <span className="ml-2 text-base font-medium text-black">{title}</span>
         </div>
 
         <p className="mt-2 text-gray-500">{price.toLocaleString('ru-Ru')} руб/м²</p>
+        {link && (
+          <Link href={link} className="orange-bold text-ld font-semibold underline">
+            Подробнее
+          </Link>
+        )}
       </div>
     </div>
   )

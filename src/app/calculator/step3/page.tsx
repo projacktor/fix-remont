@@ -1,13 +1,15 @@
 'use client'
 import React, { useState } from 'react'
 import Image from 'next/image'
+
 import openLink from '@/functions/openLink'
+
 import Card from '@/components/shared/Clac Card/Card'
 import ContentFilter from '@/components/shared/Content Filter/ContentFilter'
-import mock from '../../../../public/assets/img/mockImg.png'
-import clock from '../../../../public/assets/svg/clock.svg'
 import SingleFaq from '@/components/entities/Single Faq/SingleFaq'
 import CalcHeading from '@/components/widgets/Calc Heading/CalcHeading'
+
+import mock from '../../../../public/assets/img/mockImg.png'
 
 function Page() {
   const [selectedCard, setSelectedCard] = useState<string | null>(null)
