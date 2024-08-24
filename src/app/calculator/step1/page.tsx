@@ -21,7 +21,7 @@ function RenovationForm() {
   }
 
   return (
-    <main className="w-full p-20">
+    <main className="whiteContainer w-full p-20">
       <div className="flex w-full flex-row items-end justify-between">
         <section className="space-y-4">
           <h1 className="headingStruct text-4xl">
