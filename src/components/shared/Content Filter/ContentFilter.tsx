@@ -10,7 +10,7 @@ const ContentFilter: React.FC<ContentFilterProps> = ({ buttons }) => {
       {buttons.map((text, index) => (
         <button
           key={index}
-          className="rounded-full bg-gray-200 p-3 text-xs active:bg-color-dark active:text-white"
+          className="rounded-full bg-gray-100 p-3 text-sm active:bg-color-dark active:text-white"
         >
           {text}
         </button>
