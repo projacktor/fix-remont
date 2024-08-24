@@ -1,8 +1,6 @@
 'use client'
 import React, { useState } from 'react'
-import Image from 'next/image'
 
-import clock from '../../../../public/assets/svg/clock.svg'
 import CalcHeading from '@/components/widgets/Calc Heading/CalcHeading'
 
 function RenovationForm() {
