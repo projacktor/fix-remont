@@ -2,7 +2,7 @@
 import React, { useState } from 'react'
 import Image from 'next/image'
 import openLink from '@/functions/openLink'
-import Card from '@/components/shared/Card/Card'
+import Card from '@/components/shared/Clac Card/Card'
 import clock from '../../../../public/assets/svg/clock.svg'
 import CalcHeading from '@/components/widgets/Calc Heading/CalcHeading'
 
