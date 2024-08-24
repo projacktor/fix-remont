@@ -137,7 +137,7 @@ function Page() {
         </div>
       </div>
       <picture>
-        <Image src={control as string} alt="control banner" />
+        <Image src={control as unknown as string} alt="control banner" />
       </picture>
 
       <section className="flex flex-row-reverse items-start gap-x-4 pr-7">
