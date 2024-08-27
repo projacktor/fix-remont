@@ -13,7 +13,7 @@ const Symbol: React.FC<SymbolProps> = ({ header_src, lineColor }) => {
 
   return (
     <div className="flex w-auto flex-row items-center justify-around rounded-2xl bg-inherit">
-      <Link href="/public">
+      <Link href="/">
         <Image alt="FIX-remont_logo" src={header_src} width={90} />
       </Link>
       <div

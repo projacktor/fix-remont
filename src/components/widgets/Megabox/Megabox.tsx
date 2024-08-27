@@ -13,22 +13,19 @@ function MegaboxSection() {
     <div className="flex h-max w-full flex-row items-center gap-6">
       <div className={`relative flex h-max rounded-3xl bg-cover`}>
         <Image src={bg as unknown as string} alt="backgraund" />
-        <p className="absolute left-14 top-64 w-72 text-4xl font-medium leading-tight tracking-tight text-white">
-          Первый в России <br />
-          онлайн-сервис <br />
-          по ремонту и строительству <br />с фиксированной стоимостью
-        </p>
+        <h1
+          className="absolute bottom-20 left-14 w-96 font-normal leading-tight tracking-tight text-white"
+          style={{ fontSize: '2.6rem' }}
+        >
+          Первый в России онлайн-сервис по ремонту и строительству с фиксированной стоимостью
+        </h1>
       </div>
 
       <div className="max-w-1/2 flex w-1/2 flex-col items-center justify-between self-stretch">
-        <div className="flex h-[28rem] w-full flex-col gap-32 rounded-3xl bg-color-dark p-10">
-          <p className="text-2xl font-medium leading-snug tracking-tight text-white">
-            Воплотим вашу
-            <br />
-            мечту в реальность
-            <br /> без визитов на
-            <br /> объект
-          </p>
+        <div className="flex h-[26rem] w-full flex-col justify-between gap-32 rounded-3xl bg-color-dark p-11">
+          <h3 className="w-60 text-2xl font-normal leading-snug tracking-tight text-white">
+            Воплотим вашу мечту в реальность без визитов на объект
+          </h3>
           <div className={`${style.button_container} flex flex-row items-center space-x-8`}>
             <div className="button_container h-[4.6rem] w-1/2">
               <OrangeButton text="Онлайн-калькулятор" link="" />
@@ -39,7 +36,7 @@ function MegaboxSection() {
           </div>
         </div>
 
-        <div className="flex flex-row gap-4">
+        <div className="flex w-full flex-row justify-between space-x-4">
           <HoverSection
             name="Ремонт"
             text={
