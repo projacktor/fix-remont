@@ -19,7 +19,7 @@ const Work1: React.FC = () => {
   const links = ['/pages/dashboard/portfolio', '/pages/dashboard/portfolio/works']
   return (
     <main className="flex h-full w-full flex-col">
-      <div className="flex w-full flex-col items-center">
+      <section className="flex w-full flex-col items-center">
         <div className="flex w-full flex-col items-start gap-4 p-4">
           <Crumb path={path} links={links} />
           <h1 className="heading">Дом из кирпича 560 м2 на Барвихе</h1>
@@ -29,10 +29,12 @@ const Work1: React.FC = () => {
             <Minibar desc_name="Площадь объекта" desc_content="240 м2" />
             <MinibarVideo desc_content="1:25 мин" />
           </div>
-          <Image src={projPic1} alt="Project picture" />
-          <Die text="СТРОИТЕЛЬСТВО ДОМОВ" />
+          <Image src={projPic1} alt="Project picture" quality={100} className="relative" />
+          <div className="relative bottom-[45rem] left-5">
+            <Die text="СТРОИТЕЛЬСТВО ДОМОВ" />
+          </div>
           <VideoGallery />
-          <Image src={projPic2} alt="projectPic2" />
+          <Image src={projPic2} alt="projectPic2" quality={100} />
           <div className="flex w-full flex-col p-8">
             <h2>Задача:</h2>
             <p className="w-4/5">
@@ -79,10 +81,10 @@ const Work1: React.FC = () => {
           </div>
           <div className="flex w-full flex-col gap-5 p-8">
             <h2 className="text-lg font-bold">Результат:</h2>
-            <Image src={projPic2} alt="projectPic2" className="w-full" />
+            <Image src={projPic2} alt="projectPic2" className="w-full" quality={100} />
           </div>
         </div>
-      </div>
+      </section>
       <div className="flex w-full flex-col items-center gap-8">
         <h1 className={'heading w-full items-start'}>Другие реализованные проекты</h1>
         <WorksGallery />
