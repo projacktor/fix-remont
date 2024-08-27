@@ -25,8 +25,9 @@ function HoverSection({ name, text, link, blank = false }: HoverSectionProps) {
       <Image
         alt="arrow"
         src={arrow as unknown as string}
-        width="40"
-        height="40"
+        width={40}
+        height={40}
+        quality={100}
         className={`${style.arrow} relative bottom-4 left-36`}
       />
     </button>

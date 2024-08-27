@@ -6,10 +6,11 @@ import headerLogo from '@/../public/assets/svg/headerLogo.svg'
 import profileIcon from '@/../public/assets/svg/profileIcon.svg'
 import menuBar from '@/../public/assets/svg/menuBar.svg'
 import Image from 'next/image'
+import openLink from '@/functions/openLink'
 
 const Header: React.FC = () => {
   return (
-    <header className="flex w-full flex-row items-center justify-around p-4">
+    <header className="flex w-full flex-row items-center justify-around bg-color-back p-4">
       <div className="flex flex-row items-center justify-around gap-4">
         <Symbol header_src={headerLogo as unknown as string} lineColor="rgba(0, 0, 0, 0.5)" />
         <div className="flex h-12 w-px justify-center border-l border-dashed border-gray-400 opacity-50"></div>
@@ -18,7 +19,10 @@ const Header: React.FC = () => {
 
       <WriteUs />
 
-      <button className="flex flex-row items-center justify-between gap-44 rounded-xl bg-color-dark px-4 py-6">
+      <button
+        className="flex flex-row items-center justify-between gap-44 rounded-xl bg-color-dark px-4 py-6"
+        onClick={openLink('/profile/account')}
+      >
         <p className="text-base font-medium leading-none tracking-tight text-white">
           Личный кабинет
         </p>

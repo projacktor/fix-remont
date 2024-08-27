@@ -12,7 +12,7 @@ function MegaboxSection() {
   return (
     <div className="flex h-max w-full flex-row items-center gap-6">
       <div className={`relative flex h-max rounded-3xl bg-cover`}>
-        <Image src={bg as unknown as string} alt="backgraund" />
+        <Image src={bg as unknown as string} alt="backgraund" quality={100} />
         <h1
           className="absolute bottom-20 left-14 w-96 font-normal leading-tight tracking-tight text-white"
           style={{ fontSize: '2.6rem' }}
