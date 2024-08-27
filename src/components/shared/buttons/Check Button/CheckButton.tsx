@@ -1,3 +1,4 @@
+'use client'
 import React from 'react'
 import openLink from '@/functions/openLink'
 import { ButtonProps } from '@/types/ButtonProps'

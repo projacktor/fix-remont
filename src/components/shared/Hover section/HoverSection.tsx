@@ -1,4 +1,3 @@
-'use client'
 import React from 'react'
 import openLink from '@/functions/openLink'
 import Image from 'next/image'

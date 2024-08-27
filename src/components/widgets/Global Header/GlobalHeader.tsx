@@ -1,3 +1,4 @@
+'use client'
 import Symbol from '@/components/entities/Symbol/Symbol'
 import ContactsContainer from '@/components/entities/Contacts container/ContactsContainer'
 import WriteUs from '@/components/entities/Write us/WriteUs'
