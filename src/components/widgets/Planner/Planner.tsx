@@ -32,15 +32,15 @@ function Planner({
   link_text
 }: PlannerProps) {
   return (
-    <div className="flex w-full flex-row rounded-3xl bg-color-dark px-3 py-16">
-      <div className="flex w-1/2 flex-col gap-6 pl-12">
+    <div className="flex w-full flex-row justify-between rounded-3xl bg-color-dark px-3 py-16">
+      <div className="flex w-1/2 flex-col justify-between gap-6 pl-12">
         <div className="flex flex-col gap-3 text-white">
           <h2 className="heading text-white">
             Всего <span className="orange-bold">4 шага и {time_text}</span> <br /> личного времени
           </h2>
           <p className="font-normal">отделяют вас от {p1_text}</p>
         </div>
-        <div className="flex w-4/5 flex-col gap-4">
+        <div className="flex min-h-[80%] w-4/5 flex-col justify-around gap-4 self-stretch">
           {[step1_description, step2_description, step3_description, step4_description].map(
             (desc, index) => (
               <div

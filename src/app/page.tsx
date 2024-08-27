@@ -83,7 +83,7 @@ export default function Home() {
 
         <FavoriteBusiness />
 
-        <Image src={creditCard as unknown as string} alt="credit" />
+        <Image src={creditCard as unknown as string} alt="credit" quality={100} />
 
         <RiskSlide button_text="Рассчитать стоимость" background={riskBg as unknown as string} />
 
@@ -112,7 +112,7 @@ export default function Home() {
 
         <SocialMedia />
 
-        <Image src={pseudoVid as unknown as string} alt={'pseudo_vidio'} />
+        <Image src={pseudoVid as unknown as string} alt={'pseudo_vidio'} quality={100} />
 
         <ToBlog />
 

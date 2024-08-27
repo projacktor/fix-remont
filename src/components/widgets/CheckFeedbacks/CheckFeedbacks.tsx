@@ -7,8 +7,8 @@ import videoE from '../../../../public/assets/img/pseudo videos/videoE.png'
 
 function CheckFeedbacks() {
   return (
-    <div className="flex flex-col items-center gap-10">
-      <div className="flex flex-row items-center gap-24">
+    <div className="flex w-full flex-col items-center gap-10">
+      <div className="flex w-full flex-row items-center justify-between gap-24">
         <div className="flex h-full flex-col gap-1">
           <div className="relativeh-full">
             <Image src={feedback as unknown as string} alt="response_picture" height="450" />

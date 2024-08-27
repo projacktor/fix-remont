@@ -15,13 +15,13 @@ function RiskSlide({ button_text, background }: RiskSlideProps) {
   return (
     <div className="relative flex flex-row items-center justify-center gap-4">
       <div className="flex w-1/2 flex-col justify-around self-stretch">
-        <Image src={creditCardImg as unknown as string} alt="credit_card" />
-        <Image src={creditBullets as unknown as string} alt="bullets" />
+        <Image src={creditCardImg as unknown as string} alt="credit_card" quality={100} />
+        <Image src={creditBullets as unknown as string} alt="bullets" quality={100} />
       </div>
       <div className="flex h-auto w-1/2">
-        <Image src={background} alt="brush_picture" className="relative" />
+        <Image src={background} alt="brush_picture" className="relative" quality={100} />
         <div className={`button_container absolute bottom-14 right-96 w-64`}>
-          <OrangeButton text={button_text} className="w-full py-6" link={``} />
+          <OrangeButton text={button_text} className="w-full py-6" link={`/calculator/step1`} />
         </div>
       </div>
     </div>

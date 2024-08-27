@@ -13,31 +13,37 @@ function ToBlog() {
         Ведём блог, делимся <span className="orange-bold">многолетним опытом</span> <br /> и
         практической информацией
       </h1>
-      <div className="flex h-80 w-full flex-row justify-around gap-14">
-        <BlogBullet
-          section="Ремонт"
-          link="calculator-guide"
-          text="Как рассчитать стоимость через онлайн-калькулятор FIX-ремонт?"
-        />
-        <BlogBullet
-          section="Строительство"
-          link="calculator-guide"
-          text="Как рассчитать стоимость через онлайн-калькулятор FIX-ремонт?"
-        />
-        <Image
-          className="rounded-2xl bg-cover bg-center"
-          src={bg as unknown as string}
-          alt="pseudo vid"
-          width={450}
-        />
-      </div>
-      <div className={`flex h-14 w-full flex-row items-center justify-between gap-8 px-2`}>
-        <div className="button_container h-full w-4/6">
-          <CheckButton text="Перейти в блог" link="/pages/blog" />
+      <div className="grid w-full grid-cols-3 grid-rows-[auto,4rem] gap-8">
+        <div className="flex items-center justify-center">
+          <BlogBullet
+            section="Ремонт"
+            link="calculator-guide"
+            text="Как рассчитать стоимость через онлайн-калькулятор FIX-ремонт?"
+          />
+        </div>
+        <div className="flex items-center justify-center">
+          <BlogBullet
+            section="Строительство"
+            link="calculator-guide"
+            text="Как рассчитать стоимость через онлайн-калькулятор FIX-ремонт?"
+          />
+        </div>
+        <div className="flex items-center justify-center">
+          <Image
+            className="rounded-2xl bg-cover bg-center"
+            src={bg as unknown as string}
+            alt="pseudo vid"
+            width={450}
+          />
+        </div>
+        <div className="col-span-2 flex h-16 w-full items-center justify-center">
+          <div className="button_container h-16 w-full">
+            <CheckButton text="Перейти в блог" link="/pages/blog" />
+          </div>
         </div>
         <button
-          className="h-full w-[27rem] rounded-full border border-red-600 py-4 text-center text-red-600"
-          onClick={openLink('https://www.youtube.com/@director_stroyki')}
+          className="h-16 rounded-full border border-red-600 py-2 text-center text-red-600"
+          onClick={() => openLink('https://www.youtube.com/@director_stroyki')}
         >
           Перейти в YouTube
         </button>

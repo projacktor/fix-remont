@@ -37,8 +37,8 @@ function FavoriteBusiness() {
     <div className="mb-12 flex min-h-screen w-full flex-row items-center">
       <div className="flex w-1/2 flex-col items-start justify-between gap-64">
         <h1 className="heading">
-          Занимайтесь <br /> <b className={`orange-bold font-semibold`}>любимыми</b> делами, <br />{' '}
-          а ремонт мы <br /> возьмём на себя.
+          Занимайтесь <br /> <span className={`orange-bold font-semibold`}>любимыми</span> делами,{' '}
+          <br /> а ремонт мы <br /> возьмём на себя.
         </h1>
         <div className="flex flex-col items-center">
           <p className="mb-4 text-lg font-semibold">
@@ -69,7 +69,7 @@ function FavoriteBusiness() {
 
       <div className="flex h-screen w-1/2 flex-col items-center gap-1">
         <div className="relative mb-4 h-3/5">
-          <Image alt="world_picture" src={currentImg} />
+          <Image alt="world_picture" src={currentImg} quality={100} />
           <div className="relative bottom-14 left-4 flex w-28 items-center justify-around">
             <button className="border-none bg-transparent" onClick={moveLeft}>
               <Image
@@ -104,7 +104,7 @@ function FavoriteBusiness() {
               <p className={`text-base font-normal`}>Стоимость:</p>
               <h2 className="mb-6 text-4xl font-semibold">Фикс</h2>
             </div>
-            <OrangeButton text="Онлайн-калькулятор" link={''} />
+            <OrangeButton text="Онлайн-калькулятор" link="/calculator/step1" />
           </div>
         </div>
       </div>
