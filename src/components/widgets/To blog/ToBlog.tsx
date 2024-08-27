@@ -17,14 +17,14 @@ function ToBlog() {
         <div className="flex items-center justify-center">
           <BlogBullet
             section="Ремонт"
-            link="calculator-guide"
+            link="posts"
             text="Как рассчитать стоимость через онлайн-калькулятор FIX-ремонт?"
           />
         </div>
         <div className="flex items-center justify-center">
           <BlogBullet
             section="Строительство"
-            link="calculator-guide"
+            link="posts"
             text="Как рассчитать стоимость через онлайн-калькулятор FIX-ремонт?"
           />
         </div>

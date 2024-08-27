@@ -18,7 +18,7 @@ const BlogBullet: React.FC<BlogBulletProps> = ({ section, link, text }) => {
         {section}
       </p>
       <Link
-        href={`/blog/${link}`}
+        href={`pages/blog/${link}`}
         className={`absolute bottom-14 left-8 z-20 block w-96 text-xl font-semibold text-white underline`}
       >
         {text}
