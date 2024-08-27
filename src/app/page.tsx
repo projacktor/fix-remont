@@ -1,9 +1,5 @@
 'use client'
-
 import Image from 'next/image'
-
-import style from '@/styles/home.module.scss'
-
 import SeoPart from '@/components/widgets/SEO/SeoPart'
 import Megabox from '@/components/widgets/Megabox/Megabox'
 import FavoriteBusiness from '@/components/widgets/Favorite Business/FavoriteBusiness'
@@ -37,7 +33,7 @@ export default function Home() {
       <main className="flex flex-col items-center">
         <Megabox />
 
-        <div className={`flex flex-row gap-4`}>
+        <div className={`flex w-full flex-row justify-between`}>
           <TapeSection
             svg={contactIcon as string}
             altName={'contactIcon'}

@@ -6,7 +6,6 @@ import headerLogo from '@/../public/assets/svg/headerLogo.svg'
 import profileIcon from '@/../public/assets/svg/profileIcon.svg'
 import menuBar from '@/../public/assets/svg/menuBar.svg'
 import Image from 'next/image'
-import openLink from '@/functions/openLink'
 
 const Header: React.FC = () => {
   return (
@@ -20,8 +19,8 @@ const Header: React.FC = () => {
       <WriteUs />
 
       <button
+        onClick={() => window.open('/profile/account', '_self', 'noopener,noreferrer')}
         className="flex flex-row items-center justify-between gap-44 rounded-xl bg-color-dark px-4 py-6"
-        onClick={openLink('/profile/account')}
       >
         <p className="text-base font-medium leading-none tracking-tight text-white">
           Личный кабинет

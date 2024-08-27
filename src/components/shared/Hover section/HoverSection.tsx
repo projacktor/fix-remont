@@ -1,3 +1,4 @@
+'use client'
 import React from 'react'
 import openLink from '@/functions/openLink'
 import Image from 'next/image'
@@ -12,10 +13,11 @@ interface HoverSectionProps {
   blank?: boolean
 }
 
-function HoverSection({ name, text, link, blank = false }: HoverSectionProps) {
+const HoverSection: React.FC<HoverSectionProps> = ({ name, text, link, blank = false }) => {
+  const handleClick = openLink(link as string, blank)
   return (
     <button
-      onClick={openLink(link, blank)}
+      onClick={handleClick}
       className={`${style.revert} flex w-[15rem] flex-col items-start gap-1 rounded-3xl border bg-color-bg-gray px-7 text-color-dark hover:text-white`}
     >
       <div className={`mt-6 flex flex-col items-start gap-2`}>

@@ -1,4 +1,4 @@
-function openLink(link: string, blank: boolean = false) {
+export default function openLink(link: string, blank: boolean = false) {
   const shouldOpenInNewTab = blank === true
   if (shouldOpenInNewTab) {
     if (link) {
@@ -14,5 +14,3 @@ function openLink(link: string, blank: boolean = false) {
     }
   }
 }
-
-export default openLink

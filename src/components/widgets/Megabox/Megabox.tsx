@@ -28,7 +28,7 @@ function MegaboxSection() {
           </h3>
           <div className={`${style.button_container} flex flex-row items-center space-x-8`}>
             <div className="button_container h-[4.6rem] w-1/2">
-              <OrangeButton text="Онлайн-калькулятор" link="" />
+              <OrangeButton text="Онлайн-калькулятор" link="/calculator/step1" />
             </div>
             <div className="button_container w-1/2 rounded-full border border-white">
               <BlackButton text="Стать партнёром" link="/pages/partnership" />
@@ -45,7 +45,7 @@ function MegaboxSection() {
                 6-8 месяцев
               </p>
             }
-            link={'pages/services/apartments'}
+            link={'/pages/services/apartments'}
           />
           <HoverSection
             name="Строительство"
@@ -55,7 +55,7 @@ function MegaboxSection() {
                 6-8 месяцев
               </p>
             }
-            link={'pages/services/building'}
+            link={'/pages/services/building'}
           />
           <HoverSection
             name="Партнерская программа"
@@ -64,7 +64,7 @@ function MegaboxSection() {
                 Подходит для физ.лиц, <br /> застройщиков, <br /> риелторов
               </p>
             }
-            link={'pages/partnership'}
+            link={'/pages/partnership'}
           />
         </div>
       </div>
