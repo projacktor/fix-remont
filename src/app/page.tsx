@@ -33,7 +33,7 @@ export default function Home() {
       <main className="flex flex-col items-center">
         <Megabox />
 
-        <div className={`flex w-full flex-row justify-between`}>
+        <section className={`flex w-full flex-row justify-between`}>
           <TapeSection
             svg={contactIcon as string}
             altName={'contactIcon'}
@@ -79,7 +79,7 @@ export default function Home() {
               </p>
             }
           />
-        </div>
+        </section>
 
         <FavoriteBusiness />
 

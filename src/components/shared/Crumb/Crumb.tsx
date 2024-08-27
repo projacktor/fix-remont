@@ -8,7 +8,7 @@ interface CrumbProps {
 
 const Crumb: React.FC<CrumbProps> = ({ path, links }) => {
   return (
-    <div className="flex w-full flex-row items-start">
+    <nav className="flex w-full flex-row items-start">
       <p className="text-xs font-semibold">
         <Link href="/" className="text-gray-500 opacity-80">
           Главная
@@ -31,7 +31,7 @@ const Crumb: React.FC<CrumbProps> = ({ path, links }) => {
           )
         })}
       </p>
-    </div>
+    </nav>
   )
 }
 

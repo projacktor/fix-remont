@@ -8,7 +8,7 @@ import Link from 'next/link'
 
 function FaqSection() {
   return (
-    <div className="relative flex h-full w-full flex-col justify-around">
+    <section className="relative flex h-full w-full flex-col justify-around">
       <div className="flex flex-row items-center justify-between">
         <h1 className="order-0 heading">
           Отвечаем на{' '}
@@ -60,7 +60,7 @@ function FaqSection() {
             <SingleFaq key={i} text="Какой срок службы?" />
           ))}
       </div>
-    </div>
+    </section>
   )
 }
 

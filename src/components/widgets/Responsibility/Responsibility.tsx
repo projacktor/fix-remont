@@ -6,7 +6,7 @@ import ceoPhoto from '../../../../public/assets/img/ceoPhoto.png'
 
 const Responsibility = () => {
   return (
-    <div className="flex h-[96vh] w-full flex-row items-center py-12">
+    <section className="flex h-[96vh] w-full flex-row items-center py-12">
       <div className="flex h-full w-1/2 flex-col items-start gap-4">
         <h1 className="heading m-0">
           Лично{' '}
@@ -38,7 +38,7 @@ const Responsibility = () => {
           quality={100}
         />
       </div>
-    </div>
+    </section>
   )
 }
 

@@ -7,7 +7,7 @@ import videoE from '../../../../public/assets/img/pseudo videos/videoE.png'
 
 function CheckFeedbacks() {
   return (
-    <div className="flex w-full flex-col items-center gap-10">
+    <section className="flex w-full flex-col items-center gap-10">
       <div className="flex w-full flex-row items-center justify-between gap-24">
         <div className="flex h-full flex-col gap-1">
           <div className="relativeh-full">
@@ -29,7 +29,7 @@ function CheckFeedbacks() {
       <div className={`button_container h-16 w-full`}>
         <CheckButton text="Смотреть все отзывы" link="pages/feedbacks" blank={true} />
       </div>
-    </div>
+    </section>
   )
 }
 

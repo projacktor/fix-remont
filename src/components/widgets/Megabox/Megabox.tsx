@@ -10,7 +10,7 @@ import bg from '../../../../public/assets/img/megaBoxBackground.png'
 
 function MegaboxSection() {
   return (
-    <div className="flex h-max w-full flex-row items-center gap-6">
+    <section className="flex h-max w-full flex-row items-center gap-6">
       <div className={`relative flex h-max rounded-3xl bg-cover`}>
         <Image src={bg as unknown as string} alt="backgraund" quality={100} />
         <h1
@@ -68,7 +68,7 @@ function MegaboxSection() {
           />
         </div>
       </div>
-    </div>
+    </section>
   )
 }
 

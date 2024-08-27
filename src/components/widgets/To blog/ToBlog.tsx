@@ -8,7 +8,7 @@ import bg from '../../../../public/assets/img/pseudo videos/pseudo_vid_blog.png'
 
 function ToBlog() {
   return (
-    <div className="flex h-full w-full flex-col items-start gap-8">
+    <section className="flex h-full w-full flex-col items-start gap-8">
       <h1 className="heading">
         Ведём блог, делимся <span className="orange-bold">многолетним опытом</span> <br /> и
         практической информацией
@@ -48,7 +48,7 @@ function ToBlog() {
           Перейти в YouTube
         </button>
       </div>
-    </div>
+    </section>
   )
 }
 

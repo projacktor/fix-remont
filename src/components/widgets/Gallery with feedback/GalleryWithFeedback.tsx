@@ -7,7 +7,7 @@ import Link from 'next/link'
 
 function GalleryWithFeedback() {
   return (
-    <div className="flex flex-col gap-8">
+    <section className="flex flex-col gap-8">
       <div className="flex w-full flex-row items-center justify-between font-medium">
         <div className="flex w-1/2 flex-col gap-4">
           <p className={`font-semibold`}>Но лучше всего о нас расскажут</p>
@@ -41,7 +41,7 @@ function GalleryWithFeedback() {
         </div>
       </div>
       <WorksGallery />
-    </div>
+    </section>
   )
 }
 

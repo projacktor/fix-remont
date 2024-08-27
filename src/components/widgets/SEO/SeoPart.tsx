@@ -8,7 +8,7 @@ const SeoPart: React.FC = () => {
   }
 
   return (
-    <div className="relative mb-5 w-full">
+    <section className="relative mb-5 w-full">
       <div
         className={`relative space-y-3 overflow-hidden transition-all duration-500 ease-out ${
           isOpen ? 'max-h-[1000px]' : 'max-h-32'
@@ -53,7 +53,7 @@ const SeoPart: React.FC = () => {
       >
         {isOpen ? 'Закрыть' : 'Раскрыть полностью'}
       </button>
-    </div>
+    </section>
   )
 }
 

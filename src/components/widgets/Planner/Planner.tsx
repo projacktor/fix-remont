@@ -32,7 +32,7 @@ function Planner({
   link_text
 }: PlannerProps) {
   return (
-    <div className="flex w-full flex-row justify-between rounded-3xl bg-color-dark px-3 py-16">
+    <section className="flex w-full flex-row justify-between rounded-3xl bg-color-dark px-3 py-16">
       <div className="flex w-1/2 flex-col justify-between gap-6 pl-12">
         <div className="flex flex-col gap-3 text-white">
           <h2 className="heading text-white">
@@ -70,7 +70,7 @@ function Planner({
         />
         <p className="mt-4 text-2xl font-medium text-white">{p2_text}</p>
       </div>
-    </div>
+    </section>
   )
 }
 

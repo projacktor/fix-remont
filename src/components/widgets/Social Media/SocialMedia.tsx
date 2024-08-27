@@ -9,7 +9,7 @@ import SocialMediaBullet from '@/components/entities/Social media bullet/SocialM
 
 const SocialMedia = () => {
   return (
-    <div className="relative h-4/5 w-full">
+    <section className="relative h-4/5 w-full">
       <h1 className="heading">
         Мы максимально <span className="orange-bold">открыты</span> и <br />
         подтверждаем экспертность в социальных сетях
@@ -43,7 +43,7 @@ const SocialMedia = () => {
           />
         </div>
       </div>
-    </div>
+    </section>
   )
 }
 

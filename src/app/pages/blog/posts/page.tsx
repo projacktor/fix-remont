@@ -22,7 +22,7 @@ function Post1() {
   return (
     <main className="flex w-full flex-col items-center gap-12">
       <Crumb path={path} links={links} />
-      <div className="flex w-full flex-row justify-between gap-8">
+      <section className="flex w-full flex-row justify-between gap-8">
         <div className="flex w-2/3 flex-col items-center gap-6">
           <h1 className="heading w-full text-left">
             Как рассчитать стоимость <br /> через калькулятор FIX-ремонт?
@@ -72,7 +72,7 @@ function Post1() {
             устройства к системе, будь то ноутбук, смартфон или планшет. Важно, чтобы ничто не
             мешало процессу обмена информацией и идеями.
           </p>
-          <div className="button_container mt-10 h-20 w-full">
+          <div className="button_container mt-10 h-16 w-full">
             <CheckButton text="Вернуться в блог" link="/blog" />
           </div>
         </div>
@@ -81,7 +81,7 @@ function Post1() {
             <RecommendationForm />
           </div>
         </div>
-      </div>
+      </section>
 
       <PostsGallery />
 
