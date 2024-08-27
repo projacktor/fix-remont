@@ -7,7 +7,7 @@ import mainEng from '../../../../public/assets/img/mainEngPhoto.png'
 function EngConsulting() {
   const handleSave = () => {}
   return (
-    <div className="flex w-full flex-col items-center gap-12">
+    <section className="flex w-full flex-col items-center gap-12">
       <div className="flex w-11/12 flex-row items-center justify-between">
         <div className="flex flex-col gap-4 space-y-4 text-start">
           <div>
@@ -25,7 +25,7 @@ function EngConsulting() {
           </ul>
         </div>
         <div className="relative flex flex-col items-center">
-          <Image src={mainEng} alt="Фото главного инженера" width={750} />
+          <Image src={mainEng} alt="Фото главного инженера" width={750} quality={100} />
           <div className="absolute right-10 top-12 flex w-36 flex-col gap-6 text-white">
             <h2 className="text-3xl font-semibold">Саид Низамов</h2>
             <p className="text-sm font-light">Главный иженер FIX-ремонт</p>
@@ -59,7 +59,7 @@ function EngConsulting() {
           </div>
         </div>
       </form>
-    </div>
+    </section>
   )
 }
 

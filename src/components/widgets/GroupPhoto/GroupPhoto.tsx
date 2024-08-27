@@ -11,7 +11,12 @@ function Presentation() {
         <span className="orange-bold">настоящих фанатов</span> своего дела
       </h1>
       <div className="w-full px-4">
-        <Image src={groupPhoto as unknown as string} alt="group photo" className="rounded-lg" />
+        <Image
+          src={groupPhoto as unknown as string}
+          alt="group photo"
+          className="rounded-lg"
+          quality={100}
+        />
       </div>
       <div className="button_container h-16 w-full">
         <CheckButton

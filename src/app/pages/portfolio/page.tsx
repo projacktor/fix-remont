@@ -20,7 +20,7 @@ function Portfolio() {
   return (
     <main>
       <Crumb path={path} links={links} />
-      <div className="flex h-full w-full flex-col justify-around gap-4">
+      <section className="flex h-full w-full flex-col justify-around gap-4">
         <div className="flex w-full flex-col items-start justify-around gap-4">
           <div>
             <p className="w-11/12">
@@ -42,48 +42,36 @@ function Portfolio() {
             </button>
           </div>
         </div>
-        <div className="h-full columns-2">
-          <div className="">
+        <section className="grid h-full grid-cols-2 grid-rows-2 justify-around gap-4">
+          <div className="relative flex items-center justify-center">
             <Image src={work1 as unknown as string} alt="work1" width={700} />
-            <Link
-              href="/public"
-              className="relative left-[2.4rem] top-[-4rem] text-yellow-500 underline"
-            >
+            <Link href="/public" className="absolute bottom-9 left-12 text-yellow-500 underline">
               Узнать стоимость
             </Link>
           </div>
-          <div className="">
+          <div className="relative flex items-center justify-center">
             <Image src={work1 as unknown as string} alt="work1" width={700} />
-            <Link
-              href="/public"
-              className="relative left-[2.4rem] top-[-4rem] text-yellow-500 underline"
-            >
+            <Link href="/public" className="absolute bottom-9 left-12 text-yellow-500 underline">
               Узнать стоимость
             </Link>
           </div>
-          <div className="">
+          <div className="relative flex items-center justify-center">
             <Image src={work2 as unknown as string} alt="work2" width={700} />
-            <Link
-              href="/public"
-              className="relative left-[2.4rem] top-[-4rem] text-yellow-500 underline"
-            >
+            <Link href="/public" className="absolute bottom-9 left-12 text-yellow-500 underline">
               Узнать стоимость
             </Link>
           </div>
-          <div className="">
+          <div className="relative flex items-center justify-center">
             <Image src={work2 as unknown as string} alt="work2" width={700} />
-            <Link
-              href="/public"
-              className="relative left-[2.4rem] top-[-4rem] text-yellow-500 underline"
-            >
+            <Link href="/public" className="absolute bottom-9 left-12 text-yellow-500 underline">
               Узнать стоимость
             </Link>
           </div>
-        </div>
+        </section>
         <div className="button_container h-16 w-full">
           <CheckButton text="Показать больше" link="/portfolio" />
         </div>
-      </div>
+      </section>
 
       <GroupPhoto />
 
