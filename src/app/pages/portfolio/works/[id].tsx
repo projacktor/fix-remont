@@ -78,7 +78,6 @@ const ProjectPage: React.FC<ProjectPageProps> = ({ project }) => {
 }
 
 export const getStaticPaths: GetStaticPaths = async () => {
-  // Здесь получите все возможные `id` для проектов
   const res = await fetch('https://api.example.com/projects')
   const projects = await res.json()
 

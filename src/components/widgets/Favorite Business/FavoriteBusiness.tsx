@@ -34,7 +34,7 @@ function FavoriteBusiness() {
   }
 
   return (
-    <section className="mb-12 flex min-h-screen w-full flex-row items-center">
+    <section className="flex min-h-screen w-full flex-row items-center">
       <div className="flex w-1/2 flex-col items-start justify-between gap-64">
         <h1 className="heading">
           Занимайтесь <br /> <span className={`orange-bold font-semibold`}>любимыми</span> делами,{' '}

@@ -7,7 +7,7 @@ import Link from 'next/link'
 
 function WorksGallery() {
   return (
-    <div className="flex h-[80vh] flex-col items-start gap-8">
+    <div className="flex h-[80vh] flex-col items-start gap-2">
       <div className="flex flex-row items-center gap-8">
         <div id="variant1">
           <Image src={work1 as unknown as string} alt="work1" quality={100} />

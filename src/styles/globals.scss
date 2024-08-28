@@ -10,6 +10,10 @@ main {
   @apply flex flex-col gap-8 px-10;
 }
 
+header {
+  @apply px-10;
+}
+
 input[type='checkbox']:checked {
   accent-color: #f9af15;
 }

@@ -14,7 +14,7 @@ function Scroller() {
 
   return (
     <div className="flex w-full flex-row items-center justify-between">
-      <div className="order-1 flex flex-row justify-around gap-4">
+      <div className="order-1 flex flex-row justify-around gap-2">
         <button onClick={moveLeft} className="border-none bg-transparent">
           <Image src={movingArrow as unknown as string} alt="move left" className="leftMover" />
         </button>

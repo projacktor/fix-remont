@@ -30,55 +30,56 @@ export default function Home() {
   return (
     <>
       <Header />
-      <main className="flex flex-col items-center">
-        <Megabox />
-
-        <section className={`flex w-full flex-row justify-between`}>
-          <TapeSection
-            svg={contactIcon as string}
-            altName={'contactIcon'}
-            text={
-              <p>
-                Без визитов <br /> на объект
-              </p>
-            }
-          />
-          <TapeSection
-            svg={rublIcon as string}
-            altName={'rublIcon'}
-            text={
-              <p>
-                100% гарантия фиксированной <br /> сметы
-              </p>
-            }
-          />
-          <TapeSection
-            svg={shieldIcon as string}
-            altName={'shieldIcon'}
-            text={
-              <p>
-                Все финансовые риски берём <br /> на себя
-              </p>
-            }
-          />
-          <TapeSection
-            svg={lampIcon as string}
-            altName={'lampIcon'}
-            text={
-              <p>
-                36 готовых <br /> дизнай-проектов
-              </p>
-            }
-          />
-          <TapeSection
-            svg={flagIcon as string}
-            altName={'flagIcon'}
-            text={
-              <p>
-                Всё берем на себя <br /> и работаем под ключ
-              </p>
-            }
-          />
+      <main className="flex flex-col items-center gap-16">
+        <section className="space-y-8">
+          <Megabox />
+          <section className={`flex w-full flex-row justify-between`}>
+            <TapeSection
+              svg={contactIcon as string}
+              altName={'contactIcon'}
+              text={
+                <p>
+                  Без визитов <br /> на объект
+                </p>
+              }
+            />
+            <TapeSection
+              svg={rublIcon as string}
+              altName={'rublIcon'}
+              text={
+                <p>
+                  100% гарантия фиксированной <br /> сметы
+                </p>
+              }
+            />
+            <TapeSection
+              svg={shieldIcon as string}
+              altName={'shieldIcon'}
+              text={
+                <p>
+                  Все финансовые риски берём <br /> на себя
+                </p>
+              }
+            />
+            <TapeSection
+              svg={lampIcon as string}
+              altName={'lampIcon'}
+              text={
+                <p>
+                  36 готовых <br /> дизнай-проектов
+                </p>
+              }
+            />
+            <TapeSection
+              svg={flagIcon as string}
+              altName={'flagIcon'}
+              text={
+                <p>
+                  Всё берем на себя <br /> и работаем под ключ
+                </p>
+              }
+            />
+          </section>
         </section>
 
         <FavoriteBusiness />
