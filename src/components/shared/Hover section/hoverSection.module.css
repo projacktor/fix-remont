@@ -1,5 +1,7 @@
 .revert {
-  transition: background-image 0.3s ease, color 0.3s ease;
+  transition:
+    background-image 0.3s ease,
+    color 0.3s ease;
 }
 .revert span {
   position: relative;
@@ -7,10 +9,10 @@
 }
 .revert:hover {
   background-size: cover;
-  background-image: url("../../../../public/assets/img/sectionBackground.png");
+  background-image: url('../../../../public/assets/img/sectionBackground.png');
 }
 .revert:hover .arrow {
-  content: url("../../../../public/assets/svg/revertLinkImg.svg");
+  content: url('../../../../public/assets/svg/revertLinkImg.svg');
 }
 .revert:hover span {
   opacity: 100%;

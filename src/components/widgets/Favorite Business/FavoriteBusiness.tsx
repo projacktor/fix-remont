@@ -6,12 +6,21 @@ import solution1 from '../../../../public/assets/img/solutions/solution1.png'
 import solution2 from '../../../../public/assets/img/solutions/solution2.png'
 import solution3 from '../../../../public/assets/img/solutions/solution3.png'
 import solution4 from '../../../../public/assets/img/solutions/solution4.png'
+import activeSolution1 from '../../../../public/assets/img/solutions/activeSolution1.png'
+import activeSolution2 from '../../../../public/assets/img/solutions/activeSolution2.png'
+import activeSolution3 from '../../../../public/assets/img/solutions/activeSolution3.png'
+import activeSolution4 from '../../../../public/assets/img/solutions/activeSolution4.png'
 import movingArrow from '../../../../public/assets/svg/moveArrow.svg'
 import sofaImg from '../../../../public/assets/img/sofaPhotoHome.png'
+import work1 from '../../../../public/assets/img/works gallery/work1.png'
+import work2 from '../../../../public/assets/img/works gallery/work2.png'
 
 function FavoriteBusiness() {
   const [currentImg, setCurrentImg] = useState(sofaImg)
   const [selectedVariant, setSelectedVariant] = useState(2)
+
+  const images = [sofaImg, work1, work2] // Массив изображений для карусели, можно добавить больше изображений
+  const [currentIndex, setCurrentIndex] = useState(0)
 
   const handleVariantChange = (index: number) => {
     setSelectedVariant(index)
@@ -25,22 +34,29 @@ function FavoriteBusiness() {
     'Lorem ipsum Бизнес'
   ]
 
+  const solutions = [solution1, solution2, solution3, solution4]
+  const yellowSolutions = [activeSolution1, activeSolution2, activeSolution3, activeSolution4]
+
   const moveLeft = () => {
-    // Move left logic
+    const newIndex = (currentIndex - 1 + images.length) % images.length
+    setCurrentIndex(newIndex)
+    setCurrentImg(images[newIndex])
   }
 
   const moveRight = () => {
-    // Move right logic
+    const newIndex = (currentIndex + 1) % images.length
+    setCurrentIndex(newIndex)
+    setCurrentImg(images[newIndex])
   }
 
   return (
-    <section className="flex min-h-screen w-full flex-row items-center">
-      <div className="flex w-1/2 flex-col items-start justify-between gap-64">
+    <section className="grid w-full grid-cols-2">
+      <div className="grid grid-rows-2">
         <h1 className="heading">
           Занимайтесь <br /> <span className={`orange-bold font-semibold`}>любимыми</span> делами,{' '}
           <br /> а ремонт мы <br /> возьмём на себя.
         </h1>
-        <div className="flex flex-col items-center">
+        <div className="flex flex-col items-start self-end">
           <p className="mb-4 text-lg font-semibold">
             4 пакетных решения.{' '}
             <b>
@@ -49,7 +65,7 @@ function FavoriteBusiness() {
             для себя лучшее:
           </p>
           <div className="flex flex-row items-center justify-around gap-6">
-            {[solution1, solution2, solution3, solution4].map((solution, index) => (
+            {solutions.map((solution, index) => (
               <button
                 key={index}
                 className="border-none bg-transparent active:border-transparent"
@@ -57,7 +73,11 @@ function FavoriteBusiness() {
               >
                 <Image
                   alt={`solution${index + 1}`}
-                  src={solution as unknown as string}
+                  src={
+                    selectedVariant === index
+                      ? (yellowSolutions[index] as unknown as string)
+                      : (solution as unknown as string)
+                  }
                   width={100}
                   height={100}
                 />
@@ -67,10 +87,15 @@ function FavoriteBusiness() {
         </div>
       </div>
 
-      <div className="flex h-screen w-1/2 flex-col items-center gap-1">
+      <div className="flex flex-col items-center justify-between">
         <div className="relative mb-4 h-3/5">
-          <Image alt="world_picture" src={currentImg} quality={100} />
-          <div className="relative bottom-14 left-4 flex w-28 items-center justify-around">
+          <Image
+            alt="world_picture"
+            src={currentImg as unknown as string}
+            quality={100}
+            height={400}
+          />
+          <div className="relative bottom-14 left-4 flex w-24 items-center justify-around">
             <button className="border-none bg-transparent" onClick={moveLeft}>
               <Image
                 alt="move left"
@@ -91,19 +116,19 @@ function FavoriteBusiness() {
           </div>
         </div>
         <div
-          className={`flex flex-row items-center gap-36 rounded-3xl bg-color-bg-gray px-16 py-8`}
+          className={`grid grid-cols-2 grid-rows-2 items-center gap-x-16 gap-y-8 rounded-3xl bg-color-bg-gray px-16 py-8`}
         >
-          <div className="mb-4 flex flex-col gap-16">
-            <h2 className="text-4xl font-semibold">{variants[selectedVariant]}</h2>
-            <p className={`${style.gray_text} w-52 text-base text-gray-600`}>
-              {variants_description[selectedVariant]}
-            </p>
+          <h2 className="flex text-4xl font-semibold">{variants[selectedVariant]}</h2>
+
+          <div className={`flex flex-col items-baseline`}>
+            <p className={`text-base font-normal`}>Стоимость:</p>
+            <h2 className="text-4xl font-semibold">Фикс</h2>
           </div>
-          <div className={`button_container flex w-64 flex-col gap-3`}>
-            <div className={`flex flex-col items-start`}>
-              <p className={`text-base font-normal`}>Стоимость:</p>
-              <h2 className="mb-6 text-4xl font-semibold">Фикс</h2>
-            </div>
+
+          <p className={`${style.gray_text} w-52 text-base text-gray-600`}>
+            {variants_description[selectedVariant]}
+          </p>
+          <div className={`button_container w-64`}>
             <OrangeButton text="Онлайн-калькулятор" link="/calculator/step1" />
           </div>
         </div>
