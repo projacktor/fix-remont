@@ -1,7 +1,6 @@
 'use client'
 import React from 'react'
 import Image from 'next/image'
-import Link from 'next/link'
 
 import TapeSection from '@/components/shared/Tape Section/TapeSection'
 import FavoriteBusiness from '@/components/widgets/Favorite Business/FavoriteBusiness'
@@ -21,9 +20,9 @@ import RenovationHeader from '@/components/widgets/Renovation Header/RenovationH
 import Crumb from '@/components/shared/Crumb/Crumb'
 import SelfRenovation from '@/components/widgets/Self Renovation/SelfRenovation'
 import Comparison from '@/components/widgets/Comparison/Comparison'
+import CreditCard from '@/components/widgets/Credit Card/CreditCard'
 import SelfRenovationGallery from '@/components/widgets/Self Renovation Gallery/SelfRenovationGallery'
 
-import creditImg from '../../../../../public/assets/img/creditImg.png'
 import plannerImg1 from '../../../../../public/assets/img/planner img/plannerImg1.png'
 import pseudoVid from '../../../../../public/assets/img/pseudo videos/pseudoVid.png'
 import renovationHeaderBackground from '../../../../../public/assets/img/headBannerRenovationService.png'
@@ -115,9 +114,7 @@ const RenovationService = () => {
 
       <FavoriteBusiness />
 
-      <Link href="" className="w-full">
-        <Image alt="credit" src={creditImg as unknown as string} className="w-full" />
-      </Link>
+      <CreditCard />
 
       <GalleryWithFeedback />
 

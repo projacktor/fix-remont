@@ -25,6 +25,7 @@ import plannerImg1 from '../../public/assets/img/planner img/plannerImg1.png'
 import pseudoVid from '../../public/assets/img/pseudo videos/pseudoVid.png'
 import Header from '@/components/widgets/Global Header/GlobalHeader'
 import Footer from '@/components/widgets/Global Footer/GlobalFooter'
+import CreditCard from '@/components/widgets/Credit Card/CreditCard'
 
 export default function Home() {
   return (
@@ -81,10 +82,11 @@ export default function Home() {
             />
           </section>
         </section>
+        <section className="flex items-center">
+          <FavoriteBusiness />
+        </section>
 
-        <FavoriteBusiness />
-
-        <Image src={creditCard as unknown as string} alt="credit" quality={100} />
+        <CreditCard />
 
         <RiskSlide button_text="Рассчитать стоимость" background={riskBg as unknown as string} />
 
