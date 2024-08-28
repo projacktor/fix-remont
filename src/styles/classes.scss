@@ -3,23 +3,23 @@
 }
 
 .headingStruct {
-  @apply font-semibold leading-tight tracking-tighter;
+  @apply font-semibold leading-tight tracking-tighter text-color-dark;
 }
 
 .heading {
-  @apply text-5xl font-semibold leading-tight tracking-tighter;
+  @apply text-5xl font-semibold leading-tight tracking-tighter text-color-dark;
 }
 
 .heading6 {
-  @apply text-6xl font-semibold leading-tight tracking-tighter;
+  @apply text-6xl font-semibold leading-tight tracking-tighter text-color-dark;
 }
 
 .heading2 {
-  @apply text-3xl font-semibold leading-tight tracking-tighter;
+  @apply text-3xl font-semibold leading-tight tracking-tighter text-color-dark;
 }
 
 .shiftedHeading4 {
-  @apply pl-7 text-2xl font-semibold leading-tight tracking-tighter;
+  @apply pl-7 text-2xl font-semibold leading-tight tracking-tighter text-color-dark;
 }
 
 .label {
