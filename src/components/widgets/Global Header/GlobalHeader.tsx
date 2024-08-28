@@ -11,7 +11,7 @@ import Image from 'next/image'
 const Header: React.FC = () => {
   return (
     <header className="flex w-full flex-row items-center justify-around bg-color-back p-4">
-      <div className="flex flex-row items-center justify-around gap-4">
+      <div className="flex flex-row items-center justify-around gap-4 rounded-3xl bg-white">
         <Symbol header_src={headerLogo as unknown as string} lineColor="rgba(0, 0, 0, 0.5)" />
         <div className="flex h-12 w-px justify-center border-l border-dashed border-gray-400 opacity-50"></div>
         <ContactsContainer />
@@ -21,11 +21,9 @@ const Header: React.FC = () => {
 
       <button
         onClick={() => window.open('/profile/account', '_self', 'noopener,noreferrer')}
-        className="flex flex-row items-center justify-between gap-44 rounded-xl bg-color-dark px-4 py-6"
+        className="flex flex-row items-center justify-between gap-40 rounded-2xl bg-color-dark p-5"
       >
-        <p className="text-base font-medium leading-none tracking-tight text-white">
-          Личный кабинет
-        </p>
+        <p className="text-sm font-medium leading-none tracking-tight text-white">Личный кабинет</p>
         <Image alt="profile_icon" className="order-2" src={profileIcon as unknown as string} />
       </button>
 
