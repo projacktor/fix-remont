@@ -1,0 +1,21 @@
+.creditBg {
+  background-image: url('../../../../public/assets/img/creditCardImg.png');
+  background-size: 100% 100%;
+  background-position: center;
+}
+
+.rightBg1 {
+  background-image: url('../../../../public/assets/img/riskBackground1.png');
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.rightBg2 {
+  background-image: url('../../../../public/assets/img/riskBackground2.png');
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+/*# sourceMappingURL=riskSlide.module.css.map */

@@ -19,8 +19,6 @@ import rublIcon from '../../public/assets/svg/TapeSection icons/rublIcon.svg'
 import shieldIcon from '../../public/assets/svg/TapeSection icons/shiledIcon.svg'
 import lampIcon from '../../public/assets/svg/TapeSection icons/lampIcon.svg'
 import flagIcon from '../../public/assets/svg/TapeSection icons/flagIcon.svg'
-import creditCard from '../../public/assets/img/creditImg.png'
-import riskBg from '../../public/assets/img/creditCardMaterials.png'
 import plannerImg1 from '../../public/assets/img/planner img/plannerImg1.png'
 import pseudoVid from '../../public/assets/img/pseudo videos/pseudoVid.png'
 import Header from '@/components/widgets/Global Header/GlobalHeader'
@@ -88,7 +86,7 @@ export default function Home() {
 
         <CreditCard />
 
-        <RiskSlide button_text="Рассчитать стоимость" background={riskBg as unknown as string} />
+        <RiskSlide button_text="Рассчитать стоимость" type={true} />
 
         <GalleryWithFeedback />
 

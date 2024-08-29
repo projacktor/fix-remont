@@ -122,7 +122,7 @@ function Realtors() {
 
       <Predict />
 
-      <RiskSlide button_text="Стать партнером" background={riskBackground as unknown as string} />
+      <RiskSlide button_text="Стать партнером" type={false} />
 
       <Transparency />
 
