@@ -17,17 +17,17 @@ function Presentation() {
       <div className={`${style.bg} flex h-screen w-full flex-col-reverse rounded-3xl p-10`}>
         <div className="grid w-full grid-cols-3">
           <div className="flex flex-row items-center justify-center gap-x-4">
-            <Image src={tick as string} alt="black tick" width={15} />
+            <Image src={tick as string} alt="black tick" width={20} />
             <p className="text-bas4 font-normal text-white">На рынке с 2013 года</p>
           </div>
           <div className="flex flex-row items-center justify-center gap-x-4">
-            <Image src={tick as string} alt="black tick" width={15} />
+            <Image src={tick as string} alt="black tick" width={20} />
             <p className="text-bas4 font-normal text-white">
               Построили более 1 500 домов по всей РФ
             </p>
           </div>
           <div className="flex flex-row items-center justify-center gap-x-4">
-            <Image src={tick as string} alt="black tick" width={15} />
+            <Image src={tick as string} alt="black tick" width={20} />
             <p className="text-bas4 font-normal text-white">Стаж строителей - 15 лет</p>
           </div>
         </div>
