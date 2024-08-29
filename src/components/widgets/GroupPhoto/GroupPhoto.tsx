@@ -1,7 +1,11 @@
 import React from 'react'
 import Image from 'next/image'
-import groupPhoto from '../../../../public/assets/img/groupPhoto.png'
+
+import style from './groupPhoto.module.scss'
+
 import CheckButton from '@/components/shared/buttons/Check Button/CheckButton'
+
+import tick from '../../../../public/assets/svg/tickBlack.svg'
 
 function Presentation() {
   return (
@@ -10,13 +14,23 @@ function Presentation() {
         Над вашим объектом будет работать команда{' '}
         <span className="orange-bold">настоящих фанатов</span> своего дела
       </h1>
-      <div className="w-full px-4">
-        <Image
-          src={groupPhoto as unknown as string}
-          alt="group photo"
-          className="rounded-lg"
-          quality={100}
-        />
+      <div className={`${style.bg} flex h-screen w-full flex-col-reverse rounded-3xl p-10`}>
+        <div className="grid w-full grid-cols-3">
+          <div className="flex flex-row items-center justify-center gap-x-4">
+            <Image src={tick as string} alt="black tick" width={15} />
+            <p className="text-bas4 font-normal text-white">На рынке с 2013 года</p>
+          </div>
+          <div className="flex flex-row items-center justify-center gap-x-4">
+            <Image src={tick as string} alt="black tick" width={15} />
+            <p className="text-bas4 font-normal text-white">
+              Построили более 1 500 домов по всей РФ
+            </p>
+          </div>
+          <div className="flex flex-row items-center justify-center gap-x-4">
+            <Image src={tick as string} alt="black tick" width={15} />
+            <p className="text-bas4 font-normal text-white">Стаж строителей - 15 лет</p>
+          </div>
+        </div>
       </div>
       <div className="button_container h-16 w-full">
         <CheckButton
