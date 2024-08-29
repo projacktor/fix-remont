@@ -33,7 +33,6 @@ import tickIcon from '../../../../../public/assets/svg/TapeSection icons/tickIco
 import contactIcon from '../../../../../public/assets/svg/TapeSection icons/contactIcon.svg'
 import shieldIcon from '../../../../../public/assets/svg/TapeSection icons/shiledIcon.svg'
 import lampIcon from '../../../../../public/assets/svg/TapeSection icons/lampIcon.svg'
-import riskBackground from '../../../../../public/assets/img/riskBackground2.png'
 
 function Realtors() {
   const path = ['Партнёрская программа', 'Риелторам']

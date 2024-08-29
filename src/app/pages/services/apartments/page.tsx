@@ -26,7 +26,6 @@ import SelfRenovationGallery from '@/components/widgets/Self Renovation Gallery/
 import plannerImg1 from '../../../../../public/assets/img/planner img/plannerImg1.png'
 import pseudoVid from '../../../../../public/assets/img/pseudo videos/pseudoVid.png'
 import renovationHeaderBackground from '../../../../../public/assets/img/headBannerRenovationService.png'
-import materialsImg from '../../../../../public/assets/img/creditCardMaterials.png'
 import contactIcon from '../../../../../public/assets/svg/TapeSection icons/contactIcon.svg'
 import rublIcon from '../../../../../public/assets/svg/TapeSection icons/rublIcon.svg'
 import shieldIcon from '../../../../../public/assets/svg/TapeSection icons/shiledIcon.svg'
@@ -105,10 +104,7 @@ const RenovationService = () => {
         }
       />
 
-      <RiskSlide
-        button_text="Рассчитать стоимость"
-        background={materialsImg as unknown as string}
-      />
+      <RiskSlide button_text="Рассчитать стоимость" type={true} />
 
       <Comparison />
 

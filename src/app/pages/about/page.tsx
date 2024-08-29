@@ -21,7 +21,6 @@ import src2 from '../../../../public/assets/svg/digit icons/998.svg'
 import src3 from '../../../../public/assets/svg/digit icons/10.svg'
 import pseudoVid from '../../../../public/assets/img/pseudo videos/pseudoVid.png'
 import russia from '../../../../public/assets/img/Russia.png'
-import materialsImg from '../../../../public/assets/img/creditCardMaterials.png'
 
 function About() {
   const blackBullet1 = <p>Ремонт, строительство и обслуживание квартир, жилых домов под ключ</p>
@@ -80,10 +79,7 @@ function About() {
 
       <Responsibility />
 
-      <RiskSlide
-        button_text="Рассчитать стоимость"
-        background={materialsImg as unknown as string}
-      />
+      <RiskSlide button_text="Рассчитать стоимость" type={true} />
 
       <SocialMedia />
 
