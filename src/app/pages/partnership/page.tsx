@@ -25,7 +25,6 @@ import Crumb from '@/components/shared/Crumb/Crumb'
 
 import plannerImage from '../../../../public/assets/img/planner img/plannerImg2.png'
 import pseudoVid from '../../../../public/assets/img/pseudo videos/pseudoVid.png'
-import materialsImg from '../../../../public/assets/img/creditCardMaterials.png'
 import contactIcon from '../../../../public/assets/svg/TapeSection icons/contactIcon.svg'
 import rublIcon from '../../../../public/assets/svg/TapeSection icons/rublIcon.svg'
 import shieldIcon from '../../../../public/assets/svg/TapeSection icons/shiledIcon.svg'
@@ -163,10 +162,7 @@ const Partnership = () => {
 
       <Transparency />
 
-      <RiskSlide
-        button_text="Рассчитать стоимость"
-        background={materialsImg as unknown as string}
-      />
+      <RiskSlide button_text="Рассчитать стоимость" type={true} />
 
       <Reasons
         head_text={

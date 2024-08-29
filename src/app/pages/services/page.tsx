@@ -8,8 +8,6 @@ import CheckFeedbacks from '@/components/widgets/CheckFeedbacks/CheckFeedbacks'
 import HoverSectionBig from '@/components/shared/Hove Section Big/HoverSectionBig'
 import SeoPart from '@/components/widgets/SEO/SeoPart'
 
-import materialsImg from '../../../../public/assets/img/creditCardMaterials.png'
-
 export default function Services() {
   const hoverSectionLists = (
     <ul>
@@ -29,10 +27,7 @@ export default function Services() {
         <HoverSectionBig link={''} lists={hoverSectionLists} name={'Партнёрская программа'} />
       </div>
 
-      <RiskSlide
-        button_text="Рассчитать стоимость"
-        background={materialsImg as unknown as string}
-      />
+      <RiskSlide button_text="Рассчитать стоимость" type={true} />
 
       <GalleryWithFeedback />
 
