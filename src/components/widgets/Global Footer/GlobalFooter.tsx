@@ -11,7 +11,7 @@ import footerLogo from '../../../../public/assets/svg/footerLogo.svg'
 
 function Footer() {
   return (
-    <footer className="z-50 flex h-28 w-full flex-row items-center justify-around gap-8 rounded-t-2xl bg-color-dark p-10">
+    <footer className="flex h-28 w-full flex-row items-center justify-around gap-8 rounded-t-2xl bg-color-dark p-10">
       <div className={`${style.white_text} order-1`}>
         <Symbol
           header_src={footerLogo as unknown as string}
