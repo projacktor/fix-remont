@@ -13,22 +13,22 @@ function WorksGallery() {
     {
       image: work1,
       title: 'Дом из кирпича 560 м² на Барвихе',
-      link: '#'
+      link: '/pages/portfolio/works'
     },
     {
       image: work2,
       title: 'Квартира 300 м² на Баумана',
-      link: '#'
+      link: '/pages/portfolio/works'
     },
     {
       image: work2,
       title: 'Квартира 300 м² на Баумана',
-      link: '#'
+      link: '/pages/portfolio/works'
     },
     {
       image: work1,
       title: 'Дом из кирпича 560 м² на Барвихе',
-      link: '#'
+      link: '/pages/portfolio/works'
     }
   ]
 
