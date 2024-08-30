@@ -15,9 +15,9 @@ function GalleryWithFeedback() {
             Выполненные работы <br /> и отзывы клиентов
           </h1>
         </div>
-        <div className="flex flex-row gap-32">
+        <div className="flex flex-row gap-24">
           <Link
-            className="flex flex-row items-baseline justify-center gap-3"
+            className="flex flex-row items-baseline justify-center gap-3 rounded-3xl bg-white p-8"
             href="https://yandex.ru/maps/org/fix_remont/110403249402/features/?ll=49.192026%2C55.826770&mode=search&sll=48.744609%2C55.752080&sspn=0.090294%2C0.027834&tab=features&text=%D1%84%D0%B8%D0%BA%D1%81%20%D1%80%D0%B5%D0%BC%D0%BE%D0%BD%D1%82&z=12"
             target="_blank"
           >
@@ -27,16 +27,20 @@ function GalleryWithFeedback() {
               width={110}
               height={110}
             />
-            <p className="text-xs font-semibold underline">Смотреть отзывы на Яндекс</p>
+            <p className="min-w-max text-xs font-semibold underline">Смотреть отзывы на Яндекс</p>
           </Link>
-          <Link className="flex flex-row items-baseline gap-3" href="#" target="_blank">
+          <Link
+            className="flex flex-row items-baseline gap-3 rounded-3xl bg-white p-8"
+            href="#"
+            target="_blank"
+          >
             <Image
               src={responseOtzovik as unknown as string}
               alt="otzovik_picture"
               width={110}
               height={110}
             />
-            <p className="text-xs font-semibold underline">Смотреть отзывы на Отзовик</p>
+            <p className="min-w-max text-xs font-semibold underline">Смотреть отзывы на Отзовик</p>
           </Link>
         </div>
       </div>

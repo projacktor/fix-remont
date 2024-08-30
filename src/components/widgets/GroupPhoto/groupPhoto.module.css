@@ -1,5 +1,5 @@
 .bg {
-  background-image: url("../../../../public/assets/img/groupPhoto.png");
+  background-image: url('../../../../public/assets/img/groupPhoto.png');
   background-position: center;
   background-size: cover;
 }
