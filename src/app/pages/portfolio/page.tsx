@@ -68,7 +68,11 @@ function Portfolio() {
         <section className="grid h-full grid-cols-2 grid-rows-2 justify-around gap-4">
           {works.map((work, index) => (
             <div key={index} className={`flex items-center justify-center`}>
-              <GalleryElement image={work.image as unknown as string} title={work.title} link={work.link} />
+              <GalleryElement
+                image={work.image as unknown as string}
+                title={work.title}
+                link={work.link}
+              />
             </div>
           ))}
         </section>

@@ -52,7 +52,11 @@ function WorksGallery() {
                 : 'hidden translate-x-full'
             }`}
           >
-            <GalleryElement image={work.image as unknown as string} title={work.title} link={work.link} />
+            <GalleryElement
+              image={work.image as unknown as string}
+              title={work.title}
+              link={work.link}
+            />
           </div>
         ))}
       </div>

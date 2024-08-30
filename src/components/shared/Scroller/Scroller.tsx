@@ -2,7 +2,13 @@ import React from 'react'
 import Image from 'next/image'
 import movingArrow from '../../../../public/assets/svg/moveArrow.svg'
 
-function Scroller({ currentIndex, moveLeft, moveRight }) {
+interface ScrollerProps {
+  currentIndex: number
+  moveLeft: () => void
+  moveRight: () => void
+}
+
+function Scroller({ currentIndex, moveLeft, moveRight }: ScrollerProps) {
   return (
     <div className="flex w-full flex-row items-center justify-between">
       <div className="order-1 flex flex-row justify-around gap-2">
