@@ -18,11 +18,16 @@ function FaqSection() {
           </span>{' '}
           наших клиентов
         </h1>
-        <div className="order-1 flex max-h-[14.2rem] w-1/2 flex-row items-center justify-around rounded-3xl bg-color-dark">
-          <Image src={photo as unknown as string} alt={'CEO photo picture'} className={`z-10`} />
+        <div className="order-1 flex max-h-[14.2rem] w-1/2 flex-row items-center justify-around rounded-3xl bg-color-dark px-8">
+          <Image
+            src={photo as unknown as string}
+            alt={'CEO photo picture'}
+            className={`z-10`}
+            quality={100}
+          />
           <div className={`z-20 flex w-max flex-col items-start justify-around gap-4`}>
             <h4 className="text-3xl font-semibold leading-7 text-white">Фанис Хасанов</h4>
-            <p className="text-sm font-light leading-normal text-white">
+            <p className="text-sm font-extralight leading-normal text-white">
               Основатель и руководитель FIX-ремонт <br />
               Не нашли свой вопрос? Свяжитесь с нами!
             </p>

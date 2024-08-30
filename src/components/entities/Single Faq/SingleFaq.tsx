@@ -15,10 +15,10 @@ const SingleFaq: React.FC<SingleFaqProps> = ({ text }) => {
   }
 
   return (
-    <div className="mb-4">
+    <div className="mb-4 bg-white">
       <button
         onClick={toggleOpen}
-        className={`${style.plate} flex w-full items-center justify-between rounded-3xl bg-white p-5 transition-all hover:bg-gray-200`}
+        className={`${style.plate} flex w-full items-center justify-between rounded-3xl p-5 transition-all hover:bg-gray-200`}
       >
         <h4 className="text-2xl font-bold">{text}</h4>
         <Image src={linkImg as unknown as string} alt="arrow" width={40} />
@@ -28,7 +28,7 @@ const SingleFaq: React.FC<SingleFaqProps> = ({ text }) => {
           isOpen ? 'max-h-[300px] opacity-100' : 'max-h-0 opacity-0'
         }`}
       >
-        <div className="mt-2 rounded-lg bg-white p-3">
+        <div className="mt-2 rounded-lg p-5">
           <p>
             Минимальный срок службы напыляемой жидкой битумно-латексной гидроизоляции для кровли от
             WPGUM составляет 20 лет. Также наша компания предоставляет 100% гарантию качества сроком
