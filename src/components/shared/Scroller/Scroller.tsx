@@ -1,17 +1,14 @@
 import React from 'react'
 import Image from 'next/image'
 import movingArrow from '../../../../public/assets/svg/moveArrow.svg'
-import scroller from '../../../../public/assets/svg/scroller.svg'
 
-function Scroller() {
-  const moveLeft = () => {
-    // Move left logic
-  }
+interface ScrollerProps {
+  currentIndex: number
+  moveLeft: void
+  moverRight: void
+}
 
-  const moveRight = () => {
-    // Move right logic
-  }
-
+function Scroller({ currentIndex, moveLeft, moveRight }) {
   return (
     <div className="flex w-full flex-row items-center justify-between">
       <div className="order-1 flex flex-row justify-around gap-2">
@@ -27,7 +24,23 @@ function Scroller() {
         </button>
       </div>
       <div className="order-2">
-        <Image src={scroller as unknown as string} alt="scroller" width="95" />
+        <svg
+          width="110"
+          height="10"
+          viewBox="0 0 110 10"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          {[...Array(5)].map((_, index) => (
+            <circle
+              key={index}
+              cx={5 + index * 23}
+              cy="5"
+              r="4.5"
+              fill={index === currentIndex ? '#161616' : '#DDDDDD'}
+            />
+          ))}
+        </svg>
       </div>
     </div>
   )
