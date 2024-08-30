@@ -28,12 +28,14 @@ const Work1: React.FC = () => {
             <Minibar desc_name="Площадь объекта" desc_content="240 м2" />
             <MinibarVideo desc_content="1:25 мин" />
           </div>
-          <Image src={projPic1} alt="Project picture" quality={100} className="relative" />
-          <div className="relative bottom-[45rem] left-5">
-            <Die text="СТРОИТЕЛЬСТВО ДОМОВ" />
+          <div className="relative">
+            <Image src={projPic1 as unknown as string} alt="Project picture" quality={100} />
+            <div className="absolute left-12 top-12">
+              <Die text="СТРОИТЕЛЬСТВО ДОМОВ" />
+            </div>
           </div>
           <VideoGallery />
-          <Image src={projPic2} alt="projectPic2" quality={100} />
+          <Image src={projPic2 as unknown as string} alt="projectPic2" quality={100} />
           <div className="flex w-full flex-col p-8">
             <h2>Задача:</h2>
             <p className="w-4/5">
