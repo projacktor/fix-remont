@@ -1,6 +1,4 @@
 import React, { useState } from 'react'
-import Image from 'next/image'
-import Link from 'next/link'
 
 import work1 from '../../../../public/assets/img/works gallery/work1.png'
 import work2 from '../../../../public/assets/img/works gallery/work2.png'

@@ -13,10 +13,33 @@ import Responsibility from '@/components/widgets/Responsibility/Responsibility'
 import Consulting from '@/components/widgets/Consulting/Consulting'
 import SeoPart from '@/components/widgets/SEO/SeoPart'
 import Crumb from '@/components/shared/Crumb/Crumb'
+import GalleryElement from '@/components/shared/Gallery Element/GalleryElement'
 
 function Portfolio() {
   const path = ['Портфолио']
   const links = ['/pages/dashboard/portfolio']
+  const works = [
+    {
+      image: work1,
+      title: 'Дом из кирпича 560 м² на Барвихе',
+      link: '/pages/portfolio/works'
+    },
+    {
+      image: work2,
+      title: 'Квартира 300 м² на Баумана',
+      link: '/pages/portfolio/works'
+    },
+    {
+      image: work2,
+      title: 'Квартира 300 м² на Баумана',
+      link: '/pages/portfolio/works'
+    },
+    {
+      image: work1,
+      title: 'Дом из кирпича 560 м² на Барвихе',
+      link: '/pages/portfolio/works'
+    }
+  ]
   return (
     <main>
       <Crumb path={path} links={links} />
@@ -43,30 +66,12 @@ function Portfolio() {
           </div>
         </div>
         <section className="grid h-full grid-cols-2 grid-rows-2 justify-around gap-4">
-          <div className="relative flex items-center justify-center">
-            <Image src={work1 as unknown as string} alt="work1" width={700} />
-            <Link href="/public" className="absolute bottom-9 left-12 text-yellow-500 underline">
-              Узнать стоимость
-            </Link>
-          </div>
-          <div className="relative flex items-center justify-center">
-            <Image src={work1 as unknown as string} alt="work1" width={700} />
-            <Link href="/public" className="absolute bottom-9 left-12 text-yellow-500 underline">
-              Узнать стоимость
-            </Link>
-          </div>
-          <div className="relative flex items-center justify-center">
-            <Image src={work2 as unknown as string} alt="work2" width={700} />
-            <Link href="/public" className="absolute bottom-9 left-12 text-yellow-500 underline">
-              Узнать стоимость
-            </Link>
-          </div>
-          <div className="relative flex items-center justify-center">
-            <Image src={work2 as unknown as string} alt="work2" width={700} />
-            <Link href="/public" className="absolute bottom-9 left-12 text-yellow-500 underline">
-              Узнать стоимость
-            </Link>
-          </div>
+          {/*<div className="relative flex items-center justify-center">*/}
+          {works.map((work, index) => (
+            <div key={index} className={`flex items-center justify-center`}>
+              <GalleryElement image={work.image as string} title={work.title} link={work.link} />
+            </div>
+          ))}
         </section>
         <div className="button_container h-16 w-full">
           <CheckButton text="Показать больше" link="/portfolio" />
