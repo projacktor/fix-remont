@@ -3,9 +3,9 @@ import Image from 'next/image'
 import movingArrow from '../../../../public/assets/svg/moveArrow.svg'
 
 interface ScrollerProps {
-  currentIndex: number
-  moveLeft: () => void
-  moveRight: () => void
+  currentIndex?: number
+  moveLeft?: () => void
+  moveRight?: () => void
 }
 
 function Scroller({ currentIndex, moveLeft, moveRight }: ScrollerProps) {
