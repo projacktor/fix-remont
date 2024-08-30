@@ -2,12 +2,6 @@ import React from 'react'
 import Image from 'next/image'
 import movingArrow from '../../../../public/assets/svg/moveArrow.svg'
 
-interface ScrollerProps {
-  currentIndex: number
-  moveLeft: void
-  moverRight: void
-}
-
 function Scroller({ currentIndex, moveLeft, moveRight }) {
   return (
     <div className="flex w-full flex-row items-center justify-between">

@@ -6,6 +6,7 @@ import work1 from '../../../../public/assets/img/works gallery/work1.png'
 import work2 from '../../../../public/assets/img/works gallery/work2.png'
 
 import Scroller from '@/components/shared/Scroller/Scroller'
+import GalleryElement from '@/components/shared/Gallery Element/GalleryElement'
 
 function WorksGallery() {
   const [currentIndex, setCurrentIndex] = useState(0)
@@ -47,19 +48,13 @@ function WorksGallery() {
         {works.map((work, index) => (
           <div
             key={index}
-            className={`relative w-1/2 transform transition-all duration-300 ${
+            className={`w-1/2 transform transition-all duration-300 ${
               index === currentIndex || index === currentIndex + 1
                 ? 'translate-x-0'
                 : 'hidden translate-x-full'
             }`}
           >
-            <Image src={work.image as unknown as string} alt={work.title} quality={100} />
-            <div className="absolute bottom-12 left-9 flex w-max flex-col gap-y-4">
-              <h4 className="text-3xl font-semibold leading-tight text-white">{work.title}</h4>
-              <Link href={work.link} className={`font-normal text-color-orange underline`}>
-                Узнать стоимость
-              </Link>
-            </div>
+            <GalleryElement image={work.image as string} title={work.title} link={work.link} />
           </div>
         ))}
       </div>
