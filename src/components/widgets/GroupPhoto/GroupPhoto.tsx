@@ -9,7 +9,7 @@ import tick from '../../../../public/assets/svg/tickBlack.svg'
 
 function Presentation() {
   return (
-    <section className="flex w-full flex-col items-center gap-6 py-4">
+    <section className="flex w-full flex-col items-center gap-6">
       <h1 className="heading">
         Над вашим объектом будет работать команда{' '}
         <span className="orange-bold">настоящих фанатов</span> своего дела

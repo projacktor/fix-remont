@@ -41,7 +41,7 @@ function WorksGallery() {
   }
 
   return (
-    <div className="flex h-[80vh] flex-col items-start gap-4">
+    <div className="flex flex-col items-start gap-4">
       <div className="flex flex-row items-center gap-8 overflow-hidden">
         {works.map((work, index) => (
           <div
