@@ -4,26 +4,41 @@ import Link from 'next/link'
 interface CrumbProps {
   path: string[]
   links: string[]
+  mode?: boolean
 }
 
-const Crumb: React.FC<CrumbProps> = ({ path, links }) => {
+const Crumb: React.FC<CrumbProps> = ({ path, links, mode = false }) => {
   return (
     <nav className="flex w-full flex-row items-start">
       <p className="text-xs font-semibold">
-        <Link href="/" className="text-gray-500 opacity-80">
+        <Link href="/" className={`${mode ? 'text-white' : 'text-gray-500'} opacity-50`}>
           Главная
         </Link>
         {path.map((crumb, index) => {
           const isLast = index === path.length - 1
           return (
             <React.Fragment key={index}>
-              <span className={isLast ? 'font-bold text-gray-700' : 'text-gray-500 opacity-80'}>
+              <span
+                className={
+                  mode
+                    ? 'text-white opacity-50'
+                    : isLast
+                      ? 'font-bold text-gray-700'
+                      : 'text-gray-500 opacity-80'
+                }
+              >
                 {' '}
                 •{' '}
               </span>
               <Link
                 href={links[index]}
-                className={isLast ? 'font-bold text-gray-700' : 'text-gray-500 opacity-80'}
+                className={
+                  mode
+                    ? 'text-white'
+                    : isLast
+                      ? 'font-bold text-gray-700'
+                      : 'text-gray-500 opacity-80'
+                }
               >
                 {crumb}
               </Link>

@@ -37,8 +37,9 @@ const RenovationService = () => {
   const links = ['/pages/services', '/pages/services/apartments']
   return (
     <main className="flex flex-col gap-10">
-      <Crumb path={path} links={links} />
       <RenovationHeader
+        path={path}
+        links={links}
         image={renovationHeaderBackground as unknown as string}
         header1={<h1>Ремонт квартир под ключ по готовым проектам и с фиксированной ценой</h1>}
         header2="Заселитесь в квартиру мечты с мебелью в течение 3-х месяцев"
