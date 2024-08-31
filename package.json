@@ -14,23 +14,23 @@
   "dependencies": {
     "data-fns": "^1.1.0",
     "next": "14.2.4",
-    "prettier": "^3.3.2",
+    "prettier": "^3.3.3",
     "prettier-plugin-organize-attributes": "^1.0.0",
-    "prettier-plugin-tailwindcss": "^0.6.5",
-    "react": "^18",
-    "react-dom": "^18",
+    "prettier-plugin-tailwindcss": "^0.6.6",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
     "sass": "^1.77.8",
     "scss": "^0.2.4",
-    "sharp": "^0.33.4"
+    "sharp": "^0.33.5"
   },
   "devDependencies": {
-    "@types/node": "^20",
-    "@types/react": "^18",
-    "@types/react-dom": "^18",
-    "eslint": "^8",
+    "@types/node": "^20.16.2",
+    "@types/react": "^18.3.5",
+    "@types/react-dom": "^18.3.0",
+    "eslint": "^8.57.0",
     "eslint-config-next": "14.2.4",
-    "postcss": "^8",
-    "tailwindcss": "^3.4.1",
-    "typescript": "^5"
+    "postcss": "^8.4.41",
+    "tailwindcss": "^3.4.10",
+    "typescript": "^5.5.4"
   }
 }
