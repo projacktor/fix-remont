@@ -4,13 +4,14 @@ import BlackButton from '@/components/shared/buttons/Black Button/BlackButton'
 function Predict() {
   return (
     <div className="flex w-full flex-col items-center gap-8">
-      <div className="flex w-full flex-row items-center justify-between gap-40">
+      <div className="flex w-full flex-row items-center justify-around">
         <div className="flex flex-col items-start gap-4">
           <h1 className="heading w-[30rem]">
             <span className="orange-bold">Спрогнозируйте свой доход</span> прямо сейчас
           </h1>
-          <p className="text-lg font-medium">В расчёт возьмём средние данные по пакетам</p>
+          <p className="text-lg font-normal">В расчёт возьмём средние данные по пакетам</p>
         </div>
+        <div className="p-12"></div>
         <div className="flex h-40 flex-col items-center justify-center gap-4 rounded-2xl border-2 border-black px-20 py-6">
           <h1 className="heading text-5xl">
             Итого: <span className="underline">382 000</span> руб
