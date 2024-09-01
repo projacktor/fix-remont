@@ -39,35 +39,36 @@ function Realtors() {
   const links = ['/pages/partnership', '/pages/partnership/realtors']
   return (
     <main className="flex flex-col space-y-8">
-      <div className="flex w-full bg-cover bg-center">
+      <div className="relative flex w-full bg-cover bg-center">
         <div className="flex flex-col gap-8">
-          <Crumb path={path} links={links} />
+          <div className="absolute left-20 top-12">
+            <Crumb path={path} links={links} mode={true} />
+          </div>
           <Image
             src={renovationHeaderBackground as unknown as string}
             alt="background"
-            className="relative"
+            quality={100}
           />
-          <div className="heading absolute bottom-[1rem] left-[8rem] max-w-lg text-white">
-            <h1 className="headingStruct text-4xl">
-              Приводите клиентов на ремонт с фикс ценой и зарабатывайте от 1000 руб/м² с каждой
-              сделки
-            </h1>
-          </div>
-          <div className="absolute bottom-[-4.75rem] right-[4rem] flex w-[26rem] flex-col space-y-7 rounded-3xl bg-color-dark p-8">
-            <h2 className="max-w-[18rem] text-2xl font-normal tracking-tighter text-white">
-              Обеспечим ваших клиентов сервисом и услугой высшего уровня без рисков для репутации
+          <h1 className="headingStruct absolute bottom-24 left-20 max-w-[42rem] text-5xl text-white">
+            Приводите клиентов на ремонт с фикс ценой и зарабатывайте от 1000 руб/м² <wbr />с каждой
+            сделки
+          </h1>
+          <div className="absolute bottom-[-0.1rem] right-[1rem] flex w-[33rem] flex-col space-y-14 rounded-3xl bg-color-dark p-11">
+            <h2 className="max-w-[26rem] text-3xl font-medium tracking-tighter text-white">
+              Обеспечим ваших <br /> клиентов сервисом и услугой высшего уровня <br />
+              без рисков для репутации
             </h2>
-            <Link href={''} className="text-color-orange underline">
+            <Link href={''} className="text-base font-medium text-color-orange underline">
               Подробнее
             </Link>
             <div className="button_container h-16 w-full">
-              <OrangeButton text="Зарегистрироваться как партнер" link="" />
+              <OrangeButton text="Зарегистрироваться как партнер" link="" className="text-base" />
             </div>
           </div>
         </div>
       </div>
 
-      <div className={`flex flex-row gap-4`}>
+      <section className={`flex w-full flex-row justify-around gap-4`}>
         <TapeSection
           svg={contactIcon as string}
           altName={'contactIcon'}
@@ -113,7 +114,7 @@ function Realtors() {
             </p>
           }
         />
-      </div>
+      </section>
 
       <DesignSlide />
 
