@@ -15,7 +15,6 @@ import GalleryWithFeedback from '@/components/widgets/Gallery with feedback/Gall
 import RiskSlide from '@/components/widgets/Risk Side/RiskSlide'
 import Planner from '@/components/widgets/Planner/Planner'
 import TapeSection from '@/components/shared/Tape Section/TapeSection'
-import HoverSection from '@/components/shared/Hover section/HoverSection'
 import SuitSection from '@/components/widgets/Suit section/SuitSection'
 import Predict from '@/components/widgets/Predict/Predict'
 import OrganazingGallery from '@/components/widgets/Organizing Gallery/OrganazingGallery'
@@ -31,6 +30,10 @@ import shieldIcon from '../../../../public/assets/svg/TapeSection icons/shiledIc
 import lampIcon from '../../../../public/assets/svg/TapeSection icons/lampIcon.svg'
 import flagIcon from '../../../../public/assets/svg/TapeSection icons/flagIcon.svg'
 import bg from '../../../../public/assets/img/partnershipBackground.png'
+
+import style from '@/components/shared/Hover section/hoverSection.module.scss'
+import arrow from '../../../../public/assets/svg/linkImg.svg'
+import Link from 'next/link'
 
 const Partnership = () => {
   const path = ['Партнерская программа']
@@ -57,13 +60,17 @@ const Partnership = () => {
     },
     {
       label: 'Физическим лицам',
-      text: <p></p>,
+      text: (
+        <p>
+          Заезжайте в готовую <br /> квартиру уже через <br /> 6-8 месяцев
+        </p>
+      ),
       link: '/pages/partnership/persons'
     }
   ]
   return (
     <main className="flex flex-col gap-14">
-      <div className="relative h-[41rem] w-full">
+      <div className="w-full">
         <div className="relative flex w-full">
           <div className="absolute left-12 top-12">
             <Crumb path={path} links={links} mode={true} />
@@ -77,23 +84,42 @@ const Partnership = () => {
           <h1 className="heading absolute bottom-24 left-20 text-white">
             Зарабатывайте 10% <br /> комиссию с каждой <br /> сделки FIX-ремонт
           </h1>
-          <div className="ml-5 flex h-[27rem] w-[27rem] flex-col items-center justify-between rounded-[32px] bg-color-dark p-11">
-            <h2 className="leading-tighter text-2xl font-medium text-white">
+          <div className="ml-5 flex h-[33.5rem] w-[33rem] flex-col items-center justify-between rounded-[32px] bg-color-dark p-11">
+            <h2 className="leading-tighter text-3xl font-medium text-white">
               Партнерская программа
               <wbr />
               от первого в России
               <br /> онлайн-сервиса по ремонту и строительству с фиксированной ценой
             </h2>
-            <div className="button_container w-full text-xs">
-              <OrangeButton text="Зарегистрироваться, как партнёр" link="" />
+            <div className="button_container w-full">
+              <OrangeButton
+                text="Зарегистрироваться, как партнёр"
+                link="/server/auth"
+                className="text-lg"
+              />
             </div>
           </div>
         </div>
-        <div className="absolute bottom-4 left-[46rem] flex flex-row justify-between gap-12">
+        <div className="absolute bottom-14 right-10 flex flex-row justify-between gap-12">
           {bullets.map((bullet, index) => (
-            <div key={index} className="w-[13rem]">
-              <HoverSection name={bullet.label} link={bullet.link} text={bullet.text} />
-            </div>
+            <Link
+              key={index}
+              href={bullet.link}
+              className={`${style.revert} relative flex min-h-[14rem] w-[15rem] flex-col items-start gap-1 rounded-3xl bg-color-bg-gray px-7 text-color-dark hover:text-white`}
+            >
+              <div className={`mt-6 flex flex-col items-start gap-2`}>
+                <h5 className="text-left text-2xl font-medium leading-5">{bullet.label}</h5>
+                <span className={`max-w-44 text-left text-xs font-normal`}>{bullet.text}</span>
+              </div>
+              <Image
+                alt="arrow"
+                src={arrow as unknown as string}
+                width={40}
+                height={40}
+                quality={100}
+                className={`${style.arrow} absolute bottom-6 right-8`}
+              />
+            </Link>
           ))}
         </div>
       </div>

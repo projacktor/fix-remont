@@ -4,19 +4,18 @@ import Image from 'next/image'
 import style from './hoverSection.module.scss'
 
 import arrow from '../../../../public/assets/svg/linkImg.svg'
+import Link from 'next/link'
 
 interface HoverSectionProps {
   name: string
   link: string
   text: React.ReactNode
-  blank?: boolean
 }
 
-const HoverSection: React.FC<HoverSectionProps> = ({ name, text, link, blank = false }) => {
-  const handleClick = openLink(link as string, blank)
+const HoverSection: React.FC<HoverSectionProps> = ({ name, text, link }) => {
   return (
-    <button
-      onClick={handleClick}
+    <Link
+      href={link}
       className={`${style.revert} flex min-h-[12rem] w-[15rem] flex-col items-start gap-1 rounded-3xl bg-color-bg-gray px-7 text-color-dark hover:text-white`}
     >
       <div className={`mt-6 flex flex-col items-start gap-2`}>
@@ -31,7 +30,7 @@ const HoverSection: React.FC<HoverSectionProps> = ({ name, text, link, blank = f
         quality={100}
         className={`${style.arrow} relative bottom-4 left-36`}
       />
-    </button>
+    </Link>
   )
 }
 
