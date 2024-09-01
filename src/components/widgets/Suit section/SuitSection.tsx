@@ -23,7 +23,7 @@ function SuitSection() {
   ]
 
   return (
-    <div className="flex w-full flex-col items-center space-y-8 md:flex-row md:space-y-0">
+    <section className="flex w-full flex-row items-center justify-around space-y-8">
       <div className="flex w-full flex-col space-y-16 md:w-1/2">
         <h1 className="heading">
           <span className="orange-bold">Кому подойдёт</span>
@@ -60,7 +60,7 @@ function SuitSection() {
           </div>
         </div>
       </div>
-    </div>
+    </section>
   )
 }
 

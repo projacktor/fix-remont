@@ -124,7 +124,7 @@ const Partnership = () => {
         </div>
       </div>
 
-      <div className={`flex flex-row gap-3`}>
+      <div className={`flex w-full flex-row justify-around gap-3`}>
         <TapeSection
           svg={contactIcon as string}
           altName={'contactIcon'}
