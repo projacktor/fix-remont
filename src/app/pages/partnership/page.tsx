@@ -35,59 +35,66 @@ import bg from '../../../../public/assets/img/partnershipBackground.png'
 const Partnership = () => {
   const path = ['Партнерская программа']
   const links = ['/pages/partnership']
+
+  const bullets = [
+    {
+      label: 'Риэлторам',
+      text: (
+        <p>
+          Заезжайте в готовую <br /> квартиру уже через <br /> 6-8 месяцев
+        </p>
+      ),
+      link: '/pages/partnership/realtors'
+    },
+    {
+      label: 'Застройщикам',
+      text: (
+        <p>
+          Заезжайте в готовую <br /> квартиру уже через <br /> 6-8 месяцев
+        </p>
+      ),
+      link: '/pages/partnership/builders'
+    },
+    {
+      label: 'Физическим лицам',
+      text: <p></p>,
+      link: '/pages/partnership/persons'
+    }
+  ]
   return (
     <main className="flex flex-col gap-14">
-      <Crumb path={path} links={links} />
       <div className="relative h-[41rem] w-full">
-        <div className="flex w-full">
-          <Image src={bg as unknown as string} alt={'background'} className="w-[69%]" />
+        <div className="relative flex w-full">
+          <div className="absolute left-12 top-12">
+            <Crumb path={path} links={links} mode={true} />
+          </div>
+          <Image
+            src={bg as unknown as string}
+            alt={'background'}
+            className="w-[69%]"
+            quality={100}
+          />
           <h1 className="heading absolute bottom-24 left-20 text-white">
             Зарабатывайте 10% <br /> комиссию с каждой <br /> сделки FIX-ремонт
           </h1>
           <div className="ml-5 flex h-[27rem] w-[27rem] flex-col items-center justify-between rounded-[32px] bg-color-dark p-11">
-            <h2 className="leading-tighter text-2xl font-semibold text-white">
+            <h2 className="leading-tighter text-2xl font-medium text-white">
               Партнерская программа
-              <br />
+              <wbr />
               от первого в России
-              <br />
-              онлайн-сервиса по ремонту и строительству с фиксированной ценой
+              <br /> онлайн-сервиса по ремонту и строительству с фиксированной ценой
             </h2>
             <div className="button_container w-full text-xs">
               <OrangeButton text="Зарегистрироваться, как партнёр" link="" />
             </div>
           </div>
         </div>
-        <div className="absolute bottom-4 left-[46rem] flex justify-between gap-6">
-          <HoverSection
-            name={'Риэлторам'}
-            link={''}
-            text={
-              <p>
-                Без визитов на объект. <br /> Заезжайте в готовую <br /> квартиру уже через <br />{' '}
-                6-8 месяцев
-              </p>
-            }
-          />
-          <HoverSection
-            name={'Застройщикам'}
-            link={''}
-            text={
-              <p>
-                Без визитов на объект. <br /> Заезжайте в готовую <br /> квартиру уже через <br />{' '}
-                6-8 месяцев
-              </p>
-            }
-          />
-          <HoverSection
-            name={'Физическим лицам'}
-            link={''}
-            text={
-              <p>
-                Без визитов на объект. <br /> Заезжайте в готовую <br /> квартиру уже через <br />{' '}
-                6-8 месяцев
-              </p>
-            }
-          />
+        <div className="absolute bottom-4 left-[46rem] flex flex-row justify-between gap-12">
+          {bullets.map((bullet, index) => (
+            <div key={index} className="w-[13rem]">
+              <HoverSection name={bullet.label} link={bullet.link} text={bullet.text} />
+            </div>
+          ))}
         </div>
       </div>
 

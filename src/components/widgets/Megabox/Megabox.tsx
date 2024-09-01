@@ -21,7 +21,7 @@ function MegaboxSection() {
         </h1>
       </div>
 
-      <div className="max-w-1/2 flex w-1/2 flex-col items-center justify-between self-stretch gap-4">
+      <div className="max-w-1/2 flex w-1/2 flex-col items-center justify-between gap-4 self-stretch">
         <div className="flex h-[26rem] w-full flex-col justify-between gap-32 rounded-3xl bg-color-dark p-11">
           <h3 className="w-60 text-2xl font-normal leading-snug tracking-tight text-white">
             Воплотим вашу мечту в реальность без визитов на объект

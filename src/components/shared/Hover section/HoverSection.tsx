@@ -17,7 +17,7 @@ const HoverSection: React.FC<HoverSectionProps> = ({ name, text, link, blank = f
   return (
     <button
       onClick={handleClick}
-      className={`${style.revert} flex w-[15rem] flex-col items-start gap-1 rounded-3xl border bg-color-bg-gray px-7 text-color-dark hover:text-white`}
+      className={`${style.revert} flex min-h-[12rem] w-[15rem] flex-col items-start gap-1 rounded-3xl bg-color-bg-gray px-7 text-color-dark hover:text-white`}
     >
       <div className={`mt-6 flex flex-col items-start gap-2`}>
         <h3 className="max-w-4 text-left text-xl font-medium leading-5">{name}</h3>
