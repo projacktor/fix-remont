@@ -70,3 +70,10 @@ input[type='number']::-webkit-inner-spin-button {
 .click:active {
   box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.2);
 }
+
+.blackButton {
+  @apply rounded-full bg-color-dark font-medium text-white transition duration-150 hover:text-color-orange active:translate-y-0.5 active:shadow-inner;
+  &:active {
+    box-shadow: inset 0 2px 4px rgba(255, 255, 255, 0.3);
+  }
+}

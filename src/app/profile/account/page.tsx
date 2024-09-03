@@ -118,7 +118,7 @@ function Page() {
               <hr className="w-full border-t border-gray-300" />
             </div>
             <button
-              className={`flex h-16 w-full items-center justify-center rounded-full bg-color-dark px-8 py-6 text-base font-medium text-white`}
+              className={`blackButton flex h-16 w-full items-center justify-center px-8 py-6 text-base`}
             >
               Сохранить
             </button>

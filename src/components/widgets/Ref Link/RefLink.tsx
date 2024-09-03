@@ -34,7 +34,7 @@ function RefLink() {
           <hr className="w-full bg-white" />
         </div>
         <button
-          className={`flex h-16 w-64 items-center justify-center rounded-full bg-color-dark text-sm font-medium text-white`}
+          className={`blackButton flex h-16 w-64 items-center justify-center text-sm`}
           onClick={handleCopy}
         >
           Скопировать ссылку
