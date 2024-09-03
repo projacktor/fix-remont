@@ -6,7 +6,7 @@ function NewsSection() {
   return (
     <div className="flex w-full flex-col items-start space-y-4">
       <h1 className="heading">Новости платформы</h1>
-      <div className="flex h-64 flex-row items-center justify-around space-x-6">
+      <div className="flex w-full flex-row items-center justify-around space-x-6">
         <BlogBulletProfile
           section="Ремонт"
           link={param}
