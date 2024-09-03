@@ -25,7 +25,7 @@ function CodeGen() {
           <h3 className="headingStruct text-2xl">Мой QR-код для приглашения</h3>
 
           <button
-            className={`flex h-16 w-full items-center justify-center rounded-full bg-color-orange px-8 py-6 text-base font-semibold text-white`}
+            className={`orangeButton flex h-16 w-full items-center justify-center px-8 py-6 text-base`}
             onClick={handleOpenModal}
           >
             Открыть

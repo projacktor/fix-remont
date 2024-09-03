@@ -1,9 +1,8 @@
 'use client'
 import React, { useState } from 'react'
-import Image from 'next/image'
+import Link from 'next/link'
 import openLink from '@/functions/openLink'
 import Card from '@/components/shared/Clac Card/Card'
-import clock from '../../../../public/assets/svg/clock.svg'
 import CalcHeading from '@/components/widgets/Calc Heading/CalcHeading'
 
 function Page() {
@@ -50,9 +49,12 @@ function Page() {
             />
           </div>
           <section className="flex flex-row-reverse items-start gap-x-4 pr-7">
-            <button className="flex w-72 items-center justify-center rounded-full bg-color-orange px-8 py-6 font-semibold text-white">
+            <Link
+              href={'/calculator/step3'}
+              className="orangeButton flex w-72 items-center justify-center px-8 py-6"
+            >
               Следующий шаг
-            </button>
+            </Link>
 
             <button
               className="flex w-52 items-center justify-center rounded-full bg-gray-200 px-8 py-6 font-semibold text-gray-400"

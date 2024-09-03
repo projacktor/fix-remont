@@ -22,7 +22,7 @@ function ProfileHeader() {
           <Image src={phone as string} alt="notification" />
         </button>
         <button
-          className={`flex w-64 items-center justify-center rounded-3xl bg-color-orange px-8 py-6 text-base font-medium text-white`}
+          className={`click flex w-64 items-center justify-center rounded-3xl bg-color-orange px-8 py-6 text-base font-medium text-white transition duration-150 hover:bg-color-hover-orange active:translate-y-0.5 active:bg-color-orange active:shadow-inner active:shadow-color-dark`}
         >
           Оформить заказ
         </button>

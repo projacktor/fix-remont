@@ -10,6 +10,7 @@ import SingleFaq from '@/components/entities/Single Faq/SingleFaq'
 import CalcHeading from '@/components/widgets/Calc Heading/CalcHeading'
 
 import mock from '../../../../public/assets/img/mockImg.png'
+import Link from 'next/link'
 
 function Page() {
   const [selectedCard, setSelectedCard] = useState<string | null>(null)
@@ -89,9 +90,12 @@ function Page() {
           </section>
 
           <section className="flex flex-row-reverse items-start gap-x-4 pr-7">
-            <button className="flex w-72 items-center justify-center rounded-full bg-color-orange px-8 py-6 font-semibold text-white">
+            <Link
+              href={'/calculator/step4'}
+              className="orangeButton flex w-72 items-center justify-center px-8 py-6"
+            >
               Следующий шаг
-            </button>
+            </Link>
 
             <button
               className="flex w-52 items-center justify-center rounded-full bg-gray-200 px-8 py-6 font-semibold text-gray-400"

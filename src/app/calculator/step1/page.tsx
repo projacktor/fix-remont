@@ -2,6 +2,7 @@
 import React, { useState } from 'react'
 
 import CalcHeading from '@/components/widgets/Calc Heading/CalcHeading'
+import Link from 'next/link'
 
 function RenovationForm() {
   const [area, setArea] = useState('')
@@ -129,9 +130,12 @@ function RenovationForm() {
         </div>
 
         <div className="flex flex-row-reverse items-end">
-          <button className="mt-8 w-64 rounded-full bg-color-orange py-4 text-lg font-medium text-white">
+          <Link
+            href={'/calculator/step2'}
+            className="orangeButton mt-8 flex w-64 items-center justify-center py-4 text-lg"
+          >
             Следующий шаг
-          </button>
+          </Link>
         </div>
       </div>
     </main>

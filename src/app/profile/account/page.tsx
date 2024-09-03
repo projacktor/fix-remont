@@ -173,7 +173,7 @@ function Page() {
               autoComplete="new-password webauthn"
               id="repeat-new-password"
             />
-            <button className="flex w-full items-center justify-center rounded-full bg-color-orange px-8 py-6 font-semibold text-white">
+            <button className="orangeButton flex w-full items-center justify-center px-8 py-6">
               Изменить пароль
             </button>
           </form>

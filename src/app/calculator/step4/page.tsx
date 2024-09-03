@@ -141,9 +141,12 @@ function Page() {
       </picture>
 
       <section className="flex flex-row-reverse items-start gap-x-4 pr-7">
-        <button className="flex w-72 items-center justify-center rounded-full bg-color-orange px-8 py-6 font-semibold text-white">
+        <Link
+          href={'/calculator/final'}
+          className="orangeButton flex w-72 items-center justify-center px-8 py-6"
+        >
           Получить рассчет
-        </button>
+        </Link>
 
         <button
           className="flex w-52 items-center justify-center rounded-full bg-gray-200 px-8 py-6 font-semibold text-gray-400"
