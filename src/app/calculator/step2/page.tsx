@@ -56,12 +56,12 @@ function Page() {
               Следующий шаг
             </Link>
 
-            <button
-              className="flex w-52 items-center justify-center rounded-full bg-gray-200 px-8 py-6 font-semibold text-gray-400"
-              onClick={openLink('/calculator/step1')}
+            <Link
+              className="click flex w-52 items-center justify-center rounded-full bg-gray-200 px-8 py-6 font-semibold text-gray-400"
+              href={'/calculator/step1/'}
             >
               Назад
-            </button>
+            </Link>
           </section>
         </form>
       </div>
