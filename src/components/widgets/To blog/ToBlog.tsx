@@ -5,6 +5,7 @@ import openLink from '@/functions/openLink'
 import Image from 'next/image'
 
 import bg from '../../../../public/assets/img/pseudo videos/pseudo_vid_blog.png'
+import Link from 'next/link'
 
 function ToBlog() {
   return (
@@ -41,12 +42,12 @@ function ToBlog() {
             <CheckButton text="Перейти в блог" link="/pages/blog" />
           </div>
         </div>
-        <button
-          className="h-16 rounded-full border border-red-600 py-2 text-center text-red-600"
-          onClick={() => openLink('https://www.youtube.com/@director_stroyki')}
+        <Link
+          className="clickBlack flex h-16 items-center justify-center rounded-full border border-red-600 py-2 text-center text-red-600 transition duration-150 hover:bg-red-600 hover:text-white active:translate-y-0.5 active:shadow-inner"
+          href={'https://www.youtube.com/@director_stroyki'}
         >
           Перейти в YouTube
-        </button>
+        </Link>
       </div>
     </section>
   )

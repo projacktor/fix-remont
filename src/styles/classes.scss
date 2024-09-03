@@ -71,9 +71,20 @@ input[type='number']::-webkit-inner-spin-button {
   box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.2);
 }
 
+.clickBlack:active {
+  box-shadow: inset 0 2px 4px rgba(255, 255, 255, 0.5);
+}
+
 .blackButton {
   @apply rounded-full bg-color-dark font-medium text-white transition duration-150 hover:text-color-orange active:translate-y-0.5 active:shadow-inner;
   &:active {
-    box-shadow: inset 0 2px 4px rgba(255, 255, 255, 0.3);
+    box-shadow: inset 0 2px 4px rgba(255, 255, 255, 0.25);
+  }
+}
+
+.checkButton {
+  @apply rounded-full border border-gray-900 bg-transparent font-semibold text-gray-900 transition duration-150 hover:bg-color-dark hover:text-white active:translate-y-0.5 active:shadow-inner;
+  &:active {
+    box-shadow: inset 0 2px 4px rgba(255, 255, 255, 0.25);
   }
 }

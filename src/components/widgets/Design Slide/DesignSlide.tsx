@@ -17,7 +17,7 @@ function DesignsSlide() {
         </p>
       </div>
       <button
-        className="order-1 flex h-20 w-full items-center justify-center rounded-full border border-white bg-transparent px-4 py-2 text-base font-semibold text-white"
+        className="clickBlack order-1 flex h-20 w-full items-center justify-center rounded-full border border-white bg-transparent px-4 py-2 text-base font-semibold text-white transition duration-150 hover:text-white hover:shadow-inner active:translate-y-0.5 active:shadow-inner"
         onClick={() => openLink('')}
       >
         Пройти 3D-тур по проектам

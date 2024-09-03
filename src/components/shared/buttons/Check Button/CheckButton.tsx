@@ -7,7 +7,7 @@ function CheckButton({ text, link, blank }: ButtonProps) {
   const handleClick = openLink(link as string, blank as boolean)
   return (
     <button
-      className="flex items-center justify-center rounded-full border border-gray-900 bg-transparent px-4 py-2 text-base font-semibold text-gray-900"
+      className="checkButton flex items-center justify-center px-4 py-2 text-base"
       onClick={handleClick}
     >
       {text}
