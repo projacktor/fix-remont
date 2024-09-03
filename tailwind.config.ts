@@ -12,6 +12,7 @@ const config: {
         'color-input-d': string
         'color-attention': string
         'color-yellow': string
+        'color-hover-orange': string
       }
       backgroundImage: { 'gradient-conic': string; 'gradient-radial': string }
     }
@@ -37,7 +38,8 @@ const config: {
         'color-back': '#FAFAFA',
         'color-input-d': '#4A4A4A',
         'color-attention': '#E02350',
-        'color-yellow': '#E0C223'
+        'color-yellow': '#E0C223',
+        'color-hover-orange': '#E9A30F'
       }
     }
   },
