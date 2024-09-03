@@ -1,0 +1,29 @@
+CHANGES
+-1. Animation to OrangeButton +
+0. Animation to BlackButtons +
+1. Animation to CheckButtons +
+2. Justify-around in plantform news (profile)
+3. Route for записать на консультацию, партнерская программа в профиле, задать вопрос в есть вопросы
+4. Подложки для хедера в профиле
+5. Копирование ссылки в aside
+6. QR code in aside
+7. QR code slide
+8. Fix styling in pages/partnership/builders
+9. Fix styling in pages/partnership/persons
+10. add routes in pages/services to slides
+11. Fix whitebullet sections (justify-around w-full)
+12. add padding to main header left part
+13. add chevron to написать в вотсап in Consulting
+14. widget 10% at pages/about
+
+DYNAMIC ROUTES:
+pages:
+portfolio
+blog
+
+profile:
+contracts
+news
+support
+
+MOBILE ADAPTATION
