@@ -4,7 +4,7 @@ import SupportSection from '@/components/widgets/Support Section/SupportSection'
 import BlogBulletProfile from '@/components/entities/Blog Bullet Profile/BlogBulletProfile'
 
 function Page() {
-  const param = ''
+  const param = '/profile/news/new'
 
   const data = [
     {
@@ -178,7 +178,7 @@ function Page() {
     <main className="mb-8 flex w-full flex-col gap-8">
       <h1 className="heading">Новости платформы</h1>
       <div className="flex flex-col items-center gap-10">
-        <div className="grid grid-cols-3 grid-rows-2 gap-7">
+        <div className="grid w-full grid-cols-3 grid-rows-2 gap-7">
           {currentItems.map((item, index) => (
             <BlogBulletProfile
               key={index}
