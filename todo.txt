@@ -16,7 +16,7 @@ CHANGES
 13. add chevron to написать в вотсап in Consulting
 14. widget 10% at pages/about
 15. fix widget self-renovation
-16, Add filter function to tel input
+16, Add filter function to tel input +
 
 DYNAMIC ROUTES:
 pages:
