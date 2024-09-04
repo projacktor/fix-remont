@@ -4,7 +4,7 @@ CHANGES
 1. Animation to CheckButtons +
 2. Justify-around in plantform news (profile) +
 3. Route for записать на консультацию +, партнерская программа в профиле - ?, задать вопрос в есть вопросы - ?
-4. Подложки для хедера в профиле
+4. Подложки для хедера в профиле +
 5. Копирование ссылки в aside
 6. QR code in aside
 7. QR code slide

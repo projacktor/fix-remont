@@ -1,25 +1,10 @@
 import React, { useRef } from 'react'
 import Link from 'next/link'
+import { handleCopy } from '@/functions/handleCopy'
 
 function RefLink() {
   const linkRef = useRef<HTMLDivElement>(null)
 
-  const handleCopy = () => {
-    if (linkRef.current) {
-      const linkElement = linkRef.current.querySelector('a')
-      const linkText = linkElement?.textContent
-      if (linkText) {
-        navigator.clipboard
-          .writeText(linkText)
-          .then(() => {
-            alert('Ссылка скопирована!')
-          })
-          .catch((err) => {
-            console.error('Не удалось скопировать текст: ', err)
-          })
-      }
-    }
-  }
   return (
     <div className="flex flex-col space-y-5 rounded-3xl bg-color-orange p-8 text-white">
       <h3 className="headingStruct text-2xl">
@@ -35,7 +20,7 @@ function RefLink() {
         </div>
         <button
           className={`blackButton flex h-16 w-64 items-center justify-center text-sm`}
-          onClick={handleCopy}
+          onClick={() => handleCopy(linkRef)}
         >
           Скопировать ссылку
         </button>
