@@ -3,7 +3,7 @@ CHANGES
 0. Animation to BlackButtons +
 1. Animation to CheckButtons +
 2. Justify-around in plantform news (profile) +
-3. Route for записать на консультацию, партнерская программа в профиле, задать вопрос в есть вопросы
+3. Route for записать на консультацию +, партнерская программа в профиле - ?, задать вопрос в есть вопросы - ?
 4. Подложки для хедера в профиле
 5. Копирование ссылки в aside
 6. QR code in aside
@@ -15,6 +15,8 @@ CHANGES
 12. add padding to main header left part
 13. add chevron to написать в вотсап in Consulting
 14. widget 10% at pages/about
+15. fix widget self-renovation
+16, Add filter function to tel input
 
 DYNAMIC ROUTES:
 pages:

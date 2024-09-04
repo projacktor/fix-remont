@@ -1,11 +1,40 @@
-import React from 'react'
+import React, { useState, useRef } from 'react'
 import Image from 'next/image'
 
 import BlackButton from '@/components/shared/buttons/Black Button/BlackButton'
 
 import mainEng from '../../../../public/assets/img/mainEngPhoto.png'
-function EngConsulting() {
+function Consulting() {
   const handleSave = () => {}
+  const [phone, setPhone] = useState<string>('')
+  const [focused, setFocused] = useState(false)
+  const inputRef = useRef<HTMLInputElement>(null)
+
+  const handleFocus = () => {
+    setFocused(true)
+    if (!phone.startsWith('+7')) {
+      setPhone('+7')
+    }
+  }
+
+  const handleBlur = () => {
+    setFocused(false)
+    if (phone === '+7') {
+      setPhone('')
+    }
+  }
+
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    const inputValue = e.target.value
+    const numericValue = inputValue.replace(/\D/g, '')
+
+    if (numericValue.startsWith('7')) {
+      setPhone('+' + numericValue)
+    } else {
+      setPhone('+7' + numericValue)
+    }
+  }
+
   return (
     <section className="flex w-full flex-col items-center gap-12">
       <div className="flex w-11/12 flex-row items-center justify-between">
@@ -48,14 +77,20 @@ function EngConsulting() {
             <option>Написать в Telegram</option>
           </select>
           <input
+            ref={inputRef}
+            value={phone}
+            onFocus={handleFocus}
+            onBlur={handleBlur}
+            onChange={handleChange}
             name="phone_number"
             autoComplete="tel"
             type="tel"
+            maxLength={12}
             placeholder="Ваш номер телефона"
             className="w-1/3 rounded-full bg-gray-100 p-6 placeholder:font-medium placeholder:text-black"
           />
           <div className="button_container w-1/3">
-            <BlackButton text="Записаться на консультацию" link="" type={'submit'} />
+            <BlackButton text="Записаться на консультацию" link="#" type={'submit'} />
           </div>
         </div>
       </form>
@@ -63,4 +98,4 @@ function EngConsulting() {
   )
 }
 
-export default EngConsulting
+export default Consulting
