@@ -1,4 +1,5 @@
-import React from 'react'
+'use client'
+import React, { useState } from 'react'
 import Image from 'next/image'
 import Link from 'next/link'
 import WriteUs from '@/components/entities/Write us/WriteUs'
@@ -7,8 +8,19 @@ import clockIcon from '../../../../public/assets/svg/headerClockIcon.svg'
 import phoneIcon from '../../../../public/assets/svg/headerPhone.svg'
 import qr from '../../../../public/assets/img/trialQr.png'
 import profile from '../../../../public/assets/img/ProfilePhoto.png'
+import Code from '@/components/modal/Code/Code'
 
 function LeftMenu() {
+  const [isModalOpen, setIsModalOpen] = useState(false)
+
+  const handleOpenModal = () => {
+    setIsModalOpen(true)
+  }
+
+  const handleCloseModal = () => {
+    setIsModalOpen(false)
+  }
+
   return (
     <aside className="sticky top-0 flex h-max w-96 flex-col items-start gap-8 rounded-3xl bg-white p-8">
       <ul className="flex flex-col text-lg font-semibold leading-10 text-color-dark underline">
@@ -38,7 +50,7 @@ function LeftMenu() {
         <div className="flex flex-col space-y-4">
           <h5 className="text-lg font-bold">Мой QR-код</h5>
           <div className="flex flex-col items-start text-sm text-color-orange underline">
-            <Link href="">Открыть</Link>
+            <button onClick={handleOpenModal}>Открыть</button>
             <Link href="">Скопировать ссылку</Link>
           </div>
         </div>
@@ -62,6 +74,8 @@ function LeftMenu() {
           Выйти из <br /> аккаунта
         </button>
       </div>
+
+      {isModalOpen && <Code onClose={handleCloseModal} />}
     </aside>
   )
 }

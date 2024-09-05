@@ -43,7 +43,7 @@ function Client() {
 
       <h1 className="heading">Главная</h1>
 
-      <div className="flex flex-row justify-between space-x-8">
+      <div className="flex flex-row justify-around space-x-8">
         <RefLink />
 
         <CodeGen />

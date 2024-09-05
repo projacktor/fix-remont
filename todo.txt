@@ -5,8 +5,8 @@ CHANGES
 2. Justify-around in plantform news (profile) +
 3. Route for записать на консультацию +, партнерская программа в профиле - ?, задать вопрос в есть вопросы - ?
 4. Подложки для хедера в профиле +
-5. Копирование ссылки в aside
-6. QR code in aside
+5. Копирование ссылки в aside - unavailable тк нужно обсудить момент с кириллом
+6. QR code in aside +
 7. QR code slide
 8. Fix styling in pages/partnership/builders
 9. Fix styling in pages/partnership/persons
@@ -17,6 +17,7 @@ CHANGES
 14. widget 10% at pages/about
 15. fix widget self-renovation
 16, Add filter function to tel input +
+17. fix inset in BlogBulletProfile
 
 DYNAMIC ROUTES:
 pages:
