@@ -1,5 +1,5 @@
 'use client'
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import Image from 'next/image'
 import Link from 'next/link'
 import WriteUs from '@/components/entities/Write us/WriteUs'
@@ -9,9 +9,14 @@ import phoneIcon from '../../../../public/assets/svg/headerPhone.svg'
 import qr from '../../../../public/assets/img/trialQr.png'
 import profile from '../../../../public/assets/img/ProfilePhoto.png'
 import Code from '@/components/modal/Code/Code'
+import { generateQrCode } from '@/functions/generateQrCode'
+import logo from '../../../../public/assets/svg/fixRemontLogo.svg'
 
 function LeftMenu() {
   const [isModalOpen, setIsModalOpen] = useState(false)
+  const [qrCodeUrl, setQrCodeUrl] = useState<string | null>(null)
+
+  const url = 'https://ref.fix-remont.ru/8GTS7LX82390'
 
   const handleOpenModal = () => {
     setIsModalOpen(true)
@@ -20,6 +25,29 @@ function LeftMenu() {
   const handleCloseModal = () => {
     setIsModalOpen(false)
   }
+
+  const handleCopy = () => {
+    navigator.clipboard
+      .writeText(url)
+      .then(() => {
+        alert('Скопировано в буфер обмена')
+      })
+      .catch((err) => {
+        console.error('Ошибка копирования: ', err)
+      })
+  }
+
+  useEffect(() => {
+    const generate = async () => {
+      const qrCode = await generateQrCode(url, logo.src, 100)
+      if (qrCode) {
+        setQrCodeUrl(qrCode)
+      } else {
+        console.error('QR-код не был сгенерирован')
+      }
+    }
+    generate()
+  }, [url])
 
   return (
     <aside className="sticky top-0 flex h-max w-96 flex-col items-start gap-8 rounded-3xl bg-white p-8">
@@ -46,12 +74,21 @@ function LeftMenu() {
       </div>
 
       <div className="m-0 flex flex-row items-center gap-4">
-        <Image src={qr as unknown as string} alt="your qr code" width={100} />
+        {qrCodeUrl && (
+          <Image
+            src={qrCodeUrl as unknown as string}
+            alt="QR-код"
+            width={100}
+            height={100}
+            quality={100}
+            className="rounded-3xl bg-color-back"
+          />
+        )}
         <div className="flex flex-col space-y-4">
           <h5 className="text-lg font-bold">Мой QR-код</h5>
           <div className="flex flex-col items-start text-sm text-color-orange underline">
             <button onClick={handleOpenModal}>Открыть</button>
-            <Link href="">Скопировать ссылку</Link>
+            <button onClick={handleCopy}>Скопировать ссылку</button>
           </div>
         </div>
       </div>

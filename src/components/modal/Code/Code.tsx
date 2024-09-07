@@ -1,17 +1,32 @@
-import React, { useCallback } from 'react'
+import React, { useEffect, useState } from 'react'
 import Image from 'next/image'
-import code from '../../../../public/assets/img/trialQr.png'
+import logo from '../../../../public/assets/svg/fixRemontLogo.svg'
+import { generateQrCode } from '@/functions/generateQrCode'
 
 interface CodeProps {
   onClose: () => void
 }
 
 function Code({ onClose }: CodeProps) {
-  const handleCopy = (event: React.MouseEvent<HTMLButtonElement>) => {
-    const buttonText = event.currentTarget.innerText
+  const [qrCodeUrl, setQrCodeUrl] = useState<string | null>(null)
+  const url = 'https://ref.fix-remont.ru/8GTS7LX82390'
 
+  useEffect(() => {
+    const generate = async () => {
+      const qrCode = await generateQrCode(url, logo.src, 300)
+      if (qrCode) {
+        setQrCodeUrl(qrCode)
+      } else {
+        console.error('QR-код не был сгенерирован')
+      }
+    }
+
+    generate()
+  }, [url])
+
+  const handleCopy = () => {
     navigator.clipboard
-      .writeText(buttonText)
+      .writeText(url)
       .then(() => {
         alert('Скопировано в буфер обмена')
       })
@@ -30,24 +45,31 @@ function Code({ onClose }: CodeProps) {
           &times;
         </button>
         <h3 className="text-center text-3xl">
-          Мой QR-код <br /> для приглашения{' '}
+          Мой QR-код <br /> для приглашения
         </h3>
-        <Image
-          src={code as unknown as string}
-          alt="QR-code"
-          quality={100}
-          width={200}
-          height={200}
-        />
+
+        {qrCodeUrl && (
+          <Image
+            src={qrCodeUrl as unknown as string}
+            alt="QR-код"
+            width={200}
+            height={200}
+            quality={100}
+            className="rounded-3xl bg-color-back"
+          />
+        )}
+
         <h5 className="w-80 text-center text-base">
           Наведите камеру на QR-код и перейдите на страницу
         </h5>
         <h5 className="text-base">Или скопируйте ссылку:</h5>
 
-        <button className="text-lg" onClick={handleCopy}>
-          ref.fix-remont.ru/*****
-        </button>
-        <hr />
+        <div className="flex w-full flex-col items-center space-y-3">
+          <button className="text-lg" onClick={handleCopy}>
+            {url}
+          </button>
+          <hr className="w-full border-t border-color-dark" />
+        </div>
       </div>
     </div>
   )

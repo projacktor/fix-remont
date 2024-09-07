@@ -6,7 +6,7 @@ function RefLink() {
   const linkRef = useRef<HTMLDivElement>(null)
 
   return (
-    <div className="flex flex-col space-y-5 rounded-3xl bg-color-orange p-8 text-white">
+    <div className="flex flex-col justify-around rounded-3xl bg-color-orange p-8 text-white">
       <h3 className="headingStruct text-2xl">
         Приглашайте новых клиентов и <br /> зарабатывайте с нами
       </h3>
