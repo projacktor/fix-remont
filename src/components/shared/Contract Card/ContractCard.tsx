@@ -5,6 +5,7 @@ import { State } from '@/types/State'
 
 import CheckButton from '@/components/shared/buttons/Check Button/CheckButton'
 import CardNote from '@/components/entities/Card Note/CardNote'
+import Link from 'next/link'
 
 interface ContractCardProps {
   index: number
@@ -71,8 +72,8 @@ function ContractCard({
         <h5 className="headingStruct text-lg">{payment.toLocaleString('ru-Ru')} руб</h5>
       </article>
 
-      <div className="button_container h-16 w-full">
-        <CheckButton text="Подробнее о заказе" link={`/profile/contracts/orders/${index}`} />
+      <div className="checkButton flex h-16 w-full items-center justify-center">
+        <Link href={`/profile/contracts/${index}`}>Подробнее о заказе</Link>
       </div>
     </div>
   )

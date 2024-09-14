@@ -15,7 +15,7 @@ import attention from '../../../../../public/assets/svg/ellips/ellipsRed.svg'
 import wait from '../../../../../public/assets/svg/ellips/ellipsYellow.svg'
 import accept from '../../../../../public/assets/svg/ellips/ellipsGreen.svg'
 
-function Page() {
+function Page({ params }: { params: { ordersId: number } }) {
   const data = [
     {
       heading: 'Монтаж пола',
@@ -125,7 +125,7 @@ function Page() {
     <main className="mb-8 flex w-full flex-col gap-8 overflow-x-hidden">
       <div className="mt-8 flex w-full flex-row justify-between">
         <article className="flex flex-col items-start space-y-3">
-          <h1 className="heading">Заказ № *****</h1>
+          <h1 className="heading">Заказ № {params.ordersId}</h1>
           <h3 className="headingStruct text-lg">Order name</h3>
         </article>
 

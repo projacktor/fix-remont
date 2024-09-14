@@ -35,7 +35,7 @@
 }
 
 .input-filed,
-input[type='number']::-webkit-inner-spin-button {
+input[type=number]::-webkit-inner-spin-button {
   @apply appearance-none rounded-full border-none bg-color-bg-gray p-6;
   -webkit-appearance: none;
 }
@@ -55,6 +55,35 @@ input[type='number']::-webkit-inner-spin-button {
 
 .whiteContainer {
   @apply rounded-3xl bg-white p-7;
+}
+
+.orangeButton {
+  @apply rounded-full bg-color-orange font-semibold text-white transition duration-150 hover:bg-color-hover-orange active:translate-y-0.5 active:bg-color-orange active:shadow-inner active:shadow-color-dark;
+}
+.orangeButton:active {
+  box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.click:active {
+  box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.clickBlack:active {
+  box-shadow: inset 0 2px 4px rgba(255, 255, 255, 0.5);
+}
+
+.blackButton {
+  @apply rounded-full bg-color-dark font-medium text-white transition duration-150 hover:text-color-orange active:translate-y-0.5 active:shadow-inner;
+}
+.blackButton:active {
+  box-shadow: inset 0 2px 4px rgba(255, 255, 255, 0.25);
+}
+
+.checkButton {
+  @apply rounded-full border border-gray-900 bg-transparent font-semibold text-gray-900 transition duration-150 hover:bg-color-dark hover:text-white active:translate-y-0.5 active:shadow-inner;
+}
+.checkButton:active {
+  box-shadow: inset 0 2px 4px rgba(255, 255, 255, 0.25);
 }
 
 /*# sourceMappingURL=classes.css.map */
