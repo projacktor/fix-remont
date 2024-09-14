@@ -11,7 +11,7 @@ import Image from 'next/image'
 const Header: React.FC = () => {
   return (
     <header className="flex w-full flex-row items-center justify-around bg-color-back p-4">
-      <div className="flex flex-row items-center justify-around gap-4 rounded-3xl bg-white">
+      <div className="flex flex-row items-center justify-around gap-4 rounded-3xl bg-white px-3">
         <Symbol header_src={headerLogo as unknown as string} lineColor="rgba(0, 0, 0, 0.5)" />
         <div className="flex h-12 w-px justify-center border-l border-dashed border-gray-400 opacity-50"></div>
         <ContactsContainer />
