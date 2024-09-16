@@ -1,5 +1,5 @@
 'use client'
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import Image from 'next/image'
 import { Notification } from '@/types/Notification'
 
@@ -14,8 +14,37 @@ import CheckButton from '@/components/shared/buttons/Check Button/CheckButton'
 import attention from '../../../../../public/assets/svg/ellips/ellipsRed.svg'
 import wait from '../../../../../public/assets/svg/ellips/ellipsYellow.svg'
 import accept from '../../../../../public/assets/svg/ellips/ellipsGreen.svg'
+import tariff from '@/types/Tariff'
+import Tariff from '@/types/Tariff'
+
+interface OrderData {
+  id: number
+  name: string
+  type: string
+  tariff: tariff
+  area: number
+  location: string
+}
 
 function Page({ params }: { params: { ordersId: number } }) {
+  const [orderData, setOrderData] = useState<null | OrderData>(null)
+
+  useEffect(() => {
+    const response = {
+      id: params.ordersId,
+      name: 'Name',
+      type: 'Quartira',
+      tariff: Tariff.business,
+      area: 12,
+      location: 'Pushkina kolotushkina'
+    }
+    setOrderData(response)
+  }, [params.ordersId])
+
+  if (!orderData) {
+    return <main className="flex items-center justify-center">Loading...</main>
+  }
+
   const data = [
     {
       heading: 'Монтаж пола',
@@ -126,7 +155,7 @@ function Page({ params }: { params: { ordersId: number } }) {
       <div className="mt-8 flex w-full flex-row justify-between">
         <article className="flex flex-col items-start space-y-3">
           <h1 className="heading">Заказ № {params.ordersId}</h1>
-          <h3 className="headingStruct text-lg">Order name</h3>
+          <h3 className="headingStruct text-lg">{orderData.name}</h3>
         </article>
 
         <div className="button_container h-16">
@@ -138,12 +167,12 @@ function Page({ params }: { params: { ordersId: number } }) {
         <h3 className="headingStruct pl-7 text-2xl">Информация об объекте</h3>
 
         <div className={`grid rounded-3xl bg-white p-7 ${style.layout1}`}>
-          <Description name="Объект" heading="objectName" />
-          <Description name="Тип заказа" heading="objectName" />
-          <Description name="Тариф" heading="objectName" />
-          <Description name="Площадь" heading="objectName" />
+          <Description name="Объект" heading={orderData.name} />
+          <Description name="Тип заказа" heading={orderData.type} />
+          <Description name="Тариф" heading={orderData.tariff} />
+          <Description name="Площадь" heading={orderData.area.toLocaleString('ru-Ru')} />
           <div className="flex flex-col items-center">
-            <Description name="Локация" heading="objectName" />
+            <Description name="Локация" heading={orderData.location} />
           </div>
         </div>
       </div>
