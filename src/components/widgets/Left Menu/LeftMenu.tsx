@@ -6,7 +6,7 @@ import WriteUs from '@/components/entities/Write us/WriteUs'
 
 import clockIcon from '../../../../public/assets/svg/headerClockIcon.svg'
 import phoneIcon from '../../../../public/assets/svg/headerPhone.svg'
-import qr from '../../../../public/assets/img/trialQr.png'
+// import qr from '../../../../public/assets/img/trialQr.png'
 import profile from '../../../../public/assets/img/ProfilePhoto.png'
 import Code from '@/components/modal/Code/Code'
 import { generateQrCode } from '@/functions/generateQrCode'
