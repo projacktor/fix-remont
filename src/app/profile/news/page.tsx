@@ -4,7 +4,7 @@ import SupportSection from '@/components/widgets/Support Section/SupportSection'
 import BlogBulletProfile from '@/components/entities/Blog Bullet Profile/BlogBulletProfile'
 
 function Page() {
-  const param = '/profile/news/new'
+  const param = '/profile/news/1'
 
   const data = [
     {

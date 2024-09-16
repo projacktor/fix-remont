@@ -30,6 +30,7 @@ function Page({ params }: { params: { ordersId: number } }) {
   const [orderData, setOrderData] = useState<null | OrderData>(null)
 
   useEffect(() => {
+    // TODO: make async fetch function to get responses
     const response = {
       id: params.ordersId,
       name: 'Name',
