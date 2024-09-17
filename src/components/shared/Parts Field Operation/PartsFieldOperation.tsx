@@ -4,7 +4,7 @@ import style from './partsFieldOparation.module.scss'
 
 import CheckButton from '@/components/shared/buttons/Check Button/CheckButton'
 import Description from '@/components/entities/Description/Description'
-import { Operation } from '@/types/Operation'
+import { Operation } from '@/server/types/Operation'
 
 interface PartsFiledOperationProps {
   type: Operation

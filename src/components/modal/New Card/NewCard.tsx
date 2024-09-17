@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import Image from 'next/image'
-import { PaymentProvider } from '@/types/Payment Provider'
-import { PaymentFieldProps } from '@/types/PaymentFieldProps'
+import { PaymentProvider } from '@/server/types/Payment Provider'
+import { PaymentFieldProps } from '@/server/types/PaymentFieldProps'
 
 import mirLogo from '../../../../public/assets/svg/mirLogo.svg'
 import visaLogo from '../../../../public/assets/svg/visaLogo.svg'

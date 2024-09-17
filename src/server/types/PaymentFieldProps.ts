@@ -1,4 +1,4 @@
-import { PaymentProvider } from '@/types/Payment Provider'
+import { PaymentProvider } from '@/server/types/Payment Provider'
 
 export interface PaymentFieldProps {
   provider: PaymentProvider

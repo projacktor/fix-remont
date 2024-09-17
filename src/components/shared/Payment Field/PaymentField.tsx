@@ -1,8 +1,8 @@
 import React from 'react'
 import Image from 'next/image'
 
-import { PaymentFieldProps } from '@/types/PaymentFieldProps'
-import { PaymentProvider } from '@/types/Payment Provider'
+import { PaymentFieldProps } from '@/server/types/PaymentFieldProps'
+import { PaymentProvider } from '@/server/types/Payment Provider'
 
 import style from './paymentField.module.scss'
 

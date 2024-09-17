@@ -1,7 +1,7 @@
 import React from 'react'
 import Image from 'next/image'
 
-import { PartsFiledProps } from '@/types/PartsFieldProps'
+import { PartsFiledProps } from '@/server/types/PartsFieldProps'
 
 import style from './partsField.module.scss'
 

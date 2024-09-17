@@ -1,8 +1,8 @@
 'use client'
 import React from 'react'
 
-import Tariff from '@/types/Tariff'
-import { State } from '@/types/State'
+import Tariff from '@/server/types/Tariff'
+import { State } from '@/server/types/State'
 
 import OrangeButton from '@/components/shared/buttons/Orange Button/OrangeButton'
 import ContentFilter from '@/components/shared/Content Filter/ContentFilter'

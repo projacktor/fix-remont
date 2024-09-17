@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import ScaleStep from '@/components/entities/Scale Step/ScaleStep'
-import { ScaleStepProps } from '@/types/ScaleStepProps'
+import { ScaleStepProps } from '@/server/types/ScaleStepProps'
 
 interface ScaleProps {
   data: ScaleStepProps[]

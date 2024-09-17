@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 
-import { PaymentFieldProps } from '@/types/PaymentFieldProps'
+import { PaymentFieldProps } from '@/server/types/PaymentFieldProps'
 
 import PaymentField from '@/components/shared/Payment Field/PaymentField'
 import NewCard from '@/components/modal/New Card/NewCard'

@@ -1,4 +1,4 @@
-import Tariff from '@/types/Tariff'
+import Tariff from '@/server/types/Tariff'
 
 export interface PartsFiledProps {
   objectName: string

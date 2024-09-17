@@ -1,7 +1,7 @@
 'use client'
 import React from 'react'
 import openLink from '@/functions/openLink'
-import { ButtonProps } from '@/types/ButtonProps'
+import { ButtonProps } from '@/server/types/ButtonProps'
 
 function CheckButton({ text, link, blank }: ButtonProps) {
   const handleClick = openLink(link as string, blank as boolean)

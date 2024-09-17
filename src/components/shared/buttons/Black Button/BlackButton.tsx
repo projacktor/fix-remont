@@ -1,6 +1,6 @@
 import React from 'react'
 import openLink from '@/functions/openLink'
-import { ButtonProps } from '@/types/ButtonProps'
+import { ButtonProps } from '@/server/types/ButtonProps'
 
 function BlackButton({ text, link, className, type = 'button', blank }: ButtonProps) {
   const handleClick = openLink(link as string, blank)

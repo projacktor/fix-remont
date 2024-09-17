@@ -1,7 +1,7 @@
 import React from 'react'
 
-import Tariff from '@/types/Tariff'
-import { State } from '@/types/State'
+import Tariff from '@/server/types/Tariff'
+import { State } from '@/server/types/State'
 
 import CheckButton from '@/components/shared/buttons/Check Button/CheckButton'
 import CardNote from '@/components/entities/Card Note/CardNote'
