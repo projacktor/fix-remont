@@ -3,21 +3,11 @@ import React from 'react'
 import NewsSection from '@/components/widgets/News Section/NewsSection'
 import SupportSection from '@/components/widgets/Support Section/SupportSection'
 import Image from 'next/image'
-
-interface SingleNews {
-  id: number
-  heading: string
-  picture1: string
-  picture2: string
-  picture3: string
-  label: string
-  article1: string
-  article2: string
-}
+import { SingleNews } from '@/server/utils/schemas'
 
 function Page({ params }: { params: { newsId: number } }) {
   // TODO: make async fetch function to get responses
-  const response = {
+  const response: SingleNews = {
     id: params.newsId,
     heading: 'Как рассчитать стоимость через онлайн- калькулятор FIX-ремонт?',
     picture1: 'string',

@@ -1,69 +1,70 @@
 'use client'
 import React, { useState } from 'react'
 import CheckButton from '@/components/shared/buttons/Check Button/CheckButton'
+import { SupportCategory } from '@/server/utils/schemas'
 
 function Page() {
   const keyword = 'KEYWORD'
 
-  const data = [
+  const data: SupportCategory[] = [
     {
-      value: 'Не происходит оплата. Что делать?',
-      label: '25 февраля 2024',
+      heading: 'Не происходит оплата. Что делать?',
+      date: '25 февраля 2024',
       key_word: keyword
     },
     {
-      value: 'Как изменить данные профиля?',
-      label: '20 февраля 2024',
+      heading: 'Как изменить данные профиля?',
+      date: '20 февраля 2024',
       key_word: keyword
     },
     {
-      value: 'Как отменить заказ?',
-      label: '18 февраля 2024',
+      heading: 'Как отменить заказ?',
+      date: '18 февраля 2024',
       key_word: keyword
     },
     {
-      value: 'Не происходит оплата. Что делать?',
-      label: '25 февраля 2024',
+      heading: 'Не происходит оплата. Что делать?',
+      date: '25 февраля 2024',
       key_word: keyword
     },
     {
-      value: 'Как изменить данные профиля?',
-      label: '20 февраля 2024',
+      heading: 'Как изменить данные профиля?',
+      date: '20 февраля 2024',
       key_word: keyword
     },
     {
-      value: 'Как отменить заказ?',
-      label: '18 февраля 2024',
+      heading: 'Как отменить заказ?',
+      date: '18 февраля 2024',
       key_word: keyword
     },
     {
-      value: 'Не происходит оплата. Что делать?',
-      label: '25 февраля 2024',
+      heading: 'Не происходит оплата. Что делать?',
+      date: '25 февраля 2024',
       key_word: keyword
     },
     {
-      value: 'Как изменить данные профиля?',
-      label: '20 февраля 2024',
+      heading: 'Как изменить данные профиля?',
+      date: '20 февраля 2024',
       key_word: keyword
     },
     {
-      value: 'Как отменить заказ?',
-      label: '18 февраля 2024',
+      heading: 'Как отменить заказ?',
+      date: '18 февраля 2024',
       key_word: keyword
     },
     {
-      value: 'Не происходит оплата. Что делать?',
-      label: '25 февраля 2024',
+      heading: 'Не происходит оплата. Что делать?',
+      date: '25 февраля 2024',
       key_word: keyword
     },
     {
-      value: 'Как изменить данные профиля?',
-      label: '20 февраля 2024',
+      heading: 'Как изменить данные профиля?',
+      date: '20 февраля 2024',
       key_word: keyword
     },
     {
-      value: 'Как отменить заказ?',
-      label: '18 февраля 2024',
+      heading: 'Как отменить заказ?',
+      date: '18 февраля 2024',
       key_word: keyword
     }
   ]
@@ -194,9 +195,9 @@ function Page() {
               <div key={index} className="flex w-full flex-col space-y-3">
                 <div className="flex w-full flex-row items-center justify-between">
                   <div className="flex flex-col space-y-1">
-                    <h5 className="headingStruct">{item.value}</h5>
+                    <h5 className="headingStruct">{item.heading}</h5>
                     <div className="flex w-max flex-row items-center space-x-3">
-                      <p className="label">{item.label}</p>
+                      <p className="label">{item.date}</p>
                       <p className="orange-bold text-xs font-medium">{item.key_word}</p>
                     </div>
                   </div>

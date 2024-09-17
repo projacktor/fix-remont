@@ -14,20 +14,11 @@ import CheckButton from '@/components/shared/buttons/Check Button/CheckButton'
 import attention from '../../../../../public/assets/svg/ellips/ellipsRed.svg'
 import wait from '../../../../../public/assets/svg/ellips/ellipsYellow.svg'
 import accept from '../../../../../public/assets/svg/ellips/ellipsGreen.svg'
-import tariff from '@/server/types/Tariff'
 import Tariff from '@/server/types/Tariff'
-
-interface OrderData {
-  id: number
-  name: string
-  type: string
-  tariff: tariff
-  area: number
-  location: string
-}
+import { Order } from '@/server/utils/schemas'
 
 function Page({ params }: { params: { ordersId: number } }) {
-  const [orderData, setOrderData] = useState<null | OrderData>(null)
+  const [orderData, setOrderData] = useState<null | Order>(null)
 
   useEffect(() => {
     // TODO: make async fetch function to get responses
