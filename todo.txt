@@ -11,7 +11,7 @@ CHANGES
 8. Fix styling in pages/partnership/builders +
 9. Fix styling in pages/partnership/persons +
 10. add routes in pages/services to slides +
-11. Fix whitebullet sections (justify-around w-full)
+11. Fix whitebullet sections (justify-around w-full) +
 12. add padding to main header left part +
 13. add chevron to написать в вотсап in Consulting
 14. widget 10% at pages/about

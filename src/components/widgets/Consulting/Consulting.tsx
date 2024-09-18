@@ -4,6 +4,7 @@ import Image from 'next/image'
 import BlackButton from '@/components/shared/buttons/Black Button/BlackButton'
 
 import mainEng from '../../../../public/assets/img/mainEngPhoto.png'
+
 function Consulting() {
   const handleSave = () => {}
   const [phone, setPhone] = useState<string>('')
@@ -69,13 +70,19 @@ function Consulting() {
           Как с нами связаться?
         </label>
         <div className="flex w-full flex-row items-center justify-around gap-16">
-          <select
-            id="contact-method"
-            className="w-1/3 appearance-none rounded-full bg-gray-100 p-6"
-          >
-            <option>Написать в WhatsApp</option>
-            <option>Написать в Telegram</option>
-          </select>
+          <div className="relative w-1/3">
+            <select
+              id="contact-method"
+              className="w-full appearance-none rounded-full bg-gray-100 p-6"
+            >
+              <option>Написать в WhatsApp</option>
+              <option>Написать в Telegram</option>
+            </select>
+
+            <span className="pointer-events-none absolute right-10 top-1/2 -translate-y-1/2 transform text-gray-400">
+              ▼
+            </span>
+          </div>
           <input
             ref={inputRef}
             value={phone}
