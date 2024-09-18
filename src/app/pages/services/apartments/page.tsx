@@ -43,7 +43,7 @@ const RenovationService = () => {
         header1={<h1>Ремонт квартир под ключ по готовым проектам и с фиксированной ценой</h1>}
         header2="Заселитесь в квартиру мечты с мебелью в течение 3-х месяцев"
       />
-      <div className={`flex flex-row gap-4`}>
+      <section className={`flex w-full flex-row justify-around gap-3`}>
         <TapeSection
           svg={contactIcon as string}
           altName={'contactIcon'}
@@ -89,7 +89,7 @@ const RenovationService = () => {
             </p>
           }
         />
-      </div>
+      </section>
 
       <SelfRenovation />
 

@@ -124,7 +124,7 @@ const Partnership = () => {
         </div>
       </div>
 
-      <div className={`flex w-full flex-row justify-around gap-3`}>
+      <section className={`flex w-full flex-row justify-around gap-3`}>
         <TapeSection
           svg={contactIcon as string}
           altName={'contactIcon'}
@@ -170,7 +170,7 @@ const Partnership = () => {
             </p>
           }
         />
-      </div>
+      </section>
 
       <SuitSection />
 
