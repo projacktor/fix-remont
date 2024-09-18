@@ -39,7 +39,7 @@ function Realtors() {
   const links = ['/pages/partnership', '/pages/partnership/realtors']
   return (
     <main className="flex flex-col space-y-8">
-      <div className="relative flex w-full bg-cover bg-center">
+      <section className="relative flex w-full bg-cover bg-center">
         <div className="flex flex-col gap-8">
           <div className="absolute left-20 top-12">
             <Crumb path={path} links={links} mode={true} />
@@ -66,7 +66,7 @@ function Realtors() {
             </div>
           </div>
         </div>
-      </div>
+      </section>
 
       <section className={`flex w-full flex-row justify-around gap-4`}>
         <TapeSection
