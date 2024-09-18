@@ -21,10 +21,22 @@ export default function Services() {
   return (
     <main className="space-y-2">
       <h1 className="text-4xl font-bold">Услуги FIX-ремонт</h1>
-      <div className="flex flex-row justify-between gap-4">
-        <HoverSectionBig link={''} lists={hoverSectionLists} name={'Ремонт'} />
-        <HoverSectionBig link={''} lists={hoverSectionLists} name={'Строительство'} />
-        <HoverSectionBig link={''} lists={hoverSectionLists} name={'Партнёрская программа'} />
+      <div className="flex flex-row justify-around gap-4">
+        <HoverSectionBig
+          link={'/pages/services/building'}
+          lists={hoverSectionLists}
+          name={'Ремонт'}
+        />
+        <HoverSectionBig
+          link={'/pages/services/apartments'}
+          lists={hoverSectionLists}
+          name={'Строительство'}
+        />
+        <HoverSectionBig
+          link={'/pages/partnership'}
+          lists={hoverSectionLists}
+          name={'Партнёрская программа'}
+        />
       </div>
 
       <RiskSlide button_text="Рассчитать стоимость" type={true} />

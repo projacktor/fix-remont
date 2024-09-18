@@ -10,14 +10,16 @@ CHANGES
 7. QR code slide +
 8. Fix styling in pages/partnership/builders +
 9. Fix styling in pages/partnership/persons +
-10. add routes in pages/services to slides
+10. add routes in pages/services to slides +
 11. Fix whitebullet sections (justify-around w-full)
-12. add padding to main header left part
+12. add padding to main header left part +
 13. add chevron to написать в вотсап in Consulting
 14. widget 10% at pages/about
 15. fix widget self-renovation
 16, Add filter function to tel input +
-17. fix inset in BlogBulletProfile
+17. fix inset in BlogBulletProfile +
+18. выровнить стрелки скроллинга в Feedbacks
+19. Увеличить отпуст между блоками
 
 DYNAMIC ROUTES:
 pages:
