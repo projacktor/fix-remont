@@ -19,7 +19,15 @@ export interface SingleNews {
   article1: string
   article2: string
 }
-//
+
+// For Consulting component
+export interface FaqAnswer {
+  id: number
+  title: string
+  label: string
+}
+
+// For profile/contracts/ordersId
 export interface OrderInfo {
   id: number
   name: string

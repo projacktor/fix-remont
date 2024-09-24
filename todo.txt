@@ -38,7 +38,7 @@ Models and types to create
 
 1. Type for picture +
 2. Schemas for Orders page + (7)
-4. Schema for FAQ
+4. Schema for FAQ +
 6. for portfolio page make working filter buttons
 7. Full schema for PORTFOLIO post
 8. Full schema for BLOG post
