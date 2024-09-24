@@ -36,8 +36,8 @@ MOBILE ADAPTATION
 ---
 Models and types to create
 
-1. Type for picture
-2. Schema for Orders page
+1. Type for picture +
+2. Schemas for Orders page + (7)
 4. Schema for FAQ
 6. for portfolio page make working filter buttons
 7. Full schema for PORTFOLIO post
@@ -45,7 +45,7 @@ Models and types to create
 9. iframes for video tags
 10. Schema for blog bullets
 13. Schema for self-renovation widget
-14. Type for videos
+14. Type for videos +
 15. Schema for MyClient, MyDocuments
 16. For Wallet (3 schemas) -
 17. For contracts page

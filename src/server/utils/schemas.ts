@@ -1,6 +1,13 @@
 import tariff from '@/server/types/Tariff'
 import { Notification } from '@/server/types/Notification'
 
+// TODO: check how to make a types for pictures in binaries and videos
+// should do I make a type for a document as kinda special Blob?
+
+export type Picture = string
+
+export type Video = string | Blob
+
 export interface SingleNews {
   id: number
   heading: string
