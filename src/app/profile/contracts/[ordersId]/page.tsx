@@ -15,14 +15,23 @@ import attention from '../../../../../public/assets/svg/ellips/ellipsRed.svg'
 import wait from '../../../../../public/assets/svg/ellips/ellipsYellow.svg'
 import accept from '../../../../../public/assets/svg/ellips/ellipsGreen.svg'
 import Tariff from '@/server/types/Tariff'
-import { Order } from '@/server/utils/schemas'
+import { OrderInfo } from '@/server/utils/schemas'
+
+// TODO:
+// 1 ObjectInfo
+// 2 WorkStatus
+// 3 Estimate
+// 4 ClientInfo
+// 5 OrderNotification
+// 6 PaymentStatus
+// 7 Documents
 
 function Page({ params }: { params: { ordersId: number } }) {
-  const [orderData, setOrderData] = useState<null | Order>(null)
+  const [orderData, setOrderData] = useState<null | OrderInfo>(null)
 
   useEffect(() => {
     // TODO: make async fetch function to get responses
-    const response = {
+    const response: OrderInfo = {
       id: params.ordersId,
       name: 'Name',
       type: 'Quartira',

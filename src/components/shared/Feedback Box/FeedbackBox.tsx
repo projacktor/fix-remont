@@ -7,9 +7,7 @@ interface FeedbackBoxProps {
 }
 
 function FeedbackBox({ image, name, text }: FeedbackBoxProps) {
-  return (
-    <div className="bg-white"></div>
-  )
+  return <div className="bg-white"></div>
 }
 
 export default FeedbackBox
