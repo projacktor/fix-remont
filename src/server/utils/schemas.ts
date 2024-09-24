@@ -1,5 +1,6 @@
 import tariff from '@/server/types/Tariff'
 import { Notification } from '@/server/types/Notification'
+import Tariff from '@/server/types/Tariff'
 
 // TODO: check how to make a types for pictures in binaries and videos
 // should do I make a type for a document as kinda special Blob?
@@ -65,6 +66,18 @@ export interface OrderInfo {
   tariff: tariff
   area: number
   location: string
+}
+
+// For MyContracts or MyDocuments
+export interface MyContracts {
+  id: number
+  // TODO: make a enum for object
+  object: number
+  tariff: Tariff
+  location: string
+  reward: number
+  status: string
+  link: string
 }
 
 export interface WorkState {

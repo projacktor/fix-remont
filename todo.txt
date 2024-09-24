@@ -46,7 +46,7 @@ Models and types to create
 8. Schema for blog bullets +
 9. Schema for self-renovation widget
 10. Type for videos +
-11. Schema for MyClient, MyDocuments
+11. Schema for MyClient, MyContracts +
 12. For Wallet (3 schemas) -
 13. For contracts page
 14. For profile page
