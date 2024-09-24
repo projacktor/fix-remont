@@ -38,18 +38,18 @@ Models and types to create
 
 1. Type for picture +
 2. Schemas for Orders page + (7)
-4. Schema for FAQ +
-6. for portfolio page make working filter buttons
-7. Full schema for PORTFOLIO post
-8. Full schema for BLOG post
-9. iframes for video tags
-10. Schema for blog bullets
-13. Schema for self-renovation widget
-14. Type for videos +
-15. Schema for MyClient, MyDocuments
-16. For Wallet (3 schemas) -
-17. For contracts page
-18. For profile page
-19. For News page in profile
-18. For support section
-19. For InvitedPartners
+3. Schema for FAQ +
+4. for portfolio page make working filter buttons
+5. Full schema for PORTFOLIO post +
+6. Full schema for BLOG post +
+7. iframes for video tags
+8. Schema for blog bullets
+9. Schema for self-renovation widget
+10. Type for videos +
+11. Schema for MyClient, MyDocuments
+12. For Wallet (3 schemas) -
+13. For contracts page
+14. For profile page
+15. For News page in profile
+16. For support section
+17. For InvitedPartners

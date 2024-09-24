@@ -27,6 +27,28 @@ export interface FaqAnswer {
   label: string
 }
 
+// For pages/portfolio/works post
+export interface PortfolioPost {
+  id: number
+  title: string
+  deadline: string
+  cost: number
+  area: number
+  video_link: string
+  video_duration: number
+  category: string
+  pictures: Picture[5]
+  article: string
+}
+
+// For pages/blog/posts
+export interface BlogPost {
+  id: number
+  title: string
+  pictures: Picture[3]
+  articles: string[]
+}
+
 // For profile/contracts/ordersId
 export interface OrderInfo {
   id: number
