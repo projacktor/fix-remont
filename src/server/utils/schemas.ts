@@ -49,6 +49,14 @@ export interface BlogPost {
   articles: string[]
 }
 
+// For Blog Bullet component
+export interface BlogBullet {
+  id: number
+  category: string
+  title: string
+  link: string
+}
+
 // For profile/contracts/ordersId
 export interface OrderInfo {
   id: number

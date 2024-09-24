@@ -43,7 +43,7 @@ Models and types to create
 5. Full schema for PORTFOLIO post +
 6. Full schema for BLOG post +
 7. iframes for video tags
-8. Schema for blog bullets
+8. Schema for blog bullets +
 9. Schema for self-renovation widget
 10. Type for videos +
 11. Schema for MyClient, MyDocuments
