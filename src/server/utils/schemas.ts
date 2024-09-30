@@ -4,6 +4,7 @@ import Tariff from '@/server/types/Tariff'
 
 // TODO: check how to make a types for pictures in binaries and videos
 // should do I make a type for a document as kinda special Blob?
+// all interfaces there are models
 
 export type Picture = string
 
@@ -165,6 +166,13 @@ export interface ProfileInfo {
   role: string
   phone: number
   email: string
+}
+// for invited partners widget
+export interface InvitedPartners {
+  // TODO: do we need id?
+  id: number
+  data: ProfileInfo
+  reward: number
 }
 
 // TODO: how will we store them?
