@@ -71,7 +71,7 @@ export interface OrderInfo {
 // For MyContracts or MyDocuments
 export interface MyContracts {
   id: number
-  // TODO: make a enum for object
+  // TODO: make an enum for object
   object: number
   tariff: Tariff
   location: string
@@ -136,6 +136,21 @@ export interface OrderDocuments {
   date: Date
   type: Notification
   file: Blob
+}
+
+// for contracts page
+export interface Contracts {
+  id: number
+  location: string
+  // TODO: make an enum for object
+  object: string
+  // TODO: make an enum for type
+  type: string
+  tariff: Tariff
+  area: number
+  status: Notification
+  stage: string
+  reward: number
 }
 
 //
