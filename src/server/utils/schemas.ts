@@ -138,7 +138,7 @@ export interface OrderDocuments {
   file: Blob
 }
 
-// for contracts page
+// for profile/contracts page
 export interface Contracts {
   id: number
   location: string
@@ -152,6 +152,25 @@ export interface Contracts {
   stage: string
   reward: number
 }
+
+// for profile/account
+export interface ProfileInfo {
+  name: string
+  surname: string
+  role: string
+  phone: number
+  email: string
+}
+
+// TODO: how will we store them?
+export interface ProfileNotification {
+  id: number
+  title: string
+  date: Date
+  description: string
+}
+
+export type PassportStatus = boolean
 
 //
 export interface SupportCategory {
