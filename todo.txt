@@ -50,6 +50,6 @@ Models and types to create
 12. For Wallet (3 schemas) -
 13. For contracts page +
 14. For profile page +
-15. For News page in profile
+15. For News page in profile +
 16. For support section
 17. For InvitedPartners

@@ -9,6 +9,11 @@ export type Picture = string
 
 export type Video = string | Blob
 
+export interface article {
+  title?: string
+  body: string
+}
+
 export interface SingleNews {
   id: number
   heading: string
@@ -17,8 +22,8 @@ export interface SingleNews {
   picture2: string
   picture3: string
   label: string
-  article1: string
-  article2: string
+  article1: article
+  article2: article
 }
 
 // For Consulting component
@@ -39,7 +44,7 @@ export interface PortfolioPost {
   video_duration: number
   category: string
   pictures: Picture[5]
-  article: string
+  articles: article[]
 }
 
 // For pages/blog/posts
@@ -47,7 +52,7 @@ export interface BlogPost {
   id: number
   title: string
   pictures: Picture[3]
-  articles: string[]
+  articles: article[]
 }
 
 // For Blog Bullet component
@@ -171,6 +176,15 @@ export interface ProfileNotification {
 }
 
 export type PassportStatus = boolean
+
+// for profile/news/newsId
+export interface ProfileNews {
+  id: number
+  type: string
+  title: string
+  pictures: Picture[3]
+  articles: article[]
+}
 
 //
 export interface SupportCategory {
