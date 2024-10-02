@@ -1,6 +1,6 @@
 export enum Notification {
-  accept = 'Accepted',
-  wait = 'Wait',
-  attention = 'Attention',
-  inactive = 'Inactive'
+  accept = 'Accepted', // green
+  wait = 'Wait', // yellow
+  attention = 'Attention', // red
+  inactive = 'Inactive' // gray
 }

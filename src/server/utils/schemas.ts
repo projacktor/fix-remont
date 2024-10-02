@@ -6,25 +6,13 @@ import Tariff from '@/server/types/Tariff'
 // should do I make a type for a document as kinda special Blob?
 // all interfaces there are models
 
-export type Picture = string
+export type Picture = Blob
 
 export type Video = string | Blob
 
 export interface article {
   title?: string
   body: string
-}
-
-export interface SingleNews {
-  id: number
-  heading: string
-  section?: string
-  picture1: string
-  picture2: string
-  picture3: string
-  label: string
-  article1: article
-  article2: article
 }
 
 // For Consulting component
@@ -43,35 +31,25 @@ export interface PortfolioPost {
   area: number
   video_link: string
   video_duration: number
-  category: string
-  pictures: Picture[5]
+  project_type: string
+  pictures: Picture[] // 5
   articles: article[]
 }
 
-// For pages/blog/posts
-export interface BlogPost {
+// For pages/blog/posts && profile/news/newsId
+export interface Post {
   id: number
   title: string
-  pictures: Picture[3]
+  pictures: Picture[] // 3
   articles: article[]
 }
 
 // For Blog Bullet component
 export interface BlogBullet {
   id: number
-  category: string
+  project_type: string
   title: string
   link: string
-}
-
-// For profile/contracts/ordersId
-export interface OrderInfo {
-  id: number
-  name: string
-  type: string
-  tariff: tariff
-  area: number
-  location: string
 }
 
 // For MyContracts or MyDocuments
@@ -86,12 +64,21 @@ export interface MyContracts {
   link: string
 }
 
+// For profile/contracts/ordersId
+export interface OrderInfo {
+  id: number
+  object: string
+  type: string
+  tariff: tariff
+  area: number
+  location: string
+}
+
 export interface WorkState {
-  // TODO: Does every WorkState need id?
-  // id: ///
+  id: number
   title: string
   status: boolean
-  link: string | null
+  document: Blob // PFD
 }
 
 export interface WorkStatus {
@@ -105,30 +92,25 @@ export interface Estimate {
   materials: number
   job: number
   reward: number
-  // TODO: how to send a file or link to it?
-  document: string
+  document: Blob
 }
 
 export interface OrderClientInfo {
-  // TODO: Should I extract ClientData into stand-alone model?
   id: number
-  name: string
-  surname: string
-  patronymic: string
-  // TODO: how we will define phone number: string | number?
-  phone: number
-  email: string
-  // TODO: take a short how to keep a Date types?
+  client: ProfileInfo
   order_date: Date
 }
 
+// may be deleted
 export interface OrderNotification {
   id: number
   type: Notification
   title: string
   label: string | null
 }
+//
 
+// may be deleted or left
 export interface PaymentStatus {
   id: number
   type: Notification
@@ -139,21 +121,13 @@ export interface PaymentStatus {
 export interface OrderDocuments {
   id: number
   title: string
-  date: Date
+  label: string
   type: Notification
-  file: Blob
+  attachment: Blob
 }
 
-// for profile/contracts page
 export interface Contracts {
-  id: number
-  location: string
-  // TODO: make an enum for object
-  object: string
-  // TODO: make an enum for type
-  type: string
-  tariff: Tariff
-  area: number
+  order: OrderInfo
   status: Notification
   stage: string
   reward: number
@@ -161,15 +135,18 @@ export interface Contracts {
 
 // for profile/account
 export interface ProfileInfo {
+  id: number
   name: string
   surname: string
-  role: string
-  phone: number
+  patronymic: string
+  phone: string
   email: string
+  role: string
+  avatar: Picture
+  passport_status: boolean
 }
 // for invited partners widget
 export interface InvitedPartners {
-  // TODO: do we need id?
   id: number
   data: ProfileInfo
   reward: number
@@ -180,18 +157,7 @@ export interface ProfileNotification {
   id: number
   title: string
   date: Date
-  description: string
-}
-
-export type PassportStatus = boolean
-
-// for profile/news/newsId
-export interface ProfileNews {
-  id: number
-  type: string
-  title: string
-  pictures: Picture[3]
-  articles: article[]
+  label: string
 }
 
 //
