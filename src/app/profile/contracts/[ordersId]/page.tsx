@@ -1,7 +1,7 @@
 'use client'
 import React, { useEffect, useState } from 'react'
 import Image from 'next/image'
-import { Notification } from '@/server/types/Notification'
+import { Notification, Tariff } from '@/server/utils/enums'
 
 import style from './page.module.scss'
 
@@ -14,7 +14,6 @@ import CheckButton from '@/components/shared/buttons/Check Button/CheckButton'
 import attention from '../../../../../public/assets/svg/ellips/ellipsRed.svg'
 import wait from '../../../../../public/assets/svg/ellips/ellipsYellow.svg'
 import accept from '../../../../../public/assets/svg/ellips/ellipsGreen.svg'
-import Tariff from '@/server/types/Tariff'
 import { OrderInfo } from '@/server/utils/schemas'
 
 // TODO:

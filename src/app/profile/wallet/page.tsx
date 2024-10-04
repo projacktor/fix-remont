@@ -1,7 +1,7 @@
 'use client'
 import React from 'react'
 import { PaymentProvider } from '@/server/types/Payment Provider'
-import { Operation } from '@/server/types/Operation'
+import { Operation } from '@/server/utils/enums'
 
 import OrangeButton from '@/components/shared/buttons/Orange Button/OrangeButton'
 import PartsFieldOperation from '@/components/shared/Parts Field Operation/PartsFieldOperation'

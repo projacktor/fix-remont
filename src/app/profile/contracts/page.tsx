@@ -1,8 +1,7 @@
 'use client'
 import React from 'react'
 
-import Tariff from '@/server/types/Tariff'
-import { State } from '@/server/types/State'
+import { State, Tariff } from '@/server/utils/enums'
 
 import OrangeButton from '@/components/shared/buttons/Orange Button/OrangeButton'
 import ContentFilter from '@/components/shared/Content Filter/ContentFilter'

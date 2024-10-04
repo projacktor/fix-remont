@@ -20,6 +20,7 @@ CHANGES
 17. fix inset in BlogBulletProfile +
 18. выровнить стрелки скроллинга в Feedbacks
 19. Увеличить отпуст между блоками
+20. opacity для BlogBullet на profile/news и Scroller"ы на profile/contracts/orders/ordersId во время открытия qr-code
 
 DYNAMIC ROUTES:
 pages:
@@ -27,8 +28,8 @@ portfolio
 blog
 
 profile:
-contracts
-news
+contracts +
+news +
 support
 
 MOBILE ADAPTATION
@@ -51,5 +52,5 @@ Models and types to create
 13. For contracts page +
 14. For profile page +
 15. For News page in profile +
-16. For support section
-17. For InvitedPartners
+16. For support section +
+17. For InvitedPartners +
