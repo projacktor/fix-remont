@@ -6,7 +6,7 @@ import Tariff from '@/server/types/Tariff'
 // should do I make a type for a document as kinda special Blob?
 // all interfaces there are models
 
-export type Picture = Blob
+export type Picture = Blob | string
 
 export type Video = string | Blob
 

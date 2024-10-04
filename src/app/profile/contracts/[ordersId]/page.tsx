@@ -33,7 +33,7 @@ function Page({ params }: { params: { ordersId: number } }) {
     // TODO: make async fetch function to get responses
     const response: OrderInfo = {
       id: params.ordersId,
-      name: 'Name',
+      object: 'Name',
       type: 'Quartira',
       tariff: Tariff.business,
       area: 12,
@@ -156,7 +156,7 @@ function Page({ params }: { params: { ordersId: number } }) {
       <div className="mt-8 flex w-full flex-row justify-between">
         <article className="flex flex-col items-start space-y-3">
           <h1 className="heading">Заказ № {params.ordersId}</h1>
-          <h3 className="headingStruct text-lg">{orderData.name}</h3>
+          <h3 className="headingStruct text-lg">{orderData.object}</h3>
         </article>
 
         <div className="button_container h-16">
@@ -168,7 +168,7 @@ function Page({ params }: { params: { ordersId: number } }) {
         <h3 className="headingStruct pl-7 text-2xl">Информация об объекте</h3>
 
         <div className={`grid rounded-3xl bg-white p-7 ${style.layout1}`}>
-          <Description name="Объект" heading={orderData.name} />
+          <Description name="Объект" heading={orderData.object} />
           <Description name="Тип заказа" heading={orderData.type} />
           <Description name="Тариф" heading={orderData.tariff} />
           <Description name="Площадь" heading={orderData.area.toLocaleString('ru-Ru')} />
