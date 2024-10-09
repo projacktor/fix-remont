@@ -1,4 +1,4 @@
-import Tariff from '@/server/types/Tariff'
+import { Tariff } from '@/server/utils/enums'
 
 export interface PartsFiledProps {
   objectName: string

@@ -1,7 +1,6 @@
 import React from 'react'
 
-import Tariff from '@/server/types/Tariff'
-import { State } from '@/server/types/State'
+import { State, Tariff } from '@/server/utils/enums'
 
 import CheckButton from '@/components/shared/buttons/Check Button/CheckButton'
 import CardNote from '@/components/entities/Card Note/CardNote'

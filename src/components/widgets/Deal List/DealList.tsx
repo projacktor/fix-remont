@@ -1,6 +1,6 @@
 import React from 'react'
 import PartsField from '@/components/shared/Parts Field/PartsField'
-import Tariff from '@/server/types/Tariff'
+import { Tariff } from '@/server/utils/enums'
 import { PartsFiledProps } from '@/server/types/PartsFieldProps'
 
 interface DealListProps {
