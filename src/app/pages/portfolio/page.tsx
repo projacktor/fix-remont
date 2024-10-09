@@ -1,6 +1,6 @@
 'use client'
 
-import React from 'react'
+import React, { useState } from 'react'
 import Link from 'next/link'
 import Image from 'next/image'
 
@@ -11,6 +11,7 @@ import Consulting from '@/components/widgets/Consulting/Consulting'
 import SeoPart from '@/components/widgets/SEO/SeoPart'
 import Crumb from '@/components/shared/Crumb/Crumb'
 import GalleryElement from '@/components/shared/Gallery Element/GalleryElement'
+import FilterButtons from '@/components/shared/Filter Buttons/FilterButtons'
 
 import work1 from '../../../../public/assets/img/works gallery/work1.png'
 import work2 from '../../../../public/assets/img/works gallery/work2.png'
@@ -22,24 +23,39 @@ function Portfolio() {
     {
       image: work1,
       title: 'Дом из кирпича 560 м² на Барвихе',
-      link: '/pages/portfolio/works'
+      link: '/pages/portfolio/works',
+      category: 'Строительство домов'
     },
     {
       image: work2,
       title: 'Квартира 300 м² на Баумана',
-      link: '/pages/portfolio/works'
+      link: '/pages/portfolio/works',
+      category: 'Ремонт квартир'
     },
     {
       image: work2,
       title: 'Квартира 300 м² на Баумана',
-      link: '/pages/portfolio/works'
+      link: '/pages/portfolio/works',
+      category: 'Ремонт квартир'
     },
     {
       image: work1,
       title: 'Дом из кирпича 560 м² на Барвихе',
-      link: '/pages/portfolio/works'
+      link: '/pages/portfolio/works',
+      category: 'Строительство домов'
     }
   ]
+
+  const filters = ['Все', 'Ремонт квартир', 'Строительство домов']
+  const [activeFilter, setActiveFilter] = useState<string>('Все')
+
+  const handleActiveFilter = (filter: string) => {
+    setActiveFilter(filter)
+  }
+
+  const filteredWorks =
+    activeFilter === 'Все' ? works : works.filter((work) => work.category === activeFilter)
+
   return (
     <main>
       <Crumb path={path} links={links} />
@@ -53,20 +69,14 @@ function Portfolio() {
               Посмотрите на наши <span className="orange-bold">выполненные проекты</span>
             </h1>
           </div>
-          <div className="flex w-[30rem] flex-row items-center gap-8">
-            <button className="flex items-center justify-center rounded-full border-transparent bg-gray-100 px-4 py-3 text-sm font-medium active:bg-color-dark active:text-white">
-              Все
-            </button>
-            <button className="flex items-center justify-center rounded-full border-transparent bg-gray-100 px-4 py-3 text-sm font-medium active:bg-color-dark active:text-white">
-              Ремонт квартир
-            </button>
-            <button className="flex items-center justify-center rounded-full border-transparent bg-gray-100 px-4 py-3 text-sm font-medium active:bg-color-dark active:text-white">
-              Строительство дома
-            </button>
-          </div>
+          <FilterButtons
+            filters={filters}
+            activeFilter={activeFilter}
+            onFilterClick={handleActiveFilter}
+          />
         </div>
-        <section className="grid h-full grid-cols-2 grid-rows-2 justify-around gap-4">
-          {works.map((work, index) => (
+        <section className="grid auto-rows-max grid-cols-2 gap-4">
+          {filteredWorks.slice(0, 4).map((work, index) => (
             <div key={index} className={`flex items-center justify-center`}>
               <GalleryElement
                 image={work.image as unknown as string}
