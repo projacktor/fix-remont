@@ -5,15 +5,15 @@ import Link from 'next/link'
 import Image from 'next/image'
 
 import CheckButton from '@/components/shared/buttons/Check Button/CheckButton'
-
-import work1 from '../../../../public/assets/img/works gallery/work1.png'
-import work2 from '../../../../public/assets/img/works gallery/work2.png'
 import GroupPhoto from '@/components/widgets/GroupPhoto/GroupPhoto'
 import Responsibility from '@/components/widgets/Responsibility/Responsibility'
 import Consulting from '@/components/widgets/Consulting/Consulting'
 import SeoPart from '@/components/widgets/SEO/SeoPart'
 import Crumb from '@/components/shared/Crumb/Crumb'
 import GalleryElement from '@/components/shared/Gallery Element/GalleryElement'
+
+import work1 from '../../../../public/assets/img/works gallery/work1.png'
+import work2 from '../../../../public/assets/img/works gallery/work2.png'
 
 function Portfolio() {
   const path = ['Портфолио']

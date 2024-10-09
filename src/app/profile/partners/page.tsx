@@ -2,8 +2,7 @@
 import React from 'react'
 import Image from 'next/image'
 
-import Tariff from '@/server/types/Tariff'
-
+import { Tariff } from '@/server/utils/enums'
 import RefLink from '@/components/widgets/Ref Link/RefLink'
 import CodeGen from '@/components/widgets/Code Generator/CodeGen'
 import Wallet from '@/components/widgets/Wallet/Wallet'

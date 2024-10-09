@@ -1,7 +1,7 @@
 import React from 'react'
 import Image from 'next/image'
 import info from '../../../../public/assets/svg/info.svg'
-import { State } from '@/server/types/State'
+import { State } from '@/server/utils/enums'
 
 interface CardNoteProps {
   state: State
