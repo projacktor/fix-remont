@@ -1,7 +1,9 @@
 'use client'
-import React, { useEffect, useState } from 'react'
 import Image from 'next/image'
+import React, { useEffect, useState } from 'react'
+import { getOrderData, getWorkStatus } from '@/api/profile/contracts/contracts'
 import { Notification, Tariff } from '@/server/utils/enums'
+import { OrderInfo, WorkStatus } from '@/server/utils/schemas'
 
 import style from './page.module.scss'
 
@@ -14,34 +16,24 @@ import CheckButton from '@/components/shared/buttons/Check Button/CheckButton'
 import attention from '../../../../../public/assets/svg/ellips/ellipsRed.svg'
 import wait from '../../../../../public/assets/svg/ellips/ellipsYellow.svg'
 import accept from '../../../../../public/assets/svg/ellips/ellipsGreen.svg'
-import { OrderInfo } from '@/server/utils/schemas'
-
-// TODO:
-// 1 ObjectInfo
-// 2 WorkStatus
-// 3 Estimate
-// 4 ClientInfo
-// 5 OrderNotification
-// 6 PaymentStatus
-// 7 Documents
 
 function Page({ params }: { params: { ordersId: number } }) {
-  const [orderData, setOrderData] = useState<null | OrderInfo>(null)
+  const [orderData, setOrderData] = useState<OrderInfo | null>(null)
+  const [workStatus, setWorkStatus] = useState<WorkStatus | null>(null)
 
   useEffect(() => {
-    // TODO: make async fetch function to get responses
-    const response: OrderInfo = {
-      id: params.ordersId,
-      object: 'Name',
-      type: 'Quartira',
-      tariff: Tariff.business,
-      area: 12,
-      location: 'Pushkina kolotushkina'
+    const fetchData = async () => {
+      const orderData = await getOrderData(params.ordersId)
+      setOrderData(orderData)
+
+      const workStatus = await getWorkStatus(params.ordersId)
+      setWorkStatus(workStatus)
     }
-    setOrderData(response)
+
+    fetchData()
   }, [params.ordersId])
 
-  if (!orderData) {
+  if (!orderData || !workStatus) {
     return <main className="flex items-center justify-center">Loading...</main>
   }
 
