@@ -1,9 +1,9 @@
 'use client'
 import Image from 'next/image'
 import React, { useEffect, useState } from 'react'
-import { getOrderData, getWorkStatus } from '@/api/profile/contracts/contracts'
+import { getEstimates, getOrderData, getWorkStatus } from '@/api/profile/contracts/contracts'
 import { Notification, Tariff } from '@/server/utils/enums'
-import { OrderInfo, WorkStatus } from '@/server/utils/schemas'
+import { Estimate, OrderInfo, WorkStatus } from '@/server/utils/schemas'
 
 import style from './page.module.scss'
 
@@ -20,20 +20,24 @@ import accept from '../../../../../public/assets/svg/ellips/ellipsGreen.svg'
 function Page({ params }: { params: { ordersId: number } }) {
   const [orderData, setOrderData] = useState<OrderInfo | null>(null)
   const [workStatus, setWorkStatus] = useState<WorkStatus | null>(null)
+  const [estimatesData, setEstimatesData] = useState<Estimate | null>(null)
 
   useEffect(() => {
     const fetchData = async () => {
       const orderData = await getOrderData(params.ordersId)
       setOrderData(orderData)
 
-      const workStatus = await getWorkStatus(params.ordersId)
-      setWorkStatus(workStatus)
+      // const workStatus = await getWorkStatus(params.ordersId)
+      // setWorkStatus(workStatus)
+
+      const estimatesData = await getEstimates(params.ordersId)
+      setEstimatesData(estimatesData)
     }
 
     fetchData()
   }, [params.ordersId])
 
-  if (!orderData || !workStatus) {
+  if (!orderData || !estimatesData) {
     return <main className="flex items-center justify-center">Loading...</main>
   }
 
@@ -73,19 +77,19 @@ function Page({ params }: { params: { ordersId: number } }) {
   const smeta = [
     {
       label: 'Общая стоимость',
-      value: 5250000
+      value: estimatesData.total
     },
     {
       label: 'Материалы',
-      value: 3075000
+      value: estimatesData.materials
     },
     {
       label: 'Работы',
-      value: 2175000
+      value: estimatesData.job
     },
     {
       label: 'Ваше вознаграждение',
-      value: 32000
+      value: estimatesData.reward
     }
   ]
 
@@ -184,6 +188,7 @@ function Page({ params }: { params: { ordersId: number } }) {
           ))}
 
           <div className="button_container flex h-16 w-64 justify-between">
+            {/* estimateData.document*/}
             <OrangeButton text="Скачать полную смету" />
           </div>
         </div>
